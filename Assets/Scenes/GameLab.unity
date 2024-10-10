@@ -1012,9 +1012,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24537211dbf996f4498ed5b84e7f349d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textSpeed: 15
+  textSpeed: 20
   timeBetweenLines: 1
-  accelerationOnInput: 2
+  accelerationOnInput: 8
 --- !u!114 &894034411
 MonoBehaviour:
   m_ObjectHideFlags: 0
