@@ -11,10 +11,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Objects
+  - Foreground
+  - Player
   - 
   - 
   - 
@@ -40,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 4277736083
+    locked: 0
+  - name: Decor
+    uniqueID: 3042091501
+    locked: 0
+  - name: Collidables
+    uniqueID: 4005781017
+    locked: 0
+  - name: Player
+    uniqueID: 1740839643
     locked: 0
