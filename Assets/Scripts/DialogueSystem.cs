@@ -94,6 +94,8 @@ public class DialogueSystem : MonoBehaviour
         gameObject.SetActive(false);
 
         Debug.Log("Dialogue system is ready!");
+
+        StartDialogue("TestDialogue");
     }
 
     // Update is called once per frame
