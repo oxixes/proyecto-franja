@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed = 5.0f;
+    public bool inDialogue = false;
 
     private Animator animator;
 
@@ -17,15 +19,18 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        int horizontalDir = Input.GetAxisRaw("Horizontal") > 0 ? 1 : Input.GetAxisRaw("Horizontal") < 0 ? -1 : 0;
-        int verticalDir = Input.GetAxisRaw("Vertical") > 0 ? 1 : Input.GetAxisRaw("Vertical") < 0 ? -1 : 0;
+        if(!inDialogue)
+        {
+            int horizontalDir = Input.GetAxisRaw("Horizontal") > 0 ? 1 : Input.GetAxisRaw("Horizontal") < 0 ? -1 : 0;
+            int verticalDir = Input.GetAxisRaw("Vertical") > 0 ? 1 : Input.GetAxisRaw("Vertical") < 0 ? -1 : 0;
 
-        animator.SetFloat("XDirection", horizontalDir);
-        animator.SetFloat("YDirection", verticalDir);
-        animator.SetBool("Moving", horizontalDir != 0 || verticalDir != 0);
+            animator.SetFloat("XDirection", horizontalDir);
+            animator.SetFloat("YDirection", verticalDir);
+            animator.SetBool("Moving", horizontalDir != 0 || verticalDir != 0);
 
-        Vector2 direction = new Vector2(horizontalDir, verticalDir);
+            Vector2 direction = new Vector2(horizontalDir, verticalDir);
 
-        transform.Translate(direction.normalized * speed * Time.deltaTime);
+            transform.Translate(direction.normalized * speed * Time.deltaTime);
+        }
     }
 }

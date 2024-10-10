@@ -27,6 +27,8 @@ public class DialogueSystem : MonoBehaviour
     private RawImage characterImage;
     private GameObject pressToContinueText;
 
+    private Player player;
+
     public DialogueSystem()
     {
         if (instance != null)
@@ -39,7 +41,8 @@ public class DialogueSystem : MonoBehaviour
 
     public static DialogueSystem GetInstance()
     {
-        if (instance == null) {
+        if (instance == null)
+        {
             Debug.LogError("You called GetInstance of DialogueSystem before it was instantiated in the scene!");
         }
 
@@ -63,7 +66,8 @@ public class DialogueSystem : MonoBehaviour
         }
 
         currentDialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
-        if (currentDialogueData == null) {
+        if (currentDialogueData == null)
+        {
             Debug.LogError("Dialogue with id: " + dialogueId + " could not be parsed.");
             return;
         }
@@ -73,6 +77,7 @@ public class DialogueSystem : MonoBehaviour
 
         isDialogueActive = true;
         gameObject.SetActive(true);
+        player.inDialogue = true;
 
         PlayNextDialogueLine();
     }
@@ -89,13 +94,14 @@ public class DialogueSystem : MonoBehaviour
         characterNameText = GameObject.Find("TalkerName").GetComponent<TextMeshProUGUI>();
         characterImage = GameObject.Find("TalkerImage").GetComponent<RawImage>();
         pressToContinueText = GameObject.Find("PressText");
+        player = GameObject.FindWithTag("Player").GetComponent<Player>();
 
         pressToContinueText.SetActive(false);
         gameObject.SetActive(false);
 
         Debug.Log("Dialogue system is ready!");
 
-        StartDialogue("TestDialogue");
+        //StartDialogue("TestDialogue");
     }
 
     // Update is called once per frame
@@ -176,6 +182,7 @@ public class DialogueSystem : MonoBehaviour
             isDialogueActive = false;
             currentDialogueLineIndex = -1;
             characterImage.texture = null;
+            player.inDialogue = false;
             return;
         }
 
@@ -197,7 +204,8 @@ public class DialogueSystem : MonoBehaviour
             }
 
             characterImage.gameObject.SetActive(true);
-        } else
+        }
+        else
         {
             characterImage.gameObject.SetActive(false);
         }
