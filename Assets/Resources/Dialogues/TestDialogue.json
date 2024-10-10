@@ -1,0 +1,34 @@
+{
+    "lines": [
+        {
+            "characterName": "TestCharacterA",
+            "text": "This is a <b>test</b> dialogue <b>line</b>.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "characterName": "TestCharacterB",
+            "text": "Character <color=red>B</color> is speaking now.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "characterName": "TestCharacterA",
+            "text": "Character <color=blue>A</color> is speaking again. And I don't have to press any button to continue.",
+            "pause": false,
+            "imageAssetId": null
+        },
+        {
+            "characterName": "CharacterWithImage",
+            "text": "This is a character with an image (the name is not linked to the image).",
+            "pause": true,
+            "imageAssetId": "example"
+        },
+        {
+            "characterName": "TestCharacterA",
+            "text": "Last line with <color=green><b>combined</b></color> tags.",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}
