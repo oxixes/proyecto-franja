@@ -20,6 +20,7 @@ public class DialogueSystem : MonoBehaviour
     private float timeSinceLastCharacter = 0;
     private float timeSinceLineFinished = 0;
     private int currentCharacterIndex = 0;
+    private bool currentLineAccelerated = false;
 
     private TextMeshProUGUI dialogueText;
     private TextMeshProUGUI characterNameText;
@@ -93,6 +94,8 @@ public class DialogueSystem : MonoBehaviour
         gameObject.SetActive(false);
 
         Debug.Log("Dialogue system is ready!");
+
+        StartDialogue("TestDialogue");
     }
 
     // Update is called once per frame
@@ -119,6 +122,7 @@ public class DialogueSystem : MonoBehaviour
                     timeSinceLastCharacter = 0;
                     currentCharacterIndex = 0;
                     timeSinceLineFinished = 0;
+                    currentLineAccelerated = false;
                     pressToContinueText.SetActive(false);
                     PlayNextDialogueLine();
                 }
@@ -128,6 +132,7 @@ public class DialogueSystem : MonoBehaviour
                 timeSinceLastCharacter = 0;
                 currentCharacterIndex = 0;
                 timeSinceLineFinished = 0;
+                currentLineAccelerated = false;
                 PlayNextDialogueLine();
             }
 
@@ -136,7 +141,12 @@ public class DialogueSystem : MonoBehaviour
         else
         {
             float acceleration = 1.0f;
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                currentLineAccelerated = true;
+            }
+
+            if (currentLineAccelerated)
             {
                 acceleration = accelerationOnInput;
             }
