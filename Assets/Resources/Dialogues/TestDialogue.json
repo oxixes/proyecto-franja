@@ -2,7 +2,7 @@
     "lines": [
         {
             "characterName": "TestCharacterA",
-            "text": "This is a <b>test</b> dialogue <b>line</b>.",
+            "text": "This is a <b>test</b> dialogue <b>line</b> that is now very long to test text justification. It needs to be\nlonger still. And more and more.",
             "pause": true,
             "imageAssetId": null
         },
