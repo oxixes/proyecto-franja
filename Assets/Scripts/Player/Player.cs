@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
 {
     public float speed = 5.0f;
     public bool inDialogue = false;
-
     private Animator animator;
 
     // Start is called before the first frame update
@@ -16,10 +15,15 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    void Update()
+    {
+
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(!inDialogue)
+        if (!inDialogue)
         {
             int horizontalDir = Input.GetAxisRaw("Horizontal") > 0 ? 1 : Input.GetAxisRaw("Horizontal") < 0 ? -1 : 0;
             int verticalDir = Input.GetAxisRaw("Vertical") > 0 ? 1 : Input.GetAxisRaw("Vertical") < 0 ? -1 : 0;
@@ -31,6 +35,15 @@ public class Player : MonoBehaviour
             Vector2 direction = new Vector2(horizontalDir, verticalDir);
 
             transform.Translate(direction.normalized * speed * Time.deltaTime);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Trigger"))
+        {
+            collision.gameObject.GetComponent<TransitionManager>().Transition();
+            GameObject level = collision.gameObject.GetComponent<TransitionManager>().newLevel;
         }
     }
 }

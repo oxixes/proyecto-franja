@@ -36,7 +36,7 @@ public class InteractableObject : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
-            Debug.Log("Presiona E para interactuar");
+            Debug.Log("Entered an object's interaction area");
             isPlayerInRange = true;
         }
     }
@@ -45,6 +45,7 @@ public class InteractableObject : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
+            Debug.Log("Left an object's interaction area");
             isPlayerInRange = false;
         }
     }

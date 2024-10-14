@@ -183,6 +183,7 @@ public class DialogueSystem : MonoBehaviour
             currentDialogueLineIndex = -1;
             characterImage.texture = null;
             player.inDialogue = false;
+            Debug.Log("Dialogue finished");
             return;
         }
 

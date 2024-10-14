@@ -2,7 +2,7 @@
     "lines": [
         {
             "characterName": "???",
-            "text": "Puto niño pringao, te han robao el móvil. Brouston, ni te ralles. Yo te ayudo. ¿Cómo te llamas?",
+            "text": "Niño pringao, te han robado el móvil. Chavalín, ni te ralles. Yo te ayudo. ¿Cómo te llamas?",
             "pause": true,
             "imageAssetId": null
         },
@@ -14,19 +14,25 @@
         },
         {
             "characterName": "Kas",
-            "text": "Me llamo Kas al Habib, pero puedes llamarme Kas. ¿Quién te ha robado el móvil?",
+            "text": "Me llamo Kas. ¿Quién te ha robado el móvil?",
             "pause": true,
             "imageAssetId": "old_man"
         },
         {
             "characterName": "Juan",
-            "text": "Tu puta madre, Kas. ¡Tu puta madre!",
+            "text": "Un cani con pintas de malote. Me lo ha quitado y ha salido corriendo.",
             "pause": true,
             "imageAssetId": null
         },
         {
             "characterName": "Kas",
-            "text": "Pero y este jambo de que va, ¿no? Bájate dos tonitos, friki. El día que toques una teta vas a flipar.",
+            "text": "Bueno, no te preocupes.",
+            "pause": true,
+            "imageAssetId": "old_man"
+        },
+        {
+            "characterName": "Kas",
+            "text": "Ve a buscar a ese malhechor, y si no lo encuentras, ven a buscarme. Te ayudaré.",
             "pause": true,
             "imageAssetId": "old_man"
         }
