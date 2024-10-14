@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5500080570774003567}
   - component: {fileID: 6938497431735216470}
-  - component: {fileID: 7494380012109361378}
   m_Layer: 0
   m_Name: TriggerDown
   m_TagString: Trigger
@@ -78,22 +77,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 35, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7494380012109361378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 261859000315692309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc16aee347e7c9e4d9e5575f3bb47ad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newLevel: {fileID: 0}
-  currentLevel: {fileID: 2697442182635538274}
-  coordToChange: 1
-  newPlayerPosition: {x: 0, y: 7}
 --- !u!1 &1937123817034384413
 GameObject:
   m_ObjectHideFlags: 0
@@ -8207,7 +8190,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8290165646474916917}
   - component: {fileID: 8459540253112762497}
-  - component: {fileID: 3661823195264748472}
   m_Layer: 0
   m_Name: TriggerLeft
   m_TagString: Trigger
@@ -8275,22 +8257,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 18}
   m_EdgeRadius: 0
---- !u!114 &3661823195264748472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2361114444365321259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc16aee347e7c9e4d9e5575f3bb47ad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newLevel: {fileID: 0}
-  currentLevel: {fileID: 2697442182635538274}
-  coordToChange: 0
-  newPlayerPosition: {x: 15.5, y: 0}
 --- !u!1 &3646799908517168429
 GameObject:
   m_ObjectHideFlags: 0
@@ -8301,7 +8267,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1829304461134338713}
   - component: {fileID: 5581171424184162297}
-  - component: {fileID: 510884955416945280}
   m_Layer: 0
   m_Name: TriggerUp
   m_TagString: Trigger
@@ -8369,22 +8334,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 40, y: 1}
   m_EdgeRadius: 0
---- !u!114 &510884955416945280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3646799908517168429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc16aee347e7c9e4d9e5575f3bb47ad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newLevel: {fileID: 0}
-  currentLevel: {fileID: 2697442182635538274}
-  coordToChange: 1
-  newPlayerPosition: {x: 0, y: -7}
 --- !u!1 &8016985355843321530
 GameObject:
   m_ObjectHideFlags: 0
@@ -8395,7 +8344,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3431124771755104604}
   - component: {fileID: 8021220264637174635}
-  - component: {fileID: 6588562124832276240}
   m_Layer: 0
   m_Name: TriggerRight
   m_TagString: Trigger
@@ -8463,22 +8411,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 17}
   m_EdgeRadius: 0
---- !u!114 &6588562124832276240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8016985355843321530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc16aee347e7c9e4d9e5575f3bb47ad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newLevel: {fileID: 0}
-  currentLevel: {fileID: 2697442182635538274}
-  coordToChange: 0
-  newPlayerPosition: {x: -15.5, y: 0}
 --- !u!1 &8195506708025563368
 GameObject:
   m_ObjectHideFlags: 0

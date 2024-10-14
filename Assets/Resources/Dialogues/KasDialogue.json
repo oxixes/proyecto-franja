@@ -2,25 +2,25 @@
     "lines": [
         {
             "characterName": "???",
-            "text": "Niño pringao, te han robado el móvil. Chavalín, ni te ralles. Yo te ayudo. ¿Cómo te llamas?",
+            "text": "Niño pringao, te han robado el móvil. Chavalín, ni te ralles. Yo te ayudo. ¿Cómo te\nllamas?",
             "pause": true,
             "imageAssetId": null
         },
         {
             "characterName": "Juan",
-            "text": "Mi nombre es Juan. ¿Y tú?",
+            "text": "Mi nombre es <color=green>Juan</color>. ¿Y tú?",
             "pause": true,
             "imageAssetId": null
         },
         {
             "characterName": "Kas",
-            "text": "Me llamo Kas. ¿Quién te ha robado el móvil?",
+            "text": "Me llamo <color=red>Kas</color>. ¿Quién te ha robado el móvil?",
             "pause": true,
             "imageAssetId": "old_man"
         },
         {
             "characterName": "Juan",
-            "text": "Un cani con pintas de malote. Me lo ha quitado y ha salido corriendo.",
+            "text": "Un <color=yellow>cani con pintas de malote</color>. Me lo ha quitado y ha salido corriendo.",
             "pause": true,
             "imageAssetId": null
         },
@@ -32,7 +32,7 @@
         },
         {
             "characterName": "Kas",
-            "text": "Ve a buscar a ese malhechor, y si no lo encuentras, ven a buscarme. Te ayudaré.",
+            "text": "Ve a buscar a ese malhechor, y si no lo encuentras, ven a buscarme. Te\nayudaré.",
             "pause": true,
             "imageAssetId": "old_man"
         }

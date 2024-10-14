@@ -27,8 +27,6 @@ public class DialogueSystem : MonoBehaviour
     private RawImage characterImage;
     private GameObject pressToContinueText;
 
-    private Player player;
-
     public DialogueSystem()
     {
         if (instance != null)
@@ -77,7 +75,6 @@ public class DialogueSystem : MonoBehaviour
 
         isDialogueActive = true;
         gameObject.SetActive(true);
-        player.inDialogue = true;
 
         PlayNextDialogueLine();
     }
@@ -94,7 +91,6 @@ public class DialogueSystem : MonoBehaviour
         characterNameText = GameObject.Find("TalkerName").GetComponent<TextMeshProUGUI>();
         characterImage = GameObject.Find("TalkerImage").GetComponent<RawImage>();
         pressToContinueText = GameObject.Find("PressText");
-        player = GameObject.FindWithTag("Player").GetComponent<Player>();
 
         pressToContinueText.SetActive(false);
         gameObject.SetActive(false);
@@ -182,7 +178,6 @@ public class DialogueSystem : MonoBehaviour
             isDialogueActive = false;
             currentDialogueLineIndex = -1;
             characterImage.texture = null;
-            player.inDialogue = false;
             Debug.Log("Dialogue finished");
             return;
         }
