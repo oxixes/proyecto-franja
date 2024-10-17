@@ -78,7 +78,7 @@ Transform:
   m_GameObject: {fileID: 2153087841984526002}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.39, y: 9.97, z: -0.17514093}
+  m_LocalPosition: {x: -23.9, y: 9.97, z: -0.17514093}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newLevel: {fileID: 7230670783255720770, guid: 5c91fb8a8f599354aa8fc52deea644ea, type: 3}
   coordToChange: 0
-  newPlayerPosition: {x: 15.5, y: 0}
+  newPlayerPosition: {x: 13.1, y: 0}
 --- !u!1 &2807805238457301274
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +247,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3344732180195023206}
   - component: {fileID: 2566825551807029314}
-  - component: {fileID: 2794678164217233901}
   m_Layer: 0
   m_Name: TriggerDown
   m_TagString: Trigger
@@ -315,21 +314,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 35, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2794678164217233901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6000393840131876659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc16aee347e7c9e4d9e5575f3bb47ad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newLevel: {fileID: 0}
-  coordToChange: 1
-  newPlayerPosition: {x: 0, y: 7}
 --- !u!1 &6066004656333522526
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +324,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1679863940888346864}
   - component: {fileID: 4149858815997587713}
-  - component: {fileID: 2617223506680045139}
   m_Layer: 0
   m_Name: TriggerRight
   m_TagString: Trigger
@@ -357,7 +340,7 @@ Transform:
   m_GameObject: {fileID: 6066004656333522526}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.68, y: 9.85, z: -0.17514093}
+  m_LocalPosition: {x: 8, y: 9.85, z: -0.17514093}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -408,21 +391,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 17}
   m_EdgeRadius: 0
---- !u!114 &2617223506680045139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6066004656333522526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc16aee347e7c9e4d9e5575f3bb47ad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newLevel: {fileID: 0}
-  coordToChange: 0
-  newPlayerPosition: {x: -15.5, y: 0}
 --- !u!1 &7816040141421897151
 GameObject:
   m_ObjectHideFlags: 0
