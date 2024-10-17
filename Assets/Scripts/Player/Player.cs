@@ -37,6 +37,12 @@ public class Player : MonoBehaviour
             bool running = Input.GetKey(KeyCode.LeftShift);
 
             transform.Translate(direction.normalized * (running ? runningSpeed : speed) * Time.deltaTime);
+        } 
+        else
+        {
+            animator.SetFloat("XDirection", 0);
+            animator.SetFloat("YDirection", 0);
+            animator.SetBool("Moving", false);
         }
     }
 
