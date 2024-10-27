@@ -1,34 +1,53 @@
 {
     "lines": [
         {
+            "type": "text",
             "characterName": "TestCharacterA",
             "text": "This is a <b>test</b> dialogue <b>line</b> that is now very long to test text justification. It needs to be\nlonger still. And more and more.",
             "pause": true,
             "imageAssetId": null
         },
         {
+            "type": "text",
             "characterName": "TestCharacterB",
             "text": "Character <color=red>B</color> is speaking now.",
             "pause": true,
             "imageAssetId": null
         },
         {
+            "type": "text",
             "characterName": "TestCharacterA",
             "text": "Character <color=blue>A</color> is speaking again. And I don't have to press any button to continue.",
             "pause": false,
             "imageAssetId": null
         },
         {
+            "type": "text",
             "characterName": "CharacterWithImage",
             "text": "This is a character with an image (the name is not linked to the image).",
             "pause": true,
             "imageAssetId": "example"
         },
         {
+            "type": "text",
             "characterName": "TestCharacterA",
             "text": "Last line with <color=green><b>combined</b></color> tags.",
             "pause": true,
             "imageAssetId": null
+        },
+        {
+            "type": "options",
+            "characterName": "TestCharacterB",
+            "options": [
+                {
+                    "text": "Option A (will repeat this dialogue)",
+                    "diversion": "TestDialogueA"
+                },
+                {
+                    "text": "Option B",
+                    "diversion": "TestDialogueB"
+                }
+            ]
         }
     ]
 }
