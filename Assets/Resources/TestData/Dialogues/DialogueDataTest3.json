@@ -1,0 +1,11 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "TestCharacterA",
+            "text": "Test dialogue line",
+            "imageAssetId": "example",
+            "pause": true
+        }
+    ]
+}

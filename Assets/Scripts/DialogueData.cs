@@ -21,14 +21,14 @@ public class DialogueData
         public bool pause = false;
         public string imageAssetId;
         public string diversion;
-        public DialogueOption[] options;
+        public DialogueOption[] options = { };
 
         public int GetTextCharLength()
         {
             if (type != "text")
             {
                 Debug.Log("Trying to get text char length for a non-text dialogue line");
-                return 0;
+                return -1;
             }
 
             // Return the length of the text skipping the tags
@@ -141,5 +141,5 @@ public class DialogueData
         }
     }
 
-    public DialogueLine[] lines;
+    public DialogueLine[] lines = { };
 }

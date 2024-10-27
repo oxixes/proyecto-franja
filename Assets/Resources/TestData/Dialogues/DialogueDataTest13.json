@@ -1,0 +1,14 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "TestCharacterA",
+            "text": "Test <b>dialogue line</b>"
+        },
+        {
+            "type": "text",
+            "characterName": "TestCharacterB",
+            "text": "Test <b><color=yellow>dialogue</color> line</b>"
+        }
+    ]
+}

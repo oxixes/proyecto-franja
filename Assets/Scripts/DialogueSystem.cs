@@ -73,12 +73,15 @@ public class DialogueSystem : MonoBehaviour
             return false;
         }
 
-        currentDialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
-        if (currentDialogueData == null)
+        try
         {
-            Debug.LogError("Dialogue with id: " + dialogueId + " could not be parsed.");
+            currentDialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
+        } catch (System.Exception e)
+        {
+            Debug.LogError("Failed to parse dialogue with id: " + dialogueId + " - " + e.Message);
             return false;
         }
+
 
         // Start the dialogue with the given id
         Debug.Log("Starting dialogue with id: " + dialogueId);
