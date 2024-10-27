@@ -6,7 +6,7 @@
             "options": [
                 {
                     "text": "Option A",
-                    "diversion": "TestDialogueA"
+                    "diversion": "TestData/DialogueDataTest3"
                 },
                 {
                     "text": "Option B",

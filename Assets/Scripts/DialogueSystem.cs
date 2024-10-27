@@ -11,6 +11,11 @@ public class DialogueSystem : MonoBehaviour
     public float timeBetweenLines = 1f; // Seconds
     public float accelerationOnInput = 1.5f;
 
+    // Allow tests to simulate pressing the space, up and down keys
+    [HideInInspector] public bool spacePressed = false;
+    [HideInInspector] public bool upPressed = false;
+    [HideInInspector] public bool downPressed = false;
+
     private static DialogueSystem instance = null;
     private bool isDialogueActive = false;
     private DialogueData currentDialogueData = null;
@@ -29,6 +34,7 @@ public class DialogueSystem : MonoBehaviour
     private GameObject pressToContinueText;
 
     private GameObject pressToContinueLayout;
+    private GameObject characterNameLayout;
     private GameObject[] optionLayouts = new GameObject[3];
     private TextMeshProUGUI[] optionTexts = new TextMeshProUGUI[3];
 
@@ -107,6 +113,8 @@ public class DialogueSystem : MonoBehaviour
         pressToContinueText = GameObject.Find("PressText");
 
         pressToContinueLayout = GameObject.Find("PressLayout");
+        characterNameLayout = GameObject.Find("TalkerPanel");
+        Debug.Log(characterNameLayout);
         for (int i = 1; i <= optionLayouts.Length; i++)
         {
             optionLayouts[i - 1] = GameObject.Find("Option" + i);
@@ -120,7 +128,7 @@ public class DialogueSystem : MonoBehaviour
 
         Debug.Log("Dialogue system is ready!");
 
-        StartDialogue("TestDialogue");
+        // StartDialogue("TestDialogue");
     }
 
     // Update is called once per frame
@@ -147,7 +155,7 @@ public class DialogueSystem : MonoBehaviour
                     }
 
                     // Wait for player input
-                    if (Input.GetKeyDown(KeyCode.Space))
+                    if (Input.GetKeyDown(KeyCode.Space) || spacePressed)
                     {
                         timeSinceLastCharacter = 0;
                         currentCharacterIndex = 0;
@@ -171,7 +179,7 @@ public class DialogueSystem : MonoBehaviour
             else
             {
                 float acceleration = 1.0f;
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.Space) || spacePressed)
                 {
                     currentLineAccelerated = true;
                 }
@@ -210,15 +218,15 @@ public class DialogueSystem : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || upPressed)
             {
                 currentOptionIndex = (currentOptionIndex - 1 + currentDialogueLine.options.Length) % currentDialogueLine.options.Length;
             }
-            else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+            else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow) || downPressed)
             {
                 currentOptionIndex = (currentOptionIndex + 1) % currentDialogueLine.options.Length;
             }
-            else if (Input.GetKeyDown(KeyCode.Space))
+            else if (Input.GetKeyDown(KeyCode.Space) || spacePressed)
             {
                 currentDialogueLineIndex = -1;
                 characterImage.texture = null;
@@ -245,7 +253,7 @@ public class DialogueSystem : MonoBehaviour
 
         currentDialogueLine = currentDialogueData.lines[currentDialogueLineIndex];
 
-        if (currentDialogueLine.type.Equals("text") || currentDialogueLine.type.Equals("diversion"))
+        if (currentDialogueLine.type.Equals("text") || currentDialogueLine.type.Equals("options"))
         {
             if (!string.IsNullOrEmpty(currentDialogueLine.imageAssetId))
             {
@@ -265,6 +273,16 @@ public class DialogueSystem : MonoBehaviour
             {
                 characterImage.gameObject.SetActive(false);
             }
+
+            if (string.IsNullOrEmpty(currentDialogueLine.characterName))
+            {
+                characterNameLayout.SetActive(false);
+            }
+            else
+            {
+                characterNameText.text = currentDialogueLine.characterName;
+                characterNameLayout.SetActive(true);
+            }
         }
 
         if (currentDialogueLine.type.Equals("text"))
@@ -277,7 +295,6 @@ public class DialogueSystem : MonoBehaviour
             currentLineCharacterCount = currentDialogueLine.GetTextCharLength();
 
             dialogueText.text = "";
-            characterNameText.text = currentDialogueLine.characterName;
         }
         else if (currentDialogueLine.type.Equals("options"))
         {

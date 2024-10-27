@@ -1,0 +1,14 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "TestCharacterA",
+            "text": "aaaa",
+            "pause": true
+        },
+        {
+            "type": "diversion",
+            "diversion": "TestData/DialogueDataTest3"
+        }
+    ]
+}

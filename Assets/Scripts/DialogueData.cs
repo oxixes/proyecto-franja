@@ -27,7 +27,7 @@ public class DialogueData
         {
             if (type != "text")
             {
-                Debug.Log("Trying to get text char length for a non-text dialogue line");
+                Debug.LogError("Trying to get text char length for a non-text dialogue line");
                 return -1;
             }
 
@@ -57,7 +57,7 @@ public class DialogueData
         {
             if (type != "text")
             {
-                Debug.Log("Trying to get text up until a char count for a non-text dialogue line");
+                Debug.LogError("Trying to get text up until a char count for a non-text dialogue line");
                 return null;
             }
 
@@ -103,37 +103,31 @@ public class DialogueData
         {
             if (type != "text" && type != "options" && type != "diversion")
             {
-                Debug.Log("Invalid dialogue line type: " + type);
-                return false;
-            }
-
-            if (type != "diversion" && string.IsNullOrEmpty(characterName))
-            {
-                Debug.Log("Dialogue line has no character name defined");
+                Debug.LogError("Invalid dialogue line type: " + type);
                 return false;
             }
 
             if (type == "text" && string.IsNullOrEmpty(text))
             {
-                Debug.Log("Dialogue line type is text but no text is defined");
+                Debug.LogError("Dialogue line type is text but no text is defined");
                 return false;
             }
 
             if (type == "options" && (options == null || options.Length == 0))
             {
-                Debug.Log("Dialogue line type is options but no options are defined");
+                Debug.LogError("Dialogue line type is options but no options are defined");
                 return false;
             }
 
             if (type == "options" && options.Length > 3)
             {
-                Debug.Log("Dialogue line type is options but more than 3 options are defined");
+                Debug.LogError("Dialogue line type is options but more than 3 options are defined");
                 return false;
             }
 
             if (type == "diversion" && string.IsNullOrEmpty(diversion))
             {
-                Debug.Log("Dialogue line type is diversion but no diversion is defined");
+                Debug.LogError("Dialogue line type is diversion but no diversion is defined");
                 return false;
             }
 

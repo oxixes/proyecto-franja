@@ -18,7 +18,7 @@ public class DialogueDataTests
     [Test]
     public void DialogueDataWithEmptyLinesPasses()
     {
-        TextAsset dialogueJSON = Resources.Load<TextAsset>("TestData/Dialogues/DialogueDataTest1");
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest1");
         DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
         Assert.IsNotNull(dialogueData);
 
@@ -28,7 +28,7 @@ public class DialogueDataTests
     [Test]
     public void DialogueDataWithSimpleLinesPasses()
     {
-        TextAsset dialogueJSON = Resources.Load<TextAsset>("TestData/Dialogues/DialogueDataTest2");
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest2");
         DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
         Assert.IsNotNull(dialogueData);
 
@@ -46,7 +46,7 @@ public class DialogueDataTests
     [Test]
     public void DialogueDataWithImagesPasses()
     {
-        TextAsset dialogueJSON = Resources.Load<TextAsset>("TestData/Dialogues/DialogueDataTest3");
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest3");
         DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
         Assert.IsNotNull(dialogueData);
 
@@ -60,7 +60,7 @@ public class DialogueDataTests
     [Test]
     public void DialogueDataWithOptionsPasses()
     {
-        TextAsset dialogueJSON = Resources.Load<TextAsset>("TestData/Dialogues/DialogueDataTest4");
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest4");
         DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
         Assert.IsNotNull(dialogueData);
 
@@ -71,7 +71,7 @@ public class DialogueDataTests
         Assert.AreEqual(2, dialogueData.lines[0].options.Length);
         
         Assert.AreEqual("Option A", dialogueData.lines[0].options[0].text);
-        Assert.AreEqual("TestDialogueA", dialogueData.lines[0].options[0].diversion);
+        Assert.AreEqual("TestData/DialogueDataTest3", dialogueData.lines[0].options[0].diversion);
 
         Assert.AreEqual("Option B", dialogueData.lines[0].options[1].text);
         Assert.AreEqual("TestDialogueB", dialogueData.lines[0].options[1].diversion);
@@ -80,7 +80,7 @@ public class DialogueDataTests
     [Test]
     public void DialogueDataWithDiversionsPasses()
     {
-        TextAsset dialogueJSON = Resources.Load<TextAsset>("TestData/Dialogues/DialogueDataTest5");
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest5");
         DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
         Assert.IsNotNull(dialogueData);
 
@@ -94,7 +94,8 @@ public class DialogueDataTests
     [Test]
     public void DialogueDataWithInvalidTypeFails()
     {
-        TextAsset dialogueJSON = Resources.Load<TextAsset>("TestData/Dialogues/DialogueDataTest6");
+        LogAssert.Expect(LogType.Error, "Invalid dialogue line type: blabla");
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest6");
         DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
         Assert.IsNotNull(dialogueData);
 
@@ -103,20 +104,21 @@ public class DialogueDataTests
     }
 
     [Test]
-    public void DialogueDataWithMissingCharacterNameFails()
+    public void DialogueDataWithMissingCharacterNamePasses()
     {
-        TextAsset dialogueJSON = Resources.Load<TextAsset>("TestData/Dialogues/DialogueDataTest7");
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest7");
         DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
         Assert.IsNotNull(dialogueData);
 
         Assert.AreEqual(1, dialogueData.lines.Length);
-        Assert.IsFalse(dialogueData.lines[0].CheckFormatOk());
+        Assert.IsTrue(dialogueData.lines[0].CheckFormatOk());
     }
 
     [Test]
     public void DialogueDataWithMissingTextFails()
     {
-        TextAsset dialogueJSON = Resources.Load<TextAsset>("TestData/Dialogues/DialogueDataTest8");
+        LogAssert.Expect(LogType.Error, "Dialogue line type is text but no text is defined");
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest8");
         DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
         Assert.IsNotNull(dialogueData);
 
@@ -127,7 +129,8 @@ public class DialogueDataTests
     [Test]
     public void DialogueDataWithMissingOptionsFails()
     {
-        TextAsset dialogueJSON = Resources.Load<TextAsset>("TestData/Dialogues/DialogueDataTest9");
+        LogAssert.Expect(LogType.Error, "Dialogue line type is options but no options are defined");
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest9");
         DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
         Assert.IsNotNull(dialogueData);
 
@@ -138,7 +141,8 @@ public class DialogueDataTests
     [Test]
     public void DialogueDataWithTooManyOptionsFails()
     {
-        TextAsset dialogueJSON = Resources.Load<TextAsset>("TestData/Dialogues/DialogueDataTest10");
+        LogAssert.Expect(LogType.Error, "Dialogue line type is options but more than 3 options are defined");
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest10");
         DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
         Assert.IsNotNull(dialogueData);
 
@@ -149,7 +153,8 @@ public class DialogueDataTests
     [Test]
     public void DialogueDataWithMissingDiversionFails()
     {
-        TextAsset dialogueJSON = Resources.Load<TextAsset>("TestData/Dialogues/DialogueDataTest11");
+        LogAssert.Expect(LogType.Error, "Dialogue line type is diversion but no diversion is defined");
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest11");
         DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
         Assert.IsNotNull(dialogueData);
 
@@ -160,21 +165,23 @@ public class DialogueDataTests
     [Test]
     public void DialogueDataCantGetTextInfoFromNonTextType()
     {
-        TextAsset dialogueJSON = Resources.Load<TextAsset>("TestData/Dialogues/DialogueDataTest12");
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest12");
         DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
         Assert.IsNotNull(dialogueData);
 
         Assert.AreEqual(1, dialogueData.lines.Length);
         Assert.IsTrue(dialogueData.lines[0].CheckFormatOk());
 
+        LogAssert.Expect(LogType.Error, "Trying to get text char length for a non-text dialogue line");
         Assert.AreEqual(-1, dialogueData.lines[0].GetTextCharLength());
+        LogAssert.Expect(LogType.Error, "Trying to get text up until a char count for a non-text dialogue line");
         Assert.IsNull(dialogueData.lines[0].GetTextUpUntil(10));
     }
 
     [Test]
     public void DialogueDataLengthDoesNotCountTags()
     {
-        TextAsset dialogueJSON = Resources.Load<TextAsset>("TestData/Dialogues/DialogueDataTest13");
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest13");
         DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
         Assert.IsNotNull(dialogueData);
 
@@ -187,7 +194,7 @@ public class DialogueDataTests
     [Test]
     public void DialogueDataGetTextUpUntilWorks()
     {
-        TextAsset dialogueJSON = Resources.Load<TextAsset>("TestData/Dialogues/DialogueDataTest13");
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest13");
         DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
         Assert.IsNotNull(dialogueData);
 
