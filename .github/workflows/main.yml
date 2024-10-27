@@ -73,6 +73,7 @@ jobs:
 
   test:
     name: Test
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       # Checkout
