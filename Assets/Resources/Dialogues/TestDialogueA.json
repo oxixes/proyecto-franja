@@ -1,0 +1,15 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "TestCharacterA",
+            "text": "Holiwis",
+            "imageAssetId": null,
+            "pause": true
+        },
+        {
+            "type": "diversion",
+            "diversion": "TestDialogue"
+        }
+    ]
+}

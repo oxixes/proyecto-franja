@@ -8,13 +8,29 @@ public class DialogueData
     [System.Serializable]
     public class DialogueLine
     {
+        [System.Serializable]
+        public class DialogueOption
+        {
+            public string text;
+            public string diversion;
+        }
+
+        public string type;
         public string characterName;
         public string text;
-        public bool pause;
+        public bool pause = false;
         public string imageAssetId;
+        public string diversion;
+        public DialogueOption[] options = { };
 
         public int GetTextCharLength()
         {
+            if (type != "text")
+            {
+                Debug.LogError("Trying to get text char length for a non-text dialogue line");
+                return -1;
+            }
+
             // Return the length of the text skipping the tags
             int counter = 0;
             bool skip = false;
@@ -39,6 +55,12 @@ public class DialogueData
 
         public string GetTextUpUntil(int charCount)
         {
+            if (type != "text")
+            {
+                Debug.LogError("Trying to get text up until a char count for a non-text dialogue line");
+                return null;
+            }
+
             // Return the text with tags up until the charCount
             string result = "";
             bool inTag = false;
@@ -76,7 +98,42 @@ public class DialogueData
 
             return result;
         }
+
+        public bool CheckFormatOk()
+        {
+            if (type != "text" && type != "options" && type != "diversion")
+            {
+                Debug.LogError("Invalid dialogue line type: " + type);
+                return false;
+            }
+
+            if (type == "text" && string.IsNullOrEmpty(text))
+            {
+                Debug.LogError("Dialogue line type is text but no text is defined");
+                return false;
+            }
+
+            if (type == "options" && (options == null || options.Length == 0))
+            {
+                Debug.LogError("Dialogue line type is options but no options are defined");
+                return false;
+            }
+
+            if (type == "options" && options.Length > 3)
+            {
+                Debug.LogError("Dialogue line type is options but more than 3 options are defined");
+                return false;
+            }
+
+            if (type == "diversion" && string.IsNullOrEmpty(diversion))
+            {
+                Debug.LogError("Dialogue line type is diversion but no diversion is defined");
+                return false;
+            }
+
+            return true;
+        }
     }
 
-    public DialogueLine[] lines;
+    public DialogueLine[] lines = { };
 }
