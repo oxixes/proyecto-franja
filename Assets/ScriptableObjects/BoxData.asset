@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6187871e8e9221948930ac943883e5a0, type: 3}
+  m_Name: BoxData
+  m_EditorClassIdentifier: 
+  itemName: Caja
+  description: Es una caja refachera
+  icon: {fileID: 44262660, guid: 4e7ae4730f9364c49a50c8e99a96415c, type: 3}
+  isUsable: 1
