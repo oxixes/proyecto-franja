@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -18,6 +19,7 @@ public class DialogueSystem : MonoBehaviour
 
     private static DialogueSystem instance = null;
     private bool isDialogueActive = false;
+    private string currentDialogueId = null;
     private DialogueData currentDialogueData = null;
     private DialogueLine currentDialogueLine = null;
     private int currentDialogueLineIndex = -1;
@@ -38,6 +40,10 @@ public class DialogueSystem : MonoBehaviour
     private GameObject[] optionLayouts = new GameObject[3];
     private TextMeshProUGUI[] optionTexts = new TextMeshProUGUI[3];
 
+    private Dictionary<string, List<Tuple<int, Action<string, string, string>>>> notificationHandlers;
+    private Dictionary<int, Tuple<string, int>> notificationIdToPosition;
+    private int currentNotificationId = 0;
+
     public DialogueSystem()
     {
         if (instance != null)
@@ -46,8 +52,16 @@ public class DialogueSystem : MonoBehaviour
         }
 
         instance = this;
+        notificationHandlers = new Dictionary<string, List<Tuple<int, Action<string, string, string>>>>();
+        notificationIdToPosition = new Dictionary<int, Tuple<string, int>>();
     }
 
+    /// <summary>
+    /// Get the instance of the DialogueSystem in the scene.
+    /// 
+    /// This is a singleton. You mustn't instantiate a DialogueSystem yourself.
+    /// </summary>
+    /// <returns>The instance of the current Dialogue System.</returns>
     public static DialogueSystem GetInstance()
     {
         if (instance == null)
@@ -58,6 +72,76 @@ public class DialogueSystem : MonoBehaviour
         return instance;
     }
 
+    /// <summary>
+    /// Register a notification handler for a given notification id.
+    /// 
+    /// The handler will be called when the notification with the given id is triggered
+    /// by a dialogue.
+    /// 
+    /// The handler has three parameters:
+    /// - The dialogue id
+    /// - The notification id
+    /// - The notification data
+    /// </summary>
+    /// <param name="notificationId">Notification identifier you will be subscribed to.</param>
+    /// <param name="handler">The handler that will be called to be notified.</param>
+    /// <returns>The handler identifier. You can use this to remove it later.</returns>
+    public int HandleNotification(string notificationId, Action<string, string, string> handler)
+    {
+        if (!notificationHandlers.ContainsKey(notificationId))
+        {
+            notificationHandlers[notificationId] = new List<Tuple<int, Action<string, string, string>>> ();
+        }
+
+        int position = notificationHandlers[notificationId].Count;
+        int id = this.currentNotificationId++;
+        notificationHandlers[notificationId].Add(new Tuple<int, Action<string, string, string>>(position, handler));
+        notificationIdToPosition[id] = new Tuple<string, int>(notificationId, position);
+        return id;
+    }
+
+    /// <summary>
+    /// Remove a notification handler with the given id.
+    /// </summary>
+    /// <param name="id">The identifier of the handler.</param>
+    /// <returns>A boolean that indicates whether the handler has been removed successfully or not.</returns>
+    public bool RemoveNotificationHandler(int id)
+    {
+        if (!notificationIdToPosition.ContainsKey(id))
+        {
+            Debug.LogError("Trying to remove a notification handler that does not exist");
+            return false;
+        }
+
+        Tuple<string, int> notificationIdAndPosition = notificationIdToPosition[id];
+        int index = -1;
+        for (int i = 0; i < notificationHandlers[notificationIdAndPosition.Item1].Count; i++)
+        {
+            if (notificationHandlers[notificationIdAndPosition.Item1][i].Item1 == notificationIdAndPosition.Item2)
+            {
+                index = i;
+                break;
+            }
+        }
+
+        if (index == -1)
+        {
+            Debug.LogError("Trying to remove a notification handler that does not exist");
+            return false;
+        }
+
+        notificationHandlers[notificationIdAndPosition.Item1].RemoveAt(index);
+        notificationIdToPosition.Remove(id);
+        
+        return true;
+    }
+
+    /// <summary>
+    /// Start a dialogue with the given id.
+    /// 
+    /// If a dialogue is already active, or if the id or file linked to it is invalid, this method will do nothing.
+    /// </summary>
+    /// <param name="dialogueId">The identifier of the dialogue to start.</param>
     public void StartDialogue(string dialogueId)
     {
         if (isDialogueActive)
@@ -82,6 +166,7 @@ public class DialogueSystem : MonoBehaviour
         try
         {
             currentDialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
+            currentDialogueId = dialogueId;
         } catch (System.Exception e)
         {
             Debug.LogError("Failed to parse dialogue with id: " + dialogueId + " - " + e.Message);
@@ -99,6 +184,10 @@ public class DialogueSystem : MonoBehaviour
         return true;
     }
 
+    /// <summary>
+    /// Check if a dialogue is currently active.
+    /// </summary>
+    /// <returns>A boolean that is true if a dialogue is active, or false otherwise.</returns>
     public bool IsDialogueActive()
     {
         return isDialogueActive;
@@ -314,6 +403,20 @@ public class DialogueSystem : MonoBehaviour
                 gameObject.SetActive(false);
                 isDialogueActive = false;
             }
+        }
+        else if (currentDialogueLine.type.Equals("notification"))
+        {
+            // Trigger the notification
+            if (notificationHandlers.ContainsKey(currentDialogueLine.notificationId))
+            {
+                foreach (Tuple<int, Action<string, string, string>> handler in notificationHandlers[currentDialogueLine.notificationId])
+                {
+                    handler.Item2(currentDialogueId, currentDialogueLine.notificationId, currentDialogueLine.text);
+                }
+            }
+
+            // Go to the next line
+            PlayNextDialogueLine();
         }
     }
 }
