@@ -6,6 +6,7 @@ public class InteractableObject : MonoBehaviour
 {
     private bool isPlayerInRange = false;
     private DialogueSystem dialogueSystem;
+    public string dialogueID;
 
     void Start() { 
         dialogueSystem = DialogueSystem.GetInstance();
@@ -24,7 +25,7 @@ public class InteractableObject : MonoBehaviour
 
         if (dialogueSystem != null && !dialogueSystem.IsDialogueActive())
         {
-            dialogueSystem.StartDialogue("KasDialogue");  // Start dialogue with ID "KasDialogue"
+            dialogueSystem.StartDialogue(dialogueID);  // Start dialogue with ID "KasDialogue"
         }
         else
         {

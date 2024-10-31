@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class DialogueSystemTests
 {
@@ -65,7 +66,7 @@ public class DialogueSystemTests
         dialogueSystem.StartDialogue("TestData/InvalidJson");
         Assert.IsFalse(dialogueSystem.IsDialogueActive());
 
-        LogAssert.Expect(LogType.Error, "Dialogue line type is text but no text is defined");
+        LogAssert.Expect(LogType.Error, "Dialogue line type is text or notification but no text is defined");
         dialogueSystem.StartDialogue("TestData/DialogueDataTest8");
         Assert.IsFalse(dialogueSystem.IsDialogueActive());
 
@@ -285,6 +286,48 @@ public class DialogueSystemTests
         }
 
         Assert.AreEqual("Test dialogue line", text.text);
+
+        yield return new WaitForEndOfFrame();
+    }
+
+    [UnityTest]
+    public IEnumerator DialogueNotifiesAndRemovesHandler()
+    {
+        bool notified = false;
+        Action<string, string, string> handler = (string dialogueId, string notificationId, string notificationData) =>
+        {
+            Assert.AreEqual("TestData/DialogueDataTest16", dialogueId);
+            Assert.AreEqual("TestNotification", notificationId);
+            Assert.AreEqual("notificationData", notificationData);
+
+            notified = true;
+        };
+
+        int handlerId = dialogueSystem.HandleNotification("TestNotification", handler);
+
+        dialogueSystem.StartDialogue("TestData/DialogueDataTest16");
+        Assert.IsFalse(dialogueSystem.IsDialogueActive());
+        Assert.IsTrue(notified);
+
+        notified = false;
+        bool success = dialogueSystem.RemoveNotificationHandler(handlerId);
+        Assert.IsTrue(success);
+
+        dialogueSystem.StartDialogue("TestData/DialogueDataTest16");
+        Assert.IsFalse(notified);
+
+        yield return new WaitForEndOfFrame();
+    }
+
+    [UnityTest]
+    public IEnumerator DialogueSystemFailsToRemoveNonExistentHandler()
+    {
+        LogAssert.Expect(LogType.Error, "Trying to remove a notification handler that does not exist");
+        bool success = dialogueSystem.RemoveNotificationHandler(0);
+
+        Assert.IsFalse(success);
+
+        yield return new WaitForEndOfFrame();
     }
 
     [TearDown]

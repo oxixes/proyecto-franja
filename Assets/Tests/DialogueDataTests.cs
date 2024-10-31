@@ -92,6 +92,31 @@ public class DialogueDataTests
     }
 
     [Test]
+    public void DialogueDataWithMissingCharacterNamePasses()
+    {
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest7");
+        DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
+        Assert.IsNotNull(dialogueData);
+
+        Assert.AreEqual(1, dialogueData.lines.Length);
+        Assert.IsTrue(dialogueData.lines[0].CheckFormatOk());
+    }
+
+    [Test]
+    public void DialogueDataWithNotificationsPasses()
+    {
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest16");
+        DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
+        Assert.IsNotNull(dialogueData);
+
+        Assert.AreEqual(1, dialogueData.lines.Length);
+        Assert.IsTrue(dialogueData.lines[0].CheckFormatOk());
+
+        Assert.AreEqual("notification", dialogueData.lines[0].type);
+        Assert.AreEqual("TestNotification", dialogueData.lines[0].notificationId);
+    }
+
+    [Test]
     public void DialogueDataWithInvalidTypeFails()
     {
         LogAssert.Expect(LogType.Error, "Invalid dialogue line type: blabla");
@@ -104,20 +129,9 @@ public class DialogueDataTests
     }
 
     [Test]
-    public void DialogueDataWithMissingCharacterNamePasses()
-    {
-        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest7");
-        DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
-        Assert.IsNotNull(dialogueData);
-
-        Assert.AreEqual(1, dialogueData.lines.Length);
-        Assert.IsTrue(dialogueData.lines[0].CheckFormatOk());
-    }
-
-    [Test]
     public void DialogueDataWithMissingTextFails()
     {
-        LogAssert.Expect(LogType.Error, "Dialogue line type is text but no text is defined");
+        LogAssert.Expect(LogType.Error, "Dialogue line type is text or notification but no text is defined");
         TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest8");
         DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
         Assert.IsNotNull(dialogueData);
@@ -155,6 +169,30 @@ public class DialogueDataTests
     {
         LogAssert.Expect(LogType.Error, "Dialogue line type is diversion but no diversion is defined");
         TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest11");
+        DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
+        Assert.IsNotNull(dialogueData);
+
+        Assert.AreEqual(1, dialogueData.lines.Length);
+        Assert.IsFalse(dialogueData.lines[0].CheckFormatOk());
+    }
+
+    [Test]
+    public void DialogueDataWithMissingNotificationIdFails()
+    {
+        LogAssert.Expect(LogType.Error, "Dialogue line type is notification but no notificationId is defined");
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest14");
+        DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
+        Assert.IsNotNull(dialogueData);
+
+        Assert.AreEqual(1, dialogueData.lines.Length);
+        Assert.IsFalse(dialogueData.lines[0].CheckFormatOk());
+    }
+
+    [Test]
+    public void DialogueDataWithMissingNotificationTextFails()
+    {
+        LogAssert.Expect(LogType.Error, "Dialogue line type is text or notification but no text is defined");
+        TextAsset dialogueJSON = Resources.Load<TextAsset>("Dialogues/TestData/DialogueDataTest15");
         DialogueData dialogueData = JsonUtility.FromJson<DialogueData>(dialogueJSON.text);
         Assert.IsNotNull(dialogueData);
 

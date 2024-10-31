@@ -240,6 +240,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29396326}
   m_CullTransparentMesh: 1
+--- !u!4 &84330048 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 271345579487052574, guid: c852279232f93a64e8498d655a91ba5a, type: 3}
+  m_PrefabInstance: {fileID: 1516803131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &164910153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -657,7 +662,7 @@ Transform:
   m_GameObject: {fileID: 347088145}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.35, y: 2.6799998, z: -0.066449806}
+  m_LocalPosition: {x: -12.93, y: 0.88, z: -0.066449806}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1122,6 +1127,7 @@ GameObject:
   - component: {fileID: 703812232}
   - component: {fileID: 703812231}
   - component: {fileID: 703812230}
+  - component: {fileID: 703812233}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1172,7 +1178,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1197,12 +1203,30 @@ Transform:
   m_GameObject: {fileID: 703812229}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -1.38, y: 2.09, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &703812233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703812229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c2a452a370d5f40b60ecb5d4574a16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 84330048}
+  offset: {x: 0, y: 0, z: -10}
+  minX: -2.15
+  maxX: 1.7
+  minY: -2.35
+  maxY: 2.15
 --- !u!1 &814809603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,7 +1480,7 @@ GameObject:
   - component: {fileID: 874655068}
   - component: {fileID: 874655067}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: DialogueCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1872,11 +1896,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 271345579487052574, guid: c852279232f93a64e8498d655a91ba5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.48
       objectReference: {fileID: 0}
     - target: {fileID: 271345579487052574, guid: c852279232f93a64e8498d655a91ba5a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.02
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 271345579487052574, guid: c852279232f93a64e8498d655a91ba5a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2007,6 +2031,14 @@ PrefabInstance:
       propertyPath: newLevel
       value: 
       objectReference: {fileID: 399696271}
+    - target: {fileID: 5442036609167773837, guid: 024eba5133e233042a2f71cf74e0ac0e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442036609167773837, guid: 024eba5133e233042a2f71cf74e0ac0e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.92
+      objectReference: {fileID: 0}
     - target: {fileID: 6120165281831625350, guid: 024eba5133e233042a2f71cf74e0ac0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.5
