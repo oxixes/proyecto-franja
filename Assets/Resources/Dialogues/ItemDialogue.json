@@ -1,0 +1,24 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "",
+            "text": "¿Quieres recoger este ítem?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "options",
+            "characterName": "",
+            "options": [
+                {
+                    "text": "Sí",
+                    "diversion": "CollectItem"
+                },
+                {
+                    "text": "No"
+                }
+            ]
+        }
+    ]
+}
