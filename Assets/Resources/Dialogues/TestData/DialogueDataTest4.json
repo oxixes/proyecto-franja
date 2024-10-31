@@ -1,0 +1,18 @@
+{
+    "lines": [
+        {
+            "type": "options",
+            "characterName": "TestCharacterA",
+            "options": [
+                {
+                    "text": "Option A",
+                    "diversion": "TestData/DialogueDataTest3"
+                },
+                {
+                    "text": "Option B",
+                    "diversion": "TestDialogueB"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "TestCharacterA",
+            "text": "You diverted to another dialogue!",
+            "pause": true
+        }
+    ]
+}

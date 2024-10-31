@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerInventoryManager : MonoBehaviour
+{
+    public Inventory playerInventory;
+
+    void Start()
+    {
+        playerInventory = new Inventory();
+        playerInventory.LoadInventory();
+    }
+
+    //cuidado con guardar las cosas en el json durante la partida porque si cojo el colgante, guardo en json, cojo otra cosa y guardo en json, habrá 2 colgantes
+    //el enfoque es guardar en el json en algún punto que aún no he pensado (¿cuándo cambie de pantalla?)
+    public void CollectItem(ItemData item)
+    {
+        playerInventory.AddItem(item);
+    }
+
+    public void SaveOnCheckpoint()
+    {
+        playerInventory.SaveInventory();
+        Debug.Log("Inventario guardado en el punto de control.");
+    }
+
+    void OnApplicationQuit()
+    {
+        playerInventory.SaveInventory();
+    }
+}

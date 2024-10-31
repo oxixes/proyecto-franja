@@ -1,0 +1,8 @@
+{
+    "lines": [
+        {
+            "type": "diversion",
+            "diversion": "hola"
+        }
+    ]
+}
