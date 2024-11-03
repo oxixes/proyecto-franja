@@ -1796,6 +1796,9 @@ MonoBehaviour:
   textSpeed: 40
   timeBetweenLines: 1
   accelerationOnInput: 5
+  spacePressed: 0
+  upPressed: 0
+  downPressed: 0
 --- !u!222 &8107498902040075349
 CanvasRenderer:
   m_ObjectHideFlags: 0
