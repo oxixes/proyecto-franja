@@ -21,6 +21,7 @@ public class DialogueData
         public bool pause = false;
         public string imageAssetId;
         public string diversion;
+        public string notificationId;
         public DialogueOption[] options = { };
 
         public int GetTextCharLength()
@@ -101,15 +102,21 @@ public class DialogueData
 
         public bool CheckFormatOk()
         {
-            if (type != "text" && type != "options" && type != "diversion")
+            if (type != "text" && type != "options" && type != "diversion" && type != "notification")
             {
                 Debug.LogError("Invalid dialogue line type: " + type);
                 return false;
             }
 
-            if (type == "text" && string.IsNullOrEmpty(text))
+            if ((type == "text" || type == "notification") && string.IsNullOrEmpty(text))
             {
-                Debug.LogError("Dialogue line type is text but no text is defined");
+                Debug.LogError("Dialogue line type is text or notification but no text is defined");
+                return false;
+            }
+
+            if (type == "notification" && string.IsNullOrEmpty(notificationId))
+            {
+                Debug.LogError("Dialogue line type is notification but no notificationId is defined");
                 return false;
             }
 

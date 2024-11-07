@@ -1,0 +1,8 @@
+{
+    "lines": [
+        {
+            "type": "notification",
+            "text": "notificationData"
+        }
+    ]
+}
