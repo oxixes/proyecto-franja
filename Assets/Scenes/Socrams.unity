@@ -174,7 +174,6 @@ GameObject:
   - component: {fileID: 127619923}
   - component: {fileID: 127619926}
   - component: {fileID: 127619925}
-  - component: {fileID: 127619924}
   m_Layer: 0
   m_Name: "Ni\xF1a"
   m_TagString: Untagged
@@ -197,21 +196,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 924308848}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &127619924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127619922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5708353fc80c34096f4ca53ffca740, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueID: KasDialogue
-  ePressed: 0
-  forcePlayerInRange: 0
 --- !u!61 &127619925
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -632,7 +616,6 @@ GameObject:
   - component: {fileID: 737449208}
   - component: {fileID: 737449211}
   - component: {fileID: 737449210}
-  - component: {fileID: 737449209}
   m_Layer: 0
   m_Name: Universitario1
   m_TagString: Untagged
@@ -655,21 +638,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 924308848}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &737449209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737449207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5708353fc80c34096f4ca53ffca740, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueID: KasDialogue
-  ePressed: 0
-  forcePlayerInRange: 0
 --- !u!61 &737449210
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18044,7 +18012,6 @@ GameObject:
   - component: {fileID: 1019886579}
   - component: {fileID: 1019886583}
   - component: {fileID: 1019886582}
-  - component: {fileID: 1019886580}
   m_Layer: 0
   m_Name: Mantero
   m_TagString: Untagged
@@ -18067,21 +18034,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 924308848}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1019886580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019886578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5708353fc80c34096f4ca53ffca740, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueID: KasDialogue
-  ePressed: 0
-  forcePlayerInRange: 0
 --- !u!61 &1019886582
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18915,7 +18867,6 @@ GameObject:
   - component: {fileID: 1423769336}
   - component: {fileID: 1423769339}
   - component: {fileID: 1423769338}
-  - component: {fileID: 1423769337}
   m_Layer: 0
   m_Name: Quiosquero
   m_TagString: Untagged
@@ -18938,21 +18889,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 924308848}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1423769337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1423769335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5708353fc80c34096f4ca53ffca740, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueID: KasDialogue
-  ePressed: 0
-  forcePlayerInRange: 0
 --- !u!61 &1423769338
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19725,7 +19661,6 @@ GameObject:
   - component: {fileID: 1886071429}
   - component: {fileID: 1886071432}
   - component: {fileID: 1886071431}
-  - component: {fileID: 1886071430}
   m_Layer: 0
   m_Name: Universitario2
   m_TagString: Untagged
@@ -19748,21 +19683,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 924308848}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1886071430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1886071428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5708353fc80c34096f4ca53ffca740, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueID: KasDialogue
-  ePressed: 0
-  forcePlayerInRange: 0
 --- !u!61 &1886071431
 BoxCollider2D:
   m_ObjectHideFlags: 0
