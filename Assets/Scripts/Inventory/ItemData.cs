@@ -11,7 +11,7 @@ public class ItemData : ScriptableObject
     public bool isUsable;
 }
 
-[CreateAssetMenu(fileName = "NewInformation", menuName = "Inventory/Information")]
+[CreateAssetMenu(fileName = "NewInformation", menuName = "Inventory/InformationData")]
 public class InformationData : ScriptableObject
 {
     public string infoName;

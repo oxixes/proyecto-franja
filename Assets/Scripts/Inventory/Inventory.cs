@@ -57,7 +57,7 @@ public class Inventory
         {
             information.Add(info); // Añadir a la lista en memoria
             SaveToJson();          // Guardar en JSON si es nuevo
-            Debug.Log("Información añadida y guardada en JSON.");
+            Debug.Log("Información añadida y guardada en JSON y de verdad.");
         }
         else
         {

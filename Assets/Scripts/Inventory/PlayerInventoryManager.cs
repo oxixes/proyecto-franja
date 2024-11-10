@@ -20,6 +20,16 @@ public class PlayerInventoryManager : MonoBehaviour
         playerInventory.AddItem(item);
     }
 
+    // Nueva función para recoger InformationData
+    public void CollectInformation(InformationData info)
+    {
+        if (playerInventory != null)
+        {
+            playerInventory.AddInformation(info);
+            Debug.Log($"Información '{info.infoName}' ha sido llevada a Inventory");
+        }
+    }
+
     public void SaveOnCheckpoint()
     {
         playerInventory.SaveInventory();
