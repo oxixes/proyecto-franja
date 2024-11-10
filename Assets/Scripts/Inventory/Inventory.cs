@@ -8,12 +8,14 @@ public class Inventory
 {
     public List<ItemData> items = new List<ItemData>();
     public List<InformationData> information = new List<InformationData>();
+    private static string filePath;
 
-    private static string filePath = Application.persistentDataPath + "/inventory.json";
+
 
     // Cargar inventario desde JSON si existe
     private void LoadFromJson()
     {
+        filePath = Application.persistentDataPath + "/inventory.json";
         if (File.Exists(filePath))
         {
             string json = File.ReadAllText(filePath);
@@ -24,6 +26,7 @@ public class Inventory
     // Guardar inventario en JSON
     private void SaveToJson()
     {
+        filePath = Application.persistentDataPath + "/inventory.json";
         string json = JsonUtility.ToJson(this);
         File.WriteAllText(filePath, json);
     }

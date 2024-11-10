@@ -647,8 +647,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c435fed779adc74c9b829abb4fa6f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: d2b6f395a14082b44922a557ee0bb2cd, type: 2}
-  dialogueId: 
+  itemData: {fileID: 11400000, guid: 446914932be07ad4cb5201f7a8214ccf, type: 2}
+  dialogueId: ItemDialogue
 --- !u!58 &627817757
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1147,7 +1147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b065052ca58e1244b91dd3d8b039a1fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoData: {fileID: 0}
+  infoData: {fileID: 11400000, guid: 5cba9eaf11341804dacb3fcbbbd32dd5, type: 2}
   dialogueId: InfoProvider_GirlWInfo
 --- !u!1001 &1516803131
 PrefabInstance:

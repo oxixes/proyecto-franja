@@ -15,13 +15,13 @@ public class CollectibleItem : MonoBehaviour
         dialogueSystem = DialogueSystem.GetInstance();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-        //tengo que comprobar si existe el objeto en el inventario, si está, destruyo el objeto 
-
-        
         playerInventory = player.GetComponent<PlayerInventoryManager>();
-        if (playerInventory !=null)
+        
+        if (playerInventory ==null)
             Debug.LogError("No existe el Inventario");
 
+        //tengo que comprobar si existe el objeto en el inventario, si está, destruyo el objeto 
+        CheckIfItemAlreadyInInventory();
         // Verifica si se ha encontrado el DialogueSystem
         if (dialogueSystem == null)
         {
@@ -42,12 +42,26 @@ public class CollectibleItem : MonoBehaviour
         }
     }
 
+    //Revisa si el objeto está en el inventario. En caso de estarlo, lo destruye. 
+    private void CheckIfItemAlreadyInInventory()
+    {
+        Debug.Log("he entrado");
+        if (playerInventory != null && itemData != null)
+        {
+            if (playerInventory.playerInventory.HasItem(itemData))
+            {
+                Debug.Log($"El ítem '{itemData.itemName}' ya está en el inventario. Destruyendo el objeto.");
+                Destroy(gameObject); // Elimina el objeto de la escena
+            }
+        }
+    }
+
     private void ShowCollectDialogue()
     {
         // Inicia el diálogo usando el DialogueSystem con el ID proporcionado
         if (dialogueSystem != null && !dialogueSystem.IsDialogueActive())
         {
-            dialogueSystem.StartDialogue("ItemDialogue");
+            dialogueSystem.StartDialogue(dialogueId);
         }
     }
 
