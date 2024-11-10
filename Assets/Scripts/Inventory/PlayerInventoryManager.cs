@@ -16,6 +16,7 @@ public class PlayerInventoryManager : MonoBehaviour
     //el enfoque es guardar en el json en algún punto que aún no he pensado (¿cuándo cambie de pantalla?)
     public void CollectItem(ItemData item)
     {
+        Debug.Log("Calling fun of Player Inventory");
         playerInventory.AddItem(item);
     }
 

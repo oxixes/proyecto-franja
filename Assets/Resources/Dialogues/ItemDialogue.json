@@ -16,7 +16,8 @@
                     "diversion": "CollectItem"
                 },
                 {
-                    "text": "No"
+                    "text": "No",
+                    "diversion": "Empty"
                 }
             ]
         }

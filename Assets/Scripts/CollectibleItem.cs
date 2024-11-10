@@ -6,12 +6,21 @@ public class CollectibleItem : MonoBehaviour
     private DialogueSystem dialogueSystem;
     public ItemData itemData; // Asigna el ItemData en el Inspector
     public string dialogueId; // El ID del diálogo que se usará en el DialogueSystem
-    private int notificationHandlerId; // ID de la subscripción a la notificación
+    private int notificationHandlerId = -1; // ID de la subscripción a la notificación
+    PlayerInventoryManager playerInventory;
 
     void Start()
     {
         // Obtén una referencia al DialogueSystem al inicio
         dialogueSystem = DialogueSystem.GetInstance();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        //tengo que comprobar si existe el objeto en el inventario, si está, destruyo el objeto 
+
+        
+        playerInventory = player.GetComponent<PlayerInventoryManager>();
+        if (playerInventory !=null)
+            Debug.LogError("No existe el Inventario");
 
         // Verifica si se ha encontrado el DialogueSystem
         if (dialogueSystem == null)
@@ -38,7 +47,7 @@ public class CollectibleItem : MonoBehaviour
         // Inicia el diálogo usando el DialogueSystem con el ID proporcionado
         if (dialogueSystem != null && !dialogueSystem.IsDialogueActive())
         {
-            dialogueSystem.StartDialogue(dialogueId);
+            dialogueSystem.StartDialogue("ItemDialogue");
         }
     }
 
@@ -54,20 +63,27 @@ public class CollectibleItem : MonoBehaviour
     // Método que se ejecutará para recoger el ítem y guardarlo en el inventario
     public void CollectItem()
     {
-        PlayerInventoryManager playerInventory = FindObjectOfType<PlayerInventoryManager>();
+        
+        Debug.Log(playerInventory);
+        Debug.Log(itemData);
         if (playerInventory != null && itemData != null)
         {
             playerInventory.CollectItem(itemData);
             Debug.Log($"Item {itemData.itemName} añadido al inventario.");
             Destroy(gameObject); // Destruye el objeto de la escena
 
-            // Elimina la suscripción a la notificación
-            dialogueSystem.RemoveNotificationHandler(notificationHandlerId);
         }
         else
         {
             Debug.LogWarning("PlayerInventoryManager o itemData es nulo.");
         }
+    }
+
+    public void OnDestroy()
+    {
+        // Elimina la suscripción a la notificación
+        if (notificationHandlerId != -1)
+            dialogueSystem.RemoveNotificationHandler(notificationHandlerId);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -39,7 +39,7 @@ public class Inventory
         {
             items.Add(item); // Añadir al inventario en memoria
             SaveToJson();    // Guardar en JSON si es nuevo
-            Debug.Log("Objeto añadido y guardado en JSON.");
+            Debug.Log("Objeto añadido y guardado en JSON de verdad.");
         }
         else
         {
