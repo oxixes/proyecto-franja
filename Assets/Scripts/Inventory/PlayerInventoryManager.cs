@@ -34,6 +34,12 @@ public class PlayerInventoryManager : MonoBehaviour
         Debug.Log("Inventario guardado en el punto de control.");
     }
 
+    //cambio abajo
+    public bool HasInformation(InformationData info)
+    {
+        return playerInventory != null && playerInventory.HasInformation(info);
+    }
+
     void OnApplicationQuit()
     {
         playerInventory.SaveInventory();
