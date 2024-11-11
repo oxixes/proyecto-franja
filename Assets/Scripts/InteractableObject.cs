@@ -8,13 +8,17 @@ public class InteractableObject : MonoBehaviour
     private DialogueSystem dialogueSystem;
     public string dialogueID;
 
+    // Allow tests to simulate key presses and player being in range
+    [HideInInspector] public bool ePressed = false;
+    [HideInInspector] public bool forcePlayerInRange = false;
+
     void Start() { 
         dialogueSystem = DialogueSystem.GetInstance();
     }
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
+        if ((isPlayerInRange || forcePlayerInRange) && (Input.GetKeyDown(KeyCode.E) || ePressed))
         {
             Interact();
         }

@@ -10,6 +10,12 @@ public class Player : MonoBehaviour
     private Animator animator;
     //PlayerInventoryManager playerInventory;
 
+    // Allow tests to simulate key presses
+    [HideInInspector] public bool upPressed = false;
+    [HideInInspector] public bool downPressed = false;
+    [HideInInspector] public bool leftPressed = false;
+    [HideInInspector] public bool rightPressed = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +37,11 @@ public class Player : MonoBehaviour
         {
             int horizontalDir = Input.GetAxisRaw("Horizontal") > 0 ? 1 : Input.GetAxisRaw("Horizontal") < 0 ? -1 : 0;
             int verticalDir = Input.GetAxisRaw("Vertical") > 0 ? 1 : Input.GetAxisRaw("Vertical") < 0 ? -1 : 0;
+
+            if (upPressed) verticalDir = 1;
+            if (downPressed) verticalDir = -1;
+            if (leftPressed) horizontalDir = -1;
+            if (rightPressed) horizontalDir = 1;
 
             animator.SetFloat("XDirection", horizontalDir);
             animator.SetFloat("YDirection", verticalDir);

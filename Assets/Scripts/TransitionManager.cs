@@ -14,7 +14,7 @@ public class TransitionManager : MonoBehaviour
 
     public GameObject newLevel;
     private GameObject currentLevel;
-    private GameObject player;
+    [HideInInspector] public GameObject player;
     public Coordinate coordToChange;
     public Vector2 newPlayerPosition;
 
