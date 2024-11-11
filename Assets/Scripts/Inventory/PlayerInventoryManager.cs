@@ -11,33 +11,41 @@ public class PlayerInventoryManager : MonoBehaviour
         playerInventory = new Inventory();
         playerInventory.LoadInventory();
     }
-
-    //cuidado con guardar las cosas en el json durante la partida porque si cojo el colgante, guardo en json, cojo otra cosa y guardo en json, habrá 2 colgantes
-    //el enfoque es guardar en el json en algún punto que aún no he pensado (¿cuándo cambie de pantalla?)
+    
     public void CollectItem(ItemData item)
     {
-        Debug.Log("Calling fun of Player Inventory");
         playerInventory.AddItem(item);
+        SaveOnCheckpoint();
     }
-
-    // Nueva función para recoger InformationData
+    
     public void CollectInformation(InformationData info)
     {
             playerInventory.AddInformation(info);
-            Debug.Log($"Información '{info.infoName}' ha sido llevada a Inventory");
         
     }
 
     public void SaveOnCheckpoint()
     {
         playerInventory.SaveInventory();
-        Debug.Log("Inventario guardado en el punto de control.");
+        Debug.Log("Inventory saved on checkpoint!");
     }
 
-    //cambio abajo
     public bool HasInformation(InformationData info)
     {
-        return playerInventory != null && playerInventory.HasInformation(info);
+        if (playerInventory == null)
+        {
+            throw new System.Exception("PlayerInventory is null");
+        }
+        return playerInventory.HasInformation(info);
+    }
+
+    public bool HasItem(ItemData item)
+    {
+        if (playerInventory == null)
+        {
+            throw new System.Exception("PlayerInventory is null");
+        }
+        return playerInventory.HasItem(item);
     }
 
     void OnApplicationQuit()

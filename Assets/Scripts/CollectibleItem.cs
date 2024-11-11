@@ -4,53 +4,56 @@ public class CollectibleItem : MonoBehaviour
 {
     private bool isPlayerInRange = false;
     private DialogueSystem dialogueSystem;
-    public ItemData itemData; // Asigna el ItemData en el Inspector
-    public string dialogueId; // El ID del diálogo que se usará en el DialogueSystem
-    private int notificationHandlerId = -1; // ID de la subscripción a la notificación
+    public ItemData itemData;
+    public string dialogueId;
+    private int notificationHandlerId = -1;
     PlayerInventoryManager playerInventory;
 
     void Start()
     {
-        // Obtén una referencia al DialogueSystem al inicio
+        // Obtains a reference to the DialogueSystem and PlayerInventoryManager
         dialogueSystem = DialogueSystem.GetInstance();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
 
         playerInventory = player.GetComponent<PlayerInventoryManager>();
         
-        if (playerInventory ==null)
-            Debug.LogError("No existe el Inventario");
-
-        //tengo que comprobar si existe el objeto en el inventario, si está, destruyo el objeto 
-        CheckIfItemAlreadyInInventory();
-        // Verifica si se ha encontrado el DialogueSystem
-        if (dialogueSystem == null)
+        if (playerInventory == null)
         {
-            Debug.LogError("DialogueSystem no se ha encontrado en la escena.");
+            Debug.LogError("Inventory not found!");
             return;
         }
 
-        // Suscríbete a la notificación "CollectItemNotification"
+        // Check if the item is already in inventory 
+        CheckIfItemAlreadyInInventory();
+
+        // Check if the DialogueSystem is null
+        if (dialogueSystem == null)
+        {
+            Debug.LogError("DialogueSystem not found!");
+            return;
+        }
+
+        // Subscribes to the "CollectItemNotification" notification
         notificationHandlerId = dialogueSystem.HandleNotification("CollectItemNotification", HandleCollectItemNotification);
     }
 
     void Update()
     {
-        // Si el jugador está en rango y presiona la tecla E
+        // Check if the player is in range and presses the E key
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
             ShowCollectDialogue();
         }
     }
 
-    //Revisa si el objeto está en el inventario. En caso de estarlo, lo destruye. 
+    // Checks if the item is already in the player's inventory, and destroys it if it is
     private void CheckIfItemAlreadyInInventory()
     {
-        Debug.Log("he entrado");
         if (playerInventory != null && itemData != null)
         {
             if (playerInventory.playerInventory.HasItem(itemData))
             {
-                Debug.Log($"El ítem '{itemData.itemName}' ya está en el inventario. Destruyendo el objeto.");
+                Debug.Log($"Item '{itemData.itemName}' already in inventory. Destroying...");
                 Destroy(gameObject); // Elimina el objeto de la escena
             }
         }
@@ -58,14 +61,14 @@ public class CollectibleItem : MonoBehaviour
 
     private void ShowCollectDialogue()
     {
-        // Inicia el diálogo usando el DialogueSystem con el ID proporcionado
+        // Starts the dialogue with the specified dialogueId if there isn't any active dialogue
         if (dialogueSystem != null && !dialogueSystem.IsDialogueActive())
         {
             dialogueSystem.StartDialogue(dialogueId);
         }
     }
 
-    // Función que maneja la notificación y recoge el ítem
+    // Item collection notification handler
     private void HandleCollectItemNotification(string dialogueId, string notificationId, string notificationData)
     {
         if (notificationId == "CollectItemNotification")
@@ -74,7 +77,7 @@ public class CollectibleItem : MonoBehaviour
         }
     }
 
-    // Método que se ejecutará para recoger el ítem y guardarlo en el inventario
+    // Collect the item and add it to the inventory
     public void CollectItem()
     {
         
@@ -83,19 +86,19 @@ public class CollectibleItem : MonoBehaviour
         if (playerInventory != null && itemData != null)
         {
             playerInventory.CollectItem(itemData);
-            Debug.Log($"Item {itemData.itemName} añadido al inventario.");
-            Destroy(gameObject); // Destruye el objeto de la escena
+            Debug.Log($"Item {itemData.itemName} added to the inventory.");
+            Destroy(gameObject); // Destroy the object in the scene
 
         }
         else
         {
-            Debug.LogWarning("PlayerInventoryManager o itemData es nulo.");
+            Debug.LogWarning("PlayerInventoryManager or itemData is null.");
         }
     }
 
     public void OnDestroy()
     {
-        // Elimina la suscripción a la notificación
+        // Elimina la suscripciï¿½n a la notificaciï¿½n
         if (notificationHandlerId != -1)
             dialogueSystem.RemoveNotificationHandler(notificationHandlerId);
     }

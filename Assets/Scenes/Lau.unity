@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -427,7 +426,6 @@ GameObject:
   - component: {fileID: 347088149}
   - component: {fileID: 347088151}
   - component: {fileID: 347088147}
-  - component: {fileID: 347088146}
   m_Layer: 0
   m_Name: Kas
   m_TagString: Untagged
@@ -435,19 +433,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &347088146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347088145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5708353fc80c34096f4ca53ffca740, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueID: 
 --- !u!58 &347088147
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -792,7 +777,6 @@ GameObject:
   - component: {fileID: 703812232}
   - component: {fileID: 703812231}
   - component: {fileID: 703812230}
-  - component: {fileID: 703812233}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -867,25 +851,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 703812229}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.38, y: 2.09, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.100000024, y: 0.93999994, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1151298491}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &703812233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703812229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9c2a452a370d5f40b60ecb5d4574a16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &878904314
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,7 +938,6 @@ GameObject:
   - component: {fileID: 1141845683}
   - component: {fileID: 1141845682}
   - component: {fileID: 1141845681}
-  - component: {fileID: 1141845680}
   - component: {fileID: 1141845684}
   m_Layer: 0
   m_Name: GirlWInfo
@@ -990,19 +961,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2114761022}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1141845680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141845678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5708353fc80c34096f4ca53ffca740, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueID: 
 --- !u!58 &1141845681
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1149,6 +1107,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoData: {fileID: 11400000, guid: 5cba9eaf11341804dacb3fcbbbd32dd5, type: 2}
   dialogueId: InfoProvider_GirlWInfo
+  alternativeDialogueId: Info_Already_Adquired
+--- !u!4 &1151298491 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 271345579487052574, guid: c852279232f93a64e8498d655a91ba5a, type: 3}
+  m_PrefabInstance: {fileID: 1516803131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1516803131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1231,7 +1195,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 271345579487052574, guid: c852279232f93a64e8498d655a91ba5a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 703812232}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c852279232f93a64e8498d655a91ba5a, type: 3}
 --- !u!1001 &1604905520
@@ -3239,7 +3206,6 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 703812232}
   - {fileID: 878904317}
   - {fileID: 3983458985965392512}
   - {fileID: 1516803131}

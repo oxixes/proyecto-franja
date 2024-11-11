@@ -10,9 +10,7 @@ public class Inventory
     public List<InformationData> information = new List<InformationData>();
     private static string filePath;
 
-
-
-    // Cargar inventario desde JSON si existe
+    // Load inventory from JSON
     private void LoadFromJson()
     {
         filePath = Application.persistentDataPath + "/inventory.json";
@@ -23,7 +21,7 @@ public class Inventory
         }
     }
 
-    // Guardar inventario en JSON
+    // Save inventory to JSON
     private void SaveToJson()
     {
         filePath = Application.persistentDataPath + "/inventory.json";
@@ -31,40 +29,40 @@ public class Inventory
         File.WriteAllText(filePath, json);
     }
 
-    // Añadir un nuevo objeto sin duplicar en lista ni JSON
+    // Add a new item to the inventory without duplicating it in the list or JSON
     public void AddItem(ItemData item)
     {
-        // Cargar el inventario actual desde JSON para evitar duplicados en archivo
+        // Load inventory from JSON to check for duplicates
         LoadFromJson();
 
-        // Verificar si el objeto ya existe en la lista o en el JSON
+        // Check if the item already exists in the list or JSON
         if (!items.Exists(i => i.name == item.name))
         {
-            items.Add(item); // Añadir al inventario en memoria
-            SaveToJson();    // Guardar en JSON si es nuevo
-            Debug.Log("Objeto añadido y guardado en JSON de verdad.");
+            items.Add(item); // Add to the list in memory
+            SaveToJson();    // Save to JSON if it's new
+            Debug.Log("Added item to inventory!");
         }
         else
         {
-            Debug.Log("El objeto ya existe en el JSON y en la lista, no se añadirá.");
+            Debug.Log("Player already had item in inventory. No change was made.");
         }
     }
 
-    // Añadir nueva información sin duplicar en lista ni JSON
+    // Add a new information to the inventory without duplicating it in the list or JSON
     public void AddInformation(InformationData info)
     {
         LoadFromJson();
 
-        // Verificar si la información ya existe en la lista o en el JSON
+        // Check if the information already exists in the list or JSON
         if (!information.Exists(i => i.infoName == info.infoName))
         {
-            information.Add(info); // Añadir a la lista en memoria
-            SaveToJson();          // Guardar en JSON si es nuevo
-            Debug.Log("Información añadida y guardada en JSON y de verdad.");
+            information.Add(info); // Add to the list in memory
+            SaveToJson();          // Check if it's new and save to JSON
+            Debug.Log("Added information to inventory!");
         }
         else
         {
-            Debug.Log("La información ya existe en el JSON y en la lista, no se añadirá.");
+            Debug.Log("Player already had information in inventory. No change was made.");
         }
     }
 
