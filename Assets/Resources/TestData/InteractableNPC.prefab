@@ -133,5 +133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea5708353fc80c34096f4ca53ffca740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueID: 
+  dialogueID: TestDialogueMetro
   ePressed: 0
+  forcePlayerInRange: 0

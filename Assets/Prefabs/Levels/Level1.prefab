@@ -639,7 +639,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc16aee347e7c9e4d9e5575f3bb47ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newLevel: {fileID: 372148995213164418, guid: 7574df95e8fdffb4da3f74efadb0ef29, type: 3}
+  newLevel: {fileID: 316750823238533073, guid: 67a8f21bc7783184695254e41f44ea12, type: 3}
+  player: {fileID: 0}
   coordToChange: 0
   newPlayerPosition: {x: -15.5, y: 0}
 --- !u!1 &5111310414446068900
