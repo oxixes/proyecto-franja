@@ -29,7 +29,7 @@ public class InteractableObject : MonoBehaviour
 
         if (dialogueSystem != null && !dialogueSystem.IsDialogueActive())
         {
-            dialogueSystem.StartDialogue(dialogueID);  // Start dialogue with ID "KasDialogue"
+            dialogueSystem.StartDialogue(dialogueID);
         }
         else
         {

@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public float speed = 5.0f;
     public float runningSpeed = 10.0f;
     private Animator animator;
+    //PlayerInventoryManager playerInventory;
 
     // Allow tests to simulate key presses
     [HideInInspector] public bool upPressed = false;
@@ -19,6 +20,9 @@ public class Player : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        //playerInventory = gameObject.AddComponent<PlayerInventoryManager>();
+        Debug.Log("Inventory Created for the player");
+
     }
 
     void Update()
