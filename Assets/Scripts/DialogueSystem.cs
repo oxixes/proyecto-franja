@@ -340,6 +340,7 @@ public class DialogueSystem : MonoBehaviour
             return;
         }
 
+        currentOptionIndex = 0;
         currentDialogueLine = currentDialogueData.lines[currentDialogueLineIndex];
 
         if (currentDialogueLine.type.Equals("text") || currentDialogueLine.type.Equals("options"))
