@@ -7,7 +7,9 @@ public class CollectibleItem : MonoBehaviour
     public ItemData itemData;
     public string dialogueId;
     private int notificationHandlerId = -1;
-    PlayerInventoryManager playerInventory;
+
+    // Allow tests to access the player inventory
+    [HideInInspector] public PlayerInventoryManager playerInventory;
 
     void Start()
     {
@@ -80,15 +82,11 @@ public class CollectibleItem : MonoBehaviour
     // Collect the item and add it to the inventory
     public void CollectItem()
     {
-        
-        Debug.Log(playerInventory);
-        Debug.Log(itemData);
         if (playerInventory != null && itemData != null)
         {
             playerInventory.CollectItem(itemData);
             Debug.Log($"Item {itemData.itemName} added to the inventory.");
             Destroy(gameObject); // Destroy the object in the scene
-
         }
         else
         {
@@ -98,7 +96,7 @@ public class CollectibleItem : MonoBehaviour
 
     public void OnDestroy()
     {
-        // Elimina la suscripci�n a la notificaci�n
+        // Remove the notification handler when the object is destroyed
         if (notificationHandlerId != -1)
             dialogueSystem.RemoveNotificationHandler(notificationHandlerId);
     }

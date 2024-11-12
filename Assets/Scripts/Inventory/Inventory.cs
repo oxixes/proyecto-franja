@@ -19,6 +19,11 @@ public class Inventory
             string json = File.ReadAllText(filePath);
             JsonUtility.FromJsonOverwrite(json, this);
         }
+        else
+        {
+            items = new List<ItemData>();
+            information = new List<InformationData>();
+        }
     }
 
     // Save inventory to JSON

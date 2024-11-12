@@ -9,7 +9,9 @@ public class InfoProvider : MonoBehaviour
     public InformationData infoData;
     public string dialogueId;
     public string alternativeDialogueId;
-    PlayerInventoryManager playerInventory;
+
+    // Allow tests to access the player inventory
+    [HideInInspector] public PlayerInventoryManager playerInventory;
 
     void Start()
     {
@@ -60,7 +62,7 @@ public class InfoProvider : MonoBehaviour
         }
     }
 
-    private void AddInfoToInventory()
+    public void AddInfoToInventory()
     {
         if (playerInventory != null && infoData != null)
         {

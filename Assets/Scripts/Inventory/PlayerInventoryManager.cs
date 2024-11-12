@@ -6,7 +6,7 @@ public class PlayerInventoryManager : MonoBehaviour
 {
     public Inventory playerInventory;
 
-    void Start()
+    public void Start()
     {
         playerInventory = new Inventory();
         playerInventory.LoadInventory();
@@ -15,13 +15,11 @@ public class PlayerInventoryManager : MonoBehaviour
     public void CollectItem(ItemData item)
     {
         playerInventory.AddItem(item);
-        SaveOnCheckpoint();
     }
     
     public void CollectInformation(InformationData info)
     {
-            playerInventory.AddInformation(info);
-        
+        playerInventory.AddInformation(info);
     }
 
     public void SaveOnCheckpoint()
@@ -48,7 +46,7 @@ public class PlayerInventoryManager : MonoBehaviour
         return playerInventory.HasItem(item);
     }
 
-    void OnApplicationQuit()
+    public void OnApplicationQuit()
     {
         playerInventory.SaveInventory();
     }
