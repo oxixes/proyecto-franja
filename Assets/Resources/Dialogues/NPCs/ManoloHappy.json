@@ -20,6 +20,11 @@
             "text": "¡Fantástico! Gracias, jefe. Ya puedes pasar. Gloria a los basureros.",
             "pause": true,
             "imageAssetId": null
+        },
+        {
+            "type" : "notification",
+            "notificationId" : "ManoloDialogueFinished",
+            "text" : "NPCs/ManoloHappyRepeat"
         }
     ]
 }

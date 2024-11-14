@@ -17,7 +17,7 @@ public class TrashTruckController : MonoBehaviour
         manoloIO = manolo.GetComponent<InteractableObject>();
         DialogueSystem.GetInstance().HandleNotification("ContainerThrown", HandleNotification);
         DialogueSystem.GetInstance().HandleNotification("AllContainersThrown", HandleRiotFinishedNotification);
-        DialogueSystem.GetInstance().HandleNotification("ManoloEncountered", HandleManoloNotification);
+        DialogueSystem.GetInstance().HandleNotification("ManoloDialogueFinished", HandleManoloNotification);
     }
 
     void HandleNotification(string dialogueID, string notificationID, string notificationData)
@@ -47,6 +47,10 @@ public class TrashTruckController : MonoBehaviour
     void HandleManoloNotification(string dialogueID, string notificationID, string notificationData)
     {
         manoloIO.dialogueID = notificationData;
+        if(dialogueID == "NPCs/ManoloHappy")
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     IEnumerator StartContainerDialogue()
@@ -70,7 +74,6 @@ public class TrashTruckController : MonoBehaviour
     {
         yield return new WaitForSeconds(.1f);
         DialogueSystem.GetInstance().StartDialogue("Other/RiotFinished");
-        gameObject.SetActive(false);
         yield return null;
     }
     // Update is called once per frame

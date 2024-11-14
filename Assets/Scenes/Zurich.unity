@@ -132,11 +132,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 271345579487052574, guid: c852279232f93a64e8498d655a91ba5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.23
+      value: -35.76
       objectReference: {fileID: 0}
     - target: {fileID: 271345579487052574, guid: c852279232f93a64e8498d655a91ba5a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.37
+      value: -5.3
       objectReference: {fileID: 0}
     - target: {fileID: 271345579487052574, guid: c852279232f93a64e8498d655a91ba5a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -277,7 +277,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1279039478
 Transform:
   m_ObjectHideFlags: 0
@@ -438,7 +438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1859441932
 Transform:
   m_ObjectHideFlags: 0
@@ -531,7 +531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2067629289
 Transform:
   m_ObjectHideFlags: 0
@@ -2506,7 +2506,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &2773017354192180567
 GameObject:
   m_ObjectHideFlags: 0
@@ -5492,7 +5492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea5708353fc80c34096f4ca53ffca740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueID: KasDialogue
+  dialogueID: NPCs/KasDialogue
   ePressed: 0
   forcePlayerInRange: 0
 --- !u!114 &4598120055504115391
@@ -16678,7 +16678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea5708353fc80c34096f4ca53ffca740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueID: KasDialogue
+  dialogueID: NPCs/MarujaDialogue
   ePressed: 0
   forcePlayerInRange: 0
 --- !u!1 &5006862680134742292
@@ -17643,7 +17643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea5708353fc80c34096f4ca53ffca740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueID: ThiefDialogue1
+  dialogueID: NPCs/ThiefDialogue1
   ePressed: 0
   forcePlayerInRange: 0
 --- !u!212 &6558766658012773386
@@ -18089,7 +18089,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!483693784 &7238493414418505862
 TilemapRenderer:
   m_ObjectHideFlags: 0
