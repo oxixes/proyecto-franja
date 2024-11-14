@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd523721-4426-4984-a488-793cc221e6e0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.proyecto-franja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.proyecto-franja/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Metro1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Metro1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Metro2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Metro2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TestData/InteractableNPC.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TestData/InteractableNPC.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Metro1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Metro1.unity" afterDir="false" />
-    </list>
+    <list default="true" id="fd523721-4426-4984-a488-793cc221e6e0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731268834785</updated>
       <workItem from="1731268837591" duration="1593000" />
-      <workItem from="1731325969421" duration="1176000" />
+      <workItem from="1731325969421" duration="1525000" />
     </task>
     <servers />
   </component>
