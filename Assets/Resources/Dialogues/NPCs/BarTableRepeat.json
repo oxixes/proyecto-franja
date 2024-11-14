@@ -1,0 +1,16 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "text": "Qué mal vamos...",
+            "pause": true,
+            "characterName": "Hombre 1"
+        },
+        {
+            "type": "text",
+            "text": "Ya te digo...",
+            "pause": true,
+            "characterName": "Hombre 2"
+        }
+    ]
+}
