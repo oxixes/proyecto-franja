@@ -37,8 +37,8 @@
         },
         {
             "type": "notification",
-            "notificationId": "robado",
-            "text": "corre"
+            "notificationId": "ThiefRun",
+            "text": "ThiefRun"
         },
         {
             "type": "text",
