@@ -1,0 +1,22 @@
+{
+    "lines": [
+    {
+        "type": "text",
+        "text": "<i>El contenedor se cae.</i>",
+        "pause": true,
+        "imageAssetId": null
+    },
+    {
+        "type": "text",
+        "characterName": "Juan",
+        "text": "Je, le he empezado a coger gusto, lástima que sea el último.",
+        "pause": true,
+        "imageAssetId": null
+    },
+    {
+        "type": "notification",
+        "notificationId": "AllContainersThrown",
+        "text": "AllContainersThrown"
+    }
+]
+}

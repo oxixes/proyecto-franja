@@ -1,0 +1,17 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "text": "<i>El contenedor se cae.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Bueno, de perdidos al río, allá va otro.",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}
