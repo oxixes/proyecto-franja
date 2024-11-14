@@ -1,0 +1,16 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "GirlWInfo",
+            "text": "Tengo información importante que debes saber. Tu mamá me mima",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "InfoReceived",
+            "text": "Has recibido la información de GirlWInfo"
+        }
+    ]
+}

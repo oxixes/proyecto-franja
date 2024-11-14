@@ -1,0 +1,9 @@
+{
+    "lines": [
+        {
+            "type": "notification",
+            "notificationId": "CollectItemNotification",
+            "text": "El ítem ha sido recogido y guardado en tu inventario."
+        }
+    ]
+}
