@@ -1,0 +1,25 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Manolo",
+            "text": "¿Qué quieres ahora? ¿Has terminado de tirar los contenedores?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "No, aún no.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Manolo",
+            "text": "Pues no vuelvas hasta que lo hagas.",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}
