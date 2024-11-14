@@ -5,6 +5,7 @@ using UnityEngine;
 public class InteractableObject : MonoBehaviour
 {
     private bool isPlayerInRange = false;
+    private bool inDialogue = false;
     private DialogueSystem dialogueSystem;
     public string dialogueID;
 
@@ -18,6 +19,7 @@ public class InteractableObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        inDialogue = dialogueSystem.IsDialogueActive();
         if ((isPlayerInRange || forcePlayerInRange) && (Input.GetKeyDown(KeyCode.E) || ePressed))
         {
             Interact();
