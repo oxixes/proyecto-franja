@@ -1,0 +1,57 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "???",
+            "text": "Ey bro, déjame ver el móvil que lo tienes roto.",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "¿Cómo va a estar roto, si es nuevo?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "text": "<i>El ladrón te quita el móvil de las manos.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "¿Tan fácil? Me das un poco de pena, en verdad.",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+        {
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "...",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+        {
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "Bueno, hasta luego parguela.",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+        {
+            "type": "notification",
+            "notificationId": "ThiefRun",
+            "text": "ThiefRun"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "¡Eh! Vuelve aquí y dame el móvil.",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}
