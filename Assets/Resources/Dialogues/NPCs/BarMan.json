@@ -1,0 +1,15 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "text": "El cani ese que me ha robado el Xiaomi nuevo, me voy a por una cerveza Antonio que\no disgusto.",
+            "pause": true,
+            "characterName": "???"
+        },
+        {
+            "type": "notification",
+            "notificationId": "BarManDialogueFinished",
+            "text": "BarManDialogueFinished"
+        }
+    ]
+}

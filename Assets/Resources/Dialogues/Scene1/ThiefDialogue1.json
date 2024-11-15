@@ -36,6 +36,11 @@
             "imageAssetId": "anonymous"
         },
         {
+            "type": "notification",
+            "notificationId": "ThiefRun",
+            "text": "ThiefRun"
+        },
+        {
             "type": "text",
             "characterName": "Juan",
             "text": "¡Eh! Vuelve aquí y dame el móvil.",

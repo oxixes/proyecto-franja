@@ -1,0 +1,30 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Manolo",
+            "text": "¿Qué quieres ahora? ¿Has terminado de tirar los contenedores?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Sí, ya he tirado todos los contenedores.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Manolo",
+            "text": "¡Fantástico! Gracias, jefe. Ya puedes pasar. Gloria a los basureros.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type" : "notification",
+            "notificationId" : "ManoloDialogueFinished",
+            "text" : "NPCs/ManoloHappyRepeat"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "Eres un tonto, te voy a dar una paliza",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+		{
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "Oh vaya sabes muchas cosas, me voy",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        }
+    ]
+}

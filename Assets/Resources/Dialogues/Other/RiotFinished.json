@@ -1,0 +1,11 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Con esto debería bastar. A ver si puedo pasar ahora.",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}

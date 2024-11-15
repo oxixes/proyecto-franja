@@ -96,15 +96,11 @@ public class PlayerTests
     [UnityTest]
     public IEnumerator PlayerSwitchesLevels()
     {
-        yield return new WaitForEndOfFrame();
-        yield return new WaitForEndOfFrame();
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(.5f);
 
         player.transform.position = new Vector2(13.5f, 0);
         this.transitionManager.player = player.gameObject;
-        yield return new WaitForEndOfFrame();
-        yield return new WaitForEndOfFrame();
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(.5f);
 
         Assert.IsFalse(this.level1Prefab.activeSelf);
         Assert.IsTrue(this.level2Prefab.activeSelf);
