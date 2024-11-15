@@ -331,8 +331,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea5708353fc80c34096f4ca53ffca740, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   dialogueID: ThiefDialogue1
   ePressed: 0
   forcePlayerInRange: 0
@@ -5183,8 +5183,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc16aee347e7c9e4d9e5575f3bb47ad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   newLevel: {fileID: 372148995213164418, guid: 7574df95e8fdffb4da3f74efadb0ef29, type: 3}
   player: {fileID: 0}
   coordToChange: 0
@@ -14794,8 +14794,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea5708353fc80c34096f4ca53ffca740, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   dialogueID: KasDialogue
   ePressed: 0
   forcePlayerInRange: 0
