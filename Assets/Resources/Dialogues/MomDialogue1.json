@@ -1,0 +1,53 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Mamá",
+            "text": "Hijo, ¿cómo te sientes después de la mudanza?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Bien, mamá",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Mamá",
+            "text": "Me alegro ¿Y qué tal con el móvil nuevo?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Aun me tengo que acostumbrar, pero bien",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Mamá",
+            "text": "Bueno, ten cuidado con él, no vaya a ser que te lo roben",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Que me van a robar el móvil, mamá. Bueno, adiós",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Mamá",
+            "text": "Adiós Juan, ten un buen día",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}

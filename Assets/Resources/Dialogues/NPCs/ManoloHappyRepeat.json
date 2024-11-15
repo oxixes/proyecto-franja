@@ -1,0 +1,11 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Manolo",
+            "text": "¿Vas a pasar o qué? No tengo todo el día.",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}

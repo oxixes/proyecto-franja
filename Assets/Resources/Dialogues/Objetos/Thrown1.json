@@ -1,0 +1,17 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "text": "<i>El contenedor se cae.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Se siente raro, quizá no debería hacer esto...",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}
