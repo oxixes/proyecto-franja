@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KasThinking : MonoBehaviour
+public class Spawn : MonoBehaviour
 {
+    public GameObject trigger;
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        DialogueSystem.GetInstance().StartDialogue("Scene1/ThinkingAboutKas");
+        DialogueSystem.GetInstance().StartDialogue("NPCs/MomDialogue1");
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        gameObject.SetActive(false);
+        trigger.SetActive(false);
     }
-}
+ }
 

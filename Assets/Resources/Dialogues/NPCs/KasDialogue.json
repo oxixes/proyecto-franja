@@ -41,6 +41,11 @@
             "text": "Ve a buscar a ese malhechor, y si no lo encuentras, ven a buscarme. Te\nayudaré.",
             "pause": true,
             "imageAssetId": "old_man"
+        },
+        {
+            "type": "notification",
+            "notificationId": "KasDialogueFinished",
+            "text": "KasDialogueFinished"
         }
     ]
 }

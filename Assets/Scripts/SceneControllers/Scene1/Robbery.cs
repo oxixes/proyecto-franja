@@ -14,7 +14,7 @@ public class Robbery : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {  
-        DialogueSystem.GetInstance().StartDialogue("Scene1/MomDialogue1");
+        DialogueSystem.GetInstance().StartDialogue("NPCs/MomDialogue1");
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -25,8 +25,8 @@ public class Robbery : MonoBehaviour
             StartCoroutine(MoveLadronTowards(player.transform.position, thiefSpeed));
 
             DialogueSystem.GetInstance().HandleNotification("ThiefRun", HandleThiefRunNotification);
-            DialogueSystem.GetInstance().StartDialogue("Scene1/ThiefDialogue1");
-            mom.GetComponent<InteractableObject>().dialogueID = "Scene1/MomDialogue2";
+            DialogueSystem.GetInstance().StartDialogue("NPCs/ThiefDialogue1");
+            mom.GetComponent<InteractableObject>().dialogueID = "NPCs/MomDialogue2";
         }
     }
 

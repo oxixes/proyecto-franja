@@ -16,21 +16,27 @@
         },
         {
             "type": "text",
-            "characterName": "???",
+            "text": "<i>El ladrón te quita el móvil de las manos.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Ladrón",
             "text": "¿Tan fácil? Me das un poco de pena, en verdad.",
             "pause": true,
             "imageAssetId": "anonymous"
         },
         {
             "type": "text",
-            "characterName": "???",
+            "characterName": "Ladrón",
             "text": "...",
             "pause": true,
             "imageAssetId": "anonymous"
         },
         {
             "type": "text",
-            "characterName": "???",
+            "characterName": "Ladrón",
             "text": "Bueno, hasta luego parguela.",
             "pause": true,
             "imageAssetId": "anonymous"
