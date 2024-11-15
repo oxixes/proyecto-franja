@@ -291,7 +291,7 @@ MonoBehaviour:
   thief: {fileID: 1532762913}
   thiefSpeed: 5
   thiefRunningSpeed: 50
-  trackingMinDistance: 1.5
+  trackingMinDistance: 2.2
 --- !u!61 &19498281
 BoxCollider2D:
   m_ObjectHideFlags: 0
