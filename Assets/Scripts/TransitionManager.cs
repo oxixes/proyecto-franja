@@ -34,8 +34,8 @@ public class TransitionManager : MonoBehaviour
     public void Transition()
     {
         Debug.Log("Transitioning");
-        currentLevel.SetActive(false);
-        newLevel.SetActive(true);
+        currentLevel.GetComponent<LevelDisable>().Disable();
+        newLevel.GetComponent<LevelDisable>().Enable();
 
         if (coordToChange == Coordinate.X)
         {

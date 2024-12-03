@@ -23,11 +23,26 @@ public class Player : MonoBehaviour
         //playerInventory = gameObject.AddComponent<PlayerInventoryManager>();
         Debug.Log("Inventory Created for the player");
 
+        if (SaveManager.GetInstance().Get<int>("InitialSpawn") != 0)
+        {
+            gameObject.transform.position = new Vector3(SaveManager.GetInstance().Get<float>("PlayerX"), SaveManager.GetInstance().Get<float>("PlayerY"), 0);
+        }
+        else
+        {
+            SaveManager.GetInstance().Set("InitialSpawn", 1);
+            SaveManager.GetInstance().Set("PlayerX", transform.position.x);
+            SaveManager.GetInstance().Set("PlayerY", transform.position.y);
+        }
+
+        StartCoroutine(SavePeriodically());
     }
 
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            SaveManager.GetInstance().DeleteAll();
+        }
     }
 
     // Update is called once per frame
@@ -52,7 +67,7 @@ public class Player : MonoBehaviour
             bool running = Input.GetKey(KeyCode.LeftShift);
 
             transform.Translate(direction.normalized * (running ? runningSpeed : speed) * Time.deltaTime);
-        } 
+        }
         else
         {
             animator.SetFloat("XDirection", 0);
@@ -70,6 +85,23 @@ public class Player : MonoBehaviour
             {
                 tm.Transition();
             }
+        }
+    }
+
+    // Save the player's position when the game closes
+    private void OnApplicationQuit()
+    {
+        SaveManager.GetInstance().Set("PlayerX", transform.position.x);
+        SaveManager.GetInstance().Set("PlayerY", transform.position.y);
+    }
+
+    private IEnumerator SavePeriodically()
+    {
+        while (true)
+        {
+            SaveManager.GetInstance().Set("PlayerX", transform.position.x);
+            SaveManager.GetInstance().Set("PlayerY", transform.position.y);
+            yield return new WaitForSeconds(5);
         }
     }
 }

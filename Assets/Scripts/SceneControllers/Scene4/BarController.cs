@@ -16,6 +16,11 @@ public class BarController : MonoBehaviour
         barTableMan1IO = barTableMan1.GetComponent<InteractableObject>();
         barTableMan2IO = barTableMan2.GetComponent<InteractableObject>();
 
+        if (SaveManager.GetInstance().Get<int>("Scene4BarTableDialogueFinished") == 1)
+        {
+            HandleTableConversationFinishNotification(null, null, null);
+        }
+
         DialogueSystem.GetInstance().HandleNotification("BarTableDialogueFinished", HandleTableConversationFinishNotification);
     }
 
@@ -23,5 +28,7 @@ public class BarController : MonoBehaviour
     {
         barTableMan1IO.dialogueID = "NPCs/BarTableRepeat";
         barTableMan2IO.dialogueID = "NPCs/BarTableRepeat";
+
+        SaveManager.GetInstance().Set("Scene4BarTableDialogueFinished", 1);
     }
 }
