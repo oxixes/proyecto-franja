@@ -1,0 +1,17 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "Ahí te quedas panoli, me quedo esto",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+        {
+            "type": "notification",
+            "notificationId": "Hostiazo",
+            "text": "Hostiazo"
+        }
+		
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "Vaya, parece que has aprendido algo.",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+        {
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "Bueno, mi planeta me necesita, hasta la próximaaaaa",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+        {
+            "type": "notification",
+            "notificationId": "SubirAlMetro",
+            "text": "SubirAlMetro"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "¿Ya lo tienes?",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Sí.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "Bien, bueno, ahí te quedas.",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+        {
+            "type": "notification",
+            "notificationId": "Irse",
+            "text": "Irse"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "¡Oye!",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "Eliminar",
+            "text": "Eliminar"
+        }
+    ]
+}
