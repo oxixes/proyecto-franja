@@ -41,11 +41,6 @@
             "text":"Combate"
         },
         {
-            "type": "notification",
-            "notificationId": "LlegaMetro",
-            "text": "LlegaMetro"
-        },
-        {
             "type": "options",
             "characterName": "Juan",
             "options": [

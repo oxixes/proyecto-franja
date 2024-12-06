@@ -1,17 +1,62 @@
 {
     "lines": [
         {
+            "type": "notification",
+            "notificationId": "LlegaMetro",
+            "text": "LlegaMetro"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "¡Mierda! ¡El metro!",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
             "type": "text",
             "characterName": "Ladrón",
             "text": "Ahí te quedas panoli, me quedo esto",
             "pause": true,
             "imageAssetId": "anonymous"
         },
+        
+        {
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "Eh, mira aquí, un móvil",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "¿?",
+            "pause": true,
+            "imageAssetId": null
+        },
         {
             "type": "notification",
             "notificationId": "Hostiazo",
             "text": "Hostiazo"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "¡Agh!",
+            "pause": true,
+            "imageAssetId": null
+        },
+		{
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "Eres patético, pringao.",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+        {
+            "type": "notification",
+            "notificationId": "SubirAlMetro",
+            "text": "SubirAlMetro"
         }
-		
     ]
 }

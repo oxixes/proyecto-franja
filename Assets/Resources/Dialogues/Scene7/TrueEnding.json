@@ -1,6 +1,11 @@
 {
     "lines": [
         {
+            "type": "notification",
+            "notificationId": "LlegaMetro",
+            "text": "LlegaMetro"
+        },
+        {
             "type": "text",
             "characterName": "Ladrón",
             "text": "!!!",
