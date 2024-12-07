@@ -244,7 +244,7 @@ public class DialogueSystem : MonoBehaviour
                     }
 
                     // Wait for player input
-                    if (Input.GetKeyDown(KeyCode.Space) || spacePressed)
+                    if (Input.GetKeyDown(KeyCode.Space) || spacePressed || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
                     {
                         timeSinceLastCharacter = 0;
                         currentCharacterIndex = 0;
@@ -268,7 +268,7 @@ public class DialogueSystem : MonoBehaviour
             else
             {
                 float acceleration = 1.0f;
-                if (Input.GetKeyDown(KeyCode.Space) || spacePressed)
+                if (Input.GetKeyDown(KeyCode.Space) || spacePressed || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
                 {
                     currentLineAccelerated = true;
                 }
@@ -315,7 +315,7 @@ public class DialogueSystem : MonoBehaviour
             {
                 currentOptionIndex = (currentOptionIndex + 1) % currentDialogueLine.options.Length;
             }
-            else if (Input.GetKeyDown(KeyCode.Space) || spacePressed)
+            else if (Input.GetKeyDown(KeyCode.Space) || spacePressed || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
             {
                 currentDialogueLineIndex = -1;
                 characterImage.texture = null;
