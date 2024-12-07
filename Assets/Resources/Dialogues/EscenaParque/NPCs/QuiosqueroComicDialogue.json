@@ -1,0 +1,23 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Francisco",
+            "text":"Entendido. Aquí tienes. Muchas gracias, niño.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text":"¡Gracias a usted, Francisco! Que tenga un buen día.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "ComicBought",
+            "text": "Hola Txema"
+        }
+    ]
+}

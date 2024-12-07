@@ -1,0 +1,44 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Te he dicho que no quiero hablar contigo. ¿Qué parte no entiendes?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Mira que gorra más chula tengo. ¿Sigues pensando que no soy de por aquí?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Pero vamos a ver, niño. ¿De verdad crees que con una gorra vas a convencerme de algo?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Si encima es más falsa que un billete de 3 euros. Además, sé que se la has comprado a Paco. A nadie le cae bien ese señor.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "No te lo pienso repetir. ¡Vete de aquí! ¡No quiero verte más!",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "ManteroAngry",
+            "text": "EscenaParque/NPCs/ManteroIgnoresJuan"
+        }
+    ]
+}

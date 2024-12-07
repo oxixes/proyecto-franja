@@ -1,0 +1,37 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Hola. ¿Has visto a un chico corriendo por aquí? Se ha llevado mi móvil y debo recuperarlo.", 
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Ey, chaval. No sé quién eres. No pareces de por aquí. No tengo ganas de hablar contigo. Pírate.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Pero...",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "¡Que te vayas, te he dicho! No eres bienvenido aquí.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "ManteroDialogueFinished",
+            "text": "EscenaParque/NPCs/ManteroDialogueRepeat"
+        }
+    ]
+}

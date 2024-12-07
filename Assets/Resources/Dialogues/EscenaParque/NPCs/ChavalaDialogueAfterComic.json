@@ -1,0 +1,30 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "¿Has encontrado el número 5 de la colección de DRACO?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Sí, aquí lo tienes.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "¡Perfecto! Aquí tienes mi gorra. Ahora ve a hablar con el mantero y dile que eres un colega mío.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "ChavalaHelped",
+            "text": "EscenaParque/NPCs/ChavalaDialogueAfterHelp"
+        }
+    ]
+}

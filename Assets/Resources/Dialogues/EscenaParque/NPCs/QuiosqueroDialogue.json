@@ -1,0 +1,53 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "???",
+            "text": "Buenos días, joven. Me llamo Paco, pero puedes llamarme Francisco.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Francisco",
+            "text": "Da gusto ver a un mozo como tú. Últimamente el barrio se está llenando de chusma. La vida antes era mejor.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Francisco",
+            "text":"¿Qué estás buscando en este quiosco?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text":"Hola, buenas. Me gustaría comprar el número 5 de la colección de DRACO.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Francisco",
+            "text":"Interesante elección. Mira, ayer me llegó esta gorra de marca, chulísima. ¿Te interesa? Te la dejo al mismo precio que el cómic. ",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "options",
+            "characterName": "Juan",
+            "options": [
+                {
+                    "text": "Ahora que lo dices, la gorra me gusta bastante. Olvídate del comic. Me la llevo.",
+                    "diversion": "EscenaParque/NPCs/QuiosqueroCapDialogue"
+                },
+                {
+                    "text": "No, gracias. Me quedo con el cómic.",
+                    "diversion": "EscenaParque/NPCs/QuiosqueroComicDialogue"
+                }
+            ]
+        }
+    ]
+}

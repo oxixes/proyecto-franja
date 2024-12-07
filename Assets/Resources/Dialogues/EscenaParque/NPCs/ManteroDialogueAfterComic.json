@@ -1,0 +1,29 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Te he dicho que no quiero hablar contigo. ¿Qué parte no entiendes?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Mira que gorra más chula tengo. Es la gorra de tu amiga. ¿Sigues pensando que no soy de por aquí?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Si te llevas bien con esa chavala, entonces te llevas bien conmigo. Escucha con atención, te contaré lo que necesitas saber.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "diversion",
+            "diversion": "EscenaParque/NPCs/ManteroRevealsSecret"
+        }
+    ]
+}
