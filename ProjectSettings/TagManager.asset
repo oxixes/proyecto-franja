@@ -7,6 +7,8 @@ TagManager:
   - TransitionManager
   - LevelManager
   - Trigger
+  - FallingObject
+  - MinigamePlayer
   layers:
   - Default
   - TransparentFX
