@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class ItemsFallingMinigame : Minigame
 {
@@ -18,6 +19,7 @@ public class ItemsFallingMinigame : Minigame
     public GameObject player;
     public GameObject explanation;
     public GameObject timer;
+    public GameObject scoreText;
     public float spawnYPos = 320.0f;
     public float spawnRate = 1.0f; // Items per second
     public float spawnRateIncrease = 0.1f; // Items per second
@@ -34,6 +36,8 @@ public class ItemsFallingMinigame : Minigame
     private int nextItemToSpawn = 0;
     private float lastItemSpawnedTime = 0;
     private float timeLeft;
+
+    private Animator playerAnimator;
 
     private int totalSpawnedItems = 0;
     private int score = 0;
@@ -63,9 +67,12 @@ public class ItemsFallingMinigame : Minigame
         backgroundTransform = background.GetComponent<RectTransform>();
         backgroundTransform.localScale = new Vector3(0, 0, 0);
 
-        player.SetActive(false);
+        playerAnimator = player.GetComponent<Animator>();
+
+        player.GetComponent<Image>().enabled = false; /* UNITY BUG: Animator stops playing if the object is disabled */
         explanation.SetActive(false);
         timer.SetActive(false);
+        scoreText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -100,7 +107,7 @@ public class ItemsFallingMinigame : Minigame
 
         if (!gameStarted && !gameFinished)
         {
-            player.SetActive(true);
+            player.GetComponent<Image>().enabled = true; /* UNITY BUG: Animator stops playing if the object is disabled */
             explanation.SetActive(true);
         }
 
@@ -108,6 +115,8 @@ public class ItemsFallingMinigame : Minigame
         {
             explanation.SetActive(false);
             timer.SetActive(true);
+            if (minigameMode == FallingMinigameModes.CatchItems)
+                scoreText.SetActive(true);
             gameStarted = true;
             lastItemSpawnedTime = Time.time;
             timeLeft = gameDuration;
@@ -152,6 +161,9 @@ public class ItemsFallingMinigame : Minigame
                     {
                         fallingItemsPool[i].SetActive(false);
                         score += (minigameMode == FallingMinigameModes.CatchItems) ? 1 : -1;
+                        scoreText.GetComponent<TextMeshProUGUI>().text = "Puntos: " + score.ToString();
+                        if (minigameMode == FallingMinigameModes.AvoidItems)
+                            playerAnimator.SetTrigger("Hit");
                     }
                 }
             }
@@ -166,7 +178,8 @@ public class ItemsFallingMinigame : Minigame
             {
                 gameStarted = false;
                 timer.SetActive(false);
-                player.SetActive(false);
+                player.GetComponent<Image>().enabled = false; /* UNITY BUG: Animator stops playing if the object is disabled */
+                scoreText.SetActive(false);
                 gameFinished = true;
 
                 for (int i = 0; i < poolSize; i++)
