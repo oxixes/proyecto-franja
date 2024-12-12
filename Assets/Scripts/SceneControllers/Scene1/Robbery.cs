@@ -20,7 +20,17 @@ public class Robbery : MonoBehaviour
         }
         else
         {
-            DialogueSystem.GetInstance().StartDialogue("NPCs/MomDialogue1");
+            if (SaveManager.GetInstance().Get<int>("TurraDicha") == 0)
+            {
+                DialogueSystem.GetInstance().StartDialogue("NPCs/MomDialogue1");
+                SaveManager.GetInstance().Set("TurraDicha", 1);
+            }
+            else
+            {
+                mom.GetComponent<InteractableObject>().dialogueID = "NPCs/MomDialogue2";
+            }
+            
+            
         }
     }
 
