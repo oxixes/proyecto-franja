@@ -1,0 +1,39 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "¿Oye, seguro que estás listo para confrontarle?",
+            "pause": true,
+            "imageAssetId": "old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Diría que sí.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Si quieres tener alguna oportunidad, más te vale haber recogido suficiente información que echarle en cara.",
+            "pause": true,
+            "imageAssetId": "old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Con mi ayuda, todavía estás a tiempo de darte la vuelta y buscar mejor.",
+            "pause": true,
+            "imageAssetId": "old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Gracias por ayudarme durante esta odisea.",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}
