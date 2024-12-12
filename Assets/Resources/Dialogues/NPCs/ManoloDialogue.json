@@ -24,7 +24,7 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Pero tengo que pasar para recuperar mi móvil, que es nuevo",
+            "text": "Pero tengo que pasar para recuperar mi móvil, que es nuevo.",
             "pause": true,
             "imageAssetId": null
         },
@@ -52,14 +52,14 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Pero tirar basura está mal :c",
+            "text": "Pero tirar basura está mal :c .",
             "pause": true,
             "imageAssetId": null
         },
         {
             "type": "text",
             "characterName": "Manolo",
-            "text": "Peor están nuestros sueldos chico, así que o tiras esos contenedores o te olvidas de pasar por aquí",
+            "text": "Peor están nuestros sueldos, chico, así que o tiras esos contenedores o te olvidas de pasar por aquí.",
             "pause": true,
             "imageAssetId": null
         },
