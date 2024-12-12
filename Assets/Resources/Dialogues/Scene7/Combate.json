@@ -1,0 +1,62 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "Qué pesao eres tío",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+		{
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "¿Me vas a dejar en paz?",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Soy Juan Hernández, tú robaste mi móvil, prepárate a -",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "Calla subnormal, y vamos a ello",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+        {
+            "type": "text",
+            "characterName": "KAS",
+            "text": "*Insertar combate*",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type":"notification",
+            "notificationId":"Combate",
+            "text":"Combate"
+        },
+        {
+            "type": "options",
+            "characterName": "Juan",
+            "options": [
+                {
+                    "text": "Ganar",
+                    "diversion": "Scene7/Victory"
+                },
+                {
+                    "text": "Derrota",
+                    "diversion": "Scene7/Defeat"
+                },
+                {
+                    "text": "True Ending",
+                    "diversion" : "Scene7/TrueEnding"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "Pero recárgalo panoli, que no es tan difícil.",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+        
+        {
+            "type": "notification",
+            "notificationId": "Return",
+            "text": "Return"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Debería recargarlo...<i>",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}

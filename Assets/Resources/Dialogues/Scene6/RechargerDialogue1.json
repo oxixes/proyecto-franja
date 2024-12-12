@@ -1,0 +1,23 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>A esto le han subido el precio desde la última vez, que pedazo de robo.<i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Bueno, ya he recargado el bono.<i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "Bono3",
+            "text": "Bono3"
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "¡!",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "¿Eh? ¿Qué pasa?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "No tengo cargado el bono...",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "... Bro, háztelo mirar",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "Return",
+            "text": "Return"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Debería recargarlo...<i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "Bono2",
+            "text": "Bono2"
+        }
+    ]
+}
