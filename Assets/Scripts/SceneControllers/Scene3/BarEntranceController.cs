@@ -9,13 +9,12 @@ public class BarEntranceController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (SaveManager.GetInstance().Get<int>("Scene3BarManDialogueFinished") == 1)
+        {
+            HandleBarManDialogueFinishNotification(null, null, null);
+        }
+
         DialogueSystem.GetInstance().HandleNotification("BarManDialogueFinished", HandleBarManDialogueFinishNotification);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -31,5 +30,6 @@ public class BarEntranceController : MonoBehaviour
     {
         barMan.SetActive(false);
         gameObject.SetActive(false);
+        SaveManager.GetInstance().Set("Scene3BarManDialogueFinished", 1);
     }
 }

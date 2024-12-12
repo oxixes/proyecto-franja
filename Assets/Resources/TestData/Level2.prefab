@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6018195117586536622}
   - component: {fileID: 602926824100472486}
+  - component: {fileID: 3182905169095525385}
   m_Layer: 0
   m_Name: Level2
   m_TagString: Untagged
@@ -51,6 +52,19 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &3182905169095525385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372148995213164418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fdba700d1d8a541893afef99391030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: level2test
 --- !u!1 &2153087841984526002
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newLevel: {fileID: 7230670783255720770, guid: 5c91fb8a8f599354aa8fc52deea644ea, type: 3}
+  player: {fileID: 0}
   coordToChange: 0
   newPlayerPosition: {x: 13.1, y: 0}
 --- !u!1 &2807805238457301274
@@ -235,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newLevel: {fileID: 316750823238533073, guid: 67a8f21bc7783184695254e41f44ea12, type: 3}
+  player: {fileID: 0}
   coordToChange: 1
   newPlayerPosition: {x: 0, y: -7}
 --- !u!1 &6000393840131876659
