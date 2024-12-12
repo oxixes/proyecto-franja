@@ -14,7 +14,14 @@ public class Robbery : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {  
-        DialogueSystem.GetInstance().StartDialogue("NPCs/MomDialogue1");
+        if (SaveManager.GetInstance().Get<int>("Scene1RobberyFinished") == 1)
+        {
+            OnTriggerExit2D(null);
+        }
+        else
+        {
+            DialogueSystem.GetInstance().StartDialogue("NPCs/MomDialogue1");
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -26,13 +33,15 @@ public class Robbery : MonoBehaviour
 
             DialogueSystem.GetInstance().HandleNotification("ThiefRun", HandleThiefRunNotification);
             DialogueSystem.GetInstance().StartDialogue("NPCs/ThiefDialogue1");
-            mom.GetComponent<InteractableObject>().dialogueID = "NPCs/MomDialogue2";
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
+        SaveManager.GetInstance().Set("Scene1RobberyFinished", 1);
         gameObject.SetActive(false);
+        thief.SetActive(false);
+        mom.GetComponent<InteractableObject>().dialogueID = "NPCs/MomDialogue2";
     }
 
     private IEnumerator MoveLadronTowards(Vector2 position, int velocidad)
@@ -47,6 +56,5 @@ public class Robbery : MonoBehaviour
     void HandleThiefRunNotification(string dialogueId, string notificationId, string notificationData) {
         StartCoroutine(MoveLadronTowards(new Vector2(200, thief.transform.position.y), thiefRunningSpeed));
     }
-
  }
 

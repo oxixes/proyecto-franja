@@ -8,11 +8,17 @@ public class Spawn : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (SaveManager.GetInstance().Get<int>("Scene1MomDialogue1Finished") == 1)
+        {
+            OnTriggerExit2D(null);
+            return;
+        }
         DialogueSystem.GetInstance().StartDialogue("NPCs/MomDialogue1");
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
+        SaveManager.GetInstance().Set("Scene1MomDialogue1Finished", 1);
         trigger.SetActive(false);
     }
  }
