@@ -43942,7 +43942,6 @@ GameObject:
   m_Component:
   - component: {fileID: 276674570}
   - component: {fileID: 276674572}
-  - component: {fileID: 276674571}
   m_Layer: 0
   m_Name: Combat
   m_TagString: Untagged
@@ -43965,26 +43964,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1361421059}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &276674571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276674569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab06796f2366914d9248f0a5a07cdf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  metro: {fileID: 2031659604}
-  player: {fileID: 1683311111}
-  thief: {fileID: 1652445349}
-  combate: {fileID: 276674569}
-  thiefSpeed: 5
-  metroSpeed: 50
-  trackingMinDistance: 1
-  scaleIncrease: {x: 2, y: 1, z: 0}
 --- !u!212 &276674572
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -141278,6 +141257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1361421059}
   - component: {fileID: 1361421058}
+  - component: {fileID: 1361421060}
   m_Layer: 0
   m_Name: "Level7(and\xE9n)"
   m_TagString: Untagged
@@ -141319,6 +141299,26 @@ Transform:
   - {fileID: 2031659605}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1361421060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361421057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab06796f2366914d9248f0a5a07cdf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  metro: {fileID: 2031659604}
+  player: {fileID: 1683311111}
+  thief: {fileID: 1652445349}
+  combate: {fileID: 276674569}
+  thiefSpeed: 5
+  metroSpeed: 50
+  trackingMinDistance: 1
+  scaleIncrease: {x: 2, y: 1, z: 0}
 --- !u!1 &1364249089
 GameObject:
   m_ObjectHideFlags: 0
@@ -146096,7 +146096,7 @@ GameObject:
   - component: {fileID: 1652445352}
   - component: {fileID: 1652445351}
   m_Layer: 0
-  m_Name: Thief
+  m_Name: Thief7
   m_TagString: Trigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146111,7 +146111,7 @@ Transform:
   m_GameObject: {fileID: 1652445349}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.93, y: 2.11, z: 0}
+  m_LocalPosition: {x: 1.63, y: 3.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -146473,7 +146473,7 @@ Transform:
   m_GameObject: {fileID: 1683311111}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 102.46, y: 108.97, z: 0}
+  m_LocalPosition: {x: 123.38, y: 87.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -147929,7 +147929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2031659605
 Transform:
   m_ObjectHideFlags: 0
@@ -147939,8 +147939,8 @@ Transform:
   m_GameObject: {fileID: 2031659604}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.06, y: 6.25, z: 0}
-  m_LocalScale: {x: 39.82745, y: 3.5330698, z: 2.1137}
+  m_LocalPosition: {x: -12, y: 6, z: -1}
+  m_LocalScale: {x: 47.613716, y: 3.3691354, z: 2.1137}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1361421059}
