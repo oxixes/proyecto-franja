@@ -102,4 +102,22 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.DeleteAll();
         PlayerPrefs.Save();
     }
+
+    public void DeleteAllExceptPosition()
+    {
+        Debug.LogWarning("Deleting all player preferences except position. If this is not what you want, check the code!");
+
+        // Guarda la posición del jugador temporalmente
+        float playerX = SaveManager.GetInstance().Get<float>("PlayerX");
+        float playerY = SaveManager.GetInstance().Get<float>("PlayerY");
+
+        // Borra todos los datos
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save(); // Asegúrate de guardar después de borrar
+
+        // Restaura la posición del jugador
+        SaveManager.GetInstance().Set("PlayerX", playerX);
+        SaveManager.GetInstance().Set("PlayerY", playerY);
+    }
+
 }

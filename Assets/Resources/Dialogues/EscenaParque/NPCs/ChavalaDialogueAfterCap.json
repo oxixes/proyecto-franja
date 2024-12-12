@@ -1,0 +1,37 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "¿Has encontrado el número 5 de la colección de DRACO?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "No. Me he comprado esta gorra que me gusta más. Seguro que el mantero me hace caso ahora.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "Con eso no vas a conseguir nada. Eres un egoísta. Si me hubieses hecho el favor, te habría ayudado.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "¡Vete de aquí! No quiero verte más.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "ChavalaAngry",
+            "text": "EscenaParque/NPCs/ChavalaIgnoresJuan"
+        }
+    ]
+}

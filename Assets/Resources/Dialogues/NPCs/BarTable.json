@@ -8,13 +8,13 @@
         {
             "type": "text",
             "characterName": "Hombre 1",
-            "text": "No! Acaba de marcar el Valencia!",
+            "text": "¡No! ¡Acaba de marcar el Valencia!",
             "pause": true
         },
         {
             "type": "text",
             "characterName": "Hombre 2",
-            "text": "Si es que es normal, si como estamos jugando nos merecemos descender.",
+            "text": "Si es que es normal, tal y como estamos jugando nos merecemos descender.",
             "pause": true
         },
         {

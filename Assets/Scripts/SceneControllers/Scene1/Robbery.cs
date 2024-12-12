@@ -7,7 +7,7 @@ public class Robbery : MonoBehaviour
     public GameObject mom;
     public GameObject player;
     public GameObject thief;
-    public int thiefSpeed = 5;
+    public int thiefSpeed = 10;
     public int thiefRunningSpeed = 50;
     public float trackingMinDistance = 1f;
 

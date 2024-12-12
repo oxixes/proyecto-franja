@@ -1,0 +1,18 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Francisco",
+            "text":"¿Necesitas algo más?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text":"No, gracias, ya me iba. Hasta luego.",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}

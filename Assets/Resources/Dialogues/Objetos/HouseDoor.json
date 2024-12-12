@@ -1,0 +1,11 @@
+{
+    "lines" : [
+        {
+            "type" : "text",
+            "characterName" : "Juan",
+            "text" : "<i>¿Cómo se me ocurre entrar en casa? ¡Me acaban de robar el móvil! ¡Mamá me mataría si se enterase!</i>",
+            "pause" : true,
+            "imageAssetId" : null
+        }
+    ]
+}

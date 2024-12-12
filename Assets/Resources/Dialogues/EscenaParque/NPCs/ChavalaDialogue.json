@@ -1,0 +1,57 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "¿Qué quieres? ¿Nos conocemos? Ven y echamos un pulso.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "text": "<i>Insertar minijuego de pulso</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Hola, me llamo Juan. ¿Sabes cómo puedo hacer que el mantero me haga caso? Necesito hablar con él.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "No quiere hablar contigo porque eres un pringao. Pero si quieres, puedo ayudarte a convencerle.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "¿Cómo?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "¿Ves ese quiosco de allí? Traeme el número 5 de la colección de DRACO. Te daré mi gorra a cambio para que le convenzas de que eres un colega.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "¡Vale! ¡Volveré enseguida!",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "ChavalaDialogueFinished",
+            "text": "EscenaParque/NPCs/ChavalaDialogueRepeat"
+        }
+    ]
+}
