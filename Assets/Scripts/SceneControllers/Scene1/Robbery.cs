@@ -29,8 +29,6 @@ public class Robbery : MonoBehaviour
             {
                 mom.GetComponent<InteractableObject>().dialogueID = "NPCs/MomDialogue2";
             }
-            
-            
         }
     }
 
