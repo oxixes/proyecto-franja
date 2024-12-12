@@ -1,0 +1,11 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Me acaban de robar el móvil. Como vuelva a casa mi madre me mata...</i>",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}
