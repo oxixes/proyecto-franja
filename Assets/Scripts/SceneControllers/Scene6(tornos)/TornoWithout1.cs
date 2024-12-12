@@ -27,6 +27,13 @@ public class TornoWithout1 : MonoBehaviour
             DialogueSystem.GetInstance().HandleNotification("Bono3", HandleBono3Notification);
             DialogueSystem.GetInstance().HandleNotification("Eliminar", Eliminar);
             DialogueSystem.GetInstance().HandleNotification("Irse", Irse);
+            bono = SaveManager.GetInstance().Get<int>("Bono");
+            if(bono == 3|| bono == 4){
+                recharger.GetComponent<InteractableObject>().dialogueID = "Scene6/RechargerDialogue2";
+            }
+            if (bono == 4){
+                thief.SetActive(false);
+            }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -36,7 +43,7 @@ public class TornoWithout1 : MonoBehaviour
             Debug.Log("Starting tornos cutscene.");
 
             
-            if (bono == 1)
+            if (bono == 0)
             {
                 DialogueSystem.GetInstance().StartDialogue("Scene6/TornoDialogue1");
             }
@@ -54,10 +61,12 @@ public class TornoWithout1 : MonoBehaviour
 
     void HandleBono2Notification(string dialogueId, string notificationId, string notificationData) {
         bono = 2;
+        SaveManager.GetInstance().Set("Bono", 2);
     }
     void HandleBono3Notification(string dialogueId, string notificationId, string notificationData) {
         bono = 3;
         recharger.GetComponent<InteractableObject>().dialogueID = "Scene6/RechargerDialogue2";
+        SaveManager.GetInstance().Set("Bono", 3);
     }
 
     void Vuelve(string dialogueId, string notificationId, string notificationData) {
@@ -70,6 +79,7 @@ public class TornoWithout1 : MonoBehaviour
 
     void Irse(string dialogueId, string notificationId, string notificationData) {
         StartCoroutine(MoveThiefAway());
+        SaveManager.GetInstance().Set("Bono", 4);
     }
 
     private IEnumerator MovePlayerDown(float stepDistance)
