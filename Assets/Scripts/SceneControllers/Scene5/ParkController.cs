@@ -80,6 +80,7 @@ public class ParkController : MonoBehaviour
             chavalaIO.dialogueID = notificationData;
             chaval1IO.dialogueID = "EscenaParque/NPCs/ChavalDialogueRepeat";
             chaval2IO.dialogueID = "EscenaParque/NPCs/ChavalDialogueRepeat";
+            quiosqueroIO.dialogueID = "EscenaParque/NPCs/QuiosqueroDialogue";
             SaveManager.GetInstance().Set("Scene5ChavalaDialogueFinished", 1);
 
         }
@@ -87,6 +88,8 @@ public class ParkController : MonoBehaviour
         void HandleManteroDialogueNotification(string dialogueID, string notificationID, string notificationData)
         {
             manteroIO.dialogueID = notificationData;
+            chaval1IO.dialogueID = "EscenaParque/NPCs/ChavalDialogue";
+            chavalaIO.dialogueID = "EscenaParque/NPCs/ChavalaDialogue";
             SaveManager.GetInstance().Set("Scene5ManteroDialogueFinished", 1);
         }
 
@@ -131,26 +134,24 @@ public class ParkController : MonoBehaviour
             runaway = true;
             SaveManager.GetInstance().Set("Scene5ManteroLeaves", 1);
         }
-
-        // Update is called once per frame
-        void Update()
+    }
+    void Update()
+    {
+        // Verifica que exista un punto de destino
+        if (runaway)
         {
-            // Verifica que exista un punto de destino
-            if (runaway)
+            // Mueve el objeto hacia el punto objetivo
+            mantero.transform.position = Vector2.MoveTowards(mantero.transform.position, targetPoint, speed * Time.deltaTime);
+            chavala.transform.position = Vector2.MoveTowards(chavala.transform.position, targetPoint, speed * Time.deltaTime);
+            chaval1.transform.position = Vector2.MoveTowards(chaval1.transform.position, targetPoint, speed * Time.deltaTime);
+            chaval2.transform.position = Vector2.MoveTowards(chaval1.transform.position, targetPoint, speed * Time.deltaTime);
+
+            // Si el objeto llega al punto objetivo, detiene el movimiento
+            if ((Vector2)mantero.transform.position == targetPoint)
             {
-                // Mueve el objeto hacia el punto objetivo
-                mantero.transform.position = Vector2.MoveTowards(mantero.transform.position, targetPoint, speed * Time.deltaTime);
-                chavala.transform.position = Vector2.MoveTowards(chavala.transform.position, targetPoint, speed * Time.deltaTime);
-                chaval1.transform.position = Vector2.MoveTowards(chaval1.transform.position, targetPoint, speed * Time.deltaTime);
-                chaval2.transform.position = Vector2.MoveTowards(chaval1.transform.position, targetPoint, speed * Time.deltaTime);
-
-                // Si el objeto llega al punto objetivo, detiene el movimiento
-                if ((Vector2)mantero.transform.position == targetPoint)
-                {
-                    runaway = false;
-                }
-
+                runaway = false;
             }
+
         }
     }
 }
