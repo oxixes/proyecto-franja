@@ -201,7 +201,7 @@ MonoBehaviour:
   timer: {fileID: 8166516286694071495}
   scoreText: {fileID: 3332322322724859763}
   spawnYPos: 320
-  spawnRate: 0.5
+  spawnRate: 0.51
   spawnRateIncrease: 0.01
   playerMoveSpeed: 30
   gameDuration: 30
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1Recoge todo lo que puedas!\n\nMuevete con A y D.\n\nPresiona espacio
+  m_text: "\xA1Recoge todo lo que puedas!\n\nMu\xE9vete con A y D.\n\nPresiona espacio
     para continuar."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

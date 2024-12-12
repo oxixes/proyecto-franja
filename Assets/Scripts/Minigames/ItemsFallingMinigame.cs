@@ -137,7 +137,7 @@ public class ItemsFallingMinigame : Minigame
                 nextItemToSpawn = (nextItemToSpawn + 1) % poolSize;
 
                 // Don't count last second items
-                if (timeLeft > 1)
+                if (timeLeft > 2)
                 {
                     totalSpawnedItems += 1;
                     if (minigameMode == FallingMinigameModes.AvoidItems)

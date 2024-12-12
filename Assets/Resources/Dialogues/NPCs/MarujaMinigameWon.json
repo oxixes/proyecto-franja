@@ -1,0 +1,30 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Maruja",
+            "text": "¡Oh, qué bien! ¡Gracias por ayudarme! ¡Eres un sol!",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Maruja",
+            "text": "¡Ahora sí que te contaré lo que vi! ¡Era un joven muy rápido! Corrió hacia el norte, se\nllama Quique y se meaba en el pañal hasta los 15.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Me pregunto si esa <color=yellow>información</color> será útil...</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "MarujaDialogueFinished",
+            "text": "NPCs/MarujaMinigameWonRepeat"
+        }
+    ]
+}
