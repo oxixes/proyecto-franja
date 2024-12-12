@@ -203,7 +203,7 @@ public class DialogueSystem : MonoBehaviour
 
         pressToContinueLayout = GameObject.Find("PressLayout");
         characterNameLayout = GameObject.Find("TalkerPanel");
-        Debug.Log(characterNameLayout);
+
         for (int i = 1; i <= optionLayouts.Length; i++)
         {
             optionLayouts[i - 1] = GameObject.Find("Option" + i);

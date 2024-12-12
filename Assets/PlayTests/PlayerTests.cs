@@ -65,6 +65,9 @@ public class PlayerTests
 
         this.npc = GameObject.Instantiate(npcPrefabResource);
         this.npcInteractableObject = npc.GetComponent<InteractableObject>();
+
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
     }
 
     [UnityTest]
@@ -151,5 +154,8 @@ public class PlayerTests
         GameObject.Destroy(npc);
         this.npc = null;
         this.npcInteractableObject = null;
+
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
     }
 }
