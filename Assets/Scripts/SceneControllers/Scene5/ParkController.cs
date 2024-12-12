@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ParkController : MonoBehaviour
 {
-
     public GameObject chavala;
     public GameObject chaval1;
     public GameObject chaval2;
@@ -131,26 +130,26 @@ public class ParkController : MonoBehaviour
             runaway = true;
             SaveManager.GetInstance().Set("Scene5ManteroLeaves", 1);
         }
+    }
 
-        // Update is called once per frame
-        void Update()
+    // Update is called once per frame
+    void Update()
+    {
+        // Verifica que exista un punto de destino
+        if (runaway)
         {
-            // Verifica que exista un punto de destino
-            if (runaway)
+            // Mueve el objeto hacia el punto objetivo
+            mantero.transform.position = Vector2.MoveTowards(mantero.transform.position, targetPoint, speed * Time.deltaTime);
+            chavala.transform.position = Vector2.MoveTowards(chavala.transform.position, targetPoint, speed * Time.deltaTime);
+            chaval1.transform.position = Vector2.MoveTowards(chaval1.transform.position, targetPoint, speed * Time.deltaTime);
+            chaval2.transform.position = Vector2.MoveTowards(chaval1.transform.position, targetPoint, speed * Time.deltaTime);
+
+            // Si el objeto llega al punto objetivo, detiene el movimiento
+            if ((Vector2) mantero.transform.position == targetPoint)
             {
-                // Mueve el objeto hacia el punto objetivo
-                mantero.transform.position = Vector2.MoveTowards(mantero.transform.position, targetPoint, speed * Time.deltaTime);
-                chavala.transform.position = Vector2.MoveTowards(chavala.transform.position, targetPoint, speed * Time.deltaTime);
-                chaval1.transform.position = Vector2.MoveTowards(chaval1.transform.position, targetPoint, speed * Time.deltaTime);
-                chaval2.transform.position = Vector2.MoveTowards(chaval1.transform.position, targetPoint, speed * Time.deltaTime);
-
-                // Si el objeto llega al punto objetivo, detiene el movimiento
-                if ((Vector2)mantero.transform.position == targetPoint)
-                {
-                    runaway = false;
-                }
-
+                runaway = false;
             }
+
         }
     }
 }
