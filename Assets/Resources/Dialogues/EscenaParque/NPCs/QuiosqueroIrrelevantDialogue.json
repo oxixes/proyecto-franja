@@ -1,0 +1,25 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Quiosquero",
+            "text": "¡Hola! ¿Qué tal? ¿Quieres algo?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "No, gracias. Solo estaba mirando.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Quiosquero",
+            "text": "Entendido. Si necesitas algo, aquí estoy.",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}

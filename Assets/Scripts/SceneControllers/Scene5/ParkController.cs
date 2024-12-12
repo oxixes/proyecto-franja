@@ -79,6 +79,7 @@ public class ParkController : MonoBehaviour
             chavalaIO.dialogueID = notificationData;
             chaval1IO.dialogueID = "EscenaParque/NPCs/ChavalDialogueRepeat";
             chaval2IO.dialogueID = "EscenaParque/NPCs/ChavalDialogueRepeat";
+            quiosqueroIO.dialogueID = "EscenaParque/NPCs/QuiosqueroDialogue";
             SaveManager.GetInstance().Set("Scene5ChavalaDialogueFinished", 1);
 
         }
@@ -86,6 +87,8 @@ public class ParkController : MonoBehaviour
         void HandleManteroDialogueNotification(string dialogueID, string notificationID, string notificationData)
         {
             manteroIO.dialogueID = notificationData;
+            chaval1IO.dialogueID = "EscenaParque/NPCs/ChavalDialogue";
+            chavalaIO.dialogueID = "EscenaParque/NPCs/ChavalaDialogue";
             SaveManager.GetInstance().Set("Scene5ManteroDialogueFinished", 1);
         }
 
@@ -131,8 +134,6 @@ public class ParkController : MonoBehaviour
             SaveManager.GetInstance().Set("Scene5ManteroLeaves", 1);
         }
     }
-
-    // Update is called once per frame
     void Update()
     {
         // Verifica que exista un punto de destino
@@ -145,7 +146,7 @@ public class ParkController : MonoBehaviour
             chaval2.transform.position = Vector2.MoveTowards(chaval1.transform.position, targetPoint, speed * Time.deltaTime);
 
             // Si el objeto llega al punto objetivo, detiene el movimiento
-            if ((Vector2) mantero.transform.position == targetPoint)
+            if ((Vector2)mantero.transform.position == targetPoint)
             {
                 runaway = false;
             }

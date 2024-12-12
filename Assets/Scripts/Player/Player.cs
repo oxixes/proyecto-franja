@@ -43,10 +43,6 @@ public class Player : MonoBehaviour
         {
             SaveManager.GetInstance().DeleteAll();
         }
-        if(Input.GetKeyDown(KeyCode.X))
-        {
-            SaveManager.GetInstance().DeleteAllExceptPosition();
-        }
     }
 
     // Update is called once per frame
