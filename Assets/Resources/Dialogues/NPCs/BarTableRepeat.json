@@ -4,13 +4,13 @@
             "type": "text",
             "text": "Qué mal vamos...",
             "pause": true,
-            "characterName": "Hombre 1"
+            "characterName": "Hombre borracho"
         },
         {
             "type": "text",
             "text": "Ya te digo...",
             "pause": true,
-            "characterName": "Hombre 2"
+            "characterName": "Hombre enfadado"
         }
     ]
 }

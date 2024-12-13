@@ -10,7 +10,7 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Una copa",
+            "text": "Una copa.",
             "pause": true,
             "imageAssetId": null
         },
