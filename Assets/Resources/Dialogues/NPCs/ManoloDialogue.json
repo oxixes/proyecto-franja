@@ -72,7 +72,7 @@
         },
         {
             "type": "notification",
-            "notificationId": "ManoloEncountered",
+            "notificationId": "ManoloDialogueFinished",
             "text": "NPCs/ManoloRepeat"
         }
     ]

@@ -27,10 +27,8 @@ public class Robbery : MonoBehaviour
             }
             else
             {
-                mom.GetComponent<InteractableObject>().dialogueID = "NPCs/MomDialogue2";
+                mom.GetComponent<InteractableObject>().dialogueID = "NPCs/MomDialogue0";
             }
-            
-            
         }
     }
 

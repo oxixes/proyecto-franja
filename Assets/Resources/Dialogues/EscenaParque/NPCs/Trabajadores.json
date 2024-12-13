@@ -1,0 +1,11 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Trabajador",
+            "text": "¡Hola! Lo siento, esta calle está cortada por obras. No se puede pasar ahora mismo.",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}

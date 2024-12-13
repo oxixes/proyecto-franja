@@ -22,8 +22,8 @@ public class FallingItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rectTransform.position -= new Vector3(0, currentFallSpeed, 0);
-        currentFallSpeed += fallAcceleration;
+        rectTransform.position -= new Vector3(0, currentFallSpeed * Time.deltaTime, 0);
+        currentFallSpeed += fallAcceleration * Time.deltaTime;
     }
 
     private void OnEnable()

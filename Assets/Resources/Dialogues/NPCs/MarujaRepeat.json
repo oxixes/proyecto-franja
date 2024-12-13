@@ -1,0 +1,25 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Maruja",
+            "text": "¿Quieres ayudarme a recoger la ropa ahora?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "options",
+            "characterName": "Juan",
+            "options": [
+                {
+                    "text": "Vale, te ayudo.",
+                    "diversion": "NPCs/MarujaDialogueA"
+                },
+                {
+                    "text": "No tengo tiempo para eso.",
+                    "diversion": "Empty"
+                }
+            ]
+        }
+    ]
+}

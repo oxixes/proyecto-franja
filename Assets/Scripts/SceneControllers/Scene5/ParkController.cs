@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ParkController : MonoBehaviour
 {
-
     public GameObject chavala;
     public GameObject chaval1;
     public GameObject chaval2;

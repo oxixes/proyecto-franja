@@ -1,0 +1,37 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "¿De dónde has sacado esto?.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Eh... de la basura de un cani ladrón.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "...",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "Bueno el collar está guapísimo, allévoy.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "EnamoradoDecision",
+            "text": "4"
+        }
+    ]
+}
