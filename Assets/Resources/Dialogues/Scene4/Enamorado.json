@@ -74,7 +74,7 @@
             "type": "text",
             "characterName": "Juan",
             "text": "<i>Tengo toda la cara del Hasbulla, se la tendré que pedir a alguien.</i>",
-            "pause": false,
+            "pause": true,
             "imageAssetId": null
         },
         {
