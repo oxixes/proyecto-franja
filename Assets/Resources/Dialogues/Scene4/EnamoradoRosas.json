@@ -1,0 +1,16 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "Seré su Romeo, allá voy Julieta. No te mates, que te traigo rosas.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "EnamoradoDecision",
+            "text": "2"
+        }
+    ]
+}

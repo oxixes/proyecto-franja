@@ -63,7 +63,6 @@ public class Scene7Controller : MonoBehaviour
     void HandleHostiazoNotification(string dialogueId, string notificationId, string notificationData) {
         StartCoroutine(Hostiazo());
     }
-    
 
     private IEnumerator ScaleCombat(){
         while (combate.transform.localScale.x < 34) {

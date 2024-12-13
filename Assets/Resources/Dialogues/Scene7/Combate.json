@@ -3,7 +3,7 @@
         {
             "type": "text",
             "characterName": "Ladrón",
-            "text": "Qué pesao eres tío",
+            "text": "Qué pesao eres tío.",
             "pause": true,
             "imageAssetId": "anonymous"
         },
@@ -24,7 +24,7 @@
         {
             "type": "text",
             "characterName": "Ladrón",
-            "text": "Calla subnormal, y vamos a ello",
+            "text": "Calla subnormal, y vamos a ello.",
             "pause": true,
             "imageAssetId": "anonymous"
         },
