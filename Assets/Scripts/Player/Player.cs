@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             SaveManager.GetInstance().DeleteAll();
+            Application.Quit();
         }
     }
 
