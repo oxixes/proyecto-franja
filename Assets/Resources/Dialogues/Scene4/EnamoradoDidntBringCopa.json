@@ -1,0 +1,11 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "Todavía no me has traído la copa. Ahora cuando la tengas me avisas.",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}

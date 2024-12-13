@@ -45,9 +45,14 @@ public class BarController : MonoBehaviour
             HandleEnamoradoDialogueFinish(null, null, null);
         }
 
-        if (SaveManager.GetInstance().Get<int>("Scene4EnamoradoDecision") == 1)
+        if (SaveManager.GetInstance().Get<int>("Scene4EnamoradoDecisionChosen") == 1)
         {
-            HandleEnamoradoDecision(null, null, null);
+            HandleEnamoradoDecision(null, null, SaveManager.GetInstance().Get<string>("Scene4EnamoradoDecision"));
+        }
+
+        if (SaveManager.GetInstance().Get<int>("Scene4BartenderCopaDialogueFinished") == 1)
+        {
+            HandleBartenderCopaFinish(null, null, null);
         }
 
         DialogueSystem.GetInstance().HandleNotification("BarTableDialogueFinished", HandleTableConversationFinishNotification);
@@ -55,6 +60,7 @@ public class BarController : MonoBehaviour
         DialogueSystem.GetInstance().HandleNotification("JessiDialogueFinished", HandleJessiFinishNotification);
         DialogueSystem.GetInstance().HandleNotification("EnamoradoDialogueFinished", HandleEnamoradoDialogueFinish);
         DialogueSystem.GetInstance().HandleNotification("EnamoradoDecision", HandleEnamoradoDecision);
+        DialogueSystem.GetInstance().HandleNotification("BartenderCopaDialogueFinished", HandleBartenderCopaFinish);
     }
 
     void HandleTableConversationFinishNotification(string dialogueId, string notificationId, string notificationData)
@@ -86,6 +92,20 @@ public class BarController : MonoBehaviour
     void HandleEnamoradoDecision(string dialogueId, string notificationId, string notificationData)
     {
         enamoradoIO.dialogueID = "Scene4/EnamoradoFinish";
-        SaveManager.GetInstance().Set("Scene4EnamoradoDialogueFinished", 1);
+        SaveManager.GetInstance().Set("Scene4EnamoradoDecisionChosen", 1);
+        SaveManager.GetInstance().Set("Scene4EnamoradoDecision", notificationData);
+
+        if (notificationData == "3")
+        {
+            enamoradoIO.dialogueID = "Scene4/EnamoradoDidntBringCopa";
+            bartenderIO.dialogueID = "Scene4/BartenderCopa";
+        }
+    }
+
+    void HandleBartenderCopaFinish(string dialogueId, string notificationId, string notificationData)
+    {
+        bartenderIO.dialogueID = "Scene4/BartenderRepeat";
+        enamoradoIO.dialogueID = "Scene4/EnamoradoFinish";
+        SaveManager.GetInstance().Set("Scene4BartenderCopaDialogueFinished", 1);
     }
 }
