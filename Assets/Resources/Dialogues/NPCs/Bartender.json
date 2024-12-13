@@ -1,0 +1,54 @@
+{
+    "lines": [ 
+        { 
+            "type": "text", 
+            "characterName": "Hombre de la barra", 
+            "text": "¿Quieres algo chaval?", 
+            "pause": true,
+            "imageAssetId": null
+        },
+        { 
+            "type": "text", 
+            "characterName": "Juan", 
+            "text": "Mi móvil que me lo han robado.", 
+            "pause": true,
+            "imageAssetId": null
+        }
+        ,
+        { 
+            "type": "text", 
+            "characterName": "Hombre de la barra", 
+            "text": "Mala suerte chaval, aunque bueno, es de esperar si eres nuevo por aquí.", 
+            "pause": true,
+            "imageAssetId": null
+        }
+        ,
+        { 
+            "type": "text", 
+            "characterName": "Juan", 
+            "text": "¿Cómo sabes que soy nuevo?.", 
+            "pause": true,
+            "imageAssetId": null
+        }
+        ,
+        { 
+            "type": "text", 
+            "characterName": "Hombre de la barra", 
+            "text": "Se te nota.", 
+            "pause": true,
+            "imageAssetId": null
+        },
+        { 
+            "type": "text", 
+            "characterName": "Hombre de la barra", 
+            "text": "En fin, yo no te puedo ayudar, pregunta por aquí, igual alguien sabe algo.", 
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "BartenderDialogueFinished",
+            "text": "BartenderDialogueFinished"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "lines": [ 
+        { 
+            "type": "text", 
+            "characterName": "Jessi", 
+            "text": "¿Tu qué miras chaval?", 
+            "pause": true,
+            "imageAssetId": null
+        },
+        { 
+            "type": "text", 
+            "characterName": "Juan", 
+            "text": "-OoOoO que guapa-", 
+            "pause": true,
+            "imageAssetId": null
+        },
+        { 
+            "type": "text", 
+            "characterName": "Jessi", 
+            "text": "Ostia tú, otro baboso", 
+            "pause": true,
+            "imageAssetId": null
+        },
+        { 
+            "type": "text", 
+            "characterName": "Jessi", 
+            "text": "Mira cuerpoescombro, ¿Por que no te vas con el de la barra a babear a distancia?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        { 
+            "type": "text", 
+            "characterName": "Jesi", 
+            "text": "De verdad, los tíos sois todos iguales...", 
+            "pause": true,
+            "imageAssetId": null
+        },
+        { 
+            "type": "text", 
+            "characterName": "Jessi", 
+            "text": "Menos mal que ya me he librado del golfo ese, vaya cani...", 
+            "pause": true,
+            "imageAssetId": null
+        },
+        { 
+            "type": "text", 
+            "characterName": "Juan", 
+            "text": "-Un momento-", 
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "JessiDialogueFinished",
+            "text": "JessiDialogueFinished"
+        }
+    ]
+}

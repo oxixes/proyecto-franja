@@ -1,0 +1,11 @@
+{
+    "lines": [ 
+        { 
+            "type": "text", 
+            "characterName": "Hombre de la Barra", 
+            "text": "Marchando que es gerundio.", 
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}
