@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class SaveManager : MonoBehaviour
 {
-    private static SaveManager instance = null;
+    [CanBeNull] private static SaveManager instance = null;
 
     // Start is called before the first frame update
     public SaveManager()
