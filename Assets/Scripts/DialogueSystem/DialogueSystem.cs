@@ -44,6 +44,8 @@ public class DialogueSystem : MonoBehaviour
     private Dictionary<int, Tuple<string, int>> notificationIdToPosition;
     private int currentNotificationId = 0;
 
+    private bool hasDialogueJustFinished = false;
+
     public DialogueSystem()
     {
         if (instance != null)
@@ -58,7 +60,7 @@ public class DialogueSystem : MonoBehaviour
 
     /// <summary>
     /// Get the instance of the DialogueSystem in the scene.
-    /// 
+    ///
     /// This is a singleton. You mustn't instantiate a DialogueSystem yourself.
     /// </summary>
     /// <returns>The instance of the current Dialogue System.</returns>
@@ -74,10 +76,10 @@ public class DialogueSystem : MonoBehaviour
 
     /// <summary>
     /// Register a notification handler for a given notification id.
-    /// 
+    ///
     /// The handler will be called when the notification with the given id is triggered
     /// by a dialogue.
-    /// 
+    ///
     /// The handler has three parameters:
     /// - The dialogue id
     /// - The notification id
@@ -132,13 +134,13 @@ public class DialogueSystem : MonoBehaviour
 
         notificationHandlers[notificationIdAndPosition.Item1].RemoveAt(index);
         notificationIdToPosition.Remove(id);
-        
+
         return true;
     }
 
     /// <summary>
     /// Start a dialogue with the given id.
-    /// 
+    ///
     /// If a dialogue is already active, or if the id or file linked to it is invalid, this method will do nothing.
     /// </summary>
     /// <param name="dialogueId">The identifier of the dialogue to start.</param>
@@ -193,6 +195,24 @@ public class DialogueSystem : MonoBehaviour
         return isDialogueActive;
     }
 
+    /// <summary>
+    /// Check if the dialogue has just finished.
+    /// </summary>
+    /// <returns>A boolean that is true if the dialogue has just finished, or false otherwise.</returns>
+    public bool HasDialogueJustFinished()
+    {
+        return hasDialogueJustFinished;
+    }
+
+    /// <summary>
+    /// Sets if the dialogue has just finished.
+    /// </summary>
+    /// <param name="hasFinished">A boolean that is true if the dialogue has just finished, or false otherwise.</param>
+    public void SetDialogueJustFinished(bool hasFinished)
+    {
+        hasDialogueJustFinished = hasFinished;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -223,6 +243,7 @@ public class DialogueSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        hasDialogueJustFinished = false;
         if (!isDialogueActive)
         {
             return;
@@ -244,13 +265,14 @@ public class DialogueSystem : MonoBehaviour
                     }
 
                     // Wait for player input
-                    if (Input.GetKeyDown(KeyCode.Space) || spacePressed || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
+                    if (Input.GetKeyDown(KeyCode.Space) || spacePressed || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.E))
                     {
                         timeSinceLastCharacter = 0;
                         currentCharacterIndex = 0;
                         timeSinceLineFinished = 0;
                         currentLineAccelerated = false;
                         pressToContinueText.SetActive(false);
+
                         PlayNextDialogueLine();
                     }
                 }
@@ -268,7 +290,7 @@ public class DialogueSystem : MonoBehaviour
             else
             {
                 float acceleration = 1.0f;
-                if (Input.GetKeyDown(KeyCode.Space) || spacePressed || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
+                if (Input.GetKeyDown(KeyCode.Space) || spacePressed || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.E))
                 {
                     currentLineAccelerated = true;
                 }
@@ -290,7 +312,7 @@ public class DialogueSystem : MonoBehaviour
                     currentCharacterIndex++;
                 }
             }
-        } 
+        }
         else if (currentDialogueLine.type.Equals("options"))
         {
             dialogueText.gameObject.SetActive(false);
@@ -315,7 +337,7 @@ public class DialogueSystem : MonoBehaviour
             {
                 currentOptionIndex = (currentOptionIndex + 1) % currentDialogueLine.options.Length;
             }
-            else if (Input.GetKeyDown(KeyCode.Space) || spacePressed || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
+            else if (Input.GetKeyDown(KeyCode.Space) || spacePressed || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.E))
             {
                 currentDialogueLineIndex = -1;
                 characterImage.texture = null;
@@ -332,6 +354,7 @@ public class DialogueSystem : MonoBehaviour
             !currentDialogueData.lines[currentDialogueLineIndex].CheckFormatOk())
         {
             // End of dialogue
+            hasDialogueJustFinished = true;
             gameObject.SetActive(false);
             isDialogueActive = false;
             currentDialogueLineIndex = -1;
@@ -421,5 +444,5 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
-  
+
 }

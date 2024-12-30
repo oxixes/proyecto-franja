@@ -13,14 +13,14 @@ public class InteractableObject : MonoBehaviour
     [HideInInspector] public bool ePressed = false;
     [HideInInspector] public bool forcePlayerInRange = false;
 
-    void Start() { 
+    void Start() {
         dialogueSystem = DialogueSystem.GetInstance();
     }
     // Update is called once per frame
     void Update()
     {
         inDialogue = dialogueSystem.IsDialogueActive();
-        if ((isPlayerInRange || forcePlayerInRange) && (Input.GetKeyDown(KeyCode.E) || ePressed) && !inDialogue && !Minigame.isInMinigame)
+        if ((isPlayerInRange || forcePlayerInRange) && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space) || ePressed) && !inDialogue && !Minigame.isInMinigame)
         {
             Interact();
         }
@@ -31,7 +31,11 @@ public class InteractableObject : MonoBehaviour
 
         if (dialogueSystem != null && !dialogueSystem.IsDialogueActive())
         {
-            dialogueSystem.StartDialogue(dialogueID);
+            if (!dialogueSystem.HasDialogueJustFinished()) {
+                dialogueSystem.StartDialogue(dialogueID);
+            } else {
+                dialogueSystem.SetDialogueJustFinished(false);
+            }
         }
         else
         {

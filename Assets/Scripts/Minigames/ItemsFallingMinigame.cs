@@ -98,7 +98,7 @@ public class ItemsFallingMinigame : Minigame
                     finishEvent.Invoke(totalSpawnedItems, score);
                     Destroy(gameObject);
                 }
-            } 
+            }
             else
             {
                 return;
@@ -111,7 +111,7 @@ public class ItemsFallingMinigame : Minigame
             explanation.SetActive(true);
         }
 
-        if (!gameStarted && !gameFinished && Input.GetKeyDown(KeyCode.Space))
+        if (!gameStarted && !gameFinished && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E)))
         {
             explanation.SetActive(false);
             timer.SetActive(true);
@@ -205,7 +205,7 @@ public class ItemsFallingMinigame : Minigame
 
         if (gameFinished)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E))
             {
                 explanation.SetActive(false);
                 animationTimer = 0.0f;
