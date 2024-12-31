@@ -13,6 +13,7 @@ public class MainMenuController : MonoBehaviour
 
     public GameObject controlsPanel;
     public GameObject controlsCloseButton;
+    public GameObject contextualHintsButton;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,16 @@ public class MainMenuController : MonoBehaviour
         controlsButton.GetComponent<Button>().onClick.AddListener(OnControlsButtonPress);
         controlsCloseButton.GetComponent<Button>().onClick.AddListener(OnControlsCloseButtonPress);
         exitButton.GetComponent<Button>().onClick.AddListener(OnExitButtonPress);
+        contextualHintsButton.GetComponent<Button>().onClick.AddListener(OnContextualHintsButtonPress);
+
+        if (PlayerPrefs.GetInt("ShowContextualHints", 0) == 1)
+        {
+            contextualHintsButton.GetComponentInChildren<TextMeshProUGUI>().text = "Recordatorios contextuales: Activados";
+        }
+        else
+        {
+            contextualHintsButton.GetComponentInChildren<TextMeshProUGUI>().text = "Recordatorios contextuales: Desactivados";
+        }
     }
 
     void Update()
@@ -41,10 +52,13 @@ public class MainMenuController : MonoBehaviour
 
     void OnNewGameButtonPress()
     {
+        int contextualHints = PlayerPrefs.GetInt("ShowContextualHints", 1);
+
         PlayerPrefs.DeleteAll();
         PlayerPrefs.Save();
 
         PlayerPrefs.SetInt("SavedGame", 0);
+        PlayerPrefs.SetInt("ShowContextualHints", contextualHints);
         PlayerPrefs.Save();
 
         UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
@@ -68,5 +82,30 @@ public class MainMenuController : MonoBehaviour
     public void OnControlsCloseButtonPress()
     {
         controlsPanel.SetActive(false);
+    }
+
+    public void OnContextualHintsButtonPress()
+    {
+        bool showContextualHints = PlayerPrefs.GetInt("ShowContextualHints", 0) == 1;
+
+        if (showContextualHints)
+        {
+            PlayerPrefs.SetInt("ShowContextualHints", 0);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("ShowContextualHints", 1);
+        }
+
+        PlayerPrefs.Save();
+
+        if (!showContextualHints)
+        {
+            contextualHintsButton.GetComponentInChildren<TextMeshProUGUI>().text = "<color=yellow>Recordatorios contextuales: Activados</color>";
+        }
+        else
+        {
+            contextualHintsButton.GetComponentInChildren<TextMeshProUGUI>().text = "<color=yellow>Recordatorios contextuales: Desactivados</color>";
+        }
     }
 }

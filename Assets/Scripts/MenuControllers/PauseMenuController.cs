@@ -18,7 +18,9 @@ public class PauseMenuController : MonoBehaviour
     public GameObject controlsPanel;
     public GameObject controlsExitButton;
 
-    public static bool isPaused = false;
+    public GameObject contextualHintsButton;
+
+    [HideInInspector] public static bool isPaused = false;
 
     private int currentSelectionIndex = 0;
 
@@ -70,6 +72,16 @@ public class PauseMenuController : MonoBehaviour
         objectsExitButton.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(OnExitButtonPressed);
         infoExitButton.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(OnExitButtonPressed);
         controlsExitButton.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(OnExitButtonPressed);
+        contextualHintsButton.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(OnContextualHintsButtonPress);
+
+        if (SaveManager.GetInstance().Get<int>("ShowContextualHints") == 1)
+        {
+            contextualHintsButton.GetComponentInChildren<TextMeshProUGUI>().text = "Recordatorios contextuales: Activados";
+        }
+        else
+        {
+            contextualHintsButton.GetComponentInChildren<TextMeshProUGUI>().text = "Recordatorios contextuales: Desactivados";
+        }
     }
 
     // Update is called once per frame
@@ -159,5 +171,28 @@ public class PauseMenuController : MonoBehaviour
     {
         panels[currentPanelIndex].SetActive(false);
         isPanelOpen = false;
+    }
+
+    public void OnContextualHintsButtonPress()
+    {
+        bool showContextualHints = SaveManager.GetInstance().Get<int>("ShowContextualHints") == 1;
+
+        if (showContextualHints)
+        {
+            SaveManager.GetInstance().Set("ShowContextualHints", 0);
+        }
+        else
+        {
+            SaveManager.GetInstance().Set("ShowContextualHints", 1);
+        }
+
+        if (!showContextualHints)
+        {
+            contextualHintsButton.GetComponentInChildren<TextMeshProUGUI>().text = "<color=yellow>Recordatorios contextuales: Activados</color>";
+        }
+        else
+        {
+            contextualHintsButton.GetComponentInChildren<TextMeshProUGUI>().text = "<color=yellow>Recordatorios contextuales: Desactivados</color>";
+        }
     }
 }
