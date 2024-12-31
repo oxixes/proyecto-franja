@@ -20,7 +20,7 @@ public class InteractableObject : MonoBehaviour
     void Update()
     {
         inDialogue = dialogueSystem.IsDialogueActive();
-        if ((isPlayerInRange || forcePlayerInRange) && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space) || ePressed) && !inDialogue && !Minigame.isInMinigame)
+        if ((isPlayerInRange || forcePlayerInRange) && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space) || ePressed) && !inDialogue && !Minigame.isInMinigame && !PauseMenuController.isPaused)
         {
             Interact();
         }

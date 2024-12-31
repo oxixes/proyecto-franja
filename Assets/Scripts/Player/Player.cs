@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!DialogueSystem.GetInstance().IsDialogueActive() && !Minigame.isInMinigame)
+        if (!DialogueSystem.GetInstance().IsDialogueActive() && !Minigame.isInMinigame && !PauseMenuController.isPaused)
         {
             int horizontalDir = Input.GetAxisRaw("Horizontal") > 0 ? 1 : Input.GetAxisRaw("Horizontal") < 0 ? -1 : 0;
             int verticalDir = Input.GetAxisRaw("Vertical") > 0 ? 1 : Input.GetAxisRaw("Vertical") < 0 ? -1 : 0;

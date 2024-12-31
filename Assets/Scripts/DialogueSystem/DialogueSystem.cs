@@ -314,7 +314,7 @@ public class DialogueSystem : MonoBehaviour
                     optionTexts[i].text = "<color=yellow>> " + currentDialogueLine.options[i].text + "</color>";
                 } else
                 {
-                    optionTexts[i].text = "   " + currentDialogueLine.options[i].text;
+                    optionTexts[i].text = "  " + currentDialogueLine.options[i].text;
                 }
             }
 

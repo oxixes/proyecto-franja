@@ -9,6 +9,7 @@ public class MainMenuController : MonoBehaviour
     public GameObject newGameButton;
     public GameObject continueButton;
     public GameObject controlsButton;
+    public GameObject exitButton;
 
     public GameObject controlsPanel;
     public GameObject controlsCloseButton;
@@ -27,6 +28,15 @@ public class MainMenuController : MonoBehaviour
         newGameButton.GetComponent<Button>().onClick.AddListener(OnNewGameButtonPress);
         controlsButton.GetComponent<Button>().onClick.AddListener(OnControlsButtonPress);
         controlsCloseButton.GetComponent<Button>().onClick.AddListener(OnControlsCloseButtonPress);
+        exitButton.GetComponent<Button>().onClick.AddListener(OnExitButtonPress);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            controlsPanel.SetActive(false);
+        }
     }
 
     void OnNewGameButtonPress()
@@ -43,6 +53,11 @@ public class MainMenuController : MonoBehaviour
     void OnContinueButtonPress()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
+    }
+
+    void OnExitButtonPress()
+    {
+        Application.Quit();
     }
 
     public void OnControlsButtonPress()
