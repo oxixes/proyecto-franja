@@ -195,24 +195,6 @@ public class DialogueSystem : MonoBehaviour
         return isDialogueActive;
     }
 
-    /// <summary>
-    /// Check if the dialogue has just finished.
-    /// </summary>
-    /// <returns>A boolean that is true if the dialogue has just finished, or false otherwise.</returns>
-    public bool HasDialogueJustFinished()
-    {
-        return hasDialogueJustFinished;
-    }
-
-    /// <summary>
-    /// Sets if the dialogue has just finished.
-    /// </summary>
-    /// <param name="hasFinished">A boolean that is true if the dialogue has just finished, or false otherwise.</param>
-    public void SetDialogueJustFinished(bool hasFinished)
-    {
-        hasDialogueJustFinished = hasFinished;
-    }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -243,7 +225,14 @@ public class DialogueSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hasDialogueJustFinished = false;
+        if (hasDialogueJustFinished)
+        {
+            hasDialogueJustFinished = false;
+            isDialogueActive = false;
+            gameObject.SetActive(false);
+            return;
+        }
+
         if (!isDialogueActive)
         {
             return;
@@ -355,8 +344,6 @@ public class DialogueSystem : MonoBehaviour
         {
             // End of dialogue
             hasDialogueJustFinished = true;
-            gameObject.SetActive(false);
-            isDialogueActive = false;
             currentDialogueLineIndex = -1;
             characterImage.texture = null;
             Debug.Log("Dialogue finished");
@@ -424,8 +411,9 @@ public class DialogueSystem : MonoBehaviour
             {
                 Debug.LogError("Failed to divert to dialogue with id: " + currentDialogueLine.diversion);
                 // End of dialogue
-                gameObject.SetActive(false);
-                isDialogueActive = false;
+                hasDialogueJustFinished = true;
+                currentDialogueLineIndex = -1;
+                characterImage.texture = null;
             }
         }
         else if (currentDialogueLine.type.Equals("notification"))
@@ -443,6 +431,4 @@ public class DialogueSystem : MonoBehaviour
             PlayNextDialogueLine();
         }
     }
-
-
 }

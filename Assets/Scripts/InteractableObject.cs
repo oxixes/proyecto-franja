@@ -31,11 +31,7 @@ public class InteractableObject : MonoBehaviour
 
         if (dialogueSystem != null && !dialogueSystem.IsDialogueActive())
         {
-            if (!dialogueSystem.HasDialogueJustFinished()) {
-                dialogueSystem.StartDialogue(dialogueID);
-            } else {
-                dialogueSystem.SetDialogueJustFinished(false);
-            }
+            dialogueSystem.StartDialogue(dialogueID);
         }
         else
         {
