@@ -18,6 +18,11 @@ public class PlayerInventoryManager : MonoBehaviour
         playerInventory = new Inventory();
         playerInventory.LoadInventory();
 
+        if (pauseMenuObjectsText == null || pauseMenuInfoText == null)
+        {
+            return; // Tests
+        }
+
         objectsText = pauseMenuObjectsText.GetComponent<TextMeshProUGUI>();
         infoText = pauseMenuInfoText.GetComponent<TextMeshProUGUI>();
 
@@ -68,6 +73,11 @@ public class PlayerInventoryManager : MonoBehaviour
 
     private void UpdateObjectsText()
     {
+        if (objectsText == null)
+        {
+            return; // Tests
+        }
+
         string text = "";
         int i = 1;
         foreach (ItemData item in playerInventory.GetItems())
@@ -86,6 +96,11 @@ public class PlayerInventoryManager : MonoBehaviour
 
     private void UpdateInfoText()
     {
+        if (infoText == null)
+        {
+            return; // Tests
+        }
+
         string text = "";
         int i = 1;
         foreach (InformationData info in playerInventory.GetInformation())
