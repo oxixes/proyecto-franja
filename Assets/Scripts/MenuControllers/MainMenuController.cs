@@ -52,7 +52,7 @@ public class MainMenuController : MonoBehaviour
 
     void OnNewGameButtonPress()
     {
-        int contextualHints = PlayerPrefs.GetInt("ShowContextualHints", 1);
+        int contextualHints = PlayerPrefs.GetInt("ShowContextualHints", 0);
 
         PlayerPrefs.DeleteAll();
         PlayerPrefs.Save();

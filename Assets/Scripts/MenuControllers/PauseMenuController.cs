@@ -123,7 +123,7 @@ public class PauseMenuController : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !isPanelOpen)
         {
             currentSelectionIndex--;
             if (currentSelectionIndex < 0)
@@ -131,7 +131,7 @@ public class PauseMenuController : MonoBehaviour
                 currentSelectionIndex = 3;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        else if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && !isPanelOpen)
         {
             currentSelectionIndex++;
             if (currentSelectionIndex > 3)
