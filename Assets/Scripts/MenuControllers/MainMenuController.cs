@@ -61,6 +61,9 @@ public class MainMenuController : MonoBehaviour
         PlayerPrefs.SetInt("ShowContextualHints", contextualHints);
         PlayerPrefs.Save();
 
+        Inventory playerInventory = new Inventory();
+        playerInventory.DeleteInventory();
+
         UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
     }
 

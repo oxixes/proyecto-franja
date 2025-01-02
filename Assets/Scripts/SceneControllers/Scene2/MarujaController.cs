@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class MarujaController : MonoBehaviour
 {
     public GameObject minigamePrefab;
+    public GameObject player;
+    public InformationData marujaInformation;
 
     private InteractableObject marujaIO;
     private GameObject canvas;
+    private PlayerInventoryManager playerInventoryManager;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +27,8 @@ public class MarujaController : MonoBehaviour
 
         DialogueSystem.GetInstance().HandleNotification("MarujaDialogueFinished", HandleMarujaDialogueFinishedNotification);
         DialogueSystem.GetInstance().HandleNotification("MarujaMinigame", HandleMinigameStartNotification);
+
+        playerInventoryManager = player.GetComponent<PlayerInventoryManager>();
     }
 
     void HandleMarujaDialogueFinishedNotification(string dialogueID, string notificationID, string notificationData)
@@ -31,6 +37,11 @@ public class MarujaController : MonoBehaviour
         marujaIO.dialogueID = notificationData;
         SaveManager.GetInstance().Set("Scene2MarujaDialogueID", dialogueID);
         SaveManager.GetInstance().Set("Scene2MarujaDialogueData", notificationData);
+
+        if (dialogueID == "NPCs/MarujaMinigameWon" || dialogueID == "NPCs/MarujaMinigameSkipped") {
+            Debug.Log("MarujaController: MarujaDialogueFinishedNotification: Adding Maruja information to player inventory");
+            playerInventoryManager.CollectInformation(marujaInformation);
+        }
     }
 
     void HandleMinigameStartNotification(string dialogueID, string notificationID, string notificationData)
@@ -42,8 +53,14 @@ public class MarujaController : MonoBehaviour
         minigame.GetComponent<ItemsFallingMinigame>().finishEvent.AddListener(HandleOnMinigameFinish);
     }
 
-    void HandleOnMinigameFinish(int total, int score)
+    void HandleOnMinigameFinish(int total, int score, bool skipped)
     {
+        if (skipped)
+        {
+            DialogueSystem.GetInstance().StartDialogue("NPCs/MarujaMinigameSkipped");
+            return;
+        }
+
         float percentage = (float)score / total;
         if (percentage >= 0.5)
         {

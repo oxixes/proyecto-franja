@@ -3,7 +3,7 @@
         {
             "type": "text",
             "characterName": "Maruja",
-            "text": "No me has ayudado, se te ha caído casi toda la ropa, ¡así no se hace!",
+            "text": "No me has ayudado, se te ha caído casi toda la ropa, ¡así no se\nhace!",
             "pause": true,
             "imageAssetId": null
         },

@@ -100,4 +100,11 @@ public class Inventory
     {
         LoadFromJson();
     }
+
+    public void DeleteInventory()
+    {
+        items = new List<ItemData>();
+        information = new List<InformationData>();
+        SaveToJson();
+    }
 }

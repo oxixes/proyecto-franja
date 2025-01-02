@@ -71,6 +71,13 @@ public class PlayerInventoryManager : MonoBehaviour
         playerInventory.SaveInventory();
     }
 
+    public void Delete()
+    {
+        playerInventory.DeleteInventory();
+        UpdateObjectsText();
+        UpdateInfoText();
+    }
+
     private void UpdateObjectsText()
     {
         if (objectsText == null)

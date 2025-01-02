@@ -3,7 +3,7 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Disculpe, ¿no habrá visto usted a un joven salir corriendo por aquí?",
+            "text": "Disculpe, ¿no habrá visto usted a un joven salir corriendo por\naquí?",
             "pause": true,
             "imageAssetId": null
         },
@@ -38,7 +38,7 @@
         {
             "type":"text",
             "characterName":"Maruja",
-            "text":"Sí, claro que lo he visto. Te lo contaré si me ayudas a recoger la ropa, ¿vale? Parece que va a llover...",
+            "text":"Sí, claro que lo he visto. Te lo contaré si me ayudas a recoger\nla ropa, ¿vale? Parece que va a llover...",
             "pause": true,
             "imageAssetId": null
         },

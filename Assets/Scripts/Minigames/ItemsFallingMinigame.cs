@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class ItemsFallingMinigame : Minigame
 {
-    public UnityEvent<int, int> finishEvent = new UnityEvent<int, int>();
+    public UnityEvent<int, int, bool> finishEvent = new UnityEvent<int, int, bool>();
 
     public enum FallingMinigameModes
     {
@@ -20,6 +20,7 @@ public class ItemsFallingMinigame : Minigame
     public GameObject explanation;
     public GameObject timer;
     public GameObject scoreText;
+    public GameObject kasHelp;
     public float spawnYPos = 320.0f;
     public float spawnRate = 1.0f; // Items per second
     public float spawnRateIncrease = 0.1f; // Items per second
@@ -31,6 +32,7 @@ public class ItemsFallingMinigame : Minigame
 
     private bool isInAnimation = true;
     private bool startingAnimation = true;
+    private bool gameSkipped = false;
     private float animationTimer = 0.0f;
     private List<GameObject> fallingItemsPool = new List<GameObject>();
     private int nextItemToSpawn = 0;
@@ -69,10 +71,13 @@ public class ItemsFallingMinigame : Minigame
 
         playerAnimator = player.GetComponent<Animator>();
 
+        kasHelp.GetComponent<Button>().onClick.AddListener(OnKasHelpButtonPress);
+
         player.GetComponent<Image>().enabled = false; /* UNITY BUG: Animator stops playing if the object is disabled */
         explanation.SetActive(false);
         timer.SetActive(false);
         scoreText.SetActive(false);
+        kasHelp.SetActive(false);
     }
 
     // Update is called once per frame
@@ -95,7 +100,7 @@ public class ItemsFallingMinigame : Minigame
                 if (!startingAnimation)
                 {
                     isInMinigame = false;
-                    finishEvent.Invoke(totalSpawnedItems, score);
+                    finishEvent.Invoke(totalSpawnedItems, score, gameSkipped);
                     Destroy(gameObject);
                 }
             }
@@ -124,15 +129,25 @@ public class ItemsFallingMinigame : Minigame
 
         if (gameStarted)
         {
+            if (!kasHelp.activeSelf)
+            {
+                kasHelp.SetActive(true);
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                OnKasHelpButtonPress();
+            }
+
             Vector3 moveDirection = new Vector3(Input.GetAxisRaw("Horizontal") * playerMoveSpeed * Time.deltaTime, 0, 0);
-            player.transform.localPosition = new Vector3(Mathf.Clamp(player.transform.localPosition.x + moveDirection.x * 10, -360, 360),
+            player.transform.localPosition = new Vector3(Mathf.Clamp(player.transform.localPosition.x + moveDirection.x * 10, -290, 290),
                 player.transform.localPosition.y, player.transform.localPosition.z);
 
             if ((Time.time - lastItemSpawnedTime) >= (1 / spawnRate))
             {
                 fallingItemsPool[nextItemToSpawn].SetActive(false);
                 lastItemSpawnedTime = Time.time;
-                fallingItemsPool[nextItemToSpawn].transform.localPosition = new Vector3(Random.Range(-360, 360), spawnYPos, 0);
+                fallingItemsPool[nextItemToSpawn].transform.localPosition = new Vector3(Random.Range(-290, 290), spawnYPos, 0);
                 fallingItemsPool[nextItemToSpawn].SetActive(true);
                 nextItemToSpawn = (nextItemToSpawn + 1) % poolSize;
 
@@ -180,6 +195,7 @@ public class ItemsFallingMinigame : Minigame
                 timer.SetActive(false);
                 player.GetComponent<Image>().enabled = false; /* UNITY BUG: Animator stops playing if the object is disabled */
                 scoreText.SetActive(false);
+                kasHelp.SetActive(false);
                 gameFinished = true;
 
                 for (int i = 0; i < poolSize; i++)
@@ -211,6 +227,28 @@ public class ItemsFallingMinigame : Minigame
                 animationTimer = 0.0f;
                 isInAnimation = true;
             }
+        }
+    }
+
+    public void OnKasHelpButtonPress()
+    {
+        Debug.Log("Kas help button pressed");
+
+        gameStarted = false;
+        timer.SetActive(false);
+        player.GetComponent<Image>().enabled = false; /* UNITY BUG: Animator stops playing if the object is disabled */
+        scoreText.SetActive(false);
+        kasHelp.SetActive(false);
+        gameFinished = true;
+        startingAnimation = false;
+        isInAnimation = true;
+        gameSkipped = true;
+        animationTimer = 0.0f;
+
+        for (int i = 0; i < poolSize; i++)
+        {
+            fallingItemsPool[i].SetActive(false);
+            Destroy(fallingItemsPool[i]);
         }
     }
 
