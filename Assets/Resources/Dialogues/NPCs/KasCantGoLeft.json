@@ -1,0 +1,11 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Ey, el ladrón se ha ido a la derecha, ¡no vayas por ahí!.",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}

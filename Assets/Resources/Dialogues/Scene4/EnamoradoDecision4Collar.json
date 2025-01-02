@@ -1,0 +1,25 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "¿Pero, y entonces que le doy?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "options",
+            "characterName": "Juan",
+            "options": [
+                {
+                    "text": "Dale este collar tan bonito.",
+                    "diversion": "Scene4/EnamoradoCollar"
+                },
+                {
+                    "text": "Ni de co... eh nada, me lo tengo que pensar otra vez.",
+                    "diversion": "Empty"
+                }
+            ]
+        }
+    ]
+}

@@ -15,14 +15,14 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Me quedo esto, gracias por devolverlo",
+            "text": "Me quedo esto, gracias por devolverlo.",
             "pause": true,
             "imageAssetId": null
         },
         {
             "type": "text",
             "characterName": "Ladrón",
-            "text": "Mierda, me las vas a pagar",
+            "text": "Mierda, me las vas a pagar.",
             "pause": true,
             "imageAssetId": "anonymous"
         },
@@ -34,7 +34,7 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "<i> Ya puedo volver a casa. <i>",
+            "text": "<i>Ya puedo volver a casa.<i>",
             "pause": true,
             "imageAssetId": null
         }

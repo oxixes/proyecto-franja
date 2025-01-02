@@ -81,6 +81,16 @@ public class Inventory
         return information.Contains(info);
     }
 
+    public List<ItemData> GetItems()
+    {
+        return items;
+    }
+
+    public List<InformationData> GetInformation()
+    {
+        return information;
+    }
+
     public void SaveInventory()
     {
         SaveToJson();
@@ -89,5 +99,12 @@ public class Inventory
     public void LoadInventory()
     {
         LoadFromJson();
+    }
+
+    public void DeleteInventory()
+    {
+        items = new List<ItemData>();
+        information = new List<InformationData>();
+        SaveToJson();
     }
 }

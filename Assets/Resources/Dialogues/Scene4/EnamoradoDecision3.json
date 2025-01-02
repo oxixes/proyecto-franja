@@ -1,0 +1,25 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "Bueno, ¿Pues le doy la copa no?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "options",
+            "characterName": "Juan",
+            "options": [
+                {
+                    "text": "Adelante, llévele el brebaje.",
+                    "diversion": "Scene4/EnamoradoCopa"
+                },
+                {
+                    "text": "Ni de cooooooña chaval.",
+                    "diversion": "Scene4/EnamoradoDecision4Collar"
+                }
+            ]
+        }
+    ]
+}

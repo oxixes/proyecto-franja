@@ -1,0 +1,32 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Universitario",
+            "text": "Hola, ¿eres miembro de la UPM?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "No, acabo de llegar aquí.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Universitario",
+            "text": "Pues lo siento, estamos de elecciones ahora mismo y tú no puedes votar.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "No pasa nada, ya volveré en otro momento.",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}

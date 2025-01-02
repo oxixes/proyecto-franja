@@ -1,0 +1,16 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Maruja",
+            "text": "No me has ayudado, se te ha caído casi toda la ropa, ¡así no se\nhace!",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "MarujaDialogueFinished",
+            "text": "NPCs/MarujaMinigameLost"
+        }
+    ]
+}

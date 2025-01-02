@@ -13,16 +13,31 @@ public class InteractableObject : MonoBehaviour
     [HideInInspector] public bool ePressed = false;
     [HideInInspector] public bool forcePlayerInRange = false;
 
-    void Start() { 
+    private GameObject eKeyHint;
+
+    void Start() {
         dialogueSystem = DialogueSystem.GetInstance();
+
+        // Find the E key hint in the children of this object
+        if (transform.Find("EKeySprite") != null)
+        {
+            eKeyHint = transform.Find("EKeySprite").gameObject;
+            eKeyHint.SetActive(false);
+        }
     }
     // Update is called once per frame
     void Update()
     {
         inDialogue = dialogueSystem.IsDialogueActive();
-        if ((isPlayerInRange || forcePlayerInRange) && (Input.GetKeyDown(KeyCode.E) || ePressed) && !inDialogue)
+        if ((isPlayerInRange || forcePlayerInRange) && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space) || ePressed) && !inDialogue && !Minigame.isInMinigame && !PauseMenuController.isPaused)
         {
             Interact();
+        }
+
+        if (SaveManager.GetInstance().Get<int>("ShowContextualHints") == 1 && eKeyHint != null && (isPlayerInRange || forcePlayerInRange) && !inDialogue && !Minigame.isInMinigame) {
+            eKeyHint.SetActive(true);
+        } else if (eKeyHint != null) {
+            eKeyHint.SetActive(false);
         }
     }
 

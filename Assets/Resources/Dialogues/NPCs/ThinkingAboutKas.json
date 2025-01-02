@@ -6,6 +6,13 @@
             "text": "<i>A lo mejor ese señor me puede ayudar con esto.</i>",
             "pause": true,
             "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Siento una voz que me dice que puedo interactuar con <color=yellow>E</color> y correr con <color=yellow>Shift</color>.</i>",
+            "pause": true,
+            "imageAssetId": null
         }
     ]
 }

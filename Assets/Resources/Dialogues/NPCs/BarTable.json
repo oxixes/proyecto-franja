@@ -7,13 +7,13 @@
         },
         {
             "type": "text",
-            "characterName": "Hombre 1",
+            "characterName": "Hombre borracho",
             "text": "¡No! ¡Acaba de marcar el Valencia!",
             "pause": true
         },
         {
             "type": "text",
-            "characterName": "Hombre 2",
+            "characterName": "Hombre enfadado",
             "text": "Si es que es normal, tal y como estamos jugando nos merecemos descender.",
             "pause": true
         },

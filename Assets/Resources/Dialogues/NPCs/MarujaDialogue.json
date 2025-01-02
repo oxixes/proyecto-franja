@@ -3,7 +3,7 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Disculpe, ¿no habrá visto usted a un joven salir corriendo por aquí?",
+            "text": "Disculpe, ¿no habrá visto usted a un joven salir corriendo por\naquí?",
             "pause": true,
             "imageAssetId": null
         },
@@ -38,30 +38,28 @@
         {
             "type":"text",
             "characterName":"Maruja",
-            "text":"Sí, claro que lo he visto. Conozco muy bien a su familia. Se llama Quique y se meaba en la cama hasta los 15 años.",
-            "pause":true,
-            "imageAssetId":null
+            "text":"Sí, claro que lo he visto. Te lo contaré si me ayudas a recoger\nla ropa, ¿vale? Parece que va a llover...",
+            "pause": true,
+            "imageAssetId": null
         },
         {
-            "type":"text",
-            "characterName":"Maruja",
-            "text":"Iba corriendo como una bala. Lo vi yendo al norte de la plaza, tras la fuente.",
-            "pause":true,
-            "imageAssetId":null
+            "type": "notification",
+            "notificationId": "MarujaDialogueFinished",
+            "text": "NPCs/MarujaRepeat"
         },
         {
-            "type":"text",
-            "characterName":"Juan",
-            "text":"¡Muchas gracias, señora!",
-            "pause":true,
-            "imageAssetId":null
-        },
-        {
-            "type":"text",
-            "characterName":"Maruja",
-            "text":"¡De nada, hijo! Pero para la próxima, me ayudas con la colada, ¿vale?",
-            "pause":true,
-            "imageAssetId":null
+            "type": "options",
+            "characterName": "Juan",
+            "options": [
+                {
+                    "text": "Vale, te ayudo.",
+                    "diversion": "NPCs/MarujaDialogueA"
+                },
+                {
+                    "text": "No tengo tiempo para eso.",
+                    "diversion": "Empty"
+                }
+            ]
         }
     ]
 

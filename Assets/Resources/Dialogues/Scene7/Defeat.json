@@ -15,15 +15,15 @@
         {
             "type": "text",
             "characterName": "Ladrón",
-            "text": "Ahí te quedas panoli, me quedo esto",
+            "text": "Ahí te quedas panoli, me quedo esto.",
             "pause": true,
             "imageAssetId": "anonymous"
         },
-        
+
         {
             "type": "text",
             "characterName": "Ladrón",
-            "text": "Eh, mira aquí, un móvil",
+            "text": "Eh, mira aquí, un móvil.",
             "pause": true,
             "imageAssetId": "anonymous"
         },

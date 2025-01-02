@@ -1,0 +1,16 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "Roncola, en tí confío, te amo.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "EnamoradoDecision",
+            "text": "3"
+        }
+    ]
+}

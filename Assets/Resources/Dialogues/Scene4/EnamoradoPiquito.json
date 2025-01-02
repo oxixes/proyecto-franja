@@ -1,0 +1,16 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "Venga, deseame suerte.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "EnamoradoDecision",
+            "text": "1"
+        }
+    ]
+}
