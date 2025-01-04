@@ -108,14 +108,28 @@
         {
             "type": "text",
             "characterName": "Enamorado",
-            "text": "Vuelve a hablar conmigo cuando hayas tomado una decisión.",
+            "text": "Por cierto, recuerda traerme las flores o la copa si al final te decides por alguna de estas dos.",
             "pause": true,
             "imageAssetId": null
         },
         {
             "type": "text",
             "characterName": "Enamorado",
-            "text": "Cuento contigo chaval, mi futura parienta está en tus manos.",
+            "text": "Yo me quedaré aquí haciendo guardia.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "No puedo arriesgarme a que se me escape la Jessi.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "Vuelve a hablar conmigo cuando hayas tomado una decisión.",
             "pause": true,
             "imageAssetId": null
         },

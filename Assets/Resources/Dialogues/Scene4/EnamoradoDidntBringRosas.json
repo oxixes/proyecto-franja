@@ -3,28 +3,21 @@
         {
             "type": "text",
             "characterName": "Enamorado",
-            "text": "Si no tienes la copa, poco podemos hacer.",
+            "text": "Muy bien ¿Y las rosas campeón?",
             "pause": true,
             "imageAssetId": null
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Pero soy un crío, ¿cómo me van a dar una copa?",
+            "text": "¿Y de dónde saco unas rosas?",
             "pause": true,
             "imageAssetId": null
         },
         {
             "type": "text",
             "characterName": "Enamorado",
-            "text": "Quizás alguien la pueda pedir por ti.",
-            "pause": true,
-            "imageAssetId": null
-        },
-        {
-            "type": "text",
-            "characterName": "Enamorado",
-            "text": "A mi no me mires, no puedo romper contacto visual con mi amada.",
+            "text": "Hay un parque más adelante. Puedes mirar por ahí.",
             "pause": true,
             "imageAssetId": null
         }
