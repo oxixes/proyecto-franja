@@ -1,0 +1,107 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Total, que <color=red>El Kike</color> me puso los cuernos.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "¿Cómo fue capaz, a alguien tan guapa como tú?.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Eso mismo pienso yo.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Chaval, creo que tu y yo nos vamos a llevar bien.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "¿De verdad?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Sí... ¿Amigos?.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "...",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "Vale...",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "¿Puedo darte un abrazo?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Que mono.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "No.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Así que <color=red>el ladrón</color> le puso los cuernos a su ex</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Me pregunto si esa <color=yellow>información</color> será útil...</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Parece que no se puede hacer más por aquí, será mejor que siga adelante</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "CutsceneCopa2Finished",
+            "text": "CutsceneCopa2Finished"
+        }
+    ]
+}

@@ -1,0 +1,135 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "Hola.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "¿Que quieres?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "Ehm...",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "Toma.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Le da un piquito.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "...",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "¿Qué haces?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "¿Te ha gustado? A mi sí.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Te vas a enterar, golfo.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>La Jessi arma el brazo derecho y su mano corta el viento.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>El impacto crea un silencio en todo el bar.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Después de un segundo, todo sigue como si no hubiese pasado nada.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>El abofeteado vuelve a su sitio.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "Sinceramente, no sé por qué te he hecho caso.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Bueno... mira lo que le pasó a Rubiales, yo diría que has tenido suerte.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "¿Suerte? <i>Risa lenta</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "Tus muertos, chaval.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Parece que no se puede hacer más por aquí, será mejor que siga adelante</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "CutscenePiquitoFinished",
+            "text": "CutscenePiquitoFinished"
+        }
+    ]
+}

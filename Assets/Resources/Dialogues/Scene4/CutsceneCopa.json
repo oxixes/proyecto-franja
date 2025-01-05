@@ -1,0 +1,44 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "¿Que pasa nena? Yo invito a esta, para que luego no digas que te trato mal eh muñeca.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Mejor no hables.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Dame eso y ven, que me vas a servir de pañuelo.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Una elegía a la infidelidad más tarde.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "Fondo a negro cuando termine este diálogo, *eliminar esta línea*",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "CutsceneCopaFinished",
+            "text": "CutsceneCopaFinished"
+        }
+    ]
+}
