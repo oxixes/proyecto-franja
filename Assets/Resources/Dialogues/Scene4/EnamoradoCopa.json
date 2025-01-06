@@ -3,14 +3,9 @@
         {
             "type": "text",
             "characterName": "Enamorado",
-            "text": "Roncola, en tí confío",
+            "text": "Roncola, en tí confío.",
             "pause": true,
             "imageAssetId": null
-        },
-        {
-            "type": "notification",
-            "notificationId": "EnamoradoDecision",
-            "text": "3"
         }
     ]
 }

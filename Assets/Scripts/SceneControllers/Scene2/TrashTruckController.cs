@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TrashTruckController : MonoBehaviour
 {
@@ -9,12 +10,24 @@ public class TrashTruckController : MonoBehaviour
     public GameObject container2;
     public GameObject container3;
     public GameObject manolo;
+    public GameObject fadeOutPanel;
+    public GameObject trashTruck;
 
     private InteractableObject manoloIO;
     // Start is called before the first frame update
     void Start()
     {
         manoloIO = manolo.GetComponent<InteractableObject>();
+        container1.SetActive(false);
+        container2.SetActive(false);
+        container3.SetActive(false);
+
+        if (SaveManager.GetInstance().Get<int>("Scene2ManoloDialogueFinished") == 1)
+        {
+            HandleManoloNotification(SaveManager.GetInstance().Get<string>("Scene2ManoloDialogueID"), null,
+                SaveManager.GetInstance().Get<string>("Scene2ManoloDialogueData"));
+        }
+
         counter = SaveManager.GetInstance().Get<int>("Scene2ContainersThrown");
 
         if (SaveManager.GetInstance().Get<int>("Scene2Container1Thrown") == 1)
@@ -35,12 +48,6 @@ public class TrashTruckController : MonoBehaviour
         if (SaveManager.GetInstance().Get<int>("Scene2RiotFinished") == 1)
         {
             manoloIO.dialogueID = "NPCs/ManoloHappy";
-        }
-
-        if (SaveManager.GetInstance().Get<int>("Scene2ManoloDialogueFinished") == 1)
-        {
-            HandleManoloNotification(SaveManager.GetInstance().Get<string>("Scene2ManoloDialogueID"), null,
-                SaveManager.GetInstance().Get<string>("Scene2ManoloDialogueData"));
         }
 
         DialogueSystem.GetInstance().HandleNotification("ContainerThrown", HandleNotification);
@@ -85,7 +92,20 @@ public class TrashTruckController : MonoBehaviour
         SaveManager.GetInstance().Set("Scene2ManoloDialogueData", notificationData);
         if (dialogueID == "NPCs/ManoloHappy")
         {
-            gameObject.SetActive(false);
+            if (notificationID == null)
+            {
+                trashTruck.SetActive(false);
+            }
+            else
+            {
+                StartCoroutine(HideTrashTruck());
+            }
+        }
+        else
+        {
+            container1.SetActive(true);
+            container2.SetActive(true);
+            container3.SetActive(true);
         }
     }
 
@@ -111,5 +131,33 @@ public class TrashTruckController : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         DialogueSystem.GetInstance().StartDialogue("Other/RiotFinished");
         yield return null;
+    }
+
+    IEnumerator HideTrashTruck()
+    {
+        Minigame.isInMinigame = true;
+        fadeOutPanel.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        fadeOutPanel.SetActive(true);
+
+        // Animate fade in
+        for (float i = 0; i <= 1; i += Time.deltaTime)
+        {
+            fadeOutPanel.GetComponent<Image>().color = new Color(0, 0, 0, i);
+            yield return null;
+        }
+
+        // Hide trash truck
+        trashTruck.SetActive(false);
+        yield return new WaitForSeconds(1f);
+
+        // Animate fade out
+        for (float i = 1; i >= 0; i -= Time.deltaTime)
+        {
+            fadeOutPanel.GetComponent<Image>().color = new Color(0, 0, 0, i);
+            yield return null;
+        }
+
+        fadeOutPanel.SetActive(false);
+        Minigame.isInMinigame = false;
     }
 }

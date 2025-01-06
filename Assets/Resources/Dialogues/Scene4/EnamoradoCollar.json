@@ -27,11 +27,6 @@
             "text": "Bueno el collar está guapísimo, allévoy.",
             "pause": true,
             "imageAssetId": null
-        },
-        {
-            "type": "notification",
-            "notificationId": "EnamoradoDecision",
-            "text": "4"
         }
     ]
 }

@@ -1,0 +1,30 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Ese tipo me ha traído una copa para intentar ligar conmigo.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Casi cuela, pero va a ser que no me interesa.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "No quiero saber nada de tíos, me voy a seguir de bajón.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "JessiEnamoradoDialogueFinished",
+            "text": "2"
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Buah, ese tipo me ha traído una copa para intentar ligar\nconmigo.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Me recuerda a mi ex, me puso los cuernos con una por ahí.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "No quiero saber nada de tíos, me voy a seguir de bajón.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Me pregunto si esa <color=yellow>información</color> será útil...</i>",
+            "pause": true
+        },
+        {
+            "type": "notification",
+            "notificationId": "JessiEnamoradoDialogueFinished",
+            "text": "3"
+        }
+    ]
+}
