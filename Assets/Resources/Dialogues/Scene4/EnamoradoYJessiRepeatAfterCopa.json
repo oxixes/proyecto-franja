@@ -1,0 +1,16 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Mejor dejo a estos dos a lo suyo.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "EnamoradoYJessiRepeatDialogueFinished",
+            "text": "EnamoradoYJessiRepeatDialogueFinished"
+        }
+    ]
+}

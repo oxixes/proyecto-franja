@@ -24,14 +24,7 @@
         {
             "type": "text",
             "characterName": null,
-            "text": "<i>Una elegía a la infidelidad más tarde.</i>",
-            "pause": true,
-            "imageAssetId": null
-        },
-        {
-            "type": "text",
-            "characterName": null,
-            "text": "Fondo a negro cuando termine este diálogo, *eliminar esta línea*",
+            "text": "Fundido a negro cuando termine este diálogo, *eliminar esta línea*",
             "pause": true,
             "imageAssetId": null
         },

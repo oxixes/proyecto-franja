@@ -2,6 +2,13 @@
     "lines": [
         {
             "type": "text",
+            "characterName": null,
+            "text": "<i>Una elegía a la infidelidad más tarde.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
             "characterName": "Jessi",
             "text": "Total, que <color=red>El Kike</color> me puso los cuernos.",
             "pause": true,
