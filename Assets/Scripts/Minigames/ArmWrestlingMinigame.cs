@@ -4,13 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ArmWrestlingMinigame : Minigame
+public class ArmWrestlingMinigame : MonoBehaviour
 {
     public Slider progressBar; // Barra deslizante para representar el progreso.
     public GameObject canvas; // Canvas negro para el minijuego.
     public TMP_Text instructionText; // Texto para mostrar instrucciones al usuario.
     public Image backgroundImage; // Imagen de fondo para el minijuego.
     public Sprite specificBackground; // Fondo específico a usar.
+    public GameObject introPanel; // Panel para la pantalla de introducción
+    public TMP_Text introText; // Texto para la pantalla de introducción
+
     public float decrementRate = 0.2f; // Tasa a la que disminuye la barra.
     public float incrementAmount = 0.05f; // Cantidad que aumenta la barra por cada pulsación de espacio.
     public float winThreshold = 1.0f; // Valor al que el jugador gana.
@@ -37,7 +40,24 @@ public class ArmWrestlingMinigame : Minigame
             bgTransform.offsetMax = Vector2.zero; // Right, Top
         }
 
-        // Configurar el texto
+        // Configurar el texto de introducción
+        if (introPanel != null && introText != null)
+        {
+            var panelImage = introPanel.GetComponent<Image>();
+            if (panelImage != null)
+            {
+                panelImage.color = new Color(0, 0, 0, 0.95f); // Negro con 95% opacidad
+            }
+
+            introText.text = "Press SPACE to start!\n\nInstructions:\n- Press SPACE to win the arm wrestle.\n- Keep the bar full to win.";
+            introText.alignment = TextAlignmentOptions.Center;
+            introText.fontSize = 30;
+            introText.rectTransform.sizeDelta = new Vector2(800, 200);
+
+            introPanel.SetActive(true); // Mostrar el panel al inicio
+        }
+
+        // Configurar el texto del minijuego
         instructionText.text = "¡Presiona ESPACIO para ganar el pulso de brazos!";
         instructionText.alignment = TextAlignmentOptions.Center;
         instructionText.rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
@@ -46,26 +66,13 @@ public class ArmWrestlingMinigame : Minigame
         instructionText.rectTransform.anchoredPosition = new Vector2(0, -120); // Posición justo encima del slider.
         instructionText.rectTransform.sizeDelta = new Vector2(600, 100); // Más ancho.
         instructionText.fontSize = 24; // Reducir tamaño de letra.
-        instructionText.color = Color.white; // Cambiar el texto a negro.
-        instructionText.fontStyle = FontStyles.Bold; // Negrita para resaltar.
+        instructionText.color = Color.white;
+        instructionText.fontStyle = FontStyles.Bold;
         instructionText.enableWordWrapping = true;
-
-        // Añadir un fondo detrás del texto para resaltarlo
-        GameObject textBackground = new GameObject("TextBackground");
-        textBackground.transform.SetParent(instructionText.transform.parent);
-        RectTransform bgRect = textBackground.AddComponent<RectTransform>();
-        bgRect.anchorMin = instructionText.rectTransform.anchorMin;
-        bgRect.anchorMax = instructionText.rectTransform.anchorMax;
-        bgRect.pivot = instructionText.rectTransform.pivot;
-        bgRect.sizeDelta = instructionText.rectTransform.sizeDelta + new Vector2(20, 20); // Margen extra alrededor del texto.
-        bgRect.anchoredPosition = instructionText.rectTransform.anchoredPosition;
-        Image bgImage = textBackground.AddComponent<Image>();
-        bgImage.color = new Color(0, 0, 0, 0.5f); // Fondo negro semitransparente.
-        textBackground.transform.SetSiblingIndex(instructionText.transform.GetSiblingIndex());
 
         // Añadir sombra al texto
         Shadow shadow = instructionText.gameObject.AddComponent<Shadow>();
-        shadow.effectColor = new Color(0, 0, 0, 0.5f); // Sombra negra semitransparente.
+        shadow.effectColor = new Color(0, 0, 0, 0.5f);
         shadow.effectDistance = new Vector2(2, -2);
 
         // Configurar el slider
@@ -84,12 +91,19 @@ public class ArmWrestlingMinigame : Minigame
             fillImage.color = Color.yellow; // Cambiar a un color que resalte.
         }
 
-        gameActive = true;
+        gameActive = false; // El juego empieza inactivo hasta que se pulse espacio
     }
 
     void Update()
     {
-        if (!gameActive) return;
+        if (!gameActive)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                StartGame();
+            }
+            return;
+        }
 
         // Disminuir el valor de la barra de progreso con el tiempo.
         progressBar.value -= decrementRate * Time.deltaTime;
@@ -112,6 +126,12 @@ public class ArmWrestlingMinigame : Minigame
         {
             EndGame(false);
         }
+    }
+
+    private void StartGame()
+    {
+        introPanel.SetActive(false); // Ocultar el panel de introducción
+        gameActive = true;
     }
 
     void EndGame(bool won)
