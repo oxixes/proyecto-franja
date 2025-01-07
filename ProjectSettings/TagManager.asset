@@ -9,6 +9,7 @@ TagManager:
   - Trigger
   - FallingObject
   - MinigamePlayer
+  - Cup
   layers:
   - Default
   - TransparentFX
