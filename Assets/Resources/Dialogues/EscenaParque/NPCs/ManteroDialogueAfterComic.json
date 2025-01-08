@@ -17,7 +17,14 @@
         {
             "type": "text",
             "characterName": "Mantero",
-            "text": "Si te llevas bien con esa chavala, entonces te llevas bien conmigo. Escucha con atención, te contaré lo que necesitas saber.",
+            "text": "Si te llevas bien con esa chavala, entonces te llevas bien conmigo.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Escucha con atención, te contaré lo que necesitas saber.",
             "pause": true,
             "imageAssetId": null
         },

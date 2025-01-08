@@ -1,0 +1,15 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "text": "<i>Has lavado el collar en la fuente.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "CollarCleaned",
+            "text": "CollarCleaned"
+        }
+    ]
+}

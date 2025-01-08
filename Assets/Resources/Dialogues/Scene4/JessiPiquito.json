@@ -1,0 +1,23 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Ese baboso de ahí me ha intentado dar un piquito.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Qué asco de tíos, no quiero saber nada de ellos, me voy a seguir de bajón.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "JessiEnamoradoDialogueFinished",
+            "text": "1"
+        }
+    ]
+}

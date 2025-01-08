@@ -31,7 +31,14 @@
         {
             "type": "text",
             "characterName": "Francisco",
-            "text":"Interesante elección. Mira, ayer me llegó esta gorra de marca, chulísima. ¿Te interesa? Te la dejo al mismo precio que el cómic. ",
+            "text":"Interesante elección. Mira, ayer me llegó esta gorra de marca, chulísima. ¿Te interesa?",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Francisco",
+            "text":"Te la dejo al mismo precio que el cómic.",
             "pause": true,
             "imageAssetId": null
         },
@@ -40,7 +47,7 @@
             "characterName": "Juan",
             "options": [
                 {
-                    "text": "Ahora que lo dices, la gorra me gusta bastante. Olvídate del comic. Me la llevo.",
+                    "text": "Ahora que lo dices, prefiero la gorra.",
                     "diversion": "EscenaParque/NPCs/QuiosqueroCapDialogue"
                 },
                 {

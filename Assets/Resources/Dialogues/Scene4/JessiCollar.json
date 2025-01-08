@@ -1,0 +1,42 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Ese tío de ahí me ha traido el collar de mi ex.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Creo que lo ha sacado de la basura.",
+            "pause": true
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "No me extraña, era un picha corta al que no le importaba nada.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "No quiero saber nada de tíos, me voy a seguir de bajón.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Me pregunto si esa <color=yellow>información</color> será útil...</i>",
+            "pause": true
+        },
+        {
+            "type": "notification",
+            "notificationId": "JessiEnamoradoDialogueFinished",
+            "text": "4"
+        }
+    ]
+}

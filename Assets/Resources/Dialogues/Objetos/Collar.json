@@ -1,0 +1,15 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "text": "<i>Has encontrado un collar sucio.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "CollarFound",
+            "text": "CollarFound"
+        }
+    ]
+}

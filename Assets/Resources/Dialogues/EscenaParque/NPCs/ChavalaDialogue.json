@@ -37,7 +37,14 @@
         {
             "type": "text",
             "characterName": "Chavala",
-            "text": "¿Ves ese quiosco de allí? Traeme el número 5 de la colección de DRACO. Te daré mi gorra a cambio para que le convenzas de que eres un colega.",
+            "text": "¿Ves ese quiosco de allí? Traeme el número 5 de la colección de DRACO.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "Te daré mi gorra a cambio para que le convenzas de que eres un colega.",
             "pause": true,
             "imageAssetId": null
         },

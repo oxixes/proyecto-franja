@@ -13,11 +13,11 @@
             "options": [
                 {
                     "text": "Adelante, llévele el brebaje.",
-                    "diversion": "Scene4/EnamoradoCopa"
+                    "diversion": "Scene4/EnamoradoDecision3Notification"
                 },
                 {
                     "text": "Ni de cooooooña chaval.",
-                    "diversion": "Scene4/EnamoradoDecision4Collar"
+                    "diversion": "Scene4/EnamoradoDecision4Notification"
                 }
             ]
         }

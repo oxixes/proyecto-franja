@@ -36,6 +36,12 @@ public class PlayerInventoryManager : MonoBehaviour
         UpdateObjectsText();
     }
 
+    public void RemoveItem(ItemData item)
+    {
+        playerInventory.RemoveItem(item);
+        UpdateObjectsText();
+    }
+
     public void CollectInformation(InformationData info)
     {
         playerInventory.AddInformation(info);
@@ -89,7 +95,7 @@ public class PlayerInventoryManager : MonoBehaviour
         int i = 1;
         foreach (ItemData item in playerInventory.GetItems())
         {
-            text += i.ToString() + ". " + item.name + "\n";
+            text += i.ToString() + ". " + item.itemName + "\n";
             i++;
         }
 
