@@ -53,6 +53,24 @@ public class Inventory
         }
     }
 
+    // Remove an item from the inventory
+    public void RemoveItem(ItemData item)
+    {
+        LoadFromJson();
+
+        // Check if the item exists in the list or JSON
+        if (items.Exists(i => i.name == item.name))
+        {
+            items.Remove(item); // Remove from the list in memory
+            SaveToJson();       // Save to JSON if it was removed
+            Debug.Log("Removed item from inventory!");
+        }
+        else
+        {
+            Debug.Log("Player did not have item in inventory. No change was made.");
+        }
+    }
+
     // Add a new information to the inventory without duplicating it in the list or JSON
     public void AddInformation(InformationData info)
     {

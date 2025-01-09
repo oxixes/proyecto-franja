@@ -20,11 +20,6 @@
             "text": "Cállate, que si no no rimaba.",
             "pause": true,
             "imageAssetId": null
-        },
-        {
-            "type": "notification",
-            "notificationId": "EnamoradoDecision",
-            "text": "2"
         }
     ]
 }

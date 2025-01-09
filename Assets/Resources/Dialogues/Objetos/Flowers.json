@@ -1,0 +1,15 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "text": "<i>Has encontrado unas flores.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "FlowersFound",
+            "text": "FlowersFound"
+        }
+    ]
+}
