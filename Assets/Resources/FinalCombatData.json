@@ -1,0 +1,48 @@
+{
+    "lines": [
+        {
+            "enemyText": "¿Qué haces aquí?\nSi no sabes ni\ndarle a una\npelota.",
+            "regularOptions": [
+                {
+                    "text": "Es que se me da mal el fútbol",
+                    "response": "Lo suponía.",
+                    "score": 0
+                },
+                {
+                    "text": "¿Y tú que sabes?",
+                    "response": "Se te nota.",
+                    "score": 1
+                },
+                {
+                    "text": "¡Sé jugar mejor que tú!",
+                    "response": "¡Ja! ¡Eso habría\nque verlo!",
+                    "score": 1
+                }
+            ],
+            "specialOptionScore": 2,
+            "specialOptionResponse": "¿Y eso cómo\nlo sabes?"
+        },
+        {
+            "enemyText": "¿Qué haces aquí?\nSi no sabes ni\ndarle a una\npelota.",
+            "regularOptions": [
+                {
+                    "text": "Es que se me da mal el fútbol",
+                    "response": "Lo suponía.",
+                    "score": 0
+                },
+                {
+                    "text": "¿Y tú que sabes?",
+                    "response": "Se te nota.",
+                    "score": 1
+                },
+                {
+                    "text": "¡Sé jugar mejor que tú!",
+                    "response": "¡Ja! ¡Eso habría\nque verlo!",
+                    "score": 1
+                }
+            ],
+            "specialOptionScore": 2,
+            "specialOptionResponse": "¿Y eso cómo\nlo sabes?"
+        }
+    ]
+}
