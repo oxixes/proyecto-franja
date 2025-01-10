@@ -103,21 +103,21 @@
             "characterName": "Juan",
             "text": "<i>Así que <color=red>el ladrón</color> le puso los cuernos a su ex</i>",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "<i>Me pregunto si esa <color=yellow>información</color> será útil...</i>",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "<i>Parece que no se puede hacer más por aquí, será mejor que siga adelante</i>",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "notification",
