@@ -15,6 +15,13 @@
             "imageAssetId": null
         },
         {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Hmm, lleva una especia de código \"DRACODE\", B5A18E50...</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
             "type": "notification",
             "notificationId": "ComicBought",
             "text": "Hola Txema"

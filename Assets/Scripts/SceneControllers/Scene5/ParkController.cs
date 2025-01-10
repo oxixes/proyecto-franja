@@ -14,6 +14,8 @@ public class ParkController : MonoBehaviour
     public GameObject player;
     public GameObject flowers;
     public ItemData flowersItem;
+    public ItemData comicItem;
+    public ItemData capItem;
     public InformationData quiqueTraidorInfo;
 
     public Vector2 targetPoint;
@@ -106,6 +108,7 @@ public class ParkController : MonoBehaviour
 
     void HandleCapNotification(string dialogueID, string notificationID, string notificationData)
     {
+        player.GetComponent<PlayerInventoryManager>().CollectItem(capItem);
         manteroIO.dialogueID = "EscenaParque/NPCs/ManteroDialogueAfterCap";
         quiosqueroIO.dialogueID = "EscenaParque/NPCs/QuiosqueroDialogueAfterPurchase";
         chavalaIO.dialogueID = "EscenaParque/NPCs/ChavalaDialogueAfterCap";
@@ -114,6 +117,7 @@ public class ParkController : MonoBehaviour
 
     void HandleComicNotification(string dialogueID, string notificationID, string notificationData)
     {
+        player.GetComponent<PlayerInventoryManager>().CollectItem(comicItem);
         chavalaIO.dialogueID = "EscenaParque/NPCs/ChavalaDialogueAfterComic";
         quiosqueroIO.dialogueID = "EscenaParque/NPCs/QuiosqueroDialogueAfterPurchase";
         SaveManager.GetInstance().Set("ComicBought", 1);
@@ -135,6 +139,8 @@ public class ParkController : MonoBehaviour
 
     void HandleChavalaHelpedNotification(string dialogueID, string notificationID, string notificationData)
     {
+        player.GetComponent<PlayerInventoryManager>().RemoveItem(comicItem);
+        player.GetComponent<PlayerInventoryManager>().CollectItem(capItem);
         chavalaIO.dialogueID = notificationData;
         manteroIO.dialogueID = "EscenaParque/NPCs/ManteroDialogueAfterComic";
         SaveManager.GetInstance().Set("Scene5ChavalaHelped", 1);

@@ -79,6 +79,7 @@ public class Player : MonoBehaviour
             Vector2 direction = new Vector2(horizontalDir, verticalDir);
 
             bool running = Input.GetKey(KeyCode.LeftShift);
+            animator.SetFloat("Speed", running ? 2 : 1);
 
             transform.Translate(direction.normalized * (running ? runningSpeed : speed) * Time.deltaTime);
         }
@@ -86,6 +87,7 @@ public class Player : MonoBehaviour
         {
             animator.SetFloat("XDirection", 0);
             animator.SetFloat("YDirection", 0);
+            animator.SetFloat("Speed", 1);
             animator.SetBool("Moving", false);
         }
     }

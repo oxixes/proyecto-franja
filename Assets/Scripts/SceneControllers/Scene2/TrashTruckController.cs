@@ -12,6 +12,7 @@ public class TrashTruckController : MonoBehaviour
     public GameObject manolo;
     public GameObject fadeOutPanel;
     public GameObject trashTruck;
+    public GameObject collarItem;
 
     private InteractableObject manoloIO;
     // Start is called before the first frame update
@@ -21,6 +22,11 @@ public class TrashTruckController : MonoBehaviour
         container1.SetActive(false);
         container2.SetActive(false);
         container3.SetActive(false);
+
+        if (SaveManager.GetInstance().Get<int>("Scene2RiotFinished") == 1)
+        {
+            manoloIO.dialogueID = "NPCs/ManoloHappy";
+        }
 
         if (SaveManager.GetInstance().Get<int>("Scene2ManoloDialogueFinished") == 1)
         {
@@ -43,11 +49,10 @@ public class TrashTruckController : MonoBehaviour
         if (SaveManager.GetInstance().Get<int>("Scene2Container3Thrown") == 1)
         {
             container3.SetActive(false);
-        }
-
-        if (SaveManager.GetInstance().Get<int>("Scene2RiotFinished") == 1)
-        {
-            manoloIO.dialogueID = "NPCs/ManoloHappy";
+            if (SaveManager.GetInstance().Get<int>("Scene2CollarDialogueFinished") == 0)
+            {
+                collarItem.SetActive(true);
+            }
         }
 
         DialogueSystem.GetInstance().HandleNotification("ContainerThrown", HandleNotification);
@@ -73,6 +78,7 @@ public class TrashTruckController : MonoBehaviour
         else if (notificationData == "3")
         {
             container3.SetActive(false);
+            collarItem.SetActive(true);
             SaveManager.GetInstance().Set("Scene2Container3Thrown", 1);
         }
     }

@@ -10,10 +10,13 @@ public class Robbery : MonoBehaviour
     public int thiefSpeed = 10;
     public int thiefRunningSpeed = 50;
     public float trackingMinDistance = 1f;
+    public AudioClip robberyMusic;
+    public AudioClip overworldMusic;
+    public GameObject audioController;
 
     // Start is called before the first frame update
     void Start()
-    {  
+    {
         if (SaveManager.GetInstance().Get<int>("Scene1RobberyFinished") == 1)
         {
             OnTriggerExit2D(null);
@@ -40,6 +43,8 @@ public class Robbery : MonoBehaviour
             StartCoroutine(MoveLadronTowards(player.transform.position, thiefSpeed));
 
             DialogueSystem.GetInstance().HandleNotification("ThiefRun", HandleThiefRunNotification);
+            DialogueSystem.GetInstance().HandleNotification("ThiefSteal", HandleThiefStealNotification);
+            DialogueSystem.GetInstance().HandleNotification("BackToOverworldMusic", HandleBackToOverworldMusic);
             DialogueSystem.GetInstance().StartDialogue("NPCs/ThiefDialogue1");
         }
     }
@@ -63,6 +68,14 @@ public class Robbery : MonoBehaviour
 
     void HandleThiefRunNotification(string dialogueId, string notificationId, string notificationData) {
         StartCoroutine(MoveLadronTowards(new Vector2(200, thief.transform.position.y), thiefRunningSpeed));
+    }
+
+    void HandleThiefStealNotification(string dialogueId, string notificationId, string notificationData) {
+        audioController.GetComponent<AudioController>().ForcePlayWithTransition(robberyMusic, true);
+    }
+
+    void HandleBackToOverworldMusic(string dialogueId, string notificationId, string notificationData) {
+        audioController.GetComponent<AudioController>().ForcePlayWithTransition(overworldMusic, true);
     }
  }
 

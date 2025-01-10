@@ -11,6 +11,12 @@ public class DialogueSystem : MonoBehaviour
     public int textSpeed = 20; // Characters per second
     public float timeBetweenLines = 1f; // Seconds
     public float accelerationOnInput = 1.5f;
+    public float timeBetweenClicks = 0.05f;
+
+    public GameObject audioController;
+    public AudioClip clickSound;
+
+    private AudioController audioControllerScript;
 
     // Allow tests to simulate pressing the space, up and down keys
     [HideInInspector] public bool spacePressed = false;
@@ -27,6 +33,7 @@ public class DialogueSystem : MonoBehaviour
     private float timeSinceLastCharacter = 0;
     private float timeSinceLineFinished = 0;
     private int currentCharacterIndex = 0;
+    private float previousClick = 0;
     private bool currentLineAccelerated = false;
     private int currentOptionIndex = 0;
 
@@ -206,6 +213,11 @@ public class DialogueSystem : MonoBehaviour
         pressToContinueLayout = GameObject.Find("PressLayout");
         characterNameLayout = GameObject.Find("TalkerPanel");
 
+        if (audioController != null)
+        {
+            audioControllerScript = audioController.GetComponent<AudioController>();
+        }
+
         for (int i = 1; i <= optionLayouts.Length; i++)
         {
             optionLayouts[i - 1] = GameObject.Find("Option" + i);
@@ -218,8 +230,6 @@ public class DialogueSystem : MonoBehaviour
         gameObject.SetActive(false);
 
         Debug.Log("Dialogue system is ready!");
-
-        // StartDialogue("TestDialogue");
     }
 
     // Update is called once per frame
@@ -294,6 +304,12 @@ public class DialogueSystem : MonoBehaviour
                 {
                     if (currentCharacterIndex < currentLineCharacterCount)
                     {
+                        if (Time.time - previousClick > timeBetweenClicks / (currentLineAccelerated ? 2 : 1) && audioControllerScript != null && clickSound != null)
+                        {
+                            previousClick = Time.time;
+                            audioControllerScript.PlayOneShot(clickSound);
+                        }
+
                         dialogueText.text = currentDialogueLine.GetTextUpUntil(currentCharacterIndex + 1);
                     }
 

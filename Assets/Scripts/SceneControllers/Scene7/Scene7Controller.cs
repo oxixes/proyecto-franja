@@ -128,14 +128,14 @@ public class Scene7Controller : MonoBehaviour
 
         int contextualHints = PlayerPrefs.GetInt("ShowContextualHints", 0);
 
-        /* PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();
         PlayerPrefs.Save();
 
         PlayerPrefs.SetInt("ShowContextualHints", contextualHints);
         PlayerPrefs.Save();
 
         Inventory playerInventory = new Inventory();
-        playerInventory.DeleteInventory(); */
+        playerInventory.DeleteInventory();
 
         StartCoroutine(EndSequence());
     }
