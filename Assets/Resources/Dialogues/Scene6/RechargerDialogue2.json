@@ -3,7 +3,7 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "<i>No pienso volver a pagar<i>",
+            "text": "<i>No pienso volver a pagar.<i>",
             "pause": true,
             "imageAssetId": null
         }

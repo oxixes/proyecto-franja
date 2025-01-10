@@ -42,23 +42,12 @@ public class Scene7Controller : MonoBehaviour
         }
 
         thief.SetActive(false);
-        yield return MoveMetro(new Vector3(metro.transform.position.x -50, metro.transform.position.y, metro.transform.position.z), metroSpeed);
 
-        int contextualHints = PlayerPrefs.GetInt("ShowContextualHints", 0);
-
-        PlayerPrefs.DeleteAll();
-        PlayerPrefs.Save();
-
-        PlayerPrefs.SetInt("ShowContextualHints", contextualHints);
-        PlayerPrefs.Save();
-
-        Inventory playerInventory = new Inventory();
-        playerInventory.DeleteInventory();
-
-        StartCoroutine(EndSequence());
+        metro.GetComponent<AnimationEndNotifier>().onAnimationEnd2.AddListener(HandleMetroDoorsClose);
+        metro.GetComponent<Animator>().SetTrigger("CloseDoors");
     }
 
-    private IEnumerator MoveMetro(Vector2 position, int velocidad)
+    private IEnumerator MoveMetro(Vector2 position, float velocidad)
     {
         while (Vector2.Distance(metro.transform.position, position) > trackingMinDistance)
         {
@@ -107,18 +96,59 @@ public class Scene7Controller : MonoBehaviour
 
     void HandleLlegaMetroNotification(string dialogueId, string notificationId, string notificationData)
     {
-        metro.transform.localPosition = new Vector3(-12, 6, -1);
         metro.SetActive(true);
+        StartCoroutine(MoveMetroStart());
     }
 
     void HandleSubirAlMetroNotification(string dialogueId, string notificationId, string notificationData)
     {
-        StartCoroutine(MoveLadronTowards(new Vector2(thief.transform.position.x, thief.transform.position.y + 4), thiefSpeed));
+        metro.GetComponent<AnimationEndNotifier>().onAnimationEnd.AddListener(HandleMetroDoorsOpen);
+        metro.GetComponent<Animator>().SetTrigger("OpenDoors");
+    }
+
+    void HandleMetroDoorsOpen()
+    {
+        StartCoroutine(MoveLadronTowards(new Vector2(thief.transform.position.x, thief.transform.position.y + 5), thiefSpeed));
+    }
+
+    void HandleMetroDoorsClose()
+    {
+        StartCoroutine(MoveMetroAndPlayEnd());
+    }
+
+    IEnumerator MoveMetroAndPlayEnd()
+    {
+        yield return MoveMetro(new Vector3(metro.transform.position.x - 50, metro.transform.position.y, metro.transform.position.z), metroSpeed);
+
+        /* int contextualHints = PlayerPrefs.GetInt("ShowContextualHints", 0);
+
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+
+        PlayerPrefs.SetInt("ShowContextualHints", contextualHints);
+        PlayerPrefs.Save();
+
+        Inventory playerInventory = new Inventory();
+        playerInventory.DeleteInventory(); */
+
+        StartCoroutine(EndSequence());
     }
 
     void HandleHostiazoNotification(string dialogueId, string notificationId, string notificationData)
     {
         StartCoroutine(Hostiazo());
+    }
+
+    private IEnumerator MoveMetroStart()
+    {
+        float velocidad = 40f;
+        Vector2 position = new Vector2(metro.transform.position.x - 50, metro.transform.position.y);
+        while (Vector2.Distance(metro.transform.position, position) > trackingMinDistance)
+        {
+            metro.transform.position = Vector2.MoveTowards(metro.transform.position, position, velocidad * Time.deltaTime);
+            velocidad *= 0.9995f;
+            yield return null;
+        }
     }
 
     private IEnumerator Hostiazo()
@@ -138,6 +168,13 @@ public class Scene7Controller : MonoBehaviour
     {
         int velocidad = 20;
         Vector2 position = new Vector2(thief.transform.position.x - 4, thief.transform.position.y);
+        while (Vector2.Distance(thief.transform.position, position) > trackingMinDistance)
+        {
+            thief.transform.position = Vector2.MoveTowards(thief.transform.position, position, velocidad * Time.deltaTime);
+            yield return null;
+        }
+
+        position = new Vector2(thief.transform.position.x + 3, thief.transform.position.y);
         while (Vector2.Distance(thief.transform.position, position) > trackingMinDistance)
         {
             thief.transform.position = Vector2.MoveTowards(thief.transform.position, position, velocidad * Time.deltaTime);
