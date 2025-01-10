@@ -5,21 +5,21 @@
             "characterName": "Enamorado",
             "text": "Seré su Romeo, allá voy Julieta. No te mates, que te traigo violetas.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Eran rosas.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Cállate, que si no no rimaba.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         }
     ]
 }

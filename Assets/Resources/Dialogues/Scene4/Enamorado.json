@@ -5,133 +5,133 @@
             "characterName": "Enamorado",
             "text": "Jessi, que guapa eres, hermosa.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Eh chaval, ¿P-Podrías ayudarme con una cosa?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "¿Qué pasa?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Necesito conquistar a la bella choni que está allí en la esquina, pero no tengo huev...",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Digo, valor para hablarle.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "¿Quizás si le ofrezco algo, me hará caso?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Yo no tengo nada eh...",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Estaba pensando en algo romántico, como una rosa, ¿de donde podría sacar una rosa?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "<i>Del suelo digo yo.</i>",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Aunque pensándolo mejor, es bastante poligonera la muchacha, mejor una copa y seguro que me la camelo.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "<i>Tengo toda la cara del Hasbulla, se la tendré que pedir a alguien.</i>",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "¿Y si le doy...",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "...un piquito?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "<i>¿Un piquito? ¿Qué es eso?</i>",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "¿Qué crees que debería darle?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Por cierto, si quieres que le de las flores o la copa, tráemelas, ¿vale?.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Yo debo quedarme aquí haciendo guardia.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "No puedo arriesgarme a que se me escape la Jessi.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Vuelve a hablar conmigo cuando hayas tomado una decisión.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "notification",

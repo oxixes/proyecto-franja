@@ -5,63 +5,63 @@
             "characterName": "Enamorado",
             "text": "Feliz día, amada mía, aquí te traigo unas rosas silvestres que puedan igualar tu belleza.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "¿Ah sí? ¿Y me traes flores con sus raíces todavía?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJessi"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Bueno, así... es como yo te veo mi amor, salvaje y auténtica.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Jessi",
-            "text": "Sí, doblada y llena de tierra también ¿No?.",
+            "text": "¿Doblada y llena de tierra?.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJessi"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "Bueno, por lo menos no has sido un guarro. No como el imbécil de la cresta.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJessi"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "<i>¡¿Cómo?!</i>",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "Te daré otra oportunidad. Necesito desahogarme con algo... bien cargado... ya me entiendes.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJessi"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Por supuesto, ahora mismo se lo traigo.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "Y déjate de tanta poesía, que estamos en Vallecas.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJessi"
         },
         {
             "type": "text",
@@ -75,21 +75,21 @@
             "characterName": "Enamorado",
             "text": "Rápido, traeme alcohol, mi amor... digo, la Jessi, lo necesita.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "<i>Susurrando</i> Jiji, ha dicho mi amor, jiji.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "¡Cállate!",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "notification",

@@ -5,7 +5,7 @@
             "characterName": "Juan", 
             "text": "Hola ¿Me podéis pedir una copa?", 
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         { 
             "type": "text", 
@@ -26,7 +26,7 @@
             "characterName": "Juan", 
             "text": "No, no, para mí.", 
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         { 
             "type": "text", 
@@ -61,7 +61,7 @@
             "characterName": "Juan", 
             "text": "¿El beer pong?", 
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         { 
             "type": "text", 
@@ -80,16 +80,16 @@
         { 
             "type": "text", 
             "characterName": "Juan", 
-            "text": "Eee... Sí, paga el de la barra.", 
+            "text": "Eee... Sí, paga el pelirrojo.", 
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         { 
             "type": "text", 
             "characterName": "Enamorado", 
             "text": "¿Qué?", 
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         { 
             "type": "text", 

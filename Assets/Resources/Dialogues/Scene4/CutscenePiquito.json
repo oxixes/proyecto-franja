@@ -5,28 +5,28 @@
             "characterName": "Enamorado",
             "text": "Hola.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "¿Que quieres?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJessi"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Ehm...",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Toma.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
@@ -40,28 +40,28 @@
             "characterName": "Jessi",
             "text": "...",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJessi"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "¿Qué haces?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJessi"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "¿Te ha gustado? A mi sí.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "Te vas a enterar, golfo.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJessi"
         },
         {
             "type": "text",
@@ -96,35 +96,35 @@
             "characterName": "Enamorado",
             "text": "Sinceramente, no sé por qué te he hecho caso.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Bueno... mira lo que le pasó a Rubiales, yo diría que has tenido suerte.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "¿Suerte? Je je je...",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Tus muertos, chaval.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGEnamorado"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "<i>Parece que no se puede hacer más por aquí, será mejor que siga adelante</i>",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "notification",
