@@ -18,6 +18,10 @@ public class Scene7Controller : MonoBehaviour
     public GameObject creditsText;
     public GameObject thanksText;
 
+    public Sprite thiefLookingUp;
+    public Sprite thiefLookingRight;
+    public Sprite thiefLookingDown;
+
     public int thiefSpeed = 5;
     public int metroSpeed = 50;
     public float trackingMinDistance = 1f;
@@ -35,6 +39,8 @@ public class Scene7Controller : MonoBehaviour
 
     private IEnumerator MoveLadronTowards(Vector2 position, int velocidad)
     {
+        thief.GetComponent<SpriteRenderer>().sprite = thiefLookingUp;
+
         while (Vector2.Distance(thief.transform.position, position) > trackingMinDistance)
         {
             thief.transform.position = Vector2.MoveTowards(thief.transform.position, position, velocidad * Time.deltaTime);
@@ -120,9 +126,9 @@ public class Scene7Controller : MonoBehaviour
     {
         yield return MoveMetro(new Vector3(metro.transform.position.x - 50, metro.transform.position.y, metro.transform.position.z), metroSpeed);
 
-        /* int contextualHints = PlayerPrefs.GetInt("ShowContextualHints", 0);
+        int contextualHints = PlayerPrefs.GetInt("ShowContextualHints", 0);
 
-        PlayerPrefs.DeleteAll();
+        /* PlayerPrefs.DeleteAll();
         PlayerPrefs.Save();
 
         PlayerPrefs.SetInt("ShowContextualHints", contextualHints);
@@ -153,6 +159,10 @@ public class Scene7Controller : MonoBehaviour
 
     private IEnumerator Hostiazo()
     {
+        thief.GetComponent<SpriteRenderer>().sprite = thiefLookingRight;
+        // Flip the sprite
+        thief.GetComponent<SpriteRenderer>().flipX = true;
+
         float velocidad = 1.5f;
         Vector2 position = new Vector2(thief.transform.position.x + 3, thief.transform.position.y);
         while (Vector2.Distance(thief.transform.position, position) > trackingMinDistance)
@@ -180,6 +190,9 @@ public class Scene7Controller : MonoBehaviour
             thief.transform.position = Vector2.MoveTowards(thief.transform.position, position, velocidad * Time.deltaTime);
             yield return null;
         }
+
+        thief.GetComponent<SpriteRenderer>().sprite = thiefLookingDown;
+        thief.GetComponent<SpriteRenderer>().flipX = false;
     }
 
     private IEnumerator MoveKasToFinalPosition()

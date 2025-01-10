@@ -15,25 +15,30 @@ public class TornoWithout1 : MonoBehaviour
 
     public GameObject huida;
     public int bono = 1;
-    //public float trackingMinDistance = 1f;
+
+    public Sprite thiefLookingUp;
 
     // Start is called before the first frame update
     void Start()
-    {   
+    {
         player = GameObject.Find("Player");
         thief = GameObject.Find("Thief");
         DialogueSystem.GetInstance().HandleNotification("Return", Vuelve);
-            DialogueSystem.GetInstance().HandleNotification("Bono2", HandleBono2Notification);
-            DialogueSystem.GetInstance().HandleNotification("Bono3", HandleBono3Notification);
-            DialogueSystem.GetInstance().HandleNotification("Eliminar", Eliminar);
-            DialogueSystem.GetInstance().HandleNotification("Irse", Irse);
-            bono = SaveManager.GetInstance().Get<int>("Bono");
-            if(bono == 3|| bono == 4){
-                recharger.GetComponent<InteractableObject>().dialogueID = "Scene6/RechargerDialogue2";
-            }
-            if (bono == 4){
-                thief.SetActive(false);
-            }
+        DialogueSystem.GetInstance().HandleNotification("Bono2", HandleBono2Notification);
+        DialogueSystem.GetInstance().HandleNotification("Bono3", HandleBono3Notification);
+        DialogueSystem.GetInstance().HandleNotification("Eliminar", Eliminar);
+        DialogueSystem.GetInstance().HandleNotification("Irse", Irse);
+        bono = SaveManager.GetInstance().Get<int>("Bono");
+
+        if (bono == 3 || bono == 4)
+        {
+            recharger.GetComponent<InteractableObject>().dialogueID = "Scene6/RechargerDialogue2";
+        }
+
+        if (bono == 4)
+        {
+            thief.SetActive(false);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -42,7 +47,7 @@ public class TornoWithout1 : MonoBehaviour
         {
             Debug.Log("Starting tornos cutscene.");
 
-            
+
             if (bono == 0)
             {
                 DialogueSystem.GetInstance().StartDialogue("Scene6/TornoDialogue1");
@@ -63,6 +68,7 @@ public class TornoWithout1 : MonoBehaviour
         bono = 2;
         SaveManager.GetInstance().Set("Bono", 2);
     }
+
     void HandleBono3Notification(string dialogueId, string notificationId, string notificationData) {
         bono = 3;
         recharger.GetComponent<InteractableObject>().dialogueID = "Scene6/RechargerDialogue2";
@@ -83,30 +89,33 @@ public class TornoWithout1 : MonoBehaviour
     }
 
     private IEnumerator MovePlayerDown(float stepDistance)
-{
-    // Calcula la posición objetivo desplazada "stepDistance" hacia abajo
-    Vector2 targetPosition = new Vector2(player.transform.position.x, player.transform.position.y - stepDistance);
-    
-    // Mueve al jugador hacia la posición objetivo
-    while (Vector2.Distance(player.transform.position, targetPosition) > 0.1f) // Menor distancia para precisión
     {
-        player.transform.position = Vector2.MoveTowards(player.transform.position, targetPosition, playerSpeed * Time.deltaTime);
-        yield return null;
+        // Calcula la posición objetivo desplazada "stepDistance" hacia abajo
+        Vector2 targetPosition = new Vector2(player.transform.position.x, player.transform.position.y - stepDistance);
+
+        // Mueve al jugador hacia la posición objetivo
+        while (Vector2.Distance(player.transform.position, targetPosition) > 0.1f) // Menor distancia para precisión
+        {
+            player.transform.position = Vector2.MoveTowards(player.transform.position, targetPosition, playerSpeed * Time.deltaTime);
+            yield return null;
+        }
+
+        yield break;
     }
 
-    yield break;
-}
-
-private IEnumerator MoveThiefAway(){
-    Vector2 targetPosition = new Vector2(huida.transform.position.x, huida.transform.position.y);
-    while (Vector2.Distance(thief.transform.position, targetPosition) > 0.1f) // Menor distancia para precisión
+    private IEnumerator MoveThiefAway()
     {
-        thief.transform.position = Vector2.MoveTowards(thief.transform.position, targetPosition, thiefSpeed * Time.deltaTime);
-        yield return null;
-    }
-    thief.SetActive(false);
-    yield break;
+        thief.GetComponent<SpriteRenderer>().sprite = thiefLookingUp;
 
- }
+        Vector2 targetPosition = new Vector2(huida.transform.position.x, huida.transform.position.y);
+        while (Vector2.Distance(thief.transform.position, targetPosition) > 0.1f) // Menor distancia para precisión
+        {
+            thief.transform.position = Vector2.MoveTowards(thief.transform.position, targetPosition, thiefSpeed * Time.deltaTime);
+            yield return null;
+        }
+        thief.SetActive(false);
+        yield break;
+
+    }
 
 }
