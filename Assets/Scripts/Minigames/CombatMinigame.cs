@@ -219,7 +219,7 @@ public class CombatMinigame : Minigame
             }
 
             bool specialOptionAvailable = inventory.HasInformation(specialOptionsData[currentCombatLine]);
-            optionsText[i].text = specialOptionAvailable ? (currentSelectedOption == i) ? "<color=yellow>> " + specialOptionsData[currentCombatLine].infoName + "</color>" : "  " + specialOptionsData[currentCombatLine].infoName : "<color=#adadad>  ???</color>";
+            optionsText[i].text = specialOptionAvailable ? (currentSelectedOption == i) ? "<color=yellow>> " + specialOptionsData[currentCombatLine].combatInfoName + "</color>" : "  " + specialOptionsData[currentCombatLine].combatInfoName : "<color=#adadad>  ???</color>";
 
             foreach (GameObject option in options)
             {
@@ -275,6 +275,8 @@ public class CombatMinigame : Minigame
         } else {
             if (lineIsFullyDisplayed && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)))
             {
+                currentSelectedOption = 0;
+
                 currentCombatLine++;
                 inOptionsPart = true;
                 continueText.SetActive(false);
@@ -303,7 +305,7 @@ public class CombatMinigame : Minigame
         textComponent.text = "";
         foreach (char c in text)
         {
-            if (!startedWithPressedKey && Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return))
+            if (!startedWithPressedKey && (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return)))
             {
                 textComponent.text = text;
                 lineIsFullyDisplayed = true;

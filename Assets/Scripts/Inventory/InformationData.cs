@@ -6,5 +6,6 @@ using UnityEngine;
 public class InformationData : ScriptableObject
 {
     public string infoName;
+    public string combatInfoName;
     public string description;
 }

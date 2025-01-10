@@ -42,6 +42,13 @@
         {
             "type": "text",
             "characterName": "Juan",
+            "text": "¿Dónde?",
+            "pause": false,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
             "text": "¡Agh!",
             "pause": true,
             "imageAssetId": null

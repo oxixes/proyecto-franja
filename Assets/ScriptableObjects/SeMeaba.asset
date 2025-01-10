@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: SeMeaba
   m_EditorClassIdentifier: 
   infoName: Quique se meaba en la cama
+  combatInfoName: Te meabas en la cama hasta los 15
   description: 

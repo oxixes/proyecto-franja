@@ -1,0 +1,61 @@
+{
+    "lines": [
+        {
+            "type": "notification",
+            "notificationId": "LlegaMetro",
+            "text": "LlegaMetro"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "¡Kas! ¡Ayúdame!",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "notification",
+            "notificationId": "SpawnKasInCombat",
+            "text": "SpawnKasInCombat"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "¡No te preocupes, Juan! ¡Voy a ayudarte!",
+            "pause": true,
+            "imageAssetId": "old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Quique, devuélvele el móvil, si no se lo voy a contar a\ntu madre.",
+            "pause": true,
+            "imageAssetId": "old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Quique",
+            "text": "A mi que me cuentas, yo me voy, que mi planeta me\nnecesita.",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+        {
+            "type": "text",
+            "characterName": "Quique",
+            "text": "Adioooooos.",
+            "pause": true,
+            "imageAssetId": "anonymous"
+        },
+        {
+            "type": "notification",
+            "notificationId": "SubirAlMetro",
+            "text": "SubirAlMetro"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "¡Espera!",
+            "pause": false,
+            "imageAssetId": null
+        }
+    ]
+}

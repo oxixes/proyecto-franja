@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: QuiqueEsUnTraidor
   m_EditorClassIdentifier: 
   infoName: Quique es un traidor
+  combatInfoName: "T\xFA traicionaste al mantero"
   description: 

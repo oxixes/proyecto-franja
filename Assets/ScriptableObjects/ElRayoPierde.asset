@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: ElRayoPierde
   m_EditorClassIdentifier: 
   infoName: El Rayo Vallecano va perdiendo
+  combatInfoName: Tu equipo va perdiendo
   description: 

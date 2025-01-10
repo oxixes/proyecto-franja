@@ -18,7 +18,7 @@
             "type": "text",
             "characterName": "Juan",
             "text": "Soy Juan Hernández, tú robaste mi móvil, prepárate a -",
-            "pause": true,
+            "pause": false,
             "imageAssetId": null
         },
         {
@@ -29,34 +29,9 @@
             "imageAssetId": "anonymous"
         },
         {
-            "type": "text",
-            "characterName": "KAS",
-            "text": "*Insertar combate*",
-            "pause": true,
-            "imageAssetId": null
-        },
-        {
             "type":"notification",
             "notificationId":"Combate",
             "text":"Combate"
-        },
-        {
-            "type": "options",
-            "characterName": "Juan",
-            "options": [
-                {
-                    "text": "Ganar",
-                    "diversion": "Scene7/Victory"
-                },
-                {
-                    "text": "Derrota",
-                    "diversion": "Scene7/Defeat"
-                },
-                {
-                    "text": "True Ending",
-                    "diversion" : "Scene7/TrueEnding"
-                }
-            ]
         }
     ]
 }

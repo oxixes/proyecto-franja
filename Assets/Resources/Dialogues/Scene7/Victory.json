@@ -23,6 +23,13 @@
             "type": "notification",
             "notificationId": "SubirAlMetro",
             "text": "SubirAlMetro"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "¡Espera!",
+            "pause": false,
+            "imageAssetId": null
         }
     ]
 }
