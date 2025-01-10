@@ -3,30 +3,58 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Hola. ¿Has visto a un chico corriendo por aquí? Se ha llevado mi móvil y debo recuperarlo.", 
+            "text": "Ey estoy buscando a un chaval que me ha robado el móvil, tenía una cresta y pintas de cani. ¿Lo has visto?", 
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
             "characterName": "Mantero",
-            "text": "Ey, chaval. No sé quién eres. No pareces de por aquí. No tengo ganas de hablar contigo. Pírate.",
+            "text": "Sí, sí que lo he visto. Se fue hacia el metro que está más arriba.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGMantero"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Pero...",
+            "text": "Gracias. Oye, ¿No sabrás algo de él que me pueda servir para humillarle?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
             "characterName": "Mantero",
-            "text": "¡Que te vayas, te he dicho! No eres bienvenido aquí.",
+            "text": "Yo no se nada del imbécil ese.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGMantero"
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "¿Pero tú vas a comprar algo o qué? Parece esto un interrogatorio hombre.",
+            "pause": true,
+            "imageAssetId": "IMGMantero"
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Y encima con las pintas que me llevas estás tu que te voy a decir nada.",
+            "pause": true,
+            "imageAssetId": "IMGMantero"
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Aprende a vestirte como los demás niños del barrio, caraescoba.",
+            "pause": true,
+            "imageAssetId": "IMGMantero"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>¿Tengo cara de escoba?</i>",
+            "pause": true,
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "notification",

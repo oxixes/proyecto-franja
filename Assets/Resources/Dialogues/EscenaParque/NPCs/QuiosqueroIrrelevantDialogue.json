@@ -3,23 +3,37 @@
         {
             "type": "text",
             "characterName": "Quiosquero",
-            "text": "¡Hola! ¿Qué tal? ¿Quieres algo?",
+            "text": "Muy buenos días ¿Quieres algo chaval?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGQuiosquero"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "No, gracias. Solo estaba mirando.",
+            "text": "Hola, ¿Has visto a un chaval con cresta corriendo por aquí?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
             "characterName": "Quiosquero",
-            "text": "Entendido. Si necesitas algo, aquí estoy.",
+            "text": "Sí, se fue para el metro. Yo que tú no me acercaría a él.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGQuiosquero"
+        },
+        {
+            "type": "text",
+            "characterName": "Quiosquero",
+            "text": "Tiene toda la pinta de ser un perroflauta de esos.",
+            "pause": true,
+            "imageAssetId": "IMGQuiosquero"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Ehm, vale.",
+            "pause": true,
+            "imageAssetId": "IMGJuan"
         }
     ]
 }

@@ -2,31 +2,38 @@
     "lines": [
         {
             "type": "text",
-            "characterName": "Mantero",
-            "text": "Te he dicho que no quiero hablar contigo. ¿Qué parte no entiendes?",
-            "pause": true,
-            "imageAssetId": null
-        },
-        {
-            "type": "text",
             "characterName": "Juan",
-            "text": "Mira que gorra más chula tengo. Es la gorra de tu amiga. ¿Sigues pensando que no soy de por aquí?",
+            "text": "Soy VIP, tengo entendido que eso me convierte en tu amigo.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
             "characterName": "Mantero",
-            "text": "Si te llevas bien con esa chavala, entonces te llevas bien conmigo.",
+            "text": "No.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGMantero"
         },
         {
             "type": "text",
             "characterName": "Mantero",
-            "text": "Escucha con atención, te contaré lo que necesitas saber.",
+            "text": "Pero si te llevas bien con esa chavala, te llevas bien conmigo.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGMantero"
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "¿Querías saber algo del que te robó el móvil, no?",
+            "pause": true,
+            "imageAssetId": "IMGMantero"
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Está bien, te lo contaré.",
+            "pause": true,
+            "imageAssetId": "IMGMantero"
         },
         {
             "type": "diversion",

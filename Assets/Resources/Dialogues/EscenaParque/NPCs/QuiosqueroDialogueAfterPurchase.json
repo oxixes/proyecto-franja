@@ -5,14 +5,21 @@
             "characterName": "Francisco",
             "text":"¿Necesitas algo más?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGQuiosquero"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text":"No, gracias, ya me iba. Hasta luego.",
+            "text":"No me queda dinero.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
+        },
+        {
+            "type": "text",
+            "characterName": "Francisco",
+            "text":"Pues ponte a currar.",
+            "pause": true,
+            "imageAssetId": "IMGQuiosquero"
         }
     ]
 }

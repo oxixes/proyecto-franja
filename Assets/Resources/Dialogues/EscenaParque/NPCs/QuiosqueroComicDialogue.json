@@ -3,21 +3,49 @@
         {
             "type": "text",
             "characterName": "Francisco",
-            "text":"Entendido. Aquí tienes. Muchas gracias, niño.",
+            "text":"Toma tu cómic y aparta de mi vista.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGQuiosquero"
+        },
+        {
+            "type": "text",
+            "characterName": "Francisco",
+            "text":"Dejar a un compatriota colgado de esta manera... me da asco verte. ¡FUERA!",
+            "pause": true,
+            "imageAssetId": "IMGQuiosquero"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text":"¡Gracias a usted, Francisco! Que tenga un buen día.",
+            "text":"Pero deme el cambio.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
+        },
+        {
+            "type": "text",
+            "characterName": "Francisco",
+            "text":"Ah sí perdona.",
+            "pause": true,
+            "imageAssetId": "IMGQuiosquero"
+        },
+        {
+            "type": "text",
+            "characterName": "Francisco",
+            "text":"Y ahora vete, ¡TRAIDOR!",
+            "pause": true,
+            "imageAssetId": "IMGQuiosquero"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text":"<i>Ya tengo lo que me pidió aquella chica, debería ir a pedirle la gorra.</i>",
+            "pause": true,
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "notification",
-            "notificationId": "ComicBought",
-            "text": "Hola Txema"
+            "notificationId": "QuiosqueroComicDialogueFinished",
+            "text": "ComicBought"
         }
     ]
 }

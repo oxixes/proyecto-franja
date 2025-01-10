@@ -3,42 +3,41 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Hola, ¿Habéis visto a un cani con cresta pasar por aquí? Me ha robado el móvil.",
+            "text": "Buenas, ¿Me podrías ayudar con mi outfit? Se ve que parezco una escoba",
             "pause": true,
             "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
-            "characterName": null,
-            "text": "<i>Los dos chavales de atrás dicen: 'KEKW'</i>",
+            "characterName": "Chavala",
+            "text": "Ostia es verdad.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGChavala"
         },
         {
             "type": "text",
             "characterName": "Chavala",
-            "text": "No, no hemos visto a nadie. Pregunta por ahí si eso.",
+            "text": "Si quieres te podría dar mi gorra, pero no se la puedo dejar a cualquier blandengue.",
+            "pause": true,
+            "imageAssetId": "IMGChavala"
+        },
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "Antes me tendrás que ganar en un pulso.",
             "pause": true,
             "imageAssetId": "IMGChavala"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "<i>Oye.</i>",
+            "text": "Ay Dios.",
             "pause": true,
             "imageAssetId": "IMGJuan"
         },
         {
-            "type": "text",
-            "characterName": "Juan",
-            "text": "<i>Que bien viste esta muchacha.</i>",
-            "pause": true,
-            "imageAssetId": "IMGJuan"
-        },
-        {
-            "type": "notification",
-            "notificationId": "ChavalaIrrelevantDialogueFinished",
-            "text": "ChavalaIrrelevantDialogueFinished"
+            "type": "diversion",
+            "diversion": "EscenaParque/NPCs/ChavalaDialogueAfterPulso"
         }
     ]
 }

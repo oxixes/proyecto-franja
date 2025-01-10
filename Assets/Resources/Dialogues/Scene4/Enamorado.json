@@ -108,14 +108,14 @@
         {
             "type": "text",
             "characterName": "Enamorado",
-            "text": "Por cierto, recuerda traerme las flores o la copa si al final te decides por alguna de estas dos.",
+            "text": "Por cierto, si quieres que le de las flores o la copa, tráemelas, ¿vale?.",
             "pause": true,
             "imageAssetId": null
         },
         {
             "type": "text",
             "characterName": "Enamorado",
-            "text": "Yo me quedaré aquí haciendo guardia.",
+            "text": "Yo debo quedarme aquí haciendo guardia.",
             "pause": true,
             "imageAssetId": null
         },

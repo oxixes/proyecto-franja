@@ -3,30 +3,30 @@
         {
             "type": "text",
             "characterName": "Universitario",
-            "text": "Hola, ¿eres miembro de la UPM?",
+            "text": "Hola, ¿eres de la UPM?",
             "pause": true,
             "imageAssetId": null
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "No, acabo de llegar aquí.",
+            "text": "Yo soy del Madrid.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
             "characterName": "Universitario",
-            "text": "Pues lo siento, estamos de elecciones ahora mismo y tú no puedes votar.",
+            "text": "Pues lo siento, ahora mismo estamos de elecciones y tú no puedes votar.",
             "pause": true,
             "imageAssetId": null
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "No pasa nada, ya volveré en otro momento.",
+            "text": "Vaya, con las ganas que tenía yo de votar. Que bajón.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         }
     ]
 }
