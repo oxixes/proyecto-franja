@@ -150,7 +150,7 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "<i>Parece que no se puede hacer más por aquí, será mejor que siga adelante</i>",
+            "text": "<i>Parece que no se puede hacer más por aquí, será mejor que siga adelante.</i>",
             "pause": true,
             "imageAssetId": "Portraits/Boy"
         },

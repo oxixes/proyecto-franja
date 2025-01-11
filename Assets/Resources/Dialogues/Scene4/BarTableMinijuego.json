@@ -101,7 +101,7 @@
         {
             "type": "text",
             "characterName": null,
-            "text": "<i>Juegas a una partida de beer pong con el hombre borracho.</i>",
+            "text": "<i>Juegas a una partida de beer pong con el hombre borracho. Recibes una copa de ellos.</i>",
             "pause": true,
             "imageAssetId": null
         },

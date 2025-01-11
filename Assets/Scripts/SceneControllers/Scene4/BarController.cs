@@ -126,8 +126,11 @@ public class BarController : MonoBehaviour
     void HandleEnamoradoDialogueFinish(string dialogueId, string notificationId, string notificationData)
     {
         enamoradoIO.dialogueID = "Scene4/EnamoradoDecision1";
-        barTableMan1IO.dialogueID = "Scene4/BarTableMinijuego";
-        barTableMan2IO.dialogueID = "Scene4/BarTableMinijuego";
+        if (barTableMan1IO.dialogueID != "NPCs/BarTable")
+        {
+            barTableMan1IO.dialogueID = "Scene4/BarTableMinijuego";
+            barTableMan2IO.dialogueID = "Scene4/BarTableMinijuego";
+        }
         SaveManager.GetInstance().Set("Scene4EnamoradoDialogueFinished", 1);
     }
 
@@ -266,7 +269,7 @@ public class BarController : MonoBehaviour
     private IEnumerator StartMinijuegoDialogue()
     {
         yield return new WaitForSeconds(.1f);
-        StartCoroutine(FadeOutCutscene("Scene4/BarTableMinijuego"));
+        DialogueSystem.GetInstance().StartDialogue("Scene4/BarTableMinijuego");
         yield return null;
     }
 

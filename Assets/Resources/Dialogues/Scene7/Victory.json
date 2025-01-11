@@ -59,7 +59,7 @@
             "characterName": "Juan",
             "text": "¡No puede ser!",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
