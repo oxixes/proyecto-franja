@@ -40,8 +40,20 @@
         },
         {
             "type": "text",
+<<<<<<< HEAD
             "characterName": null,
             "text": "<i>Le haces caso y el mundo se oscurece a tu alrededor.</i>",
+=======
+            "characterName": "Juan",
+            "text": "¿Dónde?",
+            "pause": false,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "¡Agh!",
+>>>>>>> main
             "pause": true,
             "imageAssetId": null
         },

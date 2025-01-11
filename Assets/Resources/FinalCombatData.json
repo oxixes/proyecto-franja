@@ -1,6 +1,7 @@
 {
     "lines": [
         {
+<<<<<<< HEAD
             "enemyText": "¿Listo para perder?",
             "regularOptions": [
                 {
@@ -16,10 +17,28 @@
                 {
                     "text": "Desde que me robaste el móvil,\nno he conocido la derrota",
                     "response": "Déjame que\nte la\nrecuerde.",
+=======
+            "enemyText": "¿Qué haces aquí?\nSi no sabes ni\ndarle a una\npelota.",
+            "regularOptions": [
+                {
+                    "text": "Es que se me da mal el fútbol",
+                    "response": "Lo suponía.",
+                    "score": 0
+                },
+                {
+                    "text": "¿Y tú que sabes?",
+                    "response": "Se te nota.",
+                    "score": 1
+                },
+                {
+                    "text": "¡Sé jugar mejor que tú!",
+                    "response": "¡Ja! ¡Eso habría\nque verlo!",
+>>>>>>> main
                     "score": 1
                 }
             ],
             "specialOptionScore": 2,
+<<<<<<< HEAD
             "specialOptionResponse": "Pero...\nel rayo\n sigue siendo\ngrande."
         },
         {
@@ -60,10 +79,31 @@
                 {
                     "text": "Eso es un argumento ad hominem, no es válido.",
                     "response": "Lo que no\nes válido\nes tu...\npelo escoba.",
+=======
+            "specialOptionResponse": "¿Y eso cómo\nlo sabes?"
+        },
+        {
+            "enemyText": "¿Qué haces aquí?\nSi no sabes ni\ndarle a una\npelota.",
+            "regularOptions": [
+                {
+                    "text": "Es que se me da mal el fútbol",
+                    "response": "Lo suponía.",
+                    "score": 0
+                },
+                {
+                    "text": "¿Y tú que sabes?",
+                    "response": "Se te nota.",
+                    "score": 1
+                },
+                {
+                    "text": "¡Sé jugar mejor que tú!",
+                    "response": "¡Ja! ¡Eso habría\nque verlo!",
+>>>>>>> main
                     "score": 1
                 }
             ],
             "specialOptionScore": 2,
+<<<<<<< HEAD
             "specialOptionResponse": "Tu que sabrás."
         },
         {
@@ -110,6 +150,9 @@
             ],
             "specialOptionScore": 2,
             "specialOptionResponse": "¡Eso es\nmentira!"
+=======
+            "specialOptionResponse": "¿Y eso cómo\nlo sabes?"
+>>>>>>> main
         }
     ]
 }

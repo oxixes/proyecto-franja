@@ -7,8 +7,19 @@
         },
         {
             "type": "text",
+<<<<<<< HEAD
             "characterName": "El Kike",
             "text": "LLega el metro...",
+=======
+            "text": "<i>Quique se siente muy ofendido, Juan le quita el móvil del\nbolsillo.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Ladrón",
+            "text": "!!!",
+>>>>>>> main
             "pause": true,
             "imageAssetId": "IMGKike"
         },
