@@ -3,44 +3,51 @@
         {
             "type": "text",
             "characterName": "Francisco",
-            "text":"Toma tu cómic y aparta de mi vista.",
+            "text": "Toma tu cómic y aparta de mi vista.",
             "pause": true,
-            "imageAssetId": "IMGQuiosquero"
+            "imageAssetId": "Portraits/old_man2"
         },
         {
             "type": "text",
             "characterName": "Francisco",
-            "text":"Dejar a un compatriota colgado de esta manera... me da asco verte. ¡FUERA!",
+            "text": "Dejar a un compatriota colgado de esta manera... me da asco verte. ¡FUERA!",
             "pause": true,
-            "imageAssetId": "IMGQuiosquero"
+            "imageAssetId": "Portraits/old_man2"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text":"Pero deme el cambio.",
+            "text": "Pero deme el cambio.",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Francisco",
-            "text":"Ah sí perdona.",
+            "text": "Ah sí perdona.",
             "pause": true,
-            "imageAssetId": "IMGQuiosquero"
+            "imageAssetId": "Portraits/old_man2"
         },
         {
             "type": "text",
             "characterName": "Francisco",
-            "text":"Y ahora vete, ¡TRAIDOR!",
+            "text": "Y ahora vete, ¡TRAIDOR!",
             "pause": true,
-            "imageAssetId": "IMGQuiosquero"
+            "imageAssetId": "Portraits/old_man2"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text":"<i>Ya tengo lo que me pidió aquella chica, debería ir a pedirle la gorra.</i>",
+            "text": "<i>Ya tengo lo que me pidió aquella chica, debería ir a pedirle la gorra.</i>",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Hmm, lleva una especia de código \"DRACODE\", B5A18E50...</i>",
+            "pause": true,
+            "imageAssetId": null
         },
         {
             "type": "notification",

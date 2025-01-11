@@ -12,7 +12,7 @@
             "characterName": "El Kike",
             "text": "Tienes suerte de que no haya llegado el metro.",
             "pause": true,
-            "imageAssetId": "IMGKike"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
@@ -33,28 +33,28 @@
             "characterName": "El Kike",
             "text": "Habla.",
             "pause": true,
-            "imageAssetId": "IMGKike"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "...",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Soy Juan Hernández, tú robaste mi móvil, prepárate a...",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Devolverme el móvil.",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
@@ -68,42 +68,42 @@
             "characterName": "Juan",
             "text": "He estado persiguiéndote por todo el barrio y, déjame decirte que no tienes muchos amigos.",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Es imposible que pueda quitarte el móvil por la fuerza.",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Pero la pluma es más fuerte que la espada.",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Voy a humillarte tan fuerte que tú mismo me entregarás el móvil.",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Y después, te subirás al tren, y te irás.",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "El Kike",
             "text": "...",
             "pause": true,
-            "imageAssetId": "IMGKike"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
@@ -117,21 +117,21 @@
             "characterName": "El Kike",
             "text": "A ver si lo he entendido.",
             "pause": true,
-            "imageAssetId": "IMGKike"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
             "characterName": "El Kike",
             "text": "Tú y yo vamos a tener una pelea verbal, en el que me vas a intentar insultar.",
             "pause": true,
-            "imageAssetId": "IMGKike"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
             "characterName": "El Kike",
             "text": "Supongo que yo tendré que insultarte también, ¿No?",
             "pause": true,
-            "imageAssetId": "IMGKike"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
@@ -145,42 +145,42 @@
             "characterName": "El Kike",
             "text": "En algún momento tendremos que ver si me has humillado lo suficiente.",
             "pause": true,
-            "imageAssetId": "IMGKike"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
             "characterName": "El Kike",
             "text": "Que va a ser cuando llegue el tren.",
             "pause": true,
-            "imageAssetId": "IMGKike"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
             "characterName": "El Kike",
             "text": "Y si resulta que me siento muy humillado te tengo que devolver el móvil y montarme en el tren.",
             "pause": true,
-            "imageAssetId": "IMGKike"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Efectivamente.",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "El Kike",
             "text": "Vale, pero si pierdes te tumbo de una ostia.",
             "pause": true,
-            "imageAssetId": "IMGKike"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
             "characterName": "El Kike",
             "text": "¿Trato?",
             "pause": true,
-            "imageAssetId": "IMGKike"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
@@ -208,28 +208,42 @@
             "characterName": "Juan",
             "text": "<i>Necesito ese móvil...</i>",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Trato.",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "El Kike",
             "text": "Perfecto, el que va segundo lo tiene más fácil.",
             "pause": true,
-            "imageAssetId": "IMGKike"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
             "characterName": "El Kike",
             "text": "Empezaré yo.",
             "pause": true,
-            "imageAssetId": "IMGKike"
+            "imageAssetId": "Portraits/Punk"
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>El ladrón se baja la cremallera de la chaqueta, debajo puedes ver una camiseta.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Es del <color=yellow>Rayo Vallecano</color>.</i>",
+            "pause": true,
+            "imageAssetId": null
         },
         {
             "type":"notification",
