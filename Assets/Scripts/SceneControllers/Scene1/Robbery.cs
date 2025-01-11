@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Codice.CM.Common;
 using UnityEngine;
 
 public class Robbery : MonoBehaviour
@@ -7,6 +8,9 @@ public class Robbery : MonoBehaviour
     public GameObject mom;
     public GameObject player;
     public GameObject thief;
+    public Sprite thiefLookingRight;
+    public Sprite regualrThief;
+    public ItemData stolenItem;
     public int thiefSpeed = 10;
     public int thiefRunningSpeed = 50;
     public float trackingMinDistance = 1f;
@@ -25,6 +29,7 @@ public class Robbery : MonoBehaviour
         {
             if (SaveManager.GetInstance().Get<int>("TurraDicha") == 0)
             {
+                player.GetComponent<PlayerInventoryManager>().CollectItem(stolenItem);
                 DialogueSystem.GetInstance().StartDialogue("NPCs/MomDialogue1");
                 SaveManager.GetInstance().Set("TurraDicha", 1);
             }
@@ -40,6 +45,9 @@ public class Robbery : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Starting robbery cutscene.");
+            player.GetComponent<PlayerInventoryManager>().RemoveItem(stolenItem);
+            thief.GetComponent<SpriteRenderer>().sprite = thiefLookingRight;
+            thief.GetComponent<SpriteRenderer>().flipX = true;
             StartCoroutine(MoveLadronTowards(player.transform.position, thiefSpeed));
 
             DialogueSystem.GetInstance().HandleNotification("ThiefRun", HandleThiefRunNotification);
@@ -64,9 +72,13 @@ public class Robbery : MonoBehaviour
             thief.transform.position = Vector2.MoveTowards(thief.transform.position, position, velocidad * Time.deltaTime);
             yield return null;
         }
+
+        thief.GetComponent<SpriteRenderer>().sprite = regualrThief;
+        thief.GetComponent<SpriteRenderer>().flipX = false;
     }
 
     void HandleThiefRunNotification(string dialogueId, string notificationId, string notificationData) {
+        thief.GetComponent<SpriteRenderer>().sprite = thiefLookingRight;
         StartCoroutine(MoveLadronTowards(new Vector2(200, thief.transform.position.y), thiefRunningSpeed));
     }
 

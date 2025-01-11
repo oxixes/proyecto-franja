@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7502fc8ed278cc744b07a21617dd3e97, type: 3}
   m_Name: SeMeaba
   m_EditorClassIdentifier: 
-  infoName: Quique se meaba en la cama
+  infoName: Kike se meaba en la cama
   combatInfoName: "Los cr\xEDos se mean en la cama."
   description: 

@@ -128,7 +128,21 @@
         },
         {
             "type": "text",
-            "characterName": "Juan",
+            "characterName": "Kas",
+            "text": "Puedes hablar varias veces con la misma persona.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Quien sabe lo que te pueden decir una vez aprendes cosas nuevas.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
             "text": "Buena suerte.",
             "pause": true,
             "imageAssetId": "Portraits/old_man"

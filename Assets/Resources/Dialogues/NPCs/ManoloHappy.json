@@ -12,7 +12,7 @@
             "characterName": "Juan",
             "text": "Sí, ya he tirado todos los contenedores.",
             "pause": true,
-            "imageAssetId": "Portraits/Luimberjack"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",

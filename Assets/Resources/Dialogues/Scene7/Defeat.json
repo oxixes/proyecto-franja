@@ -69,7 +69,7 @@
         {
             "type": "text",
             "characterName": null,
-            "text": "<i>Te sientes aliviado por no haber recivido *La Ostia*, pero recuerdas que el móvil se va con él.</i>",
+            "text": "<i>Te sientes aliviado por no haber recibido *La Hostia*, pero recuerdas que el móvil se va con él.</i>",
             "pause": true,
             "imageAssetId": null
         },
@@ -83,7 +83,7 @@
         {
             "type": "text",
             "characterName": null,
-            "text": "<i>Te has librado de una *Ostia*, pero ahora viene otra.</i>",
+            "text": "<i>Te has librado de *La Hostia*, pero ahora viene otra.</i>",
             "pause": true,
             "imageAssetId": null
         },

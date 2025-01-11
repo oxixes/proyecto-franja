@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7502fc8ed278cc744b07a21617dd3e97, type: 3}
   m_Name: QuiqueEsUnTraidor
   m_EditorClassIdentifier: 
-  infoName: Quique es un traidor
+  infoName: Kike es un traidor
   combatInfoName: "\xBFVas a huir como un cobarde?"
   description: 

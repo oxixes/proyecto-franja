@@ -17,14 +17,14 @@
         {
             "type": "text",
             "characterName": "???",
-            "text": "Que va, es que no queríamos que fueses para allá, y hemos puesto unas vallitas, ¿Te gustan?",
+            "text": "Que va, es que no queríamos que fueses para allá, y hemos puesto unas vallitas, ¿te gustan?",
             "pause": true,
             "imageAssetId": null
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Ehm, bueno sí, Aunque parece que podría saltarlas ¿No?",
+            "text": "Ehm, bueno sí. Aunque parece que podría saltarlas, ¿no?",
             "pause": true,
             "imageAssetId": "Portraits/Boy"
         },

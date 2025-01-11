@@ -101,6 +101,20 @@
         {
             "type": "text",
             "characterName": "Enamorado",
+            "text": "Si tienes una idea mejor, estoy abierto a sugerencias.",
+            "pause": true,
+            "imageAssetId": "Portraits/Glasses"
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "Eso sí, tendrás que negarme las otras opciones primero, son muy buenas.",
+            "pause": true,
+            "imageAssetId": "Portraits/Glasses"
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
             "text": "¿Qué crees que debería darle?",
             "pause": true,
             "imageAssetId": "Portraits/Glasses"

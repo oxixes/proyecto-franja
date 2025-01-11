@@ -57,6 +57,27 @@
             "imageAssetId": "Portraits/Boy"
         },
         {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Si eso ve a hablar con mi socia que está más abajo.",
+            "pause": true,
+            "imageAssetId": "Portraits/FarmerBoy"
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Puede que si le haces un recadito, te ayude.",
+            "pause": true,
+            "imageAssetId": "Portraits/FarmerBoy"
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Y vistete mejor chaval.",
+            "pause": true,
+            "imageAssetId": "Portraits/FarmerBoy"
+        },
+        {
             "type": "notification",
             "notificationId": "ManteroDialogueFinished",
             "text": "EscenaParque/NPCs/ManteroDialogueRepeat"

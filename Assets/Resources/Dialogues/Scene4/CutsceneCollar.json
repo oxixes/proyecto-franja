@@ -1,6 +1,11 @@
 {
     "lines": [
         {
+            "type": "notification",
+            "notificationId": "JessiEnamoradoDialogueFinished",
+            "text": "4"
+        },
+        {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Hola Jessi, vengo a darte este collar tan bonito que he comprado para ti.",
@@ -143,7 +148,7 @@
         {
             "type": "text",
             "characterName": "Jessi",
-            "text": "Perdona pero se dice <color=red>el Kike</color>",
+            "text": "Perdona pero se dice <color=red>el Kike</color>.",
             "pause": true,
             "imageAssetId": "Portraits/Girl2"
         },

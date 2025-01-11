@@ -113,6 +113,13 @@
             "imageAssetId": "Portraits/Kid2"
         },
         {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Ahora debería hablar con el mantero.",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
             "type": "notification",
             "notificationId": "ChavalaHelped",
             "text": "EscenaParque/NPCs/ChavalaDialogueAfterHelp"

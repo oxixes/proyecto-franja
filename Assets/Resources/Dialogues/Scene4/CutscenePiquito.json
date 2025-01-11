@@ -1,6 +1,11 @@
 {
     "lines": [
         {
+            "type": "notification",
+            "notificationId": "JessiEnamoradoDialogueFinished",
+            "text": "1"
+        },
+        {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Hola.",
@@ -10,7 +15,7 @@
         {
             "type": "text",
             "characterName": "Jessi",
-            "text": "¿Que quieres?",
+            "text": "¿Qué quieres?",
             "pause": true,
             "imageAssetId": "Portraits/Girl2"
         },

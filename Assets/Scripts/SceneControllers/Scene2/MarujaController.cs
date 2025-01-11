@@ -8,6 +8,9 @@ public class MarujaController : MonoBehaviour
     public GameObject minigamePrefab;
     public GameObject player;
     public InformationData marujaInformation;
+    public GameObject audioController;
+    public AudioClip minigameMusic;
+    public AudioClip overworldMusic;
 
     private InteractableObject marujaIO;
     private GameObject canvas;
@@ -46,6 +49,8 @@ public class MarujaController : MonoBehaviour
 
     void HandleMinigameStartNotification(string dialogueID, string notificationID, string notificationData)
     {
+        audioController.GetComponent<AudioController>().ForcePlayWithTransition(minigameMusic, true);
+
         // Instantiate the minigame in the canvas
         GameObject minigame = Instantiate(minigamePrefab, canvas.transform);
 
@@ -55,6 +60,8 @@ public class MarujaController : MonoBehaviour
 
     void HandleOnMinigameFinish(int total, int score, bool skipped)
     {
+        audioController.GetComponent<AudioController>().ForcePlayWithTransition(overworldMusic, true);
+
         if (skipped)
         {
             DialogueSystem.GetInstance().StartDialogue("NPCs/MarujaMinigameSkipped");

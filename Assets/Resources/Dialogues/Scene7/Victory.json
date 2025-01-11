@@ -64,7 +64,7 @@
         {
             "type": "text",
             "characterName": "El Kike",
-            "text": "Oye, por lo menos la ostia no te la llevas.",
+            "text": "Oye, por lo menos la hostia no te la llevas.",
             "pause": true,
             "imageAssetId": "Portraits/Punk"
         },
@@ -92,7 +92,7 @@
         {
             "type": "text",
             "characterName": null,
-            "text": "<i>En un arrebato de valentía, pegas un bote y te metes al tren.</i>",
+            "text": "<i>En un arrebato de valentía, te decides a perseguirle en el próximo tren que venga.</i>",
             "pause": true,
             "imageAssetId": null
         },

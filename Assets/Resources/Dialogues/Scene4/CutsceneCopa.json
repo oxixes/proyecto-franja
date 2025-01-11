@@ -1,6 +1,11 @@
 {
     "lines": [
         {
+            "type": "notification",
+            "notificationId": "JessiEnamoradoDialogueFinished",
+            "text": "3"
+        },
+        {
             "type": "text",
             "characterName": "Enamorado",
             "text": "¿Que pasa nena? Yo invito a esta, para que luego no digas que te trato mal eh muñeca.",

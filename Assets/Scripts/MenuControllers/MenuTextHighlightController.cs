@@ -9,6 +9,9 @@ public class MenuTextHighlightController : MonoBehaviour, IPointerEnterHandler, 
     public bool isEnabled = true;
     public bool colorChange = false;
 
+    public AudioSource audioSource;
+    public AudioClip hoverSound;
+
     private TextMeshProUGUI buttonText;
 
     public void Start()
@@ -21,6 +24,11 @@ public class MenuTextHighlightController : MonoBehaviour, IPointerEnterHandler, 
         if (!isEnabled)
         {
             return;
+        }
+
+        if (audioSource != null && hoverSound != null)
+        {
+            audioSource.PlayOneShot(hoverSound);
         }
 
         if (colorChange)

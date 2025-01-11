@@ -14,7 +14,7 @@
                     "score": 1
                 },
                 {
-                    "text": "No he conocido la derrota",
+                    "text": "No he conocido la derrota.",
                     "response": "Déjame que\nte la\nrecuerde.",
                     "score": 1
                 }
@@ -23,7 +23,7 @@
             "specialOptionResponse": "Pero...\nel rayo\nsigue siendo\ngrande."
         },
         {
-            "enemyText": "Eres un\n crío,\npírate a\ntu casa.",
+            "enemyText": "Eres un\ncrío,\npírate a\ntu casa.",
             "regularOptions": [
                 {
                     "text": "Eso no me impide domarte.",
@@ -54,7 +54,7 @@
                 },
                 {
                     "text": "Mejor que una línea vertical en la cabeza es.",
-                    "response": "No tienes\n ni idea.",
+                    "response": "No tienes\nni idea.",
                     "score": 1
                 },
                 {
@@ -92,7 +92,7 @@
             "enemyText": "Sigo siendo\nel más\ngrande del\nbarrio.",
             "regularOptions": [
                 {
-                    "text": "Mis cojones",
+                    "text": "Mis cojones.",
                     "response": "Los míos\nmás grandes.",
                     "score": 0
                 },

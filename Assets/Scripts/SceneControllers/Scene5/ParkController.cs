@@ -9,6 +9,7 @@ public class ParkController : MonoBehaviour
     public GameObject chaval1;
     public GameObject chaval2;
     public GameObject mantero;
+    public Sprite manteroLookingRight;
     public GameObject quiosquero;
 
     public GameObject player;
@@ -19,7 +20,7 @@ public class ParkController : MonoBehaviour
     public InformationData quiqueTraidorInfo;
 
     public Vector2 targetPoint;
-    public float speed = 0.1f;
+    public float speed = 0.5f;
     private bool runaway = false;
 
     private InteractableObject chavalaIO;
@@ -150,6 +151,7 @@ public class ParkController : MonoBehaviour
     {
         runaway = true;
         player.GetComponent<PlayerInventoryManager>().CollectInformation(quiqueTraidorInfo);
+        mantero.GetComponent<SpriteRenderer>().sprite = manteroLookingRight;
         SaveManager.GetInstance().Set("Scene5ManteroLeaves", 1);
     }
 

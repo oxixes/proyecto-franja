@@ -70,7 +70,7 @@ public class BarController : MonoBehaviour
         if (SaveManager.GetInstance().Get<int>("Scene4EnamoradoDecisionChosen") >= 1)
         {
             enamoradoIO.dialogueID = "Scene4/EnamoradoFinish";
-            jessiIO.dialogueID = "Scene4/EnamoradoYJessiRepeatAfterCopa";
+            jessiIO.dialogueID = "Scene4/JessiRepeat";
         }
 
         DialogueSystem.GetInstance().HandleNotification("BarTableDialogueFinished", HandleTableConversationFinishNotification);
@@ -140,7 +140,7 @@ public class BarController : MonoBehaviour
         {
             StartCoroutine(StartEnamoradoPiquitoDialogue());
             enamoradoIO.dialogueID = "Scene4/EnamoradoFinish";
-            jessiIO.dialogueID = "Scene4/EnamoradoYJessiRepeatAfterCopa";
+            jessiIO.dialogueID = "Scene4/JessiRepeat";
             SaveManager.GetInstance().Set("Scene4EnamoradoDecisionChosen", 1);
         }
         else if (notificationData == "2" && !inventory.HasItem(flowersItem))
@@ -152,7 +152,7 @@ public class BarController : MonoBehaviour
             StartCoroutine(StartEnamoradoFlowersDialogue());
             enamoradoIO.dialogueID = "Scene4/EnamoradoFinish";
             inventory.RemoveItem(flowersItem);
-            jessiIO.dialogueID = "Scene4/EnamoradoYJessiRepeatAfterCopa";
+            jessiIO.dialogueID = "Scene4/JessiRepeat";
             SaveManager.GetInstance().Set("Scene4EnamoradoDecisionChosen", 2);
         }
         else if (notificationData == "3" && !inventory.HasItem(copaItem))
@@ -163,7 +163,7 @@ public class BarController : MonoBehaviour
         {
             StartCoroutine(StartEnamoradoCopaDialogue());
             enamoradoIO.dialogueID = "Scene4/EnamoradoFinish";
-            jessiIO.dialogueID = "Scene4/EnamoradoYJessiRepeatAfterCopa";
+            jessiIO.dialogueID = "Scene4/JessiRepeat";
             inventory.RemoveItem(copaItem);
             SaveManager.GetInstance().Set("Scene4EnamoradoDecisionChosen", 3);
         }
@@ -184,7 +184,7 @@ public class BarController : MonoBehaviour
             StartCoroutine(StartCleanCollarDialogue());
             enamoradoIO.dialogueID = "Scene4/EnamoradoFinish";
             inventory.RemoveItem(cleanCollarItem);
-            jessiIO.dialogueID = "Scene4/JessiCollar";
+            jessiIO.dialogueID = "Scene4/JessiRepeat";
             SaveManager.GetInstance().Set("Scene4EnamoradoDecisionChosen", 4);
         }
     }
@@ -201,10 +201,12 @@ public class BarController : MonoBehaviour
         if (notificationData == "3")
         {
             inventory.CollectInformation(lePusoLosCuernosInfo);
+            inventory.RemoveItem(copaItem);
         } else if (notificationData == "4")
         {
             inventory.CollectInformation(pichaCortaInfo);
             inventory.CollectInformation(lePusoLosCuernosInfo);
+            inventory.RemoveItem(cleanCollarItem);
         }
 
         SaveManager.GetInstance().Set("Scene4JessiEnamoradoDialogueFinished", 1);

@@ -31,7 +31,7 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "¿Me podría dar información comprometida sobre el?",
+            "text": "¿Me podría dar información comprometida sobre él?",
             "pause": true,
             "imageAssetId": "Portraits/Boy"
         },
