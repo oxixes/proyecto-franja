@@ -3,37 +3,44 @@
         {
             "type": "text",
             "characterName": "Kas",
-            "text": "Eh tú, Maruja, deja al pobre chico que se acaba de\nmudar, dile lo que necesita saber.",
+            "text": "Eh tú, dile al chaval lo que necesita saber.",
             "pause": true,
             "imageAssetId": "Portraits/old_man"
         },
         {
             "type": "text",
             "characterName": "Maruja",
-            "text": "¡No me digas cómo hacer mi trabajo, Kas!",
+            "text": "¿Y mi ropa qué?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Lady"
         },
         {
             "type": "text",
             "characterName": "Kas",
-            "text": "¡No te estoy diciendo cómo hacer tu trabajo, te estoy\ndiciendo que lo hagas!",
+            "text": "Ahora te la recojo yo, díselo.",
             "pause": true,
             "imageAssetId": "Portraits/old_man"
         },
         {
             "type": "text",
             "characterName": "Maruja",
-            "text": "Bueno, te lo contaré. Ese chico corrió hacia el norte, se llama\nQuique y se meaba en el pañal hasta los 15.",
+            "text": "Bueno venga te lo cuento, yo soy amiga de la madre de ese chico.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Lady"
+        },
+        {
+            "type": "text",
+            "characterName": "Maruja",
+            "text": "Se llama <color=red>Kike</color> y se meaba en la cama hasta hace bien poco.",
+            "pause": true,
+            "imageAssetId": "Portraits/Lady"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "<i>Me pregunto si esa <color=yellow>información</color> será útil...</i>",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "notification",

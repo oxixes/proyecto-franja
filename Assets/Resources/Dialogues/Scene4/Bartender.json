@@ -12,7 +12,7 @@
             "characterName": "Juan",
             "text": "Mi móvil que me lo han robado.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
@@ -26,7 +26,7 @@
             "characterName": "Juan",
             "text": "¿Cómo sabes que soy nuevo?.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",

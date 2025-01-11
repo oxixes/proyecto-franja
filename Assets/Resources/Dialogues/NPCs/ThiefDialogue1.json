@@ -10,14 +10,9 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "¿Cómo va a estar roto, si es nuevo?",
+            "text": "¿Cómo va a estar roto, si es nue...",
             "pause": true,
-            "imageAssetId": null
-        },
-        {
-            "type": "notification",
-            "notificationId": "ThiefSteal",
-            "text": "ThiefSteal"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
@@ -54,14 +49,9 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "¡Eh! Vuelve aquí y dame el móvil.",
+            "text": "¡Eh! ¡Vuelve aquí y dame el móvil!",
             "pause": true,
-            "imageAssetId": null
-        },
-        {
-            "type": "notification",
-            "notificationId": "BackToOverworldMusic",
-            "text": "BackToOverworldMusic"
+            "imageAssetId": "Portraits/Boy"
         }
     ]
 }

@@ -5,7 +5,7 @@
             "characterName": "Mamá",
             "text": "Ten un buen día Juan.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Girl"
         }
     ]
 }

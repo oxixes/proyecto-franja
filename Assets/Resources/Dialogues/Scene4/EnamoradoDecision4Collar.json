@@ -5,7 +5,7 @@
             "characterName": "Enamorado",
             "text": "¿Pero, y entonces que le doy?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "options",

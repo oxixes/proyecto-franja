@@ -5,42 +5,42 @@
             "characterName": "Enamorado",
             "text": "Hola Jessi, vengo a darte este collar tan bonito que he comprado para ti.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Es muy caro.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "¿De dónde has sacado eso?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "¿Qué? ehm... ¿Del Pandora?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "Odio a los mentirosos. Dime la verdad o te suelto una hostia que te visto de torero.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Vale vale me la dio ese chaval de ahí.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
@@ -54,145 +54,166 @@
             "characterName": "Jessi",
             "text": "A ver parguela, ¿De dónde has sacado el collar?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "De la basura, pero el collar es bonito no digas que no.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "La verdad que sí, pero lo tiré yo.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "¿Por qué?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "<i>¿Qué hace que no lo vende? Pero si estamos en crisis...</i>",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "Ese collar me lo regaló mi ex, <color=red>el Kike</color>.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "Lo hizo y acto seguido me puso los cuernos con otra.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "Que asco de tío...",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Pues a mi me ha robado el móvil.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "¿Sí? No me sorprende, seguramente fue así como consiguió mi collar.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "Vendiendo móviles robados o robandole el collar a una pija.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "Que desgraciado.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Jessi, tengo que recuperar mi móvil, para ello necesito humillar al <color=red>Kike</color>.",
+            "text": "Jessi, tengo que recuperar mi móvil, para ello necesito humillar al <color=red>Quique</color>.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Perdona pero se dice <color=red>el Kike</color>",
+            "pause": true,
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "¿Me podrías ayudar?",
+            "text": "¿¡Me podrías ayudar o no!?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Jessi",
-            "text": "Bueno ye te he dicho que me puso los cuernos, también le podrías decir... jeje.",
+            "text": "Vale vale...",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Jessi",
-            "text": "Dile que la tiene enana, eso le afecta bastante porque está basado en hechos reales.",
+            "text": "Ya te he dicho que me puso los cuernos, también le podrías decir...",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Girl2"
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Jeje",
+            "pause": true,
+            "imageAssetId": "Portraits/Girl2"
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Dile que <color=yellow>la tiene enana</color>, eso le afecta bastante porque está basado en hechos reales.",
+            "pause": true,
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Entendido, gracias por la <color=yellow>información</color> Jessi.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "¿Y qué hago yo ahora con el collar?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Podrías venderlo. Te lo quitas de encima y le sacas una pasta.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "Pues sí, no es mala esa. Gracias chaval, ojalá recuperes tu móvil.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "notification",
-            "notificationId": "CutsceneCollarFinished",
-            "text": "CutsceneCollarFinished"
+            "notificationId": "CutseneFinished",
+            "text": "CutseneFinished"
         }
     ]
 }

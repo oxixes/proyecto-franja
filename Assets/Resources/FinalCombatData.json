@@ -20,7 +20,7 @@
                 }
             ],
             "specialOptionScore": 2,
-            "specialOptionResponse": "Pero...\nel rayo\n sigue siendo\ngrande."
+            "specialOptionResponse": "Pero...\nel rayo\nsigue siendo\ngrande."
         },
         {
             "enemyText": "Eres un\n crío,\npírate a\ntu casa.",
@@ -81,7 +81,7 @@
                 },
                 {
                     "text": "Chillea cabrón.",
-                    "response": "Que ostia\n tienes.",
+                    "response": "Que ostia\ntienes.",
                     "score": 1
                 }
             ],
@@ -89,7 +89,7 @@
             "specialOptionResponse": "Yo no soy\nun cobarde."
         },
         {
-            "enemyText": "Sigo siendo\nel más\ngrande del\n barrio.",
+            "enemyText": "Sigo siendo\nel más\ngrande del\nbarrio.",
             "regularOptions": [
                 {
                     "text": "Mis cojones",
@@ -98,7 +98,7 @@
                 },
                 {
                     "text": "Tampoco eres tan alto.",
-                    "response": "Comparado\na tí\n sí.",
+                    "response": "Comparado\na tí\nsí.",
                     "score": 1
                 },
                 {

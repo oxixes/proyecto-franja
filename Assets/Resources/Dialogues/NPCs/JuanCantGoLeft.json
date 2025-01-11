@@ -5,7 +5,7 @@
             "characterName": "Juan",
             "text": "<i>Hmmm, creo que no debería ir por aquí.</i>",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         }
     ]
 }

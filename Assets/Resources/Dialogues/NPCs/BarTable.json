@@ -21,7 +21,8 @@
             "type": "text",
             "characterName": "Juan",
             "text": "<i>Me pregunto si esa <color=yellow>información</color> será útil...</i>",
-            "pause": true
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "notification",

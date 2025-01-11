@@ -5,7 +5,7 @@
             "characterName": "Enamorado",
             "text": "Bueno, ¿Pues le doy la copa no?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "options",

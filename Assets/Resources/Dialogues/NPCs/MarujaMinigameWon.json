@@ -5,21 +5,28 @@
             "characterName": "Maruja",
             "text": "¡Oh, qué bien! ¡Gracias por ayudarme! ¡Eres un sol!",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Lady"
         },
         {
             "type": "text",
             "characterName": "Maruja",
-            "text": "¡Te lo contaré! ¡Era un joven muy rápido! Corrió hacia el\nnorte, se llama Quique y se meaba en el pañal hasta los 15.",
+            "text": "Mira yo soy amiga de la madre de ese chico.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Lady"
+        },
+        {
+            "type": "text",
+            "characterName": "Maruja",
+            "text": "Se llama <color=red>Kike</color> y se meaba en la cama hasta hace bien poco.",
+            "pause": true,
+            "imageAssetId": "Portraits/Lady"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "<i>Me pregunto si esa <color=yellow>información</color> será útil...</i>",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "notification",

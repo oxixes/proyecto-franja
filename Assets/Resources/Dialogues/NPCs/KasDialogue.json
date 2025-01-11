@@ -2,43 +2,134 @@
     "lines": [
         {
             "type": "text",
+            "characterName": "Juan",
+            "text": "Perdonde señor, ¿Me puede ayudar? El cani ese me ha robado el móvil.",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
             "characterName": "???",
-            "text": "Pobre niño, te han robado el móvil. Chavalín, ni te ralles. Yo te ayudo. ¿Cómo te llamas?",
-            "pause": true,
-            "imageAssetId": null
-        },
-        {
-            "type": "text",
-            "characterName": "Juan",
-            "text": "Mi nombre es <color=green>Juan</color>. ¿Y tú?",
-            "pause": true,
-            "imageAssetId": null
-        },
-        {
-            "type": "text",
-            "characterName": "Kas",
-            "text": "Me llamo <color=red>Kas</color>. ¿Quién te ha robado el móvil?",
+            "text": "Ya veo...",
             "pause": true,
             "imageAssetId": "Portraits/old_man"
         },
         {
             "type": "text",
-            "characterName": "Juan",
-            "text": "Un <color=yellow>cani con pintas de malote</color>. Me lo ha quitado y ha salido corriendo.",
-            "pause": true,
-            "imageAssetId": null
-        },
-        {
-            "type": "text",
-            "characterName": "Kas",
-            "text": "Bueno, no te preocupes.",
+            "characterName": "???",
+            "text": "Ese era <color=red>El Kike</color>, es bastante chungo, pero no te desanimes chaval.",
             "pause": true,
             "imageAssetId": "Portraits/old_man"
         },
         {
             "type": "text",
             "characterName": "Kas",
-            "text": "Ve a buscar a ese malhechor, y si no lo encuentras, ven a buscarme. Te ayudaré.",
+            "text": "Yo soy Kas, y te voy a dar la clave para derrotar a ese y a cualquiera que se interponga en tu camino.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Insúltale.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "¿Qué?",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Mec.",
+            "pause": false,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Necesitas conseguir <color=yellow>información</color> para hacerle insultos a su medida.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Puedes acceder a ella pulsando 'ESC' y seleccionando 'Información'.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "También puedes acceder a los objetos que te encuentres, seleccionando 'Objetos'.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "¿Qué?",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Así, cuando te insulte, tendrás una respuesta hecha a su medida para destruirle psicológicamente.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "¿Y no podría meterle una hostia y ya está?",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "NO, nunca recurras a la violencia. En el pasado, la violencia casi acaba con este barrio.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Con MI barrio.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "El Kike se ha ido por ahí -señalando hacia tu derecha-, no puede andar muy lejos.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Estate atento a lo que se cuece por el barrio.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Para conseguir <color=yellow>información</color> tendrás que investigar por el lugar y hablar con la gente.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Buena suerte.",
             "pause": true,
             "imageAssetId": "Portraits/old_man"
         },

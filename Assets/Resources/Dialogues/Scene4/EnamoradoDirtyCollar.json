@@ -5,28 +5,28 @@
             "characterName": "Enamorado",
             "text": "Pero... ese collar está muy sucio.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Eh... ha salido de la basura de un cani ladrón.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "...",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Bueno, lávalo y me lo vuelves a traer.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Glasses"
         }
     ]
 }

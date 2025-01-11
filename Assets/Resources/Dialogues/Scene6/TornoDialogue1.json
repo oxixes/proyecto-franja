@@ -23,13 +23,8 @@
         },
         {
             "type": "text",
-<<<<<<< HEAD
-            "characterName": "El Kike",
-            "text": "Vamos no me jodas...",
-=======
             "characterName": "Ladrón",
             "text": "Bro, háztelo mirar...",
->>>>>>> main
             "pause": true,
             "imageAssetId": "Portraits/Punk"
         },

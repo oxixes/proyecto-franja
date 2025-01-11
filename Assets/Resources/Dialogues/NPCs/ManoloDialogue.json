@@ -5,70 +5,77 @@
             "characterName": "Manolo",
             "text": "¿A dónde crees que vas?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Luimberjack"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "A perseguir a uno que me ha robado el móvil.",
+            "text": "A perseguir a un cani que me ha robado el móvil.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Manolo",
-            "text": "Una pena, pero no vas a pasar, que estamos de huelga de basureros.",
+            "text": "Ya se me ha colado uno por debajo del camión, tú no pasas.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Luimberjack"
+        },
+        {
+            "type": "text",
+            "characterName": "Manolo",
+            "text": "Estamos de huelga de basureros.",
+            "pause": true,
+            "imageAssetId": "Portraits/Luimberjack"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Pero tengo que pasar para recuperar mi móvil, que es nuevo.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Manolo",
-            "text": "Más tonto y no naces chico… Bueno, si nos ayudas, podría hacer la vista gorda y dejarte pasar.",
+            "text": "Si nos ayudas, podría hacer la vista gorda y dejarte pasar.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Luimberjack"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Agradecería eso, ¿en qué podría ayudarte?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Manolo",
             "text": "¿Ves todos esos contenedores que hay por la calle? Tíralos, cuando termines, te dejo pasar.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Luimberjack"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Pero tirar basura está mal :c .",
+            "text": "Pero tirar basura está mal...",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Manolo",
             "text": "Peor están nuestros sueldos, chico, así que o tiras esos contenedores o te olvidas de pasar por aquí.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Luimberjack"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Bueno...",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "notification",

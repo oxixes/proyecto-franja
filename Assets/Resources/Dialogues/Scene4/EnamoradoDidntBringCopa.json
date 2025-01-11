@@ -5,28 +5,28 @@
             "characterName": "Enamorado",
             "text": "Si no tienes la copa, poco podemos hacer.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Pero soy un crío, ¿cómo me van a dar una copa?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
-            "text": "Este señor te la da seguro, no le importa quien se la pida.",
+            "text": "Pregunta por ahí, seguro que alguien te la pide.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "A mi no me mires, no puedo romper contacto visual con mi amada.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Glasses"
         }
     ]
 }

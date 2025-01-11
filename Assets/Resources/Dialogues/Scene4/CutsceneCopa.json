@@ -5,28 +5,154 @@
             "characterName": "Enamorado",
             "text": "¿Que pasa nena? Yo invito a esta, para que luego no digas que te trato mal eh muñeca.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "Mejor no hables.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "Dame eso y ven, que me vas a servir de pañuelo.",
             "pause": true,
+            "imageAssetId": "Portraits/Girl2"
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>...</i>",
+            "pause": true,
             "imageAssetId": null
         },
         {
             "type": "text",
             "characterName": null,
-            "text": "Fundido a negro cuando termine este diálogo, *eliminar esta línea*",
+            "text": "<i>Una elegía a la infidelidad más tarde.</i>",
             "pause": true,
             "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>...</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Total, que <color=red>el Kike</color> me hizo mucho daño.",
+            "pause": true,
+            "imageAssetId": "Portraits/Girl2"
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Ese guarro <color=yellow>me puso los cuernos</color>.",
+            "pause": true,
+            "imageAssetId": "Portraits/Girl2"
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "¿Cómo fue capaz, a todo un mujerón como tú?.",
+            "pause": true,
+            "imageAssetId": "Portraits/Glasses"
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Eso mismo pienso yo.",
+            "pause": true,
+            "imageAssetId": "Portraits/Girl2"
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Chaval, creo que tu y yo nos vamos a llevar bien.",
+            "pause": true,
+            "imageAssetId": "Portraits/Girl2"
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "¿De verdad?",
+            "pause": true,
+            "imageAssetId": "Portraits/Glasses"
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Sí...",
+            "pause": true,
+            "imageAssetId": "Portraits/Girl2"
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "¿Amigos?.",
+            "pause": true,
+            "imageAssetId": "Portraits/Girl2"
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "...",
+            "pause": true,
+            "imageAssetId": "Portraits/Glasses"
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "Vale...",
+            "pause": true,
+            "imageAssetId": "Portraits/Glasses"
+        },
+        {
+            "type": "text",
+            "characterName": "Enamorado",
+            "text": "¿Puedo darte un abrazo?",
+            "pause": true,
+            "imageAssetId": "Portraits/Glasses"
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "Ooo que mono.",
+            "pause": true,
+            "imageAssetId": "Portraits/Girl2"
+        },
+        {
+            "type": "text",
+            "characterName": "Jessi",
+            "text": "No.",
+            "pause": true,
+            "imageAssetId": "Portraits/Girl2"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Así que <color=red>el ladrón</color> le puso los cuernos a su ex</i>",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Me pregunto si esa <color=yellow>información</color> será útil...</i>",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Parece que no se puede hacer más por aquí, será mejor que siga adelante</i>",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "notification",

@@ -5,7 +5,7 @@
             "characterName": "Maruja",
             "text": "¿Quieres ayudarme a recoger la ropa ahora?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Lady"
         },
         {
             "type": "options",

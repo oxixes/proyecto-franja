@@ -5,14 +5,14 @@
             "characterName": "Enamorado",
             "text": "Eh, has vuelto.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "¿Entonces, debería de darle un piquito?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "options",

@@ -3,9 +3,9 @@
         {
             "type": "text",
             "characterName": "Maruja",
-            "text": "No me has ayudado, se te ha caído casi toda la ropa, ¡así no se\nhace!",
+            "text": "Que desastre, toda la ropa por el suelo, te quedas sin cotilleo.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Lady"
         },
         {
             "type": "notification",

@@ -5,7 +5,7 @@
             "characterName": "Enamorado",
             "text": "Vale, ¿Le doy las rosas entonces?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "options",
