@@ -171,7 +171,7 @@ public class CombatMinigame : Minigame
 
         if (!isInMinigame) return;
 
-        if (Input.GetKeyDown(KeyCode.E)) {
+        if (Input.GetKeyDown(KeyCode.K)) {
             OnKasHelpButtonPress();
             return;
         }
@@ -240,7 +240,7 @@ public class CombatMinigame : Minigame
             {
                 currentSelectedOption = (currentSelectedOption + 1) % (options.Length - (specialOptionAvailable ? 0 : 1));
             }
-            else if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+            else if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.E))
             {
                 inOptionsPart = false;
                 optionsContainer.SetActive(false);
@@ -273,7 +273,7 @@ public class CombatMinigame : Minigame
                 quiqueAnimator.SetTrigger("Shake");
             }
         } else {
-            if (lineIsFullyDisplayed && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)))
+            if (lineIsFullyDisplayed && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.E)))
             {
                 currentSelectedOption = 0;
 
@@ -298,21 +298,21 @@ public class CombatMinigame : Minigame
 
     IEnumerator DisplayText(string text, TextMeshProUGUI textComponent)
     {
-        bool startedWithPressedKey = Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return);
+        bool startedWithPressedKey = Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return) || Input.GetKeyDown(KeyCode.E);
 
         continueText.SetActive(false);
         lineIsFullyDisplayed = false;
         textComponent.text = "";
         foreach (char c in text)
         {
-            if (!startedWithPressedKey && (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return)))
+            if (!startedWithPressedKey && (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return) || Input.GetKeyDown(KeyCode.E)))
             {
                 textComponent.text = text;
                 lineIsFullyDisplayed = true;
                 continueText.SetActive(true);
                 yield break;
             } else if (startedWithPressedKey) {
-                if (!Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.Return))
+                if (!Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.Return) && !Input.GetKeyDown(KeyCode.E))
                 {
                     startedWithPressedKey = false;
                 }

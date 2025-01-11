@@ -609,7 +609,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "E para \nayuda"
+  m_text: "K para \nsaltar"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 042a6b33dad9247299dc6daa13f66363, type: 2}
   m_sharedMaterial: {fileID: 781811519369768630, guid: 042a6b33dad9247299dc6daa13f66363, type: 2}

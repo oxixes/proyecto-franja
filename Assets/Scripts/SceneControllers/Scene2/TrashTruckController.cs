@@ -18,6 +18,7 @@ public class TrashTruckController : MonoBehaviour
     public GameObject collarItem;
 
     private InteractableObject manoloIO;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,8 +34,14 @@ public class TrashTruckController : MonoBehaviour
 
         if (SaveManager.GetInstance().Get<int>("Scene2ManoloDialogueFinished") == 1)
         {
+            string dialogueToChange = SaveManager.GetInstance().Get<string>("Scene2ManoloDialogueData");
+
             HandleManoloNotification(SaveManager.GetInstance().Get<string>("Scene2ManoloDialogueID"), null,
                 SaveManager.GetInstance().Get<string>("Scene2ManoloDialogueData"));
+
+            if (SaveManager.GetInstance().Get<int>("Scene2RiotFinished") == 1 && dialogueToChange == "NPCs/ManoloRepeat") {
+                manoloIO.dialogueID = "NPCs/ManoloHappy";
+            }
         }
 
         counter = SaveManager.GetInstance().Get<int>("Scene2ContainersThrown");
