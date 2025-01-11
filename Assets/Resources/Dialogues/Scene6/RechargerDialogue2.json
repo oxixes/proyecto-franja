@@ -3,9 +3,9 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "<i>No pienso volver a pagar<i>",
+            "text": "<i>Con pagar una vez vale<i>",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         }
     ]
 }

@@ -2,24 +2,24 @@
     "lines": [
         {
             "type": "text",
-            "characterName": "Ladrón",
-            "text": "¿Ya lo tienes?",
+            "characterName": "El Kike",
+            "text": "¿Ya lo has recargado?",
             "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": "IMGKike"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Sí.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
-            "characterName": "Ladrón",
-            "text": "Bien, bueno, ahí te quedas.",
+            "characterName": "El Kike",
+            "text": "Perfecto, podemos continuar.",
             "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": "IMGKike"
         },
         {
             "type": "notification",
@@ -31,7 +31,7 @@
             "characterName": "Juan",
             "text": "¡Oye!",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "notification",

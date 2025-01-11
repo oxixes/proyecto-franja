@@ -2,31 +2,31 @@
     "lines": [
         {
             "type": "text",
-            "characterName": "Juan",
-            "text": "¡!",
+            "characterName": null,
+            "text": "<i>Pasas el bono por la máquina y sale una luz roja.<i>",
             "pause": true,
             "imageAssetId": null
         },
         {
             "type": "text",
-            "characterName": "Ladrón",
-            "text": "¿Eh? ¿Qué pasa?",
+            "characterName": "El Kike",
+            "text": "Venga tío, que se supone que me estás persiguiendo.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGKike"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "No tengo cargado el bono...",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
-            "characterName": "Ladrón",
-            "text": "... Bro, háztelo mirar.",
+            "characterName": "El Kike",
+            "text": "Vamos no me jodas...",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGKike"
         },
         {
             "type": "notification",
@@ -36,9 +36,9 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "<i>Debería recargarlo...<i>",
+            "text": "<i>Debería recargarlo en la máquina...<i>",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "notification",

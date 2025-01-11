@@ -2,12 +2,11 @@
     "lines": [
         {
             "type": "text",
-            "characterName": "Ladrón",
-            "text": "Pero recárgalo panoli, que no es tan difícil.",
+            "characterName": "El Kike",
+            "text": "Bro, ¿Necesitas que te lo recarge yo?",
             "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": "IMGKike"
         },
-        
         {
             "type": "notification",
             "notificationId": "Return",
@@ -16,9 +15,9 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "<i>Debería recargarlo...<i>",
+            "text": "<i>Debería recargarlo en la máquina...<i>",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         }
     ]
 }

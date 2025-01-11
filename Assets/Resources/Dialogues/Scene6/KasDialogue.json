@@ -3,37 +3,44 @@
         {
             "type": "text",
             "characterName": "Kas",
-            "text": "¿Oye, seguro que estás listo para confrontarle?",
+            "text": "¿Oye, seguro que estás listo para enfrentarte contra <color=red>el Kike</color>.?",
             "pause": true,
             "imageAssetId": "old_man"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Diría que sí.",
+            "text": "¿Cómo podría estarlo? Ese tío da mucho miedo.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
             "characterName": "Kas",
-            "text": "Si quieres tener alguna oportunidad, más te vale haber recogido suficiente información que echarle en cara.",
+            "text": "Sí pero todo el mundo tiene puntos débiles.",
             "pause": true,
             "imageAssetId": "old_man"
         },
         {
             "type": "text",
             "characterName": "Kas",
-            "text": "Con mi ayuda, todavía estás a tiempo de darte la vuelta y buscar mejor.",
+            "text": "Si has conseguido suficiente <color=yellow>información</color> puedes atacarle donde más le duele.",
+            "pause": true,
+            "imageAssetId": "old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Si no sabes bien que decirle, siempre puedes volver e intentar aprender algo más.",
             "pause": true,
             "imageAssetId": "old_man"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Gracias por ayudarme durante esta odisea.",
+            "text": "Vale, gracias por ayudarme en esta odisea.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "IMGJuan"
         }
     ]
 }
