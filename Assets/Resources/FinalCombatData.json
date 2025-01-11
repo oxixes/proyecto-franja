@@ -1,48 +1,114 @@
 {
     "lines": [
         {
-            "enemyText": "¿Qué haces aquí?\nSi no sabes ni\ndarle a una\npelota.",
+            "enemyText": "¿Listo para perder?",
             "regularOptions": [
                 {
-                    "text": "Es que se me da mal el fútbol",
-                    "response": "Lo suponía.",
+                    "text": "¡Estoy listo!",
+                    "response": "Ya veo...",
                     "score": 0
                 },
                 {
-                    "text": "¿Y tú que sabes?",
-                    "response": "Se te nota.",
+                    "text": "Listo para que me devuelvas el móvil.",
+                    "response": "Ni de coña.",
                     "score": 1
                 },
                 {
-                    "text": "¡Sé jugar mejor que tú!",
-                    "response": "¡Ja! ¡Eso habría\nque verlo!",
+                    "text": "No he conocido la derrota",
+                    "response": "Déjame que\nte la\nrecuerde.",
                     "score": 1
                 }
             ],
             "specialOptionScore": 2,
-            "specialOptionResponse": "¿Y eso cómo\nlo sabes?"
+            "specialOptionResponse": "Pero...\nel rayo\n sigue siendo\ngrande."
         },
         {
-            "enemyText": "¿Qué haces aquí?\nSi no sabes ni\ndarle a una\npelota.",
+            "enemyText": "Eres un\n crío,\npírate a\ntu casa.",
             "regularOptions": [
                 {
-                    "text": "Es que se me da mal el fútbol",
-                    "response": "Lo suponía.",
-                    "score": 0
-                },
-                {
-                    "text": "¿Y tú que sabes?",
-                    "response": "Se te nota.",
+                    "text": "Eso no me impide domarte.",
+                    "response": "¿Qué dices?",
                     "score": 1
                 },
                 {
-                    "text": "¡Sé jugar mejor que tú!",
-                    "response": "¡Ja! ¡Eso habría\nque verlo!",
+                    "text": "Oye perdona, pero ya tengo 10 añazos.",
+                    "response": "Wow...",
+                    "score": 0
+                },
+                {
+                    "text": "¡Mi mamá es más fuerte que la tuya!",
+                    "response": "Pues llámala\ny que te\nrecoja.",
+                    "score": 0
+                }
+            ],
+            "specialOptionScore": 2,
+            "specialOptionResponse": "Ostia..."
+        },
+        {
+            "enemyText": "Bueno y\nese pelo\nescoba que\nllevas\nes penoso.",
+            "regularOptions": [
+                {
+                    "text": "No, otra vez eso no...",
+                    "response": "Jeje...\nparguela.",
+                    "score": 0
+                },
+                {
+                    "text": "Mejor que una línea vertical en la cabeza es.",
+                    "response": "No tienes\n ni idea.",
+                    "score": 1
+                },
+                {
+                    "text": "Eso es un argumento ad hominem, no es válido.",
+                    "response": "Lo que no\nes válido\nes tu...\npelo escoba.",
                     "score": 1
                 }
             ],
             "specialOptionScore": 2,
-            "specialOptionResponse": "¿Y eso cómo\nlo sabes?"
+            "specialOptionResponse": "Tu que sabrás."
+        },
+        {
+            "enemyText": "Sigue así\ny verás\nla que\nte llevas.",
+            "regularOptions": [
+                {
+                    "text": "No me asustas.",
+                    "response": "Pues debería.",
+                    "score": 1
+                },
+                {
+                    "text": "¿La tarjeta del hormiguero?",
+                    "response": "Que tonto.",
+                    "score": 0
+                },
+                {
+                    "text": "Chillea cabrón.",
+                    "response": "Que ostia\n tienes.",
+                    "score": 1
+                }
+            ],
+            "specialOptionScore": 2,
+            "specialOptionResponse": "Yo no soy\nun cobarde."
+        },
+        {
+            "enemyText": "Sigo siendo\nel más\ngrande del\n barrio.",
+            "regularOptions": [
+                {
+                    "text": "Mis cojones",
+                    "response": "Los míos\nmás grandes.",
+                    "score": 0
+                },
+                {
+                    "text": "Tampoco eres tan alto.",
+                    "response": "Comparado\na tí\n sí.",
+                    "score": 1
+                },
+                {
+                    "text": "¿Quién lo dice?",
+                    "response": "Yo, obvio.",
+                    "score": 1
+                }
+            ],
+            "specialOptionScore": 2,
+            "specialOptionResponse": "¡Eso es\nmentira!"
         }
     ]
 }

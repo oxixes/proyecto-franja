@@ -193,6 +193,7 @@ public class BarController : MonoBehaviour
         } else if (notificationData == "4")
         {
             inventory.CollectInformation(pichaCortaInfo);
+            inventory.CollectInformation(lePusoLosCuernosInfo);
         }
 
         SaveManager.GetInstance().Set("Scene4JessiEnamoradoDialogueFinished", 1);

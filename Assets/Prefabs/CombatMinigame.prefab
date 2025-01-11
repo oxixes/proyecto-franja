@@ -232,7 +232,10 @@ MonoBehaviour:
   dialogueDataPath: FinalCombatData
   specialOptionsData:
   - {fileID: 11400000, guid: f909cd2baa7e74496ab07fd3e0b986df, type: 2}
-  - {fileID: 11400000, guid: f909cd2baa7e74496ab07fd3e0b986df, type: 2}
+  - {fileID: 11400000, guid: 6386c3422ae95445587effc7aec66fd0, type: 2}
+  - {fileID: 11400000, guid: a59afb2569a214be281807dd0efd1fbb, type: 2}
+  - {fileID: 11400000, guid: f86150510f5e04931b28e87d3aa1c8a3, type: 2}
+  - {fileID: 11400000, guid: 8ebf5305704bf44d195a660b9749bb5a, type: 2}
   animationDuration: 1
   timeBetweenCharacters: 0.05
   startingText: "Te encuentras con Quique, \xA1v\xE9ncele en combate de\ninsultos!"
@@ -753,6 +756,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onAnimationEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  onAnimationEnd2:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &2930271833516601869
@@ -1524,6 +1530,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onAnimationEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  onAnimationEnd2:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &4167036842344292049

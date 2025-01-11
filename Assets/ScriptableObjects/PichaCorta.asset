@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PichaCorta
   m_EditorClassIdentifier: 
   infoName: Quique es un picha corta
-  combatInfoName: Pues me dicen que eres picha corta
+  combatInfoName: "\xBFLo dices por tu cosita?"
   description: 
