@@ -2,16 +2,26 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class BeerPongGame : MonoBehaviour
 {
+    public GameObject blackOverlayCanvas;
     public GameObject canvas;
+    public GameObject blackPanel;
     public TMP_Text resultText;
     public TMP_Text winText;
     public Slider horizontalSlider;
     public Slider verticalSlider;
-    public GameObject introPanel; // Panel for the intro screen
-    public TMP_Text introText; // Text for the intro panel
+    public GameObject introPanel;
+    public TMP_Text introText;
+    public Button kasHelpButton;
+
+    private RectTransform blackPanelTransform;
+    private bool isExpanding = true;
+    private bool isClosing = false;
+    private float expandTimer = 0.0f;
+    public float expandDuration = 2.0f;
 
     private GameObject ball;
     private RectTransform horizontalGreenZone;
@@ -26,43 +36,60 @@ public class BeerPongGame : MonoBehaviour
     private float verticalPower;
 
     private int consecutiveHits = 0;
-    private Vector2 initialHorizontalZoneSize = new Vector2(100, 20);
-    private Vector2 initialVerticalZoneSize = new Vector2(20, 100);
+    private Vector2 initialHorizontalZoneSize = new Vector2(120, 30);
+    private Vector2 initialVerticalZoneSize = new Vector2(30, 120);
     private float greenZoneReductionFactor = 0.8f;
     private float horizontalSpeed = 500f;
     private float verticalSpeed = 300f;
     private float speedIncreaseFactor = 1.2f;
+    private float thirdRoundToleranceIncrease = 1.5f;
+
+    private bool kasHelpUsed = false;
+
+    public UnityEvent<bool, bool> finishEvent = new UnityEvent<bool, bool>();
 
     void Start()
     {
-        if (introPanel == null || introText == null)
+        Minigame.isInMinigame = true;
+
+        if (blackPanel != null)
         {
-            Debug.LogError("IntroPanel or IntroText is not assigned in the Inspector!");
+            blackPanelTransform = blackPanel.GetComponent<RectTransform>();
+            blackPanelTransform.anchorMin = new Vector2(0, 0);
+            blackPanelTransform.anchorMax = new Vector2(1, 1);
+            blackPanelTransform.offsetMin = Vector2.zero;
+            blackPanelTransform.offsetMax = Vector2.zero;
+            blackPanelTransform.pivot = new Vector2(0.5f, 0.5f);
+            blackPanelTransform.localScale = new Vector3(0, 0, 1);
+
+            blackOverlayCanvas.SetActive(true);
+            canvas.SetActive(false);
+        }
+
+        if (canvas == null || introPanel == null || introText == null)
+        {
+            Debug.LogError("Canvas, IntroPanel o IntroText no están asignados en el Inspector!");
             return;
         }
 
-        // Configure the intro panel appearance
         var panelImage = introPanel.GetComponent<Image>();
         if (panelImage != null)
         {
-            panelImage.color = new Color(0, 0, 0, 0.95f); // Black with 95% opacity
+            panelImage.color = new Color(0, 0, 0, 0.95f);
         }
 
-        // Set the intro text
-        introText.text = "Press SPACE to start!\n\nInstructions:\n- Press SPACE to stop the sliders.\n- Align direction and power to hit 3 times consecutively to win.";
+        introText.text = "Presiona ESPACIO para comenzar!\n\nInstrucciones:\n- Presiona ESPACIO para detener los sliders.\n- Alinea dirección y potencia para acertar 3 veces consecutivas y ganar.";
         introText.alignment = TextAlignmentOptions.Center;
-        introText.fontSize = 30; // Smaller font size
-        introText.rectTransform.sizeDelta = new Vector2(800, 200); // Wider text area
+        introText.fontSize = 30;
+        introText.rectTransform.sizeDelta = new Vector2(800, 200);
 
-        introPanel.SetActive(true); // Activate the intro panel at the start
-
-        canvas.SetActive(true);
+        introPanel.SetActive(true);
 
         ball = new GameObject("Ball");
         var ballTransform = ball.AddComponent<RectTransform>();
         ballTransform.sizeDelta = new Vector2(100, 100);
-        ball.transform.SetParent(canvas.transform, false); // Ensure it stays under the canvas
-        ball.SetActive(false); // Ball starts hidden
+        ball.transform.SetParent(canvas.transform, false);
+        ball.SetActive(false);
 
         var ballRenderer = ball.AddComponent<Image>();
         ballRenderer.sprite = GenerateCircleSprite();
@@ -71,7 +98,7 @@ public class BeerPongGame : MonoBehaviour
         horizontalSlider.minValue = 0;
         horizontalSlider.maxValue = Screen.width;
         horizontalSlider.value = Screen.width / 2;
-        horizontalSlider.gameObject.transform.SetSiblingIndex(0); // Ensure sliders are behind the intro panel
+        horizontalSlider.gameObject.transform.SetSiblingIndex(0);
 
         var horizontalSliderRect = horizontalSlider.GetComponent<RectTransform>();
         horizontalSliderRect.anchorMin = new Vector2(0.5f, 0.1f);
@@ -84,7 +111,7 @@ public class BeerPongGame : MonoBehaviour
         verticalSlider.maxValue = Screen.height;
         verticalSlider.value = Screen.height / 2;
         verticalSlider.gameObject.SetActive(false);
-        verticalSlider.gameObject.transform.SetSiblingIndex(0); // Ensure sliders are behind the intro panel
+        verticalSlider.gameObject.transform.SetSiblingIndex(0);
 
         var verticalSliderRect = verticalSlider.GetComponent<RectTransform>();
         verticalSliderRect.anchorMin = new Vector2(0.1f, 0.5f);
@@ -97,12 +124,43 @@ public class BeerPongGame : MonoBehaviour
         horizontalGreenZone = CreateGreenZone(horizontalSlider, initialHorizontalZoneSize);
         verticalGreenZone = CreateGreenZone(verticalSlider, initialVerticalZoneSize);
 
-        ConfigureText(resultText, "", new Vector3(Screen.width / 2 - 200, Screen.height / 2 - 100, 0)); // Offset position for result text
-        ConfigureText(winText, "", new Vector3(Screen.width / 2 - 200, Screen.height / 2 - 100, 0)); // Offset position for win text
+        ConfigureText(resultText, "", new Vector3(Screen.width / 2 - 200, Screen.height / 2 - 100, 0));
+        ConfigureText(winText, "", new Vector3(Screen.width / 2 - 200, Screen.height / 2 - 100, 0));
+
+        if (kasHelpButton != null)
+        {
+            kasHelpButton.onClick.AddListener(OnKasHelpButtonPress);
+        }
     }
 
     void Update()
     {
+        if (isExpanding && blackPanel != null)
+        {
+            expandTimer += Time.deltaTime;
+            float progress = Mathf.Clamp01(expandTimer / expandDuration);
+            blackPanelTransform.localScale = Vector3.Lerp(new Vector3(0, 0, 1), new Vector3(1, 1, 1), progress);
+
+            if (progress >= 1.0f)
+            {
+                isExpanding = false;
+                blackOverlayCanvas.SetActive(false);
+                canvas.SetActive(true);
+            }
+        }
+
+        if (isClosing && blackPanel != null)
+        {
+            expandTimer += Time.deltaTime;
+            float progress = Mathf.Clamp01(expandTimer / expandDuration);
+            blackPanelTransform.localScale = Vector3.Lerp(new Vector3(1, 1, 1), new Vector3(0, 0, 1), progress);
+
+            if (progress >= 1.0f)
+            {
+                Destroy(gameObject);
+            }
+        }
+
         if (!isPlaying)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -137,6 +195,7 @@ public class BeerPongGame : MonoBehaviour
                     isVerticalStopped = true;
                     verticalPower = verticalSlider.value;
                     LaunchBall();
+                    StartCoroutine(DisplayResultAndContinue());
                 }
             }
         }
@@ -144,8 +203,8 @@ public class BeerPongGame : MonoBehaviour
 
     private void StartGame()
     {
-        introPanel.SetActive(false); // Hide the intro panel
-        ball.SetActive(true); // Show the ball
+        introPanel.SetActive(false);
+        ball.SetActive(true);
         ResetBallPosition();
         isPlaying = true;
     }
@@ -192,82 +251,97 @@ public class BeerPongGame : MonoBehaviour
         var ballRigidbody = ball.AddComponent<Rigidbody2D>();
         ballRigidbody.gravityScale = 0;
         ballRigidbody.AddForce(new Vector2(xForce, yForce), ForceMode2D.Impulse);
-
-        StartCoroutine(DisplayResultAndReset());
     }
 
-    private IEnumerator DisplayResultAndReset()
+    private IEnumerator DisplayResultAndContinue()
+{
+    bool hitHorizontal = Mathf.Abs(horizontalPower - horizontalGreenZone.position.x) <= horizontalGreenZone.rect.width / 2;
+    bool hitVertical = Mathf.Abs(verticalPower - verticalGreenZone.position.y) <= verticalGreenZone.rect.height / 2;
+
+    yield return new WaitForSeconds(1f); // Delay to make sure the result is visible
+
+    if (hitHorizontal && hitVertical)
     {
-        yield return new WaitUntil(() => Mathf.Abs(ball.transform.position.x) > Screen.width || Mathf.Abs(ball.transform.position.y) > Screen.height);
+        consecutiveHits++;
+        resultText.text = "Acertaste!";
+        resultText.gameObject.SetActive(true);
 
-        bool hitHorizontal = Mathf.Abs(horizontalPower - horizontalGreenZone.position.x) <= horizontalGreenZone.rect.width / 2;
-        bool hitVertical = Mathf.Abs(verticalPower - verticalGreenZone.position.y) <= verticalGreenZone.rect.height / 2;
+        // Ajustar la posición del texto "Acertaste"
+        resultText.rectTransform.anchoredPosition = new Vector2(Screen.width / 2 - 500, Screen.height / 2 - 250);
 
-        if (hitHorizontal && hitVertical)
+        // Reducir el tamaño de las zonas verdes
+        initialHorizontalZoneSize *= greenZoneReductionFactor;
+        initialVerticalZoneSize *= greenZoneReductionFactor;
+
+        // Actualizar visualmente las zonas verdes
+        UpdateGreenZoneSize(horizontalGreenZone, initialHorizontalZoneSize);
+        UpdateGreenZoneSize(verticalGreenZone, initialVerticalZoneSize);
+
+        yield return new WaitForSeconds(2f);
+        resultText.gameObject.SetActive(false);
+
+        if (consecutiveHits >= 3)
         {
-            consecutiveHits++;
-            resultText.text = "Acertaste!";
-            resultText.alignment = TextAlignmentOptions.Center;
-            resultText.rectTransform.anchoredPosition = new Vector2(Screen.width / 2 - 500, Screen.height / 2 - 300); // Offset position for result text
-
-            if (consecutiveHits >= 3)
-            {
-                winText.text = "GANASTE";
-                winText.alignment = TextAlignmentOptions.Center;
-                winText.rectTransform.anchoredPosition = new Vector2(Screen.width / 2 - 500, Screen.height / 2 - 300); // Offset position for win text
-                winText.gameObject.SetActive(true);
-                isPlaying = false;
-                yield break;
-            }
-
-            horizontalGreenZone.sizeDelta *= greenZoneReductionFactor;
-            verticalGreenZone.sizeDelta *= greenZoneReductionFactor;
-
-            horizontalSpeed *= speedIncreaseFactor;
-            verticalSpeed *= speedIncreaseFactor;
+            winText.text = "GANASTE!";
+            winText.gameObject.SetActive(true);
+            finishEvent.Invoke(true, kasHelpUsed);
+            StartClosingAnimation(); // Iniciar animación de cierre
         }
         else
         {
-            consecutiveHits = 0;
-            resultText.text = "Fallaste!";
-            resultText.alignment = TextAlignmentOptions.Center;
-            resultText.rectTransform.anchoredPosition = new Vector2(Screen.width / 2 - 200, Screen.height / 2 - 100); // Offset position for result text
-
-            horizontalGreenZone.sizeDelta = initialHorizontalZoneSize;
-            verticalGreenZone.sizeDelta = initialVerticalZoneSize;
-
-            horizontalSpeed = 500f;
-            verticalSpeed = 300f;
+            ResetBallPosition();
+            isHorizontalStopped = false;
+            isVerticalStopped = false;
+            isVerticalVisible = false;
         }
-
+    }
+    else
+    {
+        resultText.text = "Fallaste!";
         resultText.gameObject.SetActive(true);
 
+        // Ajustar la posición del texto "Fallaste"
+        resultText.rectTransform.anchoredPosition = new Vector2(Screen.width / 2 - 500, Screen.height / 2 - 250);
+
         yield return new WaitForSeconds(2f);
-
         resultText.gameObject.SetActive(false);
-        ResetGame();
+        finishEvent.Invoke(false, kasHelpUsed);
+        StartClosingAnimation(); // Iniciar animación de cierre
     }
+}
 
-    private void ResetGame()
+private void UpdateGreenZoneSize(RectTransform greenZone, Vector2 newSize)
+{
+    if (greenZone != null)
     {
-        Destroy(ball.GetComponent<Rigidbody2D>());
-        ResetBallPosition();
+        greenZone.sizeDelta = newSize;
+    }
+}
 
-        horizontalSlider.value = Screen.width / 2;
-        verticalSlider.value = Screen.height / 2;
-        verticalSlider.gameObject.SetActive(false);
 
-        isHorizontalStopped = false;
-        isVerticalStopped = false;
-        isVerticalVisible = false;
 
-        resultText.gameObject.SetActive(false);
-        winText.gameObject.SetActive(false);
+    private void StartClosingAnimation()
+    {
+        blackOverlayCanvas.SetActive(true);
+        blackPanel.SetActive(true);
+        canvas.SetActive(false);
+
+        isClosing = true;
+        expandTimer = 0f;
     }
 
     private void ResetBallPosition()
     {
         ball.transform.position = new Vector3(Screen.width / 2, Screen.height / 2, 0);
+
+        var existingRigidbody = ball.GetComponent<Rigidbody2D>();
+        if (existingRigidbody != null)
+        {
+            Destroy(existingRigidbody);
+        }
+
+        ball.SetActive(false);
+        ball.SetActive(true);
     }
 
     private void ConfigureText(TMP_Text text, string content, Vector3 position)
@@ -291,5 +365,15 @@ public class BeerPongGame : MonoBehaviour
         background.transform.SetAsFirstSibling();
 
         text.gameObject.SetActive(false);
+    }
+
+    private void OnKasHelpButtonPress()
+    {
+        kasHelpUsed = true;
+        consecutiveHits = 3;
+        winText.text = "GANASTE!";
+        winText.gameObject.SetActive(true);
+        finishEvent.Invoke(true, kasHelpUsed);
+        StartClosingAnimation();
     }
 }
