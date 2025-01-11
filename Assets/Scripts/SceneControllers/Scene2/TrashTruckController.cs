@@ -9,6 +9,9 @@ public class TrashTruckController : MonoBehaviour
     public GameObject container1;
     public GameObject container2;
     public GameObject container3;
+    public Sprite container1Thrown;
+    public Sprite container2Thrown;
+    public Sprite container3Thrown;
     public GameObject manolo;
     public GameObject fadeOutPanel;
     public GameObject trashTruck;
@@ -19,9 +22,9 @@ public class TrashTruckController : MonoBehaviour
     void Start()
     {
         manoloIO = manolo.GetComponent<InteractableObject>();
-        container1.SetActive(false);
-        container2.SetActive(false);
-        container3.SetActive(false);
+        container1.GetComponents<BoxCollider2D>()[0].enabled = false;
+        container2.GetComponents<BoxCollider2D>()[0].enabled = false;
+        container3.GetComponents<BoxCollider2D>()[0].enabled = false;
 
         if (SaveManager.GetInstance().Get<int>("Scene2RiotFinished") == 1)
         {
@@ -38,17 +41,21 @@ public class TrashTruckController : MonoBehaviour
 
         if (SaveManager.GetInstance().Get<int>("Scene2Container1Thrown") == 1)
         {
-            container1.SetActive(false);
+            Debug.Log(container1.GetComponents<BoxCollider2D>()[0]);
+            container1.GetComponents<BoxCollider2D>()[0].enabled = false;
+            container1.GetComponent<SpriteRenderer>().sprite = container1Thrown;
         }
 
         if (SaveManager.GetInstance().Get<int>("Scene2Container2Thrown") == 1)
         {
-            container2.SetActive(false);
+            container2.GetComponents<BoxCollider2D>()[0].enabled = false;
+            container2.GetComponent<SpriteRenderer>().sprite = container2Thrown;
         }
 
         if (SaveManager.GetInstance().Get<int>("Scene2Container3Thrown") == 1)
         {
-            container3.SetActive(false);
+            container3.GetComponents<BoxCollider2D>()[0].enabled = false;
+            container3.GetComponent<SpriteRenderer>().sprite = container3Thrown;
             if (SaveManager.GetInstance().Get<int>("Scene2CollarDialogueFinished") == 0)
             {
                 collarItem.SetActive(true);
@@ -67,17 +74,20 @@ public class TrashTruckController : MonoBehaviour
         StartCoroutine(StartContainerDialogue());
         if (notificationData == "1")
         {
-            container1.SetActive(false);
+            container1.GetComponents<BoxCollider2D>()[0].enabled = false;
+            container1.GetComponent<SpriteRenderer>().sprite = container1Thrown;
             SaveManager.GetInstance().Set("Scene2Container1Thrown", 1);
         }
         else if (notificationData == "2")
         {
-            container2.SetActive(false);
+            container2.GetComponents<BoxCollider2D>()[0].enabled = false;
+            container2.GetComponent<SpriteRenderer>().sprite = container2Thrown;
             SaveManager.GetInstance().Set("Scene2Container2Thrown", 1);
         }
         else if (notificationData == "3")
         {
-            container3.SetActive(false);
+            container3.GetComponents<BoxCollider2D>()[0].enabled = false;
+            container3.GetComponent<SpriteRenderer>().sprite = container3Thrown;
             collarItem.SetActive(true);
             SaveManager.GetInstance().Set("Scene2Container3Thrown", 1);
         }
@@ -109,9 +119,9 @@ public class TrashTruckController : MonoBehaviour
         }
         else
         {
-            container1.SetActive(true);
-            container2.SetActive(true);
-            container3.SetActive(true);
+            container1.GetComponents<BoxCollider2D>()[0].enabled = true;
+            container2.GetComponents<BoxCollider2D>()[0].enabled = true;
+            container3.GetComponents<BoxCollider2D>()[0].enabled = true;
         }
     }
 

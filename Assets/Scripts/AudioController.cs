@@ -13,6 +13,7 @@ public class AudioController : MonoBehaviour
     public AudioClip overworldMusic;
     public AudioClip barMusic;
     public GameObject barEntryLevel;
+    public GameObject metroEntryLevel;
 
     private AudioSource audioSource;
     private Queue<AudioData> clipQueue;
@@ -22,6 +23,7 @@ public class AudioController : MonoBehaviour
     private bool isTransitioning = false;
 
     private bool wasInBar = false;
+    private bool wasInMetro = false;
     private bool starting = true;
 
     // Start is called before the first frame update
@@ -44,7 +46,16 @@ public class AudioController : MonoBehaviour
             else
             {
                 wasInBar = false;
-                EnqueueAudio(overworldMusic, true);
+
+                if (!metroEntryLevel.activeSelf)
+                {
+                    wasInMetro = true;
+                }
+                else
+                {
+                    wasInMetro = false;
+                    EnqueueAudio(overworldMusic, true);
+                }
             }
 
             return;
@@ -58,6 +69,17 @@ public class AudioController : MonoBehaviour
         else if (barEntryLevel.activeSelf && wasInBar)
         {
             wasInBar = false;
+            ForcePlayWithTransition(overworldMusic, true);
+        }
+
+        if (!metroEntryLevel.activeSelf && !wasInMetro)
+        {
+            wasInMetro = true;
+            StopWithTransition();
+        }
+        else if (metroEntryLevel.activeSelf && wasInMetro)
+        {
+            wasInMetro = false;
             ForcePlayWithTransition(overworldMusic, true);
         }
     }
@@ -107,6 +129,23 @@ public class AudioController : MonoBehaviour
 
             // Empty the queue
             clipQueue.Clear();
+        }
+    }
+
+    public void StopWithTransition()
+    {
+        if (audioSource.isPlaying)
+        {
+            clipQueue.Clear();
+            StartCoroutine(TransitionAudio(null, false));
+        }
+        else
+        {
+            audioSource.Stop();
+            audioSource.clip = null;
+            audioSource.loop = false;
+
+            currentAudioData = null;
         }
     }
 

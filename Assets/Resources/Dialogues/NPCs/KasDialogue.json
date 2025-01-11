@@ -38,7 +38,7 @@
         {
             "type": "text",
             "characterName": "Kas",
-            "text": "Ve a buscar a ese malhechor, y si no lo encuentras, ven a buscarme. Te\nayudaré.",
+            "text": "Ve a buscar a ese malhechor, y si no lo encuentras, ven a buscarme. Te ayudaré.",
             "pause": true,
             "imageAssetId": "old_man"
         },

@@ -18,6 +18,10 @@ public class Scene7Controller : MonoBehaviour
     public GameObject creditsText;
     public GameObject thanksText;
 
+    public GameObject audioController;
+    public AudioClip combatMusic1;
+    public AudioClip combatMusic2;
+
     public Sprite thiefLookingUp;
     public Sprite thiefLookingRight;
     public Sprite thiefLookingDown;
@@ -64,6 +68,9 @@ public class Scene7Controller : MonoBehaviour
 
     void HandleCombateNotification(string dialogueId, string notificationId, string notificationData)
     {
+        audioController.GetComponent<AudioController>().ForcePlayWithTransition(combatMusic1, false);
+        audioController.GetComponent<AudioController>().EnqueueAudio(combatMusic2, true);
+
         // Instantiate the prefab in the canvas
         GameObject combat = Instantiate(combatPrefab, canvas.transform);
         CombatMinigame combatMinigame = combat.GetComponent<CombatMinigame>();
@@ -73,6 +80,8 @@ public class Scene7Controller : MonoBehaviour
 
     void HandleCombatEnd(int maxScore, int score, bool skipped)
     {
+        audioController.GetComponent<AudioController>().StopWithTransition();
+
         if (skipped)
         {
             DialogueSystem.GetInstance().StartDialogue("Scene7/CombatSkip");
