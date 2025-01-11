@@ -10,7 +10,7 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "<i>Bueno, ya he recargado el bono.<i>",
+            "text": "<i>Bueno, ya he recargado el bono.</i>",
             "pause": true,
             "imageAssetId": "IMGJuan"
         },

@@ -7,24 +7,73 @@
         },
         {
             "type": "text",
-            "characterName": "Ladrón",
-            "text": "!!!",
+            "characterName": "El Kike",
+            "text": "LLega el metro...",
             "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": "IMGKike"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Me quedo esto, gracias por devolverlo.",
+            "text": "Eso significa que me tienes que dar algo.",
+            "pause": true,
+            "imageAssetId": "IMGJuan"
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "Tienes razón, un trato es un trato",
+            "pause": true,
+            "imageAssetId": "IMGKike"
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "Sabes más cosas de mí que mi madre.",
+            "pause": true,
+            "imageAssetId": "IMGKike"
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "Y ninguna es buena.",
+            "pause": true,
+            "imageAssetId": "IMGKike"
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "Parece que soy un desgraciado, un golfo y un cobarde...",
+            "pause": true,
+            "imageAssetId": "IMGKike"
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "Creo que he jodido a la gente suficiente.",
+            "pause": true,
+            "imageAssetId": "IMGKike"
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "Te puedes librar tú. Toma.",
+            "pause": true,
+            "imageAssetId": "IMGKike"
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Extiende la mano con tu móvil. Lo coges.</i>",
             "pause": true,
             "imageAssetId": null
         },
         {
             "type": "text",
-            "characterName": "Ladrón",
-            "text": "Mierda, me las vas a pagar.",
+            "characterName": "El Kike",
+            "text": "Muy bien. Ahora creo que me toca irme.",
             "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": "IMGKike"
         },
         {
             "type": "notification",
@@ -33,8 +82,36 @@
         },
         {
             "type": "text",
+            "characterName": null,
+            "text": "<i>Tanto tiempo urgando en las vergüenzas de ese malhechor han dado sus frutos.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Sientes un alivio tremendo, has escapado el castigo de tu madre y recuperado tu móvil.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Lo tienes, lo tienes.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
             "characterName": "Juan",
-            "text": "<i>Ya puedo volver a casa.<i>",
+            "text": "¡Lo tengo, lo tengo!",
+            "pause": true,
+            "imageAssetId": "IMGJuan"
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>¡HAS GANADO!</i>",
             "pause": true,
             "imageAssetId": null
         }

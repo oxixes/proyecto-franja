@@ -2,38 +2,234 @@
     "lines": [
         {
             "type": "text",
-            "characterName": "Ladrón",
-            "text": "Qué pesao eres tío.",
+            "characterName": null,
+            "text": "<i>El ladrón te mira con cara seria y los brazos cruzados.</i>",
             "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": null
         },
-		{
+        {
             "type": "text",
-            "characterName": "Ladrón",
-            "text": "¿Me vas a dejar en paz?",
+            "characterName": "El Kike",
+            "text": "Tienes suerte de que no haya llegado el metro.",
             "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": "IMGKike"
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Detrás, puedes ver el cartel del próximo tren.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Quedan 8 minutos para el próximo tren.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "Habla.",
+            "pause": true,
+            "imageAssetId": "IMGKike"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Soy Juan Hernández, tú robaste mi móvil, prepárate a -",
+            "text": "...",
+            "pause": true,
+            "imageAssetId": "IMGJuan"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Soy Juan Hernández, tú robaste mi móvil, prepárate a...",
+            "pause": true,
+            "imageAssetId": "IMGJuan"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Devolverme el móvil.",
+            "pause": true,
+            "imageAssetId": "IMGJuan"
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>El ladrón arquea una ceja.</i>",
             "pause": true,
             "imageAssetId": null
         },
         {
             "type": "text",
-            "characterName": "Ladrón",
-            "text": "Calla subnormal, y vamos a ello.",
+            "characterName": "Juan",
+            "text": "He estado persiguiéndote por todo el barrio y, déjame decirte que no tienes muchos amigos.",
             "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": "IMGJuan"
         },
         {
             "type": "text",
-            "characterName": "KAS",
-            "text": "*Insertar combate*",
+            "characterName": "Juan",
+            "text": "Es imposible que pueda quitarte el móvil por la fuerza.",
+            "pause": true,
+            "imageAssetId": "IMGJuan"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Pero la pluma es más fuerte que la espada.",
+            "pause": true,
+            "imageAssetId": "IMGJuan"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Voy a humillarte tan fuerte que tú mismo me entregarás el móvil.",
+            "pause": true,
+            "imageAssetId": "IMGJuan"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Y después, te subirás al tren, y te irás.",
+            "pause": true,
+            "imageAssetId": "IMGJuan"
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "...",
+            "pause": true,
+            "imageAssetId": "IMGKike"
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>El ladrón te aplaude lentamente.</i>",
             "pause": true,
             "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "A ver si lo he entendido.",
+            "pause": true,
+            "imageAssetId": "IMGKike"
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "Tú y yo vamos a tener una pelea verbal, en el que me vas a intentar insultar.",
+            "pause": true,
+            "imageAssetId": "IMGKike"
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "Supongo que yo tendré que insultarte también, ¿No?",
+            "pause": true,
+            "imageAssetId": "IMGKike"
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>No te deja contestar.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "En algún momento tendremos que ver si me has humillado lo suficiente.",
+            "pause": true,
+            "imageAssetId": "IMGKike"
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "Que va a ser cuando llegue el tren.",
+            "pause": true,
+            "imageAssetId": "IMGKike"
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "Y si resulta que me siento muy humillado te tengo que devolver el móvil y montarme en el tren.",
+            "pause": true,
+            "imageAssetId": "IMGKike"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Efectivamente.",
+            "pause": true,
+            "imageAssetId": "IMGJuan"
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "Vale, pero si pierdes te tumbo de una ostia.",
+            "pause": true,
+            "imageAssetId": "IMGKike"
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "¿Trato?",
+            "pause": true,
+            "imageAssetId": "IMGKike"
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>El ladrón extiende la mano.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>La perspectiva de aceptar que un tipo te pegue una ostia no es muy atractiva.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Pero necesitas ese móvil.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Necesito ese móvil...</i>",
+            "pause": true,
+            "imageAssetId": "IMGJuan"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Trato.",
+            "pause": true,
+            "imageAssetId": "IMGJuan"
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "Perfecto, el que va segundo lo tiene más fácil.",
+            "pause": true,
+            "imageAssetId": "IMGKike"
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "Empezaré yo.",
+            "pause": true,
+            "imageAssetId": "IMGKike"
         },
         {
             "type":"notification",
