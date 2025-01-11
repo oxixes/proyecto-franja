@@ -38,7 +38,7 @@ public class BeerPongGame : MonoBehaviour
     private int consecutiveHits = 0;
     private Vector2 initialHorizontalZoneSize = new Vector2(120, 30);
     private Vector2 initialVerticalZoneSize = new Vector2(30, 120);
-    private float greenZoneReductionFactor = 0.5f;
+    private float greenZoneReductionFactor = 0.5f; //CAMBIAR A 0.6 O 0.7 SI MUY DIFÍCIL
     private float horizontalSpeed = 500f;
     private float verticalSpeed = 300f;
     private float speedIncreaseFactor = 1.7f;
