@@ -40,7 +40,7 @@
             "characterName": "???",
             "text": "Venga tira, que tu móvil no se va a recuperar solo.",
             "pause": true,
-            "imageAssetId": "Portraits/Boy"
+            "imageAssetId": null
         },
         {
             "type": "notification",

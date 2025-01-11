@@ -12,7 +12,7 @@
             "characterName": "Juan",
             "text": "Una copa.",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
@@ -33,21 +33,21 @@
             "characterName": "Juan",
             "text": "Gracias.",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "<i>Debería probarla para ver si es buena mandanga.</i>",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Esto es agua.",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
@@ -61,14 +61,14 @@
             "characterName": "Juan",
             "text": "Ah, perdón, una copa de...",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Alcohol.",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
@@ -96,7 +96,7 @@
             "characterName": "Juan",
             "text": "<i>¿Mili? ¿Éder Militao, el defensa del Madrid? Ah, seguro que a él si le darían una copa.</i>",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "notification",

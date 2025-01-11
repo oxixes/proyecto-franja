@@ -91,9 +91,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallAcceleration: 10
   possibleSprites:
-  - {fileID: 21300000, guid: 0a4aaef474c9f724896236af9ad70c1f, type: 3}
-  - {fileID: 21300000, guid: faf5390c104ad924096cc76c5bbf76c3, type: 3}
-  - {fileID: 21300000, guid: db85014dbc6edc241b606e5f6fca057c, type: 3}
+  - {fileID: -1328216107, guid: 3ccb8b6fc2fd442cfbd028183db95027, type: 3}
+  - {fileID: -949999595, guid: 3ccb8b6fc2fd442cfbd028183db95027, type: 3}
+  - {fileID: -1093717472, guid: 3ccb8b6fc2fd442cfbd028183db95027, type: 3}
+  - {fileID: 1129456180, guid: 3ccb8b6fc2fd442cfbd028183db95027, type: 3}
   minigame: {fileID: 0}
 --- !u!61 &1790342848975526360
 BoxCollider2D:
