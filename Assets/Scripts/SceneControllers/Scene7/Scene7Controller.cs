@@ -231,7 +231,7 @@ public class Scene7Controller : MonoBehaviour
             yield return null;
         }
 
-        fadeOutPanel.GetComponent<Image>().color = new Color(0, 0, 0, 255);
+        fadeOutPanel.GetComponent<Image>().color = new Color(0, 0, 0, 1);
 
         yield return new WaitForSeconds(3f);
         endText.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, 1);
@@ -259,7 +259,7 @@ public class Scene7Controller : MonoBehaviour
             yield return null;
         }
 
-        fadeOutPanel.GetComponent<Image>().color = new Color(0, 0, 0, 255);
+        fadeOutPanel.GetComponent<Image>().color = new Color(0, 0, 0, 1);
 
         yield return new WaitForSeconds(7f);
 
@@ -284,7 +284,7 @@ public class Scene7Controller : MonoBehaviour
             yield return null;
         }
 
-        fadeOutPanel.GetComponent<Image>().color = new Color(0, 0, 0, 255);
+        fadeOutPanel.GetComponent<Image>().color = new Color(0, 0, 0, 1);
 
         yield return new WaitForSeconds(5f);
 
