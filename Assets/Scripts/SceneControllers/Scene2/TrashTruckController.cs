@@ -169,6 +169,8 @@ public class TrashTruckController : MonoBehaviour
             yield return null;
         }
 
+        fadeOutPanel.GetComponent<Image>().color = new Color(0, 0, 0, 255);
+
         // Hide trash truck
         trashTruck.SetActive(false);
         yield return new WaitForSeconds(1f);

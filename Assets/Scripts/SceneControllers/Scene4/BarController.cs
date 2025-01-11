@@ -288,6 +288,8 @@ public class BarController : MonoBehaviour
             yield return null;
         }
 
+        fadeOutPanel.GetComponent<Image>().color = new Color(0, 0, 0, 255);
+
         // TP Enamorado next to Jessi
         enamorado.transform.localPosition = enamoradoNextToJessiPos;
 
@@ -316,6 +318,8 @@ public class BarController : MonoBehaviour
             fadeOutPanel.GetComponent<Image>().color = new Color(0, 0, 0, i);
             yield return null;
         }
+
+        fadeOutPanel.GetComponent<Image>().color = new Color(0, 0, 0, 255);
 
         // TP Enamorado back to original position
         enamorado.transform.localPosition = enamoradoPos;

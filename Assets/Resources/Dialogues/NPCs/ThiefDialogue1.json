@@ -15,6 +15,11 @@
             "imageAssetId": "Portraits/Boy"
         },
         {
+            "type": "notification",
+            "notificationId": "ThiefSteal",
+            "text": "ThiefSteal"
+        },
+        {
             "type": "text",
             "text": "<i>El ladrón te quita el móvil de las manos.</i>",
             "pause": true,
@@ -52,6 +57,11 @@
             "text": "¡Eh! ¡Vuelve aquí y dame el móvil!",
             "pause": true,
             "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "notification",
+            "notificationId": "BackToOverworldMusic",
+            "text": "BackToOverworldMusic"
         }
     ]
 }
