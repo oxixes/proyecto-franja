@@ -2,8 +2,8 @@
     "lines": [
         {
             "type": "text",
-            "characterName": "Chavalín",
-            "text": "¿Qué miras, tonto? Si quieres algo, habla con mi amiga.",
+            "characterName": "Chat",
+            "text": "¿Cuándo va a hablar con la jefa gente?",
             "pause": true,
             "imageAssetId": null
         }

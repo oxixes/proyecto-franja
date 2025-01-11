@@ -3,9 +3,13 @@
         {
             "type": "text",
             "characterName": "Juan",
+<<<<<<< HEAD
+            "text": "<i>Con pagar una vez vale<i>",
+=======
             "text": "<i>No pienso volver a pagar.<i>",
+>>>>>>> main
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         }
     ]
 }

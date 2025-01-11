@@ -36,7 +36,7 @@ public class ParkController : MonoBehaviour
         manteroIO = mantero.GetComponent<InteractableObject>();
         quiosqueroIO = quiosquero.GetComponent<InteractableObject>();
 
-        DialogueSystem.GetInstance().HandleNotification("ChavalaDialogueFinished", HandleChavalaDialogueNotification);
+        DialogueSystem.GetInstance().HandleNotification("ChavalaDialogueAfterPulsoFinished", HandleChavalaDialogueNotification);
         DialogueSystem.GetInstance().HandleNotification("ManteroDialogueFinished", HandleManteroDialogueNotification);
         DialogueSystem.GetInstance().HandleNotification("CapBought", HandleCapNotification);
         DialogueSystem.GetInstance().HandleNotification("ComicBought", HandleComicNotification);
@@ -102,7 +102,7 @@ public class ParkController : MonoBehaviour
     {
         manteroIO.dialogueID = notificationData;
         chaval1IO.dialogueID = "EscenaParque/NPCs/ChavalDialogue";
-        chavalaIO.dialogueID = "EscenaParque/NPCs/ChavalaDialogue";
+        chavalaIO.dialogueID = "EscenaParque/NPCs/ChavalaDialogueAfterMantero";
         SaveManager.GetInstance().Set("Scene5ManteroDialogueFinished", 1);
     }
 

@@ -3,22 +3,30 @@
         {
             "type": "text",
             "characterName": "Chavala",
-            "text": "¿Has encontrado el número 5 de la colección de DRACO?",
+            "text": "¿Qué, ya tienes el cómic?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Kid2"
         },
         {
             "type": "text",
+            "characterName": "Juan",
             "text": "No, todavía no.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Chavala",
-            "text": "Pues no vuelvas hasta que lo tengas.",
+            "text": "Pues estás tardando.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Kid2"
+        },
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "Lo tiene el viejo del quiosco.",
+            "pause": true,
+            "imageAssetId": "Portraits/Kid2"
         }
     ]
 }

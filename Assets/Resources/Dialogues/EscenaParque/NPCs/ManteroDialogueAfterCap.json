@@ -2,38 +2,80 @@
     "lines": [
         {
             "type": "text",
-            "characterName": "Mantero",
-            "text": "Te he dicho que no quiero hablar contigo. ¿Qué parte no entiendes?",
+            "characterName": "Juan",
+            "text": "¿Qué tal tronco? ¿Por qué no te enroyas un poco y me cuentas algo sobre el Quique eh?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "...",
+            "pause": true,
+            "imageAssetId": "Portraits/FarmerBoy"
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Primero, se dice <color=red>el Kike</color>.",
+            "pause": true,
+            "imageAssetId": "Portraits/FarmerBoy"
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Y segundo, esa gorra que llevas, es de las nuevas que ha traido el Paco.",
+            "pause": true,
+            "imageAssetId": "Portraits/FarmerBoy"
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Lo sé porque es más falsa que un billete de tres euros.",
+            "pause": true,
+            "imageAssetId": "Portraits/FarmerBoy"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Mira que gorra más chula tengo. ¿Sigues pensando que no soy de por aquí?",
+            "text": "No es falsa, te da envidia porque es de marca.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Mantero",
-            "text": "Pero vamos a ver, niño. ¿De verdad crees que con una gorra vas a convencerme de algo?",
+            "text": "¿Y como las consiguió? Se cayeron de un camión, ¿A que sí?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/FarmerBoy"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Exactamente, ¿Espera, cómo lo sabes?",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Mantero",
-            "text": "Si encima es más falsa que un billete de 3 euros. Además, sé que se la has comprado a Paco. A nadie le cae bien ese señor.",
+            "text": "Eso es lo que se dice cuando son robadas.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/FarmerBoy"
         },
         {
             "type": "text",
             "characterName": "Mantero",
-            "text": "No te lo pienso repetir. ¡Vete de aquí! ¡No quiero verte más!",
+            "text": "Espabila, que tienes menos calle que la alfombrilla del baño.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/FarmerBoy"
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Yo no tengo más que hablar contigo.",
+            "pause": true,
+            "imageAssetId": "Portraits/FarmerBoy"
         },
         {
             "type": "notification",

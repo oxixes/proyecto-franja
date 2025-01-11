@@ -5,7 +5,7 @@
             "characterName": "???",
             "text": "Ey bro, déjame ver el móvil que lo tienes roto.",
             "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
@@ -30,21 +30,21 @@
             "characterName": "Ladrón",
             "text": "¿Tan fácil? Me das un poco de pena, en verdad.",
             "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
             "characterName": "Ladrón",
             "text": "...",
             "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
             "characterName": "Ladrón",
             "text": "Bueno, hasta luego parguela.",
             "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "notification",

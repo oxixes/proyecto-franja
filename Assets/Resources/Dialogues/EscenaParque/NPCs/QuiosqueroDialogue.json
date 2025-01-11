@@ -2,56 +2,133 @@
     "lines": [
         {
             "type": "text",
+            "characterName": "Juan",
+            "text": "Hola, quería comprar el número 5 de la colección de DRACO.",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
             "characterName": "???",
-            "text": "Buenos días, joven. Me llamo Paco, pero puedes llamarme Francisco.",
+            "text": "...",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/old_man2"
+        },
+        {
+            "type": "text",
+            "characterName": "???",
+            "text": "EJEM",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man2"
+        },
+        {
+            "type": "text",
+            "characterName": "???",
+            "text":"Buenos días, este es el quiosco de Paco.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man2"
+        },
+        {
+            "type": "text",
+            "characterName": "Paco",
+            "text":"Aunque prefiero Francisco si no te importa. Es un nombre con más autoridad, tú ya me entiendes.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man2"
         },
         {
             "type": "text",
             "characterName": "Francisco",
-            "text": "Da gusto ver a un mozo como tú. Últimamente el barrio se está llenando de chusma. La vida antes era mejor.",
+            "text":"¿Qué tal si lo intentas otra vez? Ahora con un poquito de educación. Lo que os cuesta tener educación...",
             "pause": true,
-            "imageAssetId": null
-        },
-        {
-            "type": "text",
-            "characterName": "Francisco",
-            "text":"¿Qué estás buscando en este quiosco?",
-            "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/old_man2"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text":"Hola, buenas. Me gustaría comprar el número 5 de la colección de DRACO.",
+            "text":"Ehm vale.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text":"Buenos días, yo soy Juan, me gustaría adquirir el número 5 de la colección de DRACO. Gracias.",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Francisco",
-            "text":"Interesante elección. Mira, ayer me llegó esta gorra de marca, chulísima. ¿Te interesa?",
+            "text":"¿Solo eso? ¿No quieres nada más?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/old_man2"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text":"No, gracias.",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Francisco",
-            "text":"Te la dejo al mismo precio que el cómic.",
+            "text":"Tengo un problemilla mozo, soy la única competencia que tiene el que está al otro lado del parque.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/old_man2"
+        },
+        {
+            "type": "text",
+            "characterName": "Francisco",
+            "text":"Ese individuo vende productos de manera ilegal, pero aún así la gente le compra.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man2"
+        },
+        {
+            "type": "text",
+            "characterName": "Francisco",
+            "text":"Ayúdame un poco, compra algo más caro.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man2"
+        },
+        {
+            "type": "text",
+            "characterName": "Francisco",
+            "text":"Mira ayer me llegó una gorra de marca buenísima, te la dejo a cinco pes... euros, perdón.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man2"
+        },
+        {
+            "type": "text",
+            "characterName": "Francisco",
+            "text":"Pesetas, ¿A dónde os habéis ido?",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man2"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text":"Tiene que haberte costado una pasta hacerte con las gorras. ¿De dónde las has sacado?",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "Francisco",
+            "text":"Se cayeron de un camión. ¿La quieres o no?",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man2"
         },
         {
             "type": "options",
             "characterName": "Juan",
             "options": [
                 {
-                    "text": "Ahora que lo dices, prefiero la gorra.",
+                    "text": "Viva el pequeño comercio, deme la gorra buen señor.",
                     "diversion": "EscenaParque/NPCs/QuiosqueroCapDialogue"
                 },
                 {
-                    "text": "No, gracias. Me quedo con el cómic.",
+                    "text": "No, gracias. He venido a por el cómic.",
                     "diversion": "EscenaParque/NPCs/QuiosqueroComicDialogue"
                 }
             ]

@@ -8,29 +8,35 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "¡Mierda! ¡El metro!",
+            "text": "¡No! ¡El metro!",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
-            "characterName": "Ladrón",
-            "text": "Ahí te quedas panoli, me quedo esto.",
+            "characterName": "El Kike",
+            "text": "No sé, creo que no me siento muy humillado.",
             "pause": true,
-            "imageAssetId": "anonymous"
-        },
-
-        {
-            "type": "text",
-            "characterName": "Ladrón",
-            "text": "Eh, mira aquí, un móvil.",
-            "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
-            "characterName": "Juan",
-            "text": "¿?",
+            "characterName": "El Kike",
+            "text": "Bueno, lo has intentado.",
+            "pause": true,
+            "imageAssetId": "Portraits/Punk"
+        },
+        {
+            "type": "text",
+            "characterName": "El Kike",
+            "text": "Cierra los ojos y aprieta los dientes, así no te dolerá tanto.",
+            "pause": true,
+            "imageAssetId": "Portraits/Punk"
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Le haces caso y el mundo se oscurece a tu alrededor.</i>",
             "pause": true,
             "imageAssetId": null
         },
@@ -41,29 +47,57 @@
         },
         {
             "type": "text",
-            "characterName": "Juan",
-            "text": "¿Dónde?",
-            "pause": false,
+            "characterName": null,
+            "text": "<i>El ladrón te da un empujón.</i>",
+            "pause": true,
             "imageAssetId": null
         },
         {
             "type": "text",
-            "characterName": "Juan",
-            "text": "¡Agh!",
+            "characterName": "El Kike",
+            "text": "¡Venga bro, ya nos vemos!",
+            "pause": true,
+            "imageAssetId": "Portraits/Punk"
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Abres los ojos y le ves subido al tren.</i>",
             "pause": true,
             "imageAssetId": null
         },
-		{
+        {
             "type": "text",
-            "characterName": "Ladrón",
-            "text": "Eres patético, pringao.",
+            "characterName": null,
+            "text": "<i>Te sientes aliviado por no haber recivido *La Ostia*, pero recuerdas que el móvil se va con él.</i>",
             "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Recuerdas a tu madre, y una sensación de desamparo recorre tu cuerpo.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Te has librado de una *Ostia*, pero ahora viene otra.</i>",
+            "pause": true,
+            "imageAssetId": null
         },
         {
             "type": "notification",
             "notificationId": "SubirAlMetro",
             "text": "SubirAlMetro"
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>HAS PERDIDO.</i>",
+            "pause": false,
+            "imageAssetId": null
         }
     ]
 }

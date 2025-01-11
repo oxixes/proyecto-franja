@@ -2,10 +2,22 @@
     "lines": [
         {
             "type": "text",
-            "characterName": null,
-            "text": "<i>La chica ignora a Juan. No quiere hablar más.</i>",
+            "characterName": "Chavala",
+            "text": "¿Chat, quién ha invitado a este tío?",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Kid2"
+        },
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "Fuera de aquí o te metro otro permaban.",
+            "pause": true,
+            "imageAssetId": "Portraits/Kid2"
+        },
+        {
+            "type": "notification",
+            "notificationId": "ChavalaIgnoresJuanDialogueFinished",
+            "text": "ChavalaIgnoresJuanFinished"
         }
     ]
 }

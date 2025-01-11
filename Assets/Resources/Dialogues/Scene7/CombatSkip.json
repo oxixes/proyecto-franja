@@ -10,7 +10,7 @@
             "characterName": "Juan",
             "text": "¡Kas! ¡Ayúdame!",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "notification",
@@ -22,28 +22,28 @@
             "characterName": "Kas",
             "text": "¡No te preocupes, Juan! ¡Voy a ayudarte!",
             "pause": true,
-            "imageAssetId": "old_man"
+            "imageAssetId": "Portraits/old_man"
         },
         {
             "type": "text",
             "characterName": "Kas",
             "text": "Quique, devuélvele el móvil, si no se lo voy a contar a\ntu madre.",
             "pause": true,
-            "imageAssetId": "old_man"
+            "imageAssetId": "Portraits/old_man"
         },
         {
             "type": "text",
             "characterName": "Quique",
             "text": "A mi que me cuentas, yo me voy, que mi planeta me\nnecesita.",
             "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
             "characterName": "Quique",
             "text": "Adioooooos.",
             "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "notification",
@@ -55,7 +55,7 @@
             "characterName": "Juan",
             "text": "¡Espera!",
             "pause": false,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
         }
     ]
 }

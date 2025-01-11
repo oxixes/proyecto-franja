@@ -3,7 +3,7 @@
         {
             "type": "text",
             "characterName": null,
-            "text": "<i>El mantero ignora a Juan. No quiere hablar más.</i>",
+            "text": "<i>El mantero te mira con desprecio. Mejor no le hables.</i>",
             "pause": true,
             "imageAssetId": null
         }

@@ -5,14 +5,14 @@
             "characterName": "Ladrón",
             "text": "Eres un tonto, te voy a dar una paliza",
             "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": "Portraits/Punk"
         },
 		{
             "type": "text",
             "characterName": "Ladrón",
             "text": "Oh vaya sabes muchas cosas, me voy",
             "pause": true,
-            "imageAssetId": "anonymous"
+            "imageAssetId": "Portraits/Punk"
         }
     ]
 }

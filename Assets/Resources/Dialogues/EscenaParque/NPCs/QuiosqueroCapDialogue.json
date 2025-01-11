@@ -3,21 +3,35 @@
         {
             "type": "text",
             "characterName": "Francisco",
-            "text":"Entendido. Aquí tienes. Muchas gracias, niño.",
+            "text":"Así me gusta, gracias a jóvenes como tu, este país podrá salir adelante.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portrait/old_man2"
         },
         {
             "type": "text",
             "characterName": "Juan",
-            "text":"¡Gracias a usted, Francisco! Que tenga un buen día.",
+            "text":"Que tenga un buen día Francisco, y arriba...",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text":"El quiosco.",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text":"<i>Puede que con esta gorra el mantero me respete más.</i>",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "notification",
             "notificationId": "CapBought",
-            "text": "Hola Txema"
+            "text": "CapBought"
         }
     ]
 }

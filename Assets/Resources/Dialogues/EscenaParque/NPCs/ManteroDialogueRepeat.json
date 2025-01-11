@@ -3,9 +3,9 @@
         {
             "type": "text",
             "characterName": "Mantero",
-            "text": "Aléjate de mí, que eres un brasas.",
+            "text": "Aléjate de mí tío, eres un brasas.",
             "pause": true,
-            "imageAssetId": null
+            "imageAssetId": "Portraits/FarmerBoy"
         }
     ]
 }

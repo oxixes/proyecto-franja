@@ -19,7 +19,7 @@
             "characterName": "Kas",
             "text": "Me llamo <color=red>Kas</color>. ¿Quién te ha robado el móvil?",
             "pause": true,
-            "imageAssetId": "old_man"
+            "imageAssetId": "Portraits/old_man"
         },
         {
             "type": "text",
@@ -33,14 +33,14 @@
             "characterName": "Kas",
             "text": "Bueno, no te preocupes.",
             "pause": true,
-            "imageAssetId": "old_man"
+            "imageAssetId": "Portraits/old_man"
         },
         {
             "type": "text",
             "characterName": "Kas",
             "text": "Ve a buscar a ese malhechor, y si no lo encuentras, ven a buscarme. Te ayudaré.",
             "pause": true,
-            "imageAssetId": "old_man"
+            "imageAssetId": "Portraits/old_man"
         },
         {
             "type": "notification",

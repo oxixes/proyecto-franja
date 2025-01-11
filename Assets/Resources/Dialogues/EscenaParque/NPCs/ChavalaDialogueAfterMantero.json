@@ -1,0 +1,43 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Buenas, ¿Me podrías ayudar con mi outfit? Se ve que parezco una escoba.",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "Ostia es verdad.",
+            "pause": true,
+            "imageAssetId": "Portraits/Kid2"
+        },
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "Si quieres te podría dar mi gorra, pero no se la puedo dejar a cualquier blandengue.",
+            "pause": true,
+            "imageAssetId": "Portraits/Kid2"
+        },
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "Antes me tendrás que ganar en un pulso.",
+            "pause": true,
+            "imageAssetId": "Portraits/Kid2"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Ay Dios.",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "diversion",
+            "diversion": "EscenaParque/NPCs/ChavalaDialogueAfterPulso"
+        }
+    ]
+}

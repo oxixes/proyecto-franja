@@ -2,10 +2,50 @@
     "lines": [
         {
             "type": "text",
-            "characterName": "Trabajador",
-            "text": "¡Hola! Lo siento, esta calle está cortada por obras. No se puede pasar ahora mismo.",
+            "characterName": "Juan",
+            "text": "<i>Parece que están de obras por aquí.</i>",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Eso, o no había suficiente presupuesto.</i>",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "???",
+            "text": "Que va, es que no queríamos que fueses para allá, y hemos puesto unas vallitas, ¿Te gustan?",
             "pause": true,
             "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Ehm, bueno sí, Aunque parece que podría saltarlas ¿No?",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "???",
+            "text": "Bueno tío a mi no me mires, yo solo escribo los diálogos.",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "???",
+            "text": "Venga tira, que tu móvil no se va a recuperar solo.",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "notification",
+            "notificationId": "TrabajadoresFinished",
+            "text": "NoDialogueNow"
         }
     ]
 }
