@@ -110,7 +110,7 @@
             "characterName": "Juan",
             "text": "<i>Me pregunto si esa <color=yellow>información</color> será útil...</i>",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",

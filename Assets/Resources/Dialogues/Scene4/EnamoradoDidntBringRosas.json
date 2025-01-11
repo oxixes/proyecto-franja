@@ -5,21 +5,21 @@
             "characterName": "Enamorado",
             "text": "Muy bien ¿Y las rosas campeón?",
             "pause": true,
-            "imageAssetId": "IMGEnamorado"
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "¿Y de dónde saco unas rosas?",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Hay un parque más adelante. Puedes mirar por ahí.",
             "pause": true,
-            "imageAssetId": "IMGEnamorado"
+            "imageAssetId": "Portraits/Glasses"
         }
     ]
 }

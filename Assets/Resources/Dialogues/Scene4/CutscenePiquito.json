@@ -5,28 +5,28 @@
             "characterName": "Enamorado",
             "text": "Hola.",
             "pause": true,
-            "imageAssetId": "IMGEnamorado"
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "¿Que quieres?",
             "pause": true,
-            "imageAssetId": "IMGJessi"
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Ehm...",
             "pause": true,
-            "imageAssetId": "IMGEnamorado"
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Toma.",
             "pause": true,
-            "imageAssetId": "IMGEnamorado"
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
@@ -40,28 +40,28 @@
             "characterName": "Jessi",
             "text": "...",
             "pause": true,
-            "imageAssetId": "IMGJessi"
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "¿Qué haces?",
             "pause": true,
-            "imageAssetId": "IMGJessi"
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "¿Te ha gustado? A mi sí.",
             "pause": true,
-            "imageAssetId": "IMGEnamorado"
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
             "characterName": "Jessi",
             "text": "Te vas a enterar, golfo.",
             "pause": true,
-            "imageAssetId": "IMGJessi"
+            "imageAssetId": "Portraits/Girl2"
         },
         {
             "type": "text",
@@ -96,35 +96,35 @@
             "characterName": "Enamorado",
             "text": "Sinceramente, no sé por qué te he hecho caso.",
             "pause": true,
-            "imageAssetId": "IMGEnamorado"
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "Bueno... mira lo que le pasó a Rubiales, yo diría que has tenido suerte.",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "¿Suerte? Je je je...",
             "pause": true,
-            "imageAssetId": "IMGEnamorado"
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
             "characterName": "Enamorado",
             "text": "Tus muertos, chaval.",
             "pause": true,
-            "imageAssetId": "IMGEnamorado"
+            "imageAssetId": "Portraits/Glasses"
         },
         {
             "type": "text",
             "characterName": "Juan",
             "text": "<i>Parece que no se puede hacer más por aquí, será mejor que siga adelante</i>",
             "pause": true,
-            "imageAssetId": "IMGJuan"
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "notification",
