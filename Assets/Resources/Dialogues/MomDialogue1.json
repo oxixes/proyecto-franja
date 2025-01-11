@@ -3,7 +3,7 @@
         {
             "type": "text",
             "characterName": "Mamá",
-            "text": "Hijo, ¿cómo te sientes después de la mudanza?",
+            "text": "Hijo, ¿cómo estás después de la mudanza?",
             "pause": true,
             "imageAssetId": null
         },
@@ -38,7 +38,7 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Que me van a robar el móvil, mamá. Bueno, adiós",
+            "text": "Qué me van a robar el móvil, mamá. Bueno, adiós",
             "pause": true,
             "imageAssetId": null
         },
