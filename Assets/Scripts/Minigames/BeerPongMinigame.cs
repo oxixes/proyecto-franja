@@ -38,10 +38,10 @@ public class BeerPongGame : MonoBehaviour
     private int consecutiveHits = 0;
     private Vector2 initialHorizontalZoneSize = new Vector2(120, 30);
     private Vector2 initialVerticalZoneSize = new Vector2(30, 120);
-    private float greenZoneReductionFactor = 0.8f;
+    private float greenZoneReductionFactor = 0.5f;
     private float horizontalSpeed = 500f;
     private float verticalSpeed = 300f;
-    private float speedIncreaseFactor = 1.2f;
+    private float speedIncreaseFactor = 1.7f;
     private float thirdRoundToleranceIncrease = 1.5f;
 
     private bool kasHelpUsed = false;
@@ -258,7 +258,7 @@ public class BeerPongGame : MonoBehaviour
     bool hitHorizontal = Mathf.Abs(horizontalPower - horizontalGreenZone.position.x) <= horizontalGreenZone.rect.width / 2;
     bool hitVertical = Mathf.Abs(verticalPower - verticalGreenZone.position.y) <= verticalGreenZone.rect.height / 2;
 
-    yield return new WaitForSeconds(1f); // Delay to make sure the result is visible
+    yield return new WaitForSeconds(1f); // Espera para asegurar que el resultado se vea
 
     if (hitHorizontal && hitVertical)
     {
@@ -266,16 +266,18 @@ public class BeerPongGame : MonoBehaviour
         resultText.text = "Acertaste!";
         resultText.gameObject.SetActive(true);
 
-        // Ajustar la posición del texto "Acertaste"
+        // Posición del texto "Acertaste"
         resultText.rectTransform.anchoredPosition = new Vector2(Screen.width / 2 - 500, Screen.height / 2 - 250);
 
         // Reducir el tamaño de las zonas verdes
-        initialHorizontalZoneSize *= greenZoneReductionFactor;
+        initialHorizontalZoneSize *= greenZoneReductionFactor; // Reducir tamaño
         initialVerticalZoneSize *= greenZoneReductionFactor;
-
-        // Actualizar visualmente las zonas verdes
-        UpdateGreenZoneSize(horizontalGreenZone, initialHorizontalZoneSize);
+        UpdateGreenZoneSize(horizontalGreenZone, initialHorizontalZoneSize); // Actualizar visualmente
         UpdateGreenZoneSize(verticalGreenZone, initialVerticalZoneSize);
+
+        // Aumentar la velocidad de los sliders
+        horizontalSpeed *= speedIncreaseFactor; // Incrementar velocidad
+        verticalSpeed *= speedIncreaseFactor;
 
         yield return new WaitForSeconds(2f);
         resultText.gameObject.SetActive(false);
@@ -300,7 +302,7 @@ public class BeerPongGame : MonoBehaviour
         resultText.text = "Fallaste!";
         resultText.gameObject.SetActive(true);
 
-        // Ajustar la posición del texto "Fallaste"
+        // Posición del texto "Fallaste"
         resultText.rectTransform.anchoredPosition = new Vector2(Screen.width / 2 - 500, Screen.height / 2 - 250);
 
         yield return new WaitForSeconds(2f);
@@ -309,6 +311,7 @@ public class BeerPongGame : MonoBehaviour
         StartClosingAnimation(); // Iniciar animación de cierre
     }
 }
+
 
 private void UpdateGreenZoneSize(RectTransform greenZone, Vector2 newSize)
 {
