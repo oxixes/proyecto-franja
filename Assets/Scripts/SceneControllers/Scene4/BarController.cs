@@ -98,10 +98,16 @@ public class BarController : MonoBehaviour
         SaveManager.GetInstance().Set("Scene4BarTableDialogueFinished", 1);
         player.GetComponent<PlayerInventoryManager>().CollectInformation(rayoHasLostInfo);
 
-        if (SaveManager.GetInstance().Get<int>("Scene4MinigameFinished") == 1)
+        if (SaveManager.GetInstance().Get<int>("Scene4EnamoradoDialogueFinished") == 1)
         {
-            barTableMan1IO.dialogueID = SaveManager.GetInstance().Get<string>("Scene4BarTableDialogueEndResult");
-            barTableMan2IO.dialogueID = SaveManager.GetInstance().Get<string>("Scene4BarTableDialogueEndResult");
+            string dialogueIdToSet = SaveManager.GetInstance().Get<string>("Scene4BarTableDialogueEndResult");
+            if (string.IsNullOrEmpty(dialogueIdToSet))
+            {
+                dialogueIdToSet = "Scene4/BarTableMinijuego";
+            }
+
+            barTableMan1IO.dialogueID = dialogueIdToSet;
+            barTableMan2IO.dialogueID = dialogueIdToSet;
             if (dialogueId != null) StartCoroutine(StartMinijuegoDialogue());
         }
     }
