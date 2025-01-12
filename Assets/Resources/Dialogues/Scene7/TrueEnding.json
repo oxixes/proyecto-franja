@@ -7,14 +7,8 @@
         },
         {
             "type": "text",
-            "text": "<i>Kike se siente muy ofendido, Juan le quita el móvil del\nbolsillo.</i>",
-            "pause": true,
-            "imageAssetId": null
-        },
-        {
-            "type": "text",
             "characterName": "El Kike",
-            "text": "!!!",
+            "text": "!El metro!",
             "pause": true,
             "imageAssetId": "Portraits/Punk"
         },

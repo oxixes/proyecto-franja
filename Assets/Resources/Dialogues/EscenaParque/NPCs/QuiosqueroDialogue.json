@@ -94,7 +94,7 @@
         {
             "type": "text",
             "characterName": "Francisco",
-            "text":"Mira ayer me llegó una gorra de marca buenísima, te la dejo a cinco pes... euros, perdón.",
+            "text":"Mira ayer me llegó una gorra de marca buenísima, te la dejo a cinco pese... euros, perdón.",
             "pause": true,
             "imageAssetId": "Portraits/old_man2"
         },
@@ -116,6 +116,20 @@
             "type": "text",
             "characterName": "Francisco",
             "text":"Se cayeron de un camión. ¿La quieres o no?",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man2"
+        },
+        {
+            "type": "text",
+            "characterName": "Francisco",
+            "text":"Bueno, decídete porque solo te da para comprar una cosa.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man2"
+        },
+        {
+            "type": "text",
+            "characterName": "Francisco",
+            "text":"¿La gorra o el cómic?",
             "pause": true,
             "imageAssetId": "Portraits/old_man2"
         },

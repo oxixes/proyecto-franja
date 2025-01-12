@@ -71,7 +71,7 @@
         {
             "type": "text",
             "characterName": null,
-            "text": "<i>Al perder al ladrón de vista dentro del metro, te sientes derrotado.</i>",
+            "text": "<i>Al ver que el ladrón se subirá al tren, te sientes derrotado.</i>",
             "pause": true,
             "imageAssetId": null
         },

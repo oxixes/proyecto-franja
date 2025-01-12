@@ -27,23 +27,163 @@
         {
             "type": "text",
             "characterName": "Kas",
-            "text": "Quique, devuélvele el móvil, si no se lo voy a contar a\ntu madre.",
+            "text": "Tú...",
             "pause": true,
             "imageAssetId": "Portraits/old_man"
         },
         {
             "type": "text",
-            "characterName": "Quique",
-            "text": "A mi que me cuentas, yo me voy, que mi planeta me\nnecesita.",
+            "characterName": "Kas",
+            "text": "Eres un perdedor, un meón, un golfo, un cobarde y la tienes enana.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Kike",
+            "text": "...",
             "pause": true,
             "imageAssetId": "Portraits/Punk"
         },
         {
             "type": "text",
-            "characterName": "Quique",
-            "text": "Adioooooos.",
+            "characterName": "Kike",
+            "text": "Tío, te has pasado.",
             "pause": true,
             "imageAssetId": "Portraits/Punk"
+        },
+        {
+            "type": "text",
+            "characterName": "Kike",
+            "text": "¿Te crees que te voy a dar el móvil porque Kas me insulte?",
+            "pause": true,
+            "imageAssetId": "Portraits/Punk"
+        },
+        {
+            "type": "text",
+            "characterName": "Kike",
+            "text": "Kas lo sabe todo de todo el mundo.",
+            "pause": true,
+            "imageAssetId": "Portraits/Punk"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Dale el móvil al chaval, que si no su madre lo desahucia.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Kike",
+            "text": "No, la pasta no me viene mal y no se lo ha currado lo suficiente.",
+            "pause": true,
+            "imageAssetId": "Portraits/Punk"
+        },
+        {
+            "type": "text",
+            "characterName": "Kike",
+            "text": "Venga, con dios.",
+            "pause": true,
+            "imageAssetId": "Portraits/Punk"
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>El ladrón se gira para montarse en el metro, Kas te toca el hombro.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Ve a por él.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Pero en el siguiente tren, no sea que te caliente.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Yo tengo que quedarme en el barrio, no puedo seguirte.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        }, 
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Si alguna vez quieres volver, eres bienvenido en Vallecas.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },     
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Me caes bien, y al fin y al cabo, esto es el Valle de Kas ¿No?.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },  
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Hasta luego chaval.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Al ver que el ladrón se subirá al tren, te sientes derrotado.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Pero recuerdas a Kas, y lo mucho que ha creído en tí.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Puedes con el ladrón, si lo intentas otra vez...</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Podrías recuperar lo que es tuyo, por pleno derecho.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Y por tu madre, claro.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>En un arrebato de valentía, te decides a perseguirle en el próximo tren que venga.</i>",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Tu aventura no ha hecho más que comenzar.</i>",
+            "pause": true,
+            "imageAssetId": null
         },
         {
             "type": "notification",
@@ -52,10 +192,10 @@
         },
         {
             "type": "text",
-            "characterName": "Juan",
-            "text": "¡Espera!",
+            "characterName": null,
+            "text": "<i>CONTINUARÁ...</i>",
             "pause": false,
-            "imageAssetId": "Portraits/Boy"
+            "imageAssetId": null
         }
     ]
 }
