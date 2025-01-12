@@ -6,6 +6,13 @@
             "text": "Enhorabuena chaval, buena suerte en la senda de la destrucción del hígado.",
             "pause": true,
             "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Te dan una copa.</i>",
+            "pause": true,
+            "imageAssetId": null
         }
     ]
 }

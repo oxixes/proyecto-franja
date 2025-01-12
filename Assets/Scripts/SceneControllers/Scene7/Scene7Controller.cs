@@ -300,6 +300,8 @@ public class Scene7Controller : MonoBehaviour
 
         thanksText.SetActive(false);
 
+        audioController.GetComponent<AudioController>().StopWithTransition();
+
         yield return new WaitForSeconds(2f);
 
         Minigame.isInMinigame = false;

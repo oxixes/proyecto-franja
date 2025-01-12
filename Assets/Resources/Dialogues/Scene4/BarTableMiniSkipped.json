@@ -1,0 +1,25 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "¡EH, DADLE UNA COPA AL CHAVAL!",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Hombre borracho",
+            "text": "Vale, vale...",
+            "pause": true,
+            "imageAssetId": null
+        },
+        {
+            "type": "text",
+            "characterName": null,
+            "text": "<i>Te dan una copa.</i>",
+            "pause": true,
+            "imageAssetId": null
+        }
+    ]
+}
