@@ -21,6 +21,7 @@ public class Scene7Controller : MonoBehaviour
     public GameObject audioController;
     public AudioClip combatMusic1;
     public AudioClip combatMusic2;
+    public AudioClip creditsMusic;
 
     public Sprite thiefLookingUp;
     public Sprite thiefLookingRight;
@@ -218,6 +219,8 @@ public class Scene7Controller : MonoBehaviour
     private IEnumerator EndSequence()
     {
         Minigame.isInMinigame = true;
+
+        audioController.GetComponent<AudioController>().ForcePlayWithTransition(creditsMusic, true);
 
         yield return new WaitForSeconds(2f);
 
