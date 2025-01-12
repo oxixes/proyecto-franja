@@ -3,7 +3,7 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Perdonde señor, ¿Me puede ayudar? El cani ese me ha robado el móvil.",
+            "text": "Perdone señor, ¿Me puede ayudar? El cani ese me ha robado el móvil.",
             "pause": true,
             "imageAssetId": "Portraits/Boy"
         },
@@ -17,7 +17,7 @@
         {
             "type": "text",
             "characterName": "???",
-            "text": "Ese era <color=red>El Kike</color>, es bastante chungo, pero no te desanimes chaval.",
+            "text": "Ese era <color=#FF6961>El Kike</color>, es bastante chungo, pero no te desanimes chaval.",
             "pause": true,
             "imageAssetId": "Portraits/old_man"
         },
@@ -108,7 +108,7 @@
         {
             "type": "text",
             "characterName": "Kas",
-            "text": "El Kike se ha ido por ahí -señalando hacia tu derecha-, no puede andar muy lejos.",
+            "text": "<color=#FF6961>El Kike</color> se ha ido por ahí -señalando hacia tu derecha-, no puede andar muy lejos.",
             "pause": true,
             "imageAssetId": "Portraits/old_man"
         },

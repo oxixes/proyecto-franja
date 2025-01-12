@@ -3,7 +3,7 @@
         {
             "type": "text",
             "characterName": "Kas",
-            "text": "¿Oye, seguro que estás listo para enfrentarte contra <color=red>el Kike</color>?",
+            "text": "¿Oye, seguro que estás listo para enfrentarte contra <color=#FF6961>el Kike</color>?",
             "pause": true,
             "imageAssetId": "Portraits/old_man"
         },

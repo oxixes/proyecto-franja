@@ -31,7 +31,7 @@
         {
             "type": "text",
             "characterName": "Maruja",
-            "text": "Se llama <color=red>Kike</color> y se meaba en la cama hasta hace bien poco.",
+            "text": "Se llama <color=#FF6961>Kike</color> y se meaba en la cama hasta hace bien poco.",
             "pause": true,
             "imageAssetId": "Portraits/Lady"
         },

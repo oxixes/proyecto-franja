@@ -17,7 +17,7 @@
         {
             "type": "text",
             "characterName": "Mantero",
-            "text": "Primero, se dice <color=red>el Kike</color>.",
+            "text": "Primero, se dice <color=#FF6961>el Kike</color>.",
             "pause": true,
             "imageAssetId": "Portraits/FarmerBoy"
         },

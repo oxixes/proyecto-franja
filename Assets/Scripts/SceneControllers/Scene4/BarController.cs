@@ -122,12 +122,14 @@ public class BarController : MonoBehaviour
         if (skipped) {
             barTableMan1IO.dialogueID = "Scene4/BarTablePostMiniRepeat";
             barTableMan2IO.dialogueID = "Scene4/BarTablePostMiniRepeat";
+            inventory.CollectItem(copaItem);
             SaveManager.GetInstance().Set("Scene4BarTableDialogueEndResult", "Scene4/BarTablePostMiniRepeat");
             DialogueSystem.GetInstance().StartDialogue("Scene4/BarTableMiniSkipped");
         } else {
             if (won) {
                 barTableMan1IO.dialogueID = "Scene4/BarTablePostMiniRepeat";
                 barTableMan2IO.dialogueID = "Scene4/BarTablePostMiniRepeat";
+                inventory.CollectItem(copaItem);
                 SaveManager.GetInstance().Set("Scene4BarTableDialogueEndResult", "Scene4/BarTablePostMiniRepeat");
                 DialogueSystem.GetInstance().StartDialogue("Scene4/BarTablePostMini");
             } else {
@@ -140,7 +142,6 @@ public class BarController : MonoBehaviour
 
         SaveManager.GetInstance().Set("Scene4MinigameFinished", 1);
         player.GetComponent<PlayerInventoryManager>().CollectInformation(rayoHasLostInfo);
-        inventory.CollectItem(copaItem);
     }
 
     void HandleBartenderFinishNotification(string dialogueId, string notificationId, string notificationData)

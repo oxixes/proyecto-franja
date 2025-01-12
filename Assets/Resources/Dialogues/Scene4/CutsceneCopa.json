@@ -50,7 +50,7 @@
         {
             "type": "text",
             "characterName": "Jessi",
-            "text": "Total, que <color=red>el Kike</color> me hizo mucho daño.",
+            "text": "Total, que <color=#FF6961>el Kike</color> me hizo mucho daño.",
             "pause": true,
             "imageAssetId": "Portraits/Girl2"
         },
@@ -141,7 +141,7 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "<i>Así que <color=red>el ladrón</color> le puso los cuernos a su ex</i>",
+            "text": "<i>Así que <color=#FF6961>el ladrón</color> le puso los cuernos a su ex</i>",
             "pause": true,
             "imageAssetId": "Portraits/Boy"
         },
