@@ -129,6 +129,8 @@ public class ArmWrestlingMinigame : MonoBehaviour
             buttonTransform.anchorMax = new Vector2(0.5f, 0.5f);
             buttonTransform.pivot = new Vector2(0.5f, 0.5f);
             buttonTransform.anchoredPosition = new Vector2(358, 150);
+            kasHelpButton.gameObject.SetActive(false);
+            
         }
 
         gameActive = false;

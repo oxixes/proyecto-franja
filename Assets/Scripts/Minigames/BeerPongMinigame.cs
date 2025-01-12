@@ -199,6 +199,10 @@ public class BeerPongGame : MonoBehaviour
                 }
             }
         }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            OnKasHelpButtonPress();
+        }
     }
 
     private void StartGame()
