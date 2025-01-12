@@ -3,7 +3,7 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "<i>A lo mejor ese señor me puede ayudar con esto.</i>",
+            "text": "<i>A lo mejor ese señor de arriba me puede ayudar con esto.</i>",
             "pause": true,
             "imageAssetId": "Portraits/Boy"
         },

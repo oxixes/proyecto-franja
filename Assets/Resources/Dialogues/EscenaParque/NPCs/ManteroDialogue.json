@@ -3,7 +3,42 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Ey estoy buscando a un chaval que me ha robado el móvil, tenía una cresta. ¿Lo has visto?",
+            "text": "Hola, ¿Qué haces aquí?",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Tomar el sol, ¿Tu qué crees? Soy un mantero.",
+            "pause": true,
+            "imageAssetId": "Portraits/FarmerBoy"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "¿Ah sí?",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Sí, es que soy albino... Siempre con lo mismo hermano...",
+            "pause": true,
+            "imageAssetId": "Portraits/FarmerBoy"
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Bueno, ¿qué quieres?",
+            "pause": true,
+            "imageAssetId": "Portraits/FarmerBoy"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "Estoy buscando a un chaval que me ha robado el móvil, tenía una cresta. ¿Lo has visto?",
             "pause": true,
             "imageAssetId": "Portraits/Boy"
         },
@@ -24,9 +59,16 @@
         {
             "type": "text",
             "characterName": "Mantero",
-            "text": "Yo no se nada del imbécil ese.",
+            "text": "Yo no se nada del <color=#FF6961>imbécil</color> ese.",
             "pause": true,
             "imageAssetId": "Portraits/FarmerBoy"
+        },
+        {
+            "type": "text",
+            "characterName": "Juan",
+            "text": "<i>Mentiroso, sabes que es imbécil</i>",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
@@ -66,7 +108,14 @@
         {
             "type": "text",
             "characterName": "Mantero",
-            "text": "Puede que si le haces un recadito, te ayude.",
+            "text": "Puede que si le haces un recadito, te ayude a vestir mejor.",
+            "pause": true,
+            "imageAssetId": "Portraits/FarmerBoy"
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Y a lo mejor después, te hago caso.",
             "pause": true,
             "imageAssetId": "Portraits/FarmerBoy"
         },

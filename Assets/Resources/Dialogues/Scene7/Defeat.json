@@ -29,16 +29,9 @@
         {
             "type": "text",
             "characterName": "El Kike",
-            "text": "Cierra los ojos y aprieta los dientes, así no te dolerá tanto.",
+            "text": "Aprieta los dientes, así no te dolerá tanto.",
             "pause": true,
             "imageAssetId": "Portraits/Punk"
-        },
-        {
-            "type": "text",
-            "characterName": null,
-            "text": "<i>Le haces caso y el mundo se oscurece a tu alrededor.</i>",
-            "pause": true,
-            "imageAssetId": null
         },
         {
             "type": "notification",
@@ -48,7 +41,7 @@
         {
             "type": "text",
             "characterName": null,
-            "text": "<i>El ladrón te da un empujón.</i>",
+            "text": "<i>El ladrón no te noquea, pero te da un empujón.</i>",
             "pause": true,
             "imageAssetId": null
         },
@@ -62,14 +55,14 @@
         {
             "type": "text",
             "characterName": null,
-            "text": "<i>Abres los ojos y le ves subido al tren.</i>",
+            "text": "<i>Ves que va a subirse al tren.</i>",
             "pause": true,
             "imageAssetId": null
         },
         {
             "type": "text",
             "characterName": null,
-            "text": "<i>Te sientes aliviado por no haber recibido *La Hostia*, pero recuerdas que el móvil se va con él.</i>",
+            "text": "<i>Te sientes aliviado por no haber recibido *La Hostia*, pero el móvil se va con él.</i>",
             "pause": true,
             "imageAssetId": null
         },
@@ -83,7 +76,7 @@
         {
             "type": "text",
             "characterName": null,
-            "text": "<i>Te has librado de *La Hostia*, pero ahora viene otra.</i>",
+            "text": "<i>Te has librado de *La Hostia*, pero ahora viene *La Hostia de tu Madre*.</i>",
             "pause": true,
             "imageAssetId": null
         },

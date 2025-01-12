@@ -26,7 +26,7 @@
             "enemyText": "Eres un\ncrío,\npírate a\ntu casa.",
             "regularOptions": [
                 {
-                    "text": "Eso no me impide domarte.",
+                    "text": "Eso no me impide humillarte.",
                     "response": "¿Qué dices?",
                     "score": 1
                 },
@@ -48,26 +48,26 @@
             "enemyText": "Bueno y\nese pelo\nescoba que\nllevas\nes penoso.",
             "regularOptions": [
                 {
-                    "text": "No, otra vez eso no...",
-                    "response": "Jeje...\nparguela.",
-                    "score": 0
-                },
-                {
                     "text": "Mejor que una línea vertical en la cabeza es.",
                     "response": "No tienes\nni idea.",
                     "score": 1
                 },
                 {
                     "text": "Eso es un argumento ad hominem, no es válido.",
-                    "response": "Lo que no\nes válido\nes tu...\npelo escoba.",
+                    "response": "Lo que no\nes válido\nes tu \ncara.",
                     "score": 1
+                },
+                {
+                    "text": "No, otra vez eso no...",
+                    "response": "Jeje...\nparguela.",
+                    "score": 0
                 }
             ],
             "specialOptionScore": 2,
             "specialOptionResponse": "Tu que sabrás."
         },
         {
-            "enemyText": "Sigue así\ny verás\nla que\nte llevas.",
+            "enemyText": "Sigue así\ny verás\nlo que\nte llevas.",
             "regularOptions": [
                 {
                     "text": "No me asustas.",
@@ -75,18 +75,18 @@
                     "score": 1
                 },
                 {
-                    "text": "¿La tarjeta del hormiguero?",
-                    "response": "Que tonto.",
+                    "text": "¿Ya me das mi móvil?",
+                    "response": "Un patadón.",
                     "score": 0
                 },
                 {
-                    "text": "Chillea cabrón.",
+                    "text": "Relaja broder.",
                     "response": "Que ostia\ntienes.",
-                    "score": 1
+                    "score": 0
                 }
             ],
             "specialOptionScore": 2,
-            "specialOptionResponse": "Yo no soy\nun cobarde."
+            "specialOptionResponse": "Yo no...\nCállate."
         },
         {
             "enemyText": "Sigo siendo\nel más\ngrande del\nbarrio.",
@@ -94,7 +94,7 @@
                 {
                     "text": "Mis cojones.",
                     "response": "Los míos\nmás grandes.",
-                    "score": 0
+                    "score": 1
                 },
                 {
                     "text": "Tampoco eres tan alto.",
@@ -104,7 +104,7 @@
                 {
                     "text": "¿Quién lo dice?",
                     "response": "Yo, obvio.",
-                    "score": 1
+                    "score":0
                 }
             ],
             "specialOptionScore": 2,
