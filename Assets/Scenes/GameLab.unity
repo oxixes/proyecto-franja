@@ -5696,6 +5696,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BeerPongMinigame
       objectReference: {fileID: 0}
+    - target: {fileID: 3672951117088032457, guid: 5197e139ad2d37443869a10db80d2cff, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6157727052366689938, guid: 5197e139ad2d37443869a10db80d2cff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 451.51346
@@ -5736,6 +5740,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7177055842738350038, guid: 5197e139ad2d37443869a10db80d2cff, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341366990093000807, guid: 5197e139ad2d37443869a10db80d2cff, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7487125489008324439, guid: 5197e139ad2d37443869a10db80d2cff, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8342667619559128086, guid: 5197e139ad2d37443869a10db80d2cff, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5751,11 +5771,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 667982855870068207, guid: e8c81a5275dcb0f43b9344b94215c338, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3345155162151327602, guid: e8c81a5275dcb0f43b9344b94215c338, type: 3}
       propertyPath: m_Name
       value: ArmWrestlingMinigame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345155162151327602, guid: e8c81a5275dcb0f43b9344b94215c338, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4496781765778715319, guid: e8c81a5275dcb0f43b9344b94215c338, type: 3}
       propertyPath: m_hasFontAssetChanged
@@ -5763,7 +5787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4789686320258014074, guid: e8c81a5275dcb0f43b9344b94215c338, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7955981056152409699, guid: e8c81a5275dcb0f43b9344b94215c338, type: 3}
       propertyPath: m_hasFontAssetChanged
