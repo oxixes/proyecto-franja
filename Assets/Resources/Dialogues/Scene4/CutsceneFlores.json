@@ -36,7 +36,7 @@
         {
             "type": "text",
             "characterName": "Jessi",
-            "text": "Bueno, por lo menos no has sido un guarro. No como el imbécil de la cresta.",
+            "text": "Bueno, por lo menos no has sido un guarro. No como <color=#FF6961>el imbécil de la cresta</color>.",
             "pause": true,
             "imageAssetId": "Portraits/Girl2"
         },
@@ -50,7 +50,7 @@
         {
             "type": "text",
             "characterName": "Jessi",
-            "text": "Déjame en paz, necesito descansar de chicos.",
+            "text": "Bueno, aire aire, vuelve a tu sitio.",
             "pause": true,
             "imageAssetId": "Portraits/Girl2"
         },

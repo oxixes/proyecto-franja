@@ -1,0 +1,22 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "Chavalita, afloja ahí ese brazo y ayuda a mi colega.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "Venga Kas, que nos lo estamos pasando bien.",
+            "pause": true,
+            "imageAssetId": "Portraits/Kid2"
+        },
+        {
+            "type": "diversion",
+            "diversion": "EscenaParque/NPCs/ChavalaDialogueAfterPulso"
+        }
+    ]
+}

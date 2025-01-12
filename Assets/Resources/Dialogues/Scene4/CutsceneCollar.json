@@ -92,7 +92,7 @@
         {
             "type": "text",
             "characterName": "Jessi",
-            "text": "Ese collar me lo regaló mi ex, <color=red>el Kike</color>.",
+            "text": "Ese collar me lo regaló mi ex, <color=#FF6961>el Kike</color>.",
             "pause": true,
             "imageAssetId": "Portraits/Girl2"
         },
@@ -127,7 +127,7 @@
         {
             "type": "text",
             "characterName": "Jessi",
-            "text": "Vendiendo móviles robados o robandole el collar a una pija.",
+            "text": "Vendiendo móviles robados o robándole el collar a una pija.",
             "pause": true,
             "imageAssetId": "Portraits/Girl2"
         },
@@ -141,14 +141,14 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Jessi, tengo que recuperar mi móvil, para ello necesito humillar al <color=red>Quique</color>.",
+            "text": "Jessi, tengo que recuperar mi móvil, para ello necesito humillar al <color=#FF6961>Quique</color>.",
             "pause": true,
             "imageAssetId": "Portraits/Boy"
         },
         {
             "type": "text",
             "characterName": "Jessi",
-            "text": "Perdona pero se dice <color=red>el Kike</color>.",
+            "text": "Perdona pero se dice <color=#FF6961>Kike</color>.",
             "pause": true,
             "imageAssetId": "Portraits/Girl2"
         },

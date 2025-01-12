@@ -30,6 +30,20 @@
         },
         {
             "type": "text",
+            "characterName": "Juan",
+            "text": "Sí, del <color=#FF6961>Quique</color>.",
+            "pause": true,
+            "imageAssetId": "Portraits/Boy"
+        },
+        {
+            "type": "text",
+            "characterName": "Mantero",
+            "text": "Se dice <color=#FF6961>El Kike</color>.",
+            "pause": true,
+            "imageAssetId": "Portraits/FarmerBoy"
+        },
+        {
+            "type": "text",
             "characterName": "Mantero",
             "text": "Está bien, te lo contaré.",
             "pause": true,

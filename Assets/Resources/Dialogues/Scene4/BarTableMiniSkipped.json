@@ -2,8 +2,15 @@
     "lines": [
         {
             "type": "text",
+            "characterName": "Kas",
+            "text": "Antonio, haz el favor de darle una copa al chaval y volver con tu familia anda.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
             "characterName": "Hombre borracho",
-            "text": "Enhorabuena chaval, buena suerte en la senda de la destrucción del hígado.",
+            "text": "Joder, vale...",
             "pause": true,
             "imageAssetId": null
         },

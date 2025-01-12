@@ -3,7 +3,7 @@
         {
             "type": "text",
             "characterName": "Kas",
-            "text": "¿Oye, seguro que estás listo para enfrentarte contra <color=red>el Kike</color>?",
+            "text": "¿Oye, seguro que estás listo para enfrentarte contra <color=#FF6961>El Kike</color>?",
             "pause": true,
             "imageAssetId": "Portraits/old_man"
         },
@@ -17,7 +17,7 @@
         {
             "type": "text",
             "characterName": "Kas",
-            "text": "Sí pero todo el mundo tiene puntos débiles.",
+            "text": "Sí, pero todo el mundo tiene puntos débiles.",
             "pause": true,
             "imageAssetId": "Portraits/old_man"
         },

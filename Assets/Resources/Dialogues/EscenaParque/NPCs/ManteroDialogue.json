@@ -10,7 +10,7 @@
         {
             "type": "text",
             "characterName": "Mantero",
-            "text": "Tomar el sol, ¿Tu qué crees? Soy un mantero.",
+            "text": "Estoy de acampada en Vallecas, ¿Tu qué crees? Soy un mantero.",
             "pause": true,
             "imageAssetId": "Portraits/FarmerBoy"
         },
@@ -65,13 +65,6 @@
         },
         {
             "type": "text",
-            "characterName": "Juan",
-            "text": "<i>Mentiroso, sabes que es imbécil</i>",
-            "pause": true,
-            "imageAssetId": "Portraits/Boy"
-        },
-        {
-            "type": "text",
             "characterName": "Mantero",
             "text": "¿Pero tú vas a comprar algo o qué? Parece esto un interrogatorio hombre.",
             "pause": true,
@@ -101,7 +94,7 @@
         {
             "type": "text",
             "characterName": "Mantero",
-            "text": "Si eso ve a hablar con mi socia que está más abajo.",
+            "text": "Si eso, ve a hablar con mi socia que está más abajo.",
             "pause": true,
             "imageAssetId": "Portraits/FarmerBoy"
         },
@@ -116,13 +109,6 @@
             "type": "text",
             "characterName": "Mantero",
             "text": "Y a lo mejor después, te hago caso.",
-            "pause": true,
-            "imageAssetId": "Portraits/FarmerBoy"
-        },
-        {
-            "type": "text",
-            "characterName": "Mantero",
-            "text": "Y vistete mejor chaval.",
             "pause": true,
             "imageAssetId": "Portraits/FarmerBoy"
         },

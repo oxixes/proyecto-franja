@@ -3,7 +3,7 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "¿Qué tal tronco? ¿Por qué no te enroyas un poco y me cuentas algo sobre el Quique eh?",
+            "text": "¿Qué tal tronco? ¿Por qué no te enroyas un poco y me cuentas algo sobre <color=#FF6961>el Quique</color> eh?",
             "pause": true,
             "imageAssetId": "Portraits/Boy"
         },
@@ -17,7 +17,7 @@
         {
             "type": "text",
             "characterName": "Mantero",
-            "text": "Primero, se dice <color=red>el Kike</color>.",
+            "text": "Primero, se dice <color=#FF6961>El Kike</color>.",
             "pause": true,
             "imageAssetId": "Portraits/FarmerBoy"
         },

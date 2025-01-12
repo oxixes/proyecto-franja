@@ -3,7 +3,7 @@
         {
             "type": "text",
             "characterName": "Juan",
-            "text": "Hola ¿Me podéis pedir una copa?",
+            "text": "Hola ¿me podéis pedir una copa?",
             "pause": true,
             "imageAssetId": "Portraits/Boy"
         },
@@ -11,13 +11,6 @@
             "type": "text",
             "characterName": "Hombre borracho",
             "text": "Sí, esa es buena idea. Voy a pedirme otra.",
-            "pause": true,
-            "imageAssetId": null
-        },
-        {
-            "type": "text",
-            "characterName": "Hombre borracho",
-            "text": "Voy a pedirme otra. <i>Risas borrachas.</i>",
             "pause": true,
             "imageAssetId": null
         },
@@ -99,23 +92,9 @@
             "imageAssetId": null
         },
         {
-            "type": "text",
-            "characterName": null,
-            "text": "<i>Juegas a una partida de beer pong con el hombre borracho. Recibes una copa de ellos.</i>",
-            "pause": true,
-            "imageAssetId": null
-        },
-        {
-            "type": "text",
-            "characterName": "Hombre enfadado",
-            "text": "La partida. Son las 5 de la tarde Antonio, como vas.",
-            "pause": true,
-            "imageAssetId": null
-        },
-        {
             "type": "notification",
-            "notificationId": "MinigameFinished",
-            "text": "MinigameFinished"
+            "notificationId": "BeerPongMinigame",
+            "text": "BeerPongMinigame"
         }
     ]
 }
