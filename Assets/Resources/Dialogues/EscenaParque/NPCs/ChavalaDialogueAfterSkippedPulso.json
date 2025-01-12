@@ -1,0 +1,29 @@
+{
+    "lines": [
+        {
+            "type": "text",
+            "characterName": "Kas",
+            "text": "EH NIÑA, DEJALE EN PAZ.",
+            "pause": true,
+            "imageAssetId": "Portraits/old_man"
+        },
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "Bueno, no todo el mundo puede conmigo.",
+            "pause": true,
+            "imageAssetId": "Portraits/Kid2"
+        },
+        {
+            "type": "text",
+            "characterName": "Chavala",
+            "text": "No lo has hecho mal tampoco.",
+            "pause": true,
+            "imageAssetId": "Portraits/Kid2"
+        },
+        {
+            "type": "diversion",
+            "diversion": "EscenaParque/NPCs/ChavalaDialogueAfterPulso"
+        }
+    ]
+}

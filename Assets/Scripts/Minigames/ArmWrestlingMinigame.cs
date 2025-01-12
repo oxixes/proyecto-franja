@@ -7,94 +7,82 @@ using UnityEngine.Events;
 
 public class ArmWrestlingMinigame : MonoBehaviour
 {
-    public Slider progressBar; // Barra deslizante para representar el progreso.
-    public GameObject canvas; // Canvas negro referenciado desde el prefab.
-    public TMP_Text instructionText; // Texto para mostrar instrucciones al usuario.
-    public Image backgroundImage; // Imagen de fondo para el minijuego.
-    public Sprite specificBackground; // Fondo específico a usar.
-    public GameObject introPanel; // Panel para la pantalla de introducción.
-    public TMP_Text introText; // Texto para la pantalla de introducción.
-    public Button kasHelpButton; // Botón KAS para finalizar automáticamente el juego.
-    public GameObject blackPanel; // Panel negro para la animación inicial.
+    public Slider progressBar;
+    public GameObject canvas;
+    public TMP_Text instructionText;
+    public Image backgroundImage;
+    public Sprite specificBackground;
+    public GameObject introPanel;
+    public TMP_Text introText;
+    public Button kasHelpButton;
+    public GameObject blackPanel;
 
-    public float decrementRate = 0.2f; // Tasa a la que disminuye la barra.
-    public float incrementAmount = 0.05f; // Cantidad que aumenta la barra por cada pulsación de espacio.
-    public float winThreshold = 1.0f; // Valor al que el jugador gana.
-    public float loseThreshold = 0.0f; // Valor al que el jugador pierde.
-    public float expandDuration = 2.0f; // Duración ajustada de la animación del panel negro.
+    public float decrementRate = 0.2f;
+    public float incrementAmount = 0.05f;
+    public float winThreshold = 1.0f;
+    public float loseThreshold = 0.0f;
+    public float expandDuration = 2.0f;
 
     private bool gameActive = false;
     private RectTransform blackPanelTransform;
     private bool isExpanding = true;
+    private bool isClosing = false; // Nueva variable para gestionar la animación de cierre
     private float expandTimer = 0.0f;
-    private bool kasHelpUsed = false; // Indica si se utilizó el botón KAS.
+    private bool kasHelpUsed = false;
+    private bool isAboutToClose = false;
+    private bool won = true;
 
-    public UnityEvent<bool, bool> finishEvent = new UnityEvent<bool, bool>(); // Evento para informar del resultado.
-
+    public UnityEvent<bool, bool> finishEvent = new UnityEvent<bool, bool>();
 
     void Start()
     {
-        // Configurar el Canvas
+        Minigame.isInMinigame = true;
+
         if (canvas != null)
         {
-            canvas.SetActive(false); // Mantener el canvas desactivado inicialmente.
+            canvas.SetActive(false);
         }
 
-        // Configurar el panel negro
         if (blackPanel != null)
         {
             blackPanelTransform = blackPanel.GetComponent<RectTransform>();
-
-            // Igualar tamaño del panel negro al del canvas principal
-            Canvas canvasComponent = canvas.GetComponent<Canvas>();
-            Canvas blackPanelCanvas = blackPanel.GetComponentInParent<Canvas>();
-            if (canvasComponent != null && blackPanelCanvas != null)
-            {
-                blackPanelCanvas.renderMode = canvasComponent.renderMode;
-                blackPanelCanvas.sortingOrder = canvasComponent.sortingOrder - 1; // Asegurar que esté detrás del canvas principal
-            }
 
             blackPanelTransform.anchorMin = new Vector2(0, 0);
             blackPanelTransform.anchorMax = new Vector2(1, 1);
             blackPanelTransform.offsetMin = Vector2.zero;
             blackPanelTransform.offsetMax = Vector2.zero;
-            blackPanelTransform.pivot = new Vector2(0.5f, 0.5f); // Centrar el pivot para que escale desde el centro.
-            blackPanelTransform.localScale = new Vector3(0, 0, 1); // Comienza desde un tamaño muy pequeño.
-            blackPanel.SetActive(true); // Asegurar que el panel negro está activo.
+            blackPanelTransform.pivot = new Vector2(0.5f, 0.5f);
+            blackPanelTransform.localScale = new Vector3(0, 0, 1);
+            blackPanel.SetActive(true);
         }
 
-        // Configurar la imagen de fondo
         if (backgroundImage != null && specificBackground != null)
         {
             backgroundImage.sprite = specificBackground;
-            backgroundImage.color = Color.white; // Asegurar que la imagen no esté oscurecida.
 
-            // Configurar el RectTransform para que ocupe todo el canvas
             RectTransform bgTransform = backgroundImage.GetComponent<RectTransform>();
             bgTransform.anchorMin = new Vector2(0, 0);
             bgTransform.anchorMax = new Vector2(1, 1);
-            bgTransform.offsetMin = Vector2.zero; // Left, Bottom
-            bgTransform.offsetMax = Vector2.zero; // Right, Top
+            bgTransform.offsetMin = Vector2.zero;
+            bgTransform.offsetMax = Vector2.zero;
         }
 
-        // Configurar el texto de introducción
         if (introPanel != null && introText != null)
         {
             var panelImage = introPanel.GetComponent<Image>();
             if (panelImage != null)
             {
-                panelImage.color = new Color(0, 0, 0, 0.95f); // Negro con 95% opacidad
+                panelImage.color = new Color(0, 0, 0, 0.95f);
             }
 
-            introText.text = "Presiona ESPACIO para comenzar!\n\nInstrucciones:\n- Presiona ESPACIO rápidamente para ganar el pulso de brazos.\n- Mantén la barra llena para ganar.\n- Presiona K para pedir ayuda a KAS y saltarte el minijuego.";
+            introText.text = "Presiona ESPACIO para comenzar.\n\nInstrucciones:\n- Presiona ESPACIO rápidamente para ganar el pulso de brazos.\n- Mantén la barra llena para ganar.\n- Presiona K para pedir ayuda a KAS y saltarte el minijuego.";
             introText.alignment = TextAlignmentOptions.Center;
-            introText.fontSize = 30;
+            introText.fontSize = 40;
             introText.rectTransform.sizeDelta = new Vector2(800, 200);
 
-            introPanel.SetActive(false); // Mantener el panel de introducción oculto inicialmente.
+            introPanel.SetActive(false);
         }
 
-        // Configurar el texto del minijuego
         if (instructionText != null)
         {
             instructionText.text = "¡Presiona ESPACIO para ganar el pulso de brazos!";
@@ -102,74 +90,65 @@ public class ArmWrestlingMinigame : MonoBehaviour
             instructionText.rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
             instructionText.rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
             instructionText.rectTransform.pivot = new Vector2(0.5f, 0.5f);
-            instructionText.rectTransform.anchoredPosition = new Vector2(0, -120); // Posición justo encima del slider.
-            instructionText.rectTransform.sizeDelta = new Vector2(600, 100); // Más ancho.
-            instructionText.fontSize = 24; // Reducir tamaño de letra.
+            instructionText.rectTransform.anchoredPosition = new Vector2(0, -120);
+            instructionText.rectTransform.sizeDelta = new Vector2(600, 100);
+            instructionText.fontSize = 40;
             instructionText.color = Color.white;
             instructionText.fontStyle = FontStyles.Bold;
             instructionText.enableWordWrapping = true;
 
-            // Añadir sombra al texto
             Shadow shadow = instructionText.gameObject.AddComponent<Shadow>();
             shadow.effectColor = new Color(0, 0, 0, 0.5f);
             shadow.effectDistance = new Vector2(2, -2);
 
-            instructionText.gameObject.SetActive(false); // Ocultar texto del minijuego inicialmente.
+            instructionText.gameObject.SetActive(false);
         }
 
-        // Configurar el slider
         if (progressBar != null)
         {
-            progressBar.value = 0.5f; // Iniciar la barra en el punto medio.
+            progressBar.value = 0.5f;
             RectTransform sliderTransform = progressBar.GetComponent<RectTransform>();
             sliderTransform.anchorMin = new Vector2(0.5f, 0.5f);
             sliderTransform.anchorMax = new Vector2(0.5f, 0.5f);
             sliderTransform.pivot = new Vector2(0.5f, 0.5f);
-            sliderTransform.anchoredPosition = new Vector2(0, -200); // Más abajo.
-            sliderTransform.sizeDelta = new Vector2(800, 60); // Más grande.
+            sliderTransform.anchoredPosition = new Vector2(0, -200);
+            sliderTransform.sizeDelta = new Vector2(800, 60);
 
-            // Cambiar color del slider para resaltar
             Image fillImage = progressBar.fillRect.GetComponent<Image>();
             if (fillImage != null)
             {
-                fillImage.color = Color.yellow; // Cambiar a un color que resalte.
+                fillImage.color = Color.yellow;
             }
 
-            progressBar.gameObject.SetActive(false); // Ocultar el slider inicialmente.
+            progressBar.gameObject.SetActive(false);
         }
 
-        // Configurar la posición del botón KAS
         if (kasHelpButton != null)
         {
             RectTransform buttonTransform = kasHelpButton.GetComponent<RectTransform>();
-            buttonTransform.anchorMin = new Vector2(0.5f, 0.5f); // Centrar según la referencia del script
+            buttonTransform.anchorMin = new Vector2(0.5f, 0.5f);
             buttonTransform.anchorMax = new Vector2(0.5f, 0.5f);
             buttonTransform.pivot = new Vector2(0.5f, 0.5f);
-            buttonTransform.anchoredPosition = new Vector2(358, 150); // Posición ajustada ligeramente más abajo
+            buttonTransform.anchoredPosition = new Vector2(440, 192);
+            kasHelpButton.gameObject.SetActive(false);
+
         }
 
-        gameActive = false; // El juego empieza inactivo hasta que se pulse espacio
+        gameActive = false;
     }
 
     void Update()
     {
         if (isExpanding && blackPanel != null)
         {
-            // Incrementa el temporizador.
             expandTimer += Time.deltaTime;
-
-            // Calcula el progreso de la expansión.
             float progress = Mathf.Clamp01(expandTimer / expandDuration);
-
-            // Escala el panel negro gradualmente hasta que cubra toda la pantalla.
             blackPanelTransform.localScale = Vector3.Lerp(new Vector3(0, 0, 1), new Vector3(1, 1, 1), progress);
 
-            // Comprueba si la animación ha terminado.
             if (progress >= 1.0f)
             {
-                isExpanding = false; // Detiene la animación.
+                isExpanding = false;
 
-                // Desactiva el panel negro y activa el canvas del minijuego y el panel de introducción.
                 blackPanel.SetActive(false);
                 if (canvas != null)
                 {
@@ -182,7 +161,21 @@ public class ArmWrestlingMinigame : MonoBehaviour
             }
         }
 
-        if (!gameActive && !isExpanding)
+        if (isClosing && blackPanel != null)
+        {
+            expandTimer += Time.deltaTime;
+            float progress = Mathf.Clamp01(expandTimer / expandDuration);
+            blackPanelTransform.localScale = Vector3.Lerp(new Vector3(1, 1, 1), new Vector3(0, 0, 1), progress);
+
+            if (progress >= 1.0f)
+            {
+                Minigame.isInMinigame = false;
+                finishEvent.Invoke(won, kasHelpUsed);
+                Destroy(gameObject);
+            }
+        }
+
+        if (!gameActive && !isExpanding && !isAboutToClose)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -191,21 +184,17 @@ public class ArmWrestlingMinigame : MonoBehaviour
             return;
         }
 
-        // Disminuir el valor de la barra de progreso con el tiempo.
-        if (progressBar != null)
+        if (progressBar != null && gameActive)
         {
             progressBar.value -= decrementRate * Time.deltaTime;
 
-            // Aumentar el valor de la barra de progreso cuando se presiona la tecla espacio.
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 progressBar.value += incrementAmount;
             }
 
-            // Asegurarse de que el valor se mantenga entre 0 y 1.
             progressBar.value = Mathf.Clamp(progressBar.value, 0.0f, 1.0f);
 
-            // Comprobar las condiciones de victoria o derrota.
             if (progressBar.value >= winThreshold)
             {
                 EndGame(true);
@@ -216,7 +205,6 @@ public class ArmWrestlingMinigame : MonoBehaviour
             }
         }
 
-        // Activar el botón KAS con la tecla K
         if (Input.GetKeyDown(KeyCode.K))
         {
             OnKasHelpButtonPress();
@@ -227,56 +215,101 @@ public class ArmWrestlingMinigame : MonoBehaviour
     {
         if (introPanel != null)
         {
-            introPanel.SetActive(false); // Ocultar el panel de introducción
+            introPanel.SetActive(false);
         }
         if (instructionText != null)
         {
-            instructionText.gameObject.SetActive(true); // Mostrar el texto del minijuego
+            instructionText.gameObject.SetActive(true);
         }
         if (progressBar != null)
         {
-            progressBar.gameObject.SetActive(true); // Mostrar el slider del minijuego
+            progressBar.gameObject.SetActive(true);
         }
         gameActive = true;
         if (kasHelpButton != null)
         {
-            kasHelpButton.gameObject.SetActive(true); // Mostrar el botón KAS cuando empieza el juego
+            kasHelpButton.gameObject.SetActive(true);
         }
     }
 
-    void EndGame(bool won)
+  void EndGame(bool won)
     {
+        this.won = won;
         gameActive = false;
+        isAboutToClose = true;
 
-        if (canvas != null)
+        if (progressBar != null)
         {
-            canvas.SetActive(false); // Desactivar el canvas.
+            progressBar.gameObject.SetActive(false); // Ocultar el slider
         }
 
         if (kasHelpButton != null)
         {
-            kasHelpButton.gameObject.SetActive(false); // Ocultar el botón KAS al finalizar
+            kasHelpButton.gameObject.SetActive(false); // Ocultar el botón KAS
         }
 
-        // Invocar el evento con los resultados
-        finishEvent.Invoke(won, kasHelpUsed);
-
-        if (won)
+        // Mostrar el texto de resultado con fondo blanco
+        if (instructionText != null)
         {
-            Debug.Log("¡Ganaste el pulso de brazos!");
-        }
-        else
-        {
-            Debug.Log("Perdiste el pulso de brazos.");
+            instructionText.gameObject.SetActive(true); // Asegurarse de que está activo
+            instructionText.text = won ? "¡Ganaste!" : "¡Perdiste!";
+            instructionText.color = Color.black; // Texto negro
+            instructionText.fontSize = 50; // Tamaño grande
+            instructionText.alignment = TextAlignmentOptions.Center;
+
+            // Crear un fondo blanco dinámicamente
+            var parent = instructionText.transform.parent; // Obtener el padre del texto
+            var background = parent.Find("Background"); // Buscar si ya existe un fondo llamado "Background"
+
+            if (background == null)
+            {
+                // Crear un nuevo objeto de fondo
+                GameObject bgObject = new GameObject("Background");
+                bgObject.transform.SetParent(parent, false); // Añadirlo al mismo padre del texto
+
+                // Añadir componente de imagen al fondo
+                var bgImage = bgObject.AddComponent<Image>();
+                bgImage.color = Color.white; // Fondo blanco
+
+                // Configurar el RectTransform del fondo
+                RectTransform bgTransform = bgObject.GetComponent<RectTransform>();
+                RectTransform textTransform = instructionText.rectTransform;
+                bgTransform.anchorMin = textTransform.anchorMin; // Copiar anclas del texto
+                bgTransform.anchorMax = textTransform.anchorMax;
+                bgTransform.pivot = textTransform.pivot;
+                bgTransform.anchoredPosition = textTransform.anchoredPosition;
+                bgTransform.sizeDelta = new Vector2(textTransform.sizeDelta.x + 50, textTransform.sizeDelta.y + 30); // Ajustar tamaño del fondo
+                bgObject.transform.SetSiblingIndex(instructionText.transform.GetSiblingIndex()); // Asegurar que el fondo está detrás del texto
+            }
         }
 
-        Destroy(this.gameObject); // Destruir el prefab completo en ambos casos.
+        // Iniciar la animación de cierre con un retraso
+        StartCoroutine(CloseAfterDelay());
+    }
+
+    private IEnumerator CloseAfterDelay()
+    {
+        yield return new WaitForSeconds(2.0f); // Mostrar el texto de resultado por 2 segundos
+        StartClosingAnimation(); // Iniciar la animación de cierre
+    }
+
+
+
+    private void StartClosingAnimation()
+    {
+        blackPanel.SetActive(true); // Activar el panel negro
+        if (canvas != null)
+        {
+            canvas.SetActive(false); // Desactivar el canvas del minijuego
+        }
+        isClosing = true;
+        expandTimer = 0.0f; // Reiniciar el temporizador para la animación
     }
 
     public void OnKasHelpButtonPress()
     {
         Debug.Log("¡Ayuda de KAS activada!");
-        kasHelpUsed = true; // Marcar que se utilizó el botón KAS.
-        EndGame(true); // Finalizar el juego automáticamente como victoria
+        kasHelpUsed = true;
+        StartClosingAnimation();
     }
 }
