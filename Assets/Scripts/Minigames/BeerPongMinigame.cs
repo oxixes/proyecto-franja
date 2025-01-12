@@ -78,7 +78,7 @@ public class BeerPongGame : MonoBehaviour
             panelImage.color = new Color(0, 0, 0, 0.95f);
         }
 
-        introText.text = "Presiona ESPACIO para comenzar!\n\nInstrucciones:\n- Presiona ESPACIO para detener los sliders.\n- Alinea dirección y potencia para acertar 3 veces consecutivas y ganar.";
+        introText.text = "Presiona ESPACIO para comenzar.\n\nInstrucciones:\n- Presiona ESPACIO para detener los sliders.\n- Alinea dirección y potencia para acertar 3 veces consecutivas y ganar.";
         introText.alignment = TextAlignmentOptions.Center;
         introText.fontSize = 30;
         introText.rectTransform.sizeDelta = new Vector2(800, 200);
@@ -263,7 +263,7 @@ public class BeerPongGame : MonoBehaviour
     if (hitHorizontal && hitVertical)
     {
         consecutiveHits++;
-        resultText.text = "Acertaste!";
+        resultText.text = "¡Acertaste!";
         resultText.gameObject.SetActive(true);
 
         // Posición del texto "Acertaste"
@@ -284,7 +284,7 @@ public class BeerPongGame : MonoBehaviour
 
         if (consecutiveHits >= 3)
         {
-            winText.text = "GANASTE!";
+            winText.text = "¡GANASTE!";
             winText.gameObject.SetActive(true);
             finishEvent.Invoke(true, kasHelpUsed);
             StartClosingAnimation(); // Iniciar animación de cierre
@@ -299,7 +299,7 @@ public class BeerPongGame : MonoBehaviour
     }
     else
     {
-        resultText.text = "Fallaste!";
+        resultText.text = "¡Fallaste!";
         resultText.gameObject.SetActive(true);
 
         // Posición del texto "Fallaste"

@@ -74,7 +74,7 @@ public class ArmWrestlingMinigame : MonoBehaviour
                 panelImage.color = new Color(0, 0, 0, 0.95f);
             }
 
-            introText.text = "Presiona ESPACIO para comenzar!\n\nInstrucciones:\n- Presiona ESPACIO rápidamente para ganar el pulso de brazos.\n- Mantén la barra llena para ganar.\n- Presiona K para pedir ayuda a KAS y saltarte el minijuego.";
+            introText.text = "Presiona ESPACIO para comenzar.\n\nInstrucciones:\n- Presiona ESPACIO rápidamente para ganar el pulso de brazos.\n- Mantén la barra llena para ganar.\n- Presiona K para pedir ayuda a KAS y saltarte el minijuego.";
             introText.alignment = TextAlignmentOptions.Center;
             introText.fontSize = 30;
             introText.rectTransform.sizeDelta = new Vector2(800, 200);
