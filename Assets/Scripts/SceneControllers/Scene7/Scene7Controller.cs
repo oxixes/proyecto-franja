@@ -16,7 +16,9 @@ public class Scene7Controller : MonoBehaviour
     public GameObject fadeOutPanel;
     public GameObject endText;
     public GameObject creditsText;
+    public GameObject creditsText2;
     public GameObject thanksText;
+    public GameObject thanksToYouText;
 
     public GameObject audioController;
     public AudioClip combatMusic1;
@@ -241,6 +243,7 @@ public class Scene7Controller : MonoBehaviour
         endText.SetActive(true);
 
         yield return new WaitForSeconds(3f);
+
         // Animate endText fade out
         for (float i = 1; i >= 0; i -= Time.deltaTime)
         {
@@ -262,7 +265,7 @@ public class Scene7Controller : MonoBehaviour
             yield return null;
         }
 
-        fadeOutPanel.GetComponent<Image>().color = new Color(0, 0, 0, 1);
+        creditsText.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, 1);
 
         yield return new WaitForSeconds(7f);
 
@@ -274,6 +277,29 @@ public class Scene7Controller : MonoBehaviour
         }
 
         creditsText.SetActive(false);
+
+        creditsText2.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, 0);
+        creditsText2.SetActive(true);
+
+        // Animate credits 2 fade in
+        for (float i = 0; i <= 1; i += Time.deltaTime)
+        {
+            creditsText2.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, i);
+            yield return null;
+        }
+
+        creditsText2.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, 1);
+
+        yield return new WaitForSeconds(7f);
+
+        // Animate credits 2 fade out
+        for (float i = 1; i >= 0; i -= Time.deltaTime)
+        {
+            creditsText2.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, i);
+            yield return null;
+        }
+
+        creditsText2.SetActive(false);
 
         thanksText.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, 0);
         thanksText.SetActive(true);
@@ -287,18 +313,34 @@ public class Scene7Controller : MonoBehaviour
             yield return null;
         }
 
-        fadeOutPanel.GetComponent<Image>().color = new Color(0, 0, 0, 1);
+        thanksText.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, 2);
 
         yield return new WaitForSeconds(5f);
+
+        // Animate thanks to you fade in
+        thanksToYouText.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, 0);
+        thanksToYouText.SetActive(true);
+
+        for (float i = 0; i <= 1; i += Time.deltaTime)
+        {
+            thanksToYouText.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, i);
+            yield return null;
+        }
+
+        thanksToYouText.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, 1);
+
+        yield return new WaitForSeconds(4f);
 
         // Animate thanks fade out
         for (float i = 1; i >= 0; i -= Time.deltaTime)
         {
             thanksText.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, i);
+            thanksToYouText.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, i);
             yield return null;
         }
 
         thanksText.SetActive(false);
+        thanksToYouText.SetActive(false);
 
         audioController.GetComponent<AudioController>().StopWithTransition();
 
