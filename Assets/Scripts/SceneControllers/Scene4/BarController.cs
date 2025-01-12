@@ -10,6 +10,11 @@ public class BarController : MonoBehaviour
     public GameObject bartender;
     public GameObject jessi;
     public GameObject enamorado;
+    public GameObject canvas;
+    public GameObject minigamePrefab;
+    public AudioController audioController;
+    public AudioClip minigameMusic;
+    public AudioClip barMusic;
     public Vector2 enamoradoPos = new Vector2(-2.01f, 1.85f);
     public Vector2 enamoradoNextToJessiPos = new Vector2(7.36f, -1.07f);
     public GameObject fadeOutPanel;
@@ -74,7 +79,7 @@ public class BarController : MonoBehaviour
         }
 
         DialogueSystem.GetInstance().HandleNotification("BarTableDialogueFinished", HandleTableConversationFinishNotification);
-        DialogueSystem.GetInstance().HandleNotification("MinigameFinished", HandleMinigameFinishNotification);
+        DialogueSystem.GetInstance().HandleNotification("BeerPongMinigame", HandleMinigameStartNotification);
         DialogueSystem.GetInstance().HandleNotification("BartenderDialogueFinished", HandleBartenderFinishNotification);
         DialogueSystem.GetInstance().HandleNotification("JessiDialogueFinished", HandleJessiFinishNotification);
         DialogueSystem.GetInstance().HandleNotification("EnamoradoDialogueFinished", HandleEnamoradoDialogueFinish);
@@ -93,20 +98,47 @@ public class BarController : MonoBehaviour
         SaveManager.GetInstance().Set("Scene4BarTableDialogueFinished", 1);
         player.GetComponent<PlayerInventoryManager>().CollectInformation(rayoHasLostInfo);
 
-        if (SaveManager.GetInstance().Get<int>("Scene4EnamoradoDialogueFinished") == 1)
+        if (SaveManager.GetInstance().Get<int>("Scene4MinigameFinished") == 1)
         {
-            barTableMan1IO.dialogueID = "Scene4/BarTablePostMini";
-            barTableMan2IO.dialogueID = "Scene4/BarTablePostMini";
+            barTableMan1IO.dialogueID = SaveManager.GetInstance().Get<string>("Scene4BarTableDialogueEndResult");
+            barTableMan2IO.dialogueID = SaveManager.GetInstance().Get<string>("Scene4BarTableDialogueEndResult");
             if (dialogueId != null) StartCoroutine(StartMinijuegoDialogue());
         }
     }
 
-    void HandleMinigameFinishNotification(string dialogueId, string notificationId, string notificationData)
+    void HandleMinigameStartNotification(string dialogueId, string notificationId, string notificationData)
     {
-        barTableMan1IO.dialogueID = "Scene4/BarTablePostMini";
-        barTableMan2IO.dialogueID = "Scene4/BarTablePostMini";
+        audioController.ForcePlayWithTransition(minigameMusic, true);
 
-        SaveManager.GetInstance().Set("Scene4BarTableDialogueFinished", 1);
+        // Instantiate minigame in canvas
+        GameObject minigame = Instantiate(minigamePrefab, canvas.transform);
+        minigame.GetComponent<BeerPongGame>().finishEvent.AddListener(HandleMinigameFinish);
+    }
+
+    void HandleMinigameFinish(bool won, bool skipped)
+    {
+        audioController.ForcePlayWithTransition(barMusic, true);
+
+        if (skipped) {
+            barTableMan1IO.dialogueID = "Scene4/BarTablePostMiniRepeat";
+            barTableMan2IO.dialogueID = "Scene4/BarTablePostMiniRepeat";
+            SaveManager.GetInstance().Set("Scene4BarTableDialogueEndResult", "Scene4/BarTablePostMiniRepeat");
+            DialogueSystem.GetInstance().StartDialogue("Scene4/BarTableMiniSkipped");
+        } else {
+            if (won) {
+                barTableMan1IO.dialogueID = "Scene4/BarTablePostMiniRepeat";
+                barTableMan2IO.dialogueID = "Scene4/BarTablePostMiniRepeat";
+                SaveManager.GetInstance().Set("Scene4BarTableDialogueEndResult", "Scene4/BarTablePostMiniRepeat");
+                DialogueSystem.GetInstance().StartDialogue("Scene4/BarTablePostMini");
+            } else {
+                barTableMan1IO.dialogueID = "Scene4/BarTablePostLostMini";
+                barTableMan2IO.dialogueID = "Scene4/BarTablePostLostMini";
+                SaveManager.GetInstance().Set("Scene4BarTableDialogueEndResult", "Scene4/BarTablePostLostMini");
+                DialogueSystem.GetInstance().StartDialogue("Scene4/BarTablePostLostMini");
+            }
+        }
+
+        SaveManager.GetInstance().Set("Scene4MinigameFinished", 1);
         player.GetComponent<PlayerInventoryManager>().CollectInformation(rayoHasLostInfo);
         inventory.CollectItem(copaItem);
     }
@@ -126,7 +158,7 @@ public class BarController : MonoBehaviour
     void HandleEnamoradoDialogueFinish(string dialogueId, string notificationId, string notificationData)
     {
         enamoradoIO.dialogueID = "Scene4/EnamoradoDecision1";
-        if (barTableMan1IO.dialogueID != "NPCs/BarTable")
+        if (barTableMan1IO.dialogueID == "NPCs/BarTableRepeat")
         {
             barTableMan1IO.dialogueID = "Scene4/BarTableMinijuego";
             barTableMan2IO.dialogueID = "Scene4/BarTableMinijuego";

@@ -99,7 +99,7 @@ public class PauseMenuController : MonoBehaviour
             }
         }
 
-        if (!isPaused && Input.GetKeyDown(KeyCode.Escape) && !DialogueSystem.GetInstance().IsDialogueActive())
+        if (!isPaused && Input.GetKeyDown(KeyCode.Escape) && !DialogueSystem.GetInstance().IsDialogueActive() && !Minigame.isInMinigame)
         {
             isPaused = true;
             pauseMenu.SetActive(true);

@@ -11,6 +11,11 @@ public class ParkController : MonoBehaviour
     public GameObject mantero;
     public Sprite manteroLookingRight;
     public GameObject quiosquero;
+    public GameObject canvas;
+    public GameObject juegoPulsoPrefab;
+    public AudioController audioController;
+    public AudioClip minigameMusic;
+    public AudioClip overworldMusic;
 
     public GameObject player;
     public GameObject flowers;
@@ -46,6 +51,7 @@ public class ParkController : MonoBehaviour
         DialogueSystem.GetInstance().HandleNotification("ManteroLeaves", HandleManteroLeavesNotification);
         DialogueSystem.GetInstance().HandleNotification("ChavalaHelped", HandleChavalaHelpedNotification);
         DialogueSystem.GetInstance().HandleNotification("FlowersFound", HandleFlowersNotification);
+        DialogueSystem.GetInstance().HandleNotification("JuegoPulso", HandleJuegoPulsoNotification);
 
         if (SaveManager.GetInstance().Get<int>("Scene5ChavalaDialogueFinished") == 1)
         {
@@ -160,6 +166,29 @@ public class ParkController : MonoBehaviour
         SaveManager.GetInstance().Set("Scene5Flowers", 1);
         flowers.SetActive(false);
         player.GetComponent<PlayerInventoryManager>().CollectItem(flowersItem);
+    }
+
+    void HandleJuegoPulsoNotification(string dialogueID, string notificationID, string notificationData)
+    {
+        audioController.ForcePlayWithTransition(minigameMusic, true);
+
+        // Instantiate the minigame in the canvas
+        GameObject juegoPulso = Instantiate(juegoPulsoPrefab, canvas.transform);
+        ArmWrestlingMinigame armWrestlingMinigame = juegoPulso.GetComponent<ArmWrestlingMinigame>();
+        armWrestlingMinigame.finishEvent.AddListener(HandlePulsoFinished);
+    }
+
+    void HandlePulsoFinished(bool won, bool skipped)
+    {
+        audioController.ForcePlayWithTransition(overworldMusic, true);
+
+        if (skipped) {
+            DialogueSystem.GetInstance().StartDialogue("EscenaParque/NPCs/ChavalaDialogueAfterSkippedPulso");
+        } else if (won) {
+            DialogueSystem.GetInstance().StartDialogue("EscenaParque/NPCs/ChavalaDialogueAfterPulso");
+        } else {
+            DialogueSystem.GetInstance().StartDialogue("EscenaParque/NPCs/ChavalaDialogueAfterLostPulso");
+        }
     }
 
     void Update()

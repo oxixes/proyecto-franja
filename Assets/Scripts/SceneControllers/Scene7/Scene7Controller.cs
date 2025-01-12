@@ -21,6 +21,7 @@ public class Scene7Controller : MonoBehaviour
     public GameObject audioController;
     public AudioClip combatMusic1;
     public AudioClip combatMusic2;
+    public AudioClip creditsMusic;
 
     public Sprite thiefLookingUp;
     public Sprite thiefLookingRight;
@@ -219,6 +220,8 @@ public class Scene7Controller : MonoBehaviour
     {
         Minigame.isInMinigame = true;
 
+        audioController.GetComponent<AudioController>().ForcePlayWithTransition(creditsMusic, true);
+
         yield return new WaitForSeconds(2f);
 
         fadeOutPanel.GetComponent<Image>().color = new Color(0, 0, 0, 0);
@@ -296,6 +299,8 @@ public class Scene7Controller : MonoBehaviour
         }
 
         thanksText.SetActive(false);
+
+        audioController.GetComponent<AudioController>().StopWithTransition();
 
         yield return new WaitForSeconds(2f);
 
